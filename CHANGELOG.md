@@ -128,13 +128,13 @@
 
 ## v3 – Śledzenie meldunków silnika
 
-- Śledzenie silnika: każdy meldunek pozycji z silnika od razu (płynnie, ~0,5 s) przesuwa roletę na zgłoszone miejsce, a między meldunkami jedzie w tempie silnika
+- Śledzenie silnika: każdy meldunek pozycji z silnika od razu (płynnie, ~0,5 s) przesuwa roletę na zgłoszone miejsce, a między meldunkami jedzie zsynchronizowana z silnikiem
 - Chwilowe „0%” przy stanie otwarta jest pomijane (błąd meldunku Zigbee)
 
 ## v2 – Oba skrzydła naraz i tempo silnika
 
 - Przeciąganie ustawia oba skrzydła naraz (opcja „osobno” = jedno)
-- Animacja 1:1 w tempie silnika (czas przejazdu), rusza od razu po kliknięciu
+- Animacja 1:1 z prędkością silnika (czas przejazdu), rusza od razu po kliknięciu
 - Poprawka silników Zigbee, które przy „open” podają 0%
 - Opcja „odwroc”
 - Numer wersji w konsoli

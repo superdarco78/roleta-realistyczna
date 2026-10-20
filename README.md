@@ -101,7 +101,7 @@ Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 
 ## 🪟 Karta Roleta dzień-noc
 
-Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz palcem, animacja jedzie w tempie silnika, a za szybą widać aktualną pogodę i porę dnia.
+Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz palcem, animacja jest zsynchronizowana z silnikiem, a za szybą widać aktualną pogodę i porę dnia.
 
 <p align="center"><img src="img/opis-elementow.png" width="100%" alt="Opis elementów karty"></p>
 
@@ -264,7 +264,7 @@ Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia 
 
 ### Podgląd na żywo
 
-Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch w tempie Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
+Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
 <img src="img/edytor/podglad.png" width="380" alt="Podgląd"> <img src="img/edytor/przypiety.png" width="300" alt="Podgląd przypięty">
 
