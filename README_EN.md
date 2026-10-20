@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=release&color=0288d1" alt="Wersja"></a>
-  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/total?style=for-the-badge&label=downloads&color=2e7d32" alt="Pobrania"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/total?style=for-the-badge&label=downloads%40all&color=2e7d32" alt="Pobrania"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge&label=commit%20activity&color=0288d1" alt="Aktywność"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/last-commit/superdarco78/roleta-realistyczna?style=for-the-badge&label=last%20commit&color=6a1b9a" alt="Ostatnia zmiana"></a>
   <br>
@@ -14,11 +14,19 @@
   <img src="https://img.shields.io/github/size/superdarco78/roleta-realistyczna/dist/roleta-realistyczna.js?style=for-the-badge&label=size&color=546e7a" alt="Rozmiar">
   <img src="https://img.shields.io/badge/translations-PL%20100%25%20%7C%20EN%20100%25-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Tłumaczenia">
   <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/maintainer-%40superdarco78-d32f2f?style=for-the-badge&logo=github" alt="Autor"></a>
+  <br>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/validate.yml?style=for-the-badge&label=HACS%20validate&logo=homeassistantcommunitystore&logoColor=white" alt="HACS validate"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases/latest"><img src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/latest/total?style=for-the-badge&label=downloads%40latest&color=2e7d32" alt="Pobrania najnowszej"></a>
+  <img src="https://img.shields.io/badge/maintained-yes-2e7d32?style=for-the-badge" alt="Utrzymywana">
+  <!-- Support (uncomment when links are ready):
+  <a href="https://www.buymeacoffee.com/LINK"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-%E2%98%95-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=LINK"><img src="https://img.shields.io/badge/PayPal-donate-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal"></a>
+  -->
 </p>
 <p align="center">
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/home--assistant.io-website-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
   <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.home-assistant.io&style=for-the-badge&logo=discourse&logoColor=white&label=community%20forum&color=2e7d32" alt="Forum HA"></a>
-  <a href="https://forum.arturhome.pl/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fforum.arturhome.pl&style=for-the-badge&logo=discourse&logoColor=white&label=Polish%20forum&color=dc143c" alt="Forum arturhome.pl"></a>
+  <a href="https://forum.arturhome.pl/"><img src="https://img.shields.io/badge/forum%20PL-arturhome.pl-dc143c?style=for-the-badge&logo=discourse&logoColor=white" alt="Forum arturhome.pl"></a>
   <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/hacs.xyz-HACS-orange?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
 </p>
 
@@ -26,9 +34,11 @@
 
 # 🪟 Day-night roller blind
 
-README: [Polski](README.md) | **English**
+README: [🇵🇱 Polski](README.md) | **🇬🇧 English** · Full illustrated guide (all editor options, FAQ, examples) is in the Polish README; screenshots speak for themselves.
 
-<p align="center"><img src="img/logo.png" width="260" alt="Roller blind"></p>
+<p align="center"><img src="img/banner.png" width="100%" alt="Roller blind"></p>
+
+<p align="center"><img src="img/animacja.gif" width="380"></p>
 
 > 💡 A Home Assistant card that shows your day-night (zebra) roller blind on a realistic window. Drag the blind with your finger, the animation follows the motor speed, and the live weather and time of day are visible outside. A setup wizard configures everything when you add the card.
 
