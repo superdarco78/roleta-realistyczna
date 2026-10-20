@@ -7,8 +7,13 @@
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licencja-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="Licencja"></a>
-  <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/badge/forum-community-41BDF5?style=for-the-badge&logo=discourse&logoColor=white" alt="Forum HA"></a>
   <img src="https://img.shields.io/badge/j%C4%99zyk-PL%20%7C%20EN-orange?style=for-the-badge" alt="Język">
+</p>
+<p align="center">
+  <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/home--assistant.io-strona-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
+  <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.home-assistant.io&style=for-the-badge&logo=discourse&logoColor=white&label=forum%20HA&color=41BDF5" alt="Forum HA"></a>
+  <a href="https://forum.arturhome.pl/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fforum.arturhome.pl&style=for-the-badge&logo=discourse&logoColor=white&label=forum%20PL%20arturhome&color=dc143c" alt="Forum arturhome.pl"></a>
+  <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/hacs.xyz-HACS-orange?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
 </p>
 
 # 🪟 Roleta dzień-noc
