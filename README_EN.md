@@ -13,14 +13,16 @@
   <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&label=issues&color=e64a19" alt="Zgłoszenia"></a>
   <img src="https://img.shields.io/github/size/superdarco78/roleta-realistyczna/dist/roleta-realistyczna.js?style=for-the-badge&label=size&color=546e7a" alt="Rozmiar">
   <img src="https://img.shields.io/badge/translations-PL%20100%25%20%7C%20EN%20100%25-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Tłumaczenia">
-  <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/maintainer-%40superdarco78-6a1b9a?style=for-the-badge&logo=github" alt="Autor"></a>
+  <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/maintainer-%40superdarco78-d32f2f?style=for-the-badge&logo=github" alt="Autor"></a>
 </p>
 <p align="center">
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/home--assistant.io-website-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
-  <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.home-assistant.io&style=for-the-badge&logo=discourse&logoColor=white&label=forum%20HA&color=41BDF5" alt="Forum HA"></a>
+  <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.home-assistant.io&style=for-the-badge&logo=discourse&logoColor=white&label=community%20forum&color=2e7d32" alt="Forum HA"></a>
   <a href="https://forum.arturhome.pl/"><img src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fforum.arturhome.pl&style=for-the-badge&logo=discourse&logoColor=white&label=Polish%20forum&color=dc143c" alt="Forum arturhome.pl"></a>
   <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/hacs.xyz-HACS-orange?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
 </p>
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="40"></a></p>
 
 # 🪟 Day-night roller blind
 
