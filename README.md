@@ -7,7 +7,13 @@
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licencja-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="Licencja"></a>
-  <img src="https://img.shields.io/badge/j%C4%99zyk-PL%20%7C%20EN-orange?style=for-the-badge" alt="Język">
+    <br>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/release.yml?style=for-the-badge&label=wydanie&logo=githubactions&logoColor=white" alt="Wydanie"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/stargazers"><img src="https://img.shields.io/github/stars/superdarco78/roleta-realistyczna?style=for-the-badge&label=gwiazdki&color=f9a825&logo=github" alt="Gwiazdki"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&label=zg%C5%82oszenia&color=e64a19" alt="Zgłoszenia"></a>
+  <img src="https://img.shields.io/github/size/superdarco78/roleta-realistyczna/dist/roleta-realistyczna.js?style=for-the-badge&label=rozmiar&color=546e7a" alt="Rozmiar">
+  <img src="https://img.shields.io/badge/t%C5%82umaczenia-PL%20100%25%20%7C%20EN%20100%25-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Tłumaczenia">
+  <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/autor-%40superdarco78-6a1b9a?style=for-the-badge&logo=github" alt="Autor"></a>
 </p>
 <p align="center">
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/home--assistant.io-strona-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
