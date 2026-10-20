@@ -45,8 +45,30 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 <p align="center"><img src="img/animacja.gif" width="380" alt="Animation"></p>
 
+## 🚀 Start in 4 steps
+
+<p align="center"><a href="#️-installation"><img src="img/start-en.png" width="100%" alt="Start in 4 steps"></a></p>
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="48"></a><br><sub>⬆️ This is the button from step 1</sub></p>
+
+<details><summary><b>📖 Glossary: what do these words mean?</b></summary>
+
+| Word | In plain words |
+|---|---|
+| **Home Assistant (HA)** | The app that runs your smart home. |
+| **HACS** | An “app store” for HA add-ons. You install the card and its updates from here. |
+| **Card** | A tile on your HA screen, like this blind. |
+| **Dashboard** | An HA screen that holds cards. |
+| **`cover.…` entity** | Your blind, as HA sees it. |
+| **Contact sensor** | A window sensor: knows if it is closed, tilted or open. |
+| **Open / 100%** | Blind fully up, window uncovered. |
+| **Closed / 0%** | Blind fully down, window covered. |
+| **YAML** | Typing settings by hand. **Not needed here.** |
+</details>
+
 ## 📑 Table of contents
 
+- [🚀 Start in 4 steps](#-start-in-4-steps)
 - [⬆️ Upgrading to v22](#️-upgrading-to-v22)
 - [🪟 The Roleta dzień-noc card](#-the-roleta-dzień-noc-card)
   - [Goals](#goals)

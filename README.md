@@ -42,8 +42,30 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 
 <p align="center"><img src="img/animacja.gif" width="380" alt="Animacja rolety"></p>
 
+## 🚀 Start w 4 krokach
+
+<p align="center"><a href="#️-instalacja"><img src="img/start-pl.png" width="100%" alt="Start w 4 krokach"></a></p>
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otwórz w HACS" height="48"></a><br><sub>⬆️ To jest przycisk z kroku 1</sub></p>
+
+<details><summary><b>📖 Słowniczek: co znaczą te słowa?</b></summary>
+
+| Słowo | Po ludzku |
+|---|---|
+| **Home Assistant (HA)** | Program, który steruje Twoim domem. |
+| **HACS** | „Sklep” z dodatkami do HA. Stąd instalujesz kartę i jej aktualizacje. |
+| **Karta** | Okienko na ekranie HA, np. ta roleta. |
+| **Pulpit** | Ekran w HA, na którym leżą karty. |
+| **Encja `cover.…`** | Twoja roleta, tak jak widzi ją HA. |
+| **Kontaktron** | Czujnik na oknie: wie, czy okno jest zamknięte, uchylone czy otwarte. |
+| **Zwinięta / 100%** | Roleta na samej górze, okno odsłonięte. |
+| **Opuszczona / 0%** | Roleta na samym dole, okno zasłonięte. |
+| **YAML** | Ręczne pisanie ustawień. **Tu niepotrzebne.** |
+</details>
+
 ## 📑 Spis treści
 
+- [🚀 Start w 4 krokach](#-start-w-4-krokach)
 - [⬆️ Aktualizacja do v22 z wcześniejszych wersji](#️-aktualizacja-do-v22-z-wcześniejszych-wersji)
 - [🪟 Karta Roleta dzień-noc](#-karta-roleta-dzień-noc)
   - [Cele](#cele)
