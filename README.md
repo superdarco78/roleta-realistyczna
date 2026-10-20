@@ -182,7 +182,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
-<details><summary>🎨 Więcej: okleiny ze słojami i klamki</summary><img src="img/okleiny.png" width="300"> <img src="img/edytor/klamki.png" width="300"></details>
+<details><summary>🎨 Więcej: okleiny ze słojami i klamki</summary><img src="img/okleiny.png" width="300"> <img src="img/edytor/klamki.png" width="520"></details>
 
 ---
 
@@ -200,11 +200,11 @@ Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualiz
 
 **Krok 2.** Kliknij **Otwórz link**. Za pierwszym razem strona zapyta o adres Twojego HA. Gdy HACS zapyta „Dodać repozytorium?”, kliknij **Dodaj**.
 
-<img src="img/instalacja/hacs-1.png" width="640" alt="Krok 2">
+<img src="img/instalacja/hacs-1.png" width="820" alt="Krok 2">
 
 **Krok 3.** Kliknij **Pobierz** na dole po prawej, potem jeszcze raz **Pobierz** w okienku.
 
-<img src="img/instalacja/hacs-2.png" width="640" alt="Krok 3">
+<img src="img/instalacja/hacs-2.png" width="820" alt="Krok 3">
 
 **Krok 4.** Odśwież stronę: **Ctrl + Shift + R** (w telefonie zamknij i otwórz aplikację HA).
 
@@ -220,13 +220,41 @@ Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualiz
 
 Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z dodatkami → File editor → Zainstaluj).
 
-| Krok | Co zrobić | Zrzut |
-|:---:|---|---|
-| 1 | Pobierz `roleta-realistyczna.js` z [najnowszego wydania](https://github.com/superdarco78/roleta-realistyczna/releases/latest). | <img src="img/instalacja/krok-1.png" width="360"> |
-| 2 | W **File editor** otwórz folder `www` i wgraj plik strzałką w górę. | <img src="img/instalacja/krok-2.png" width="360"> |
-| 3 | **Ustawienia → Pulpity**. | <img src="img/instalacja/krok-3.png" width="360"> |
-| 4 | **⋮ → Zasoby**. Brak „Zasoby”? Włącz *Tryb zaawansowany* w swoim profilu. | <img src="img/instalacja/krok-4.png" width="360"> |
-| 5 | **Dodaj zasób**: `/local/roleta-realistyczna.js`, **Moduł JavaScript**, **Utwórz**. Potem **Ctrl + Shift + R**. | <img src="img/instalacja/krok-5.png" width="360"> |
+**Krok 1. Pobierz plik karty**
+
+Wejdź w [najnowsze wydanie](https://github.com/superdarco78/roleta-realistyczna/releases/latest) i kliknij `roleta-realistyczna.js`. Plik zapisze się w folderze Pobrane.
+
+<img src="img/instalacja/krok-1.png" width="820" alt="Krok 1">
+
+**Krok 2. Wgraj plik do Home Assistanta**
+
+Otwórz **File editor**. Kliknij ikonę folderu, wejdź do folderu `www` i wgraj plik strzałką w górę.
+
+<img src="img/instalacja/krok-2.png" width="820" alt="Krok 2">
+
+**Krok 3. Otwórz Pulpity**
+
+Kliknij **Ustawienia** na dole menu po lewej, potem **Pulpity**.
+
+<img src="img/instalacja/krok-3.png" width="820" alt="Krok 3">
+
+**Krok 4. Otwórz Zasoby**
+
+Kliknij trzy kropki **⋮** w prawym górnym rogu, potem **Zasoby**.
+
+<img src="img/instalacja/krok-4.png" width="820" alt="Krok 4">
+
+**Krok 4a. Nie widzisz „Zasoby”? Włącz tryb zaawansowany**
+
+Kliknij swoje imię na dole menu po lewej i włącz **Tryb zaawansowany**. Potem wróć do kroku 4.
+
+<img src="img/instalacja/krok-7.png" width="820" alt="Krok 4a">
+
+**Krok 5. Dodaj kartę jako zasób**
+
+Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Moduł JavaScript** i kliknij **Utwórz**. Na koniec odśwież stronę: **Ctrl + Shift + R**.
+
+<img src="img/instalacja/krok-5.png" width="820" alt="Krok 5">
 
 ---
 
@@ -234,14 +262,27 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 **Krok 1.** Na pulpicie kliknij ołówek (Edytuj) → **＋ Dodaj kartę** → wpisz **Roleta** → kliknij kartę.
 
-<img src="img/instalacja/krok-6.png" width="640" alt="Dodaj kartę">
+<img src="img/instalacja/krok-6.png" width="820" alt="Dodaj kartę">
 
 **Krok 2.** Kreator otworzy się sam i przeprowadzi Cię przez 3 kroki:
 
-| 1️⃣ Wybierz roletę | 2️⃣ Co karta wykryła | 3️⃣ Gotowy wygląd |
-|:---:|:---:|:---:|
-| <img src="img/kreator-1.png" width="250"> | <img src="img/kreator-2.png" width="250"> | <img src="img/kreator-3.png" width="250"> |
-| Grupy rolet są na górze listy. | Silnik, kontaktrony, pogoda. Niczego nie musisz dodawać. | 6 stylów: nowoczesny, drewno, skandynawski, ciemny, orzech, kolorowy. |
+**1️⃣ Wybierz roletę**
+
+Grupy rolet (okno 2-skrzydłowe) są na górze listy.
+
+<img src="img/kreator-1.png" width="480" alt="1️⃣ Wybierz roletę">
+
+**2️⃣ Zobacz, co karta wykryła**
+
+Silnik, kontaktrony i pogoda. Niczego nie musisz dodawać.
+
+<img src="img/kreator-2.png" width="480" alt="2️⃣ Zobacz, co karta wykryła">
+
+**3️⃣ Wybierz wygląd**
+
+6 gotowych stylów: nowoczesny, drewno, skandynawski, ciemny, orzech, kolorowy.
+
+<img src="img/kreator-3.png" width="480" alt="3️⃣ Wybierz wygląd">
 
 ✅ **Gotowe.** Wszystko inne zmienisz w [edytorze](#-edytor).
 
@@ -261,7 +302,7 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta jedzie, a w nagłówku widać np. „30% → 50%”.
 
-<img src="img/edytor/linia-celu.png" width="420" alt="Linia celu"> <img src="img/edytor/uchwyty.png" width="360" alt="Uchwyty">
+<img src="img/edytor/linia-celu.png" width="520" alt="Linia celu"> <img src="img/edytor/uchwyty.png" width="520" alt="Uchwyty">
 
 ---
 
@@ -269,19 +310,19 @@ Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta j
 
 Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia są w rozwijanych działach. W każdym jest **↺ Przywróć domyślne**.
 
-<img src="img/edytor/dzialy.png" width="380" alt="Działy edytora">
+<img src="img/edytor/dzialy.png" width="520" alt="Działy edytora">
 
 ### Podgląd na żywo
 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
-<img src="img/edytor/podglad.png" width="380" alt="Podgląd"> <img src="img/edytor/przypiety.png" width="300" alt="Podgląd przypięty">
+<img src="img/edytor/podglad.png" width="520" alt="Podgląd"> <img src="img/edytor/przypiety.png" width="520" alt="Podgląd przypięty">
 
 ### 🎨 Wygląd
 
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
-<img src="img/edytor/wyglad.png" width="380" alt="Wygląd"> <img src="img/edytor/palety.png" width="380" alt="Palety">
+<img src="img/edytor/wyglad.png" width="520" alt="Wygląd"> <img src="img/edytor/palety.png" width="520" alt="Palety">
 
 ### 🪟 Okno i kontaktrony
 
@@ -293,7 +334,7 @@ Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywan
 
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
-<img src="img/edytor/kalibracja.png" width="420" alt="Kalibracja">
+<img src="img/edytor/kalibracja.png" width="520" alt="Kalibracja">
 
 ### ⚙️ Zaawansowane
 
@@ -303,7 +344,7 @@ Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwr�
 
 **🌍 Zapisz jako domyślne** przenosi Twój wygląd na wszystkie karty rolet, także nowe. Każda karta może go nadal zmienić u siebie.
 
-<img src="img/edytor/globalne.png" width="420" alt="Ustawienia globalne">
+<img src="img/edytor/globalne.png" width="520" alt="Ustawienia globalne">
 
 ---
 

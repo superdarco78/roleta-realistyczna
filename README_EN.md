@@ -174,11 +174,11 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 **Step 2.** Click **Open link**, then **Add** when HACS asks to add the repository.
 
-<img src="img/instalacja/hacs-1.png" width="640" alt="Step 2">
+<img src="img/instalacja/hacs-1.png" width="820" alt="Step 2">
 
 **Step 3.** Click **Download** (bottom right), then **Download** again.
 
-<img src="img/instalacja/hacs-2.png" width="640" alt="Step 3">
+<img src="img/instalacja/hacs-2.png" width="820" alt="Step 3">
 
 **Step 4.** Refresh the page: **Ctrl + Shift + R** (on a phone, close and reopen the HA app).
 
@@ -192,10 +192,43 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 ### Manual
 
-1. Download `roleta-realistyczna.js` from the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest).
-2. Upload it to `/config/www/` (e.g. with the File editor add-on).
-3. **Settings → Dashboards → ⋮ → Resources → Add resource**: `/local/roleta-realistyczna.js`, **JavaScript module**.
-4. Refresh with **Ctrl + Shift + R**.
+Screenshots show the Polish HA interface; the buttons are in the same places in English.
+
+**Step 1. Download the card file**
+
+Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
+
+<img src="img/instalacja/krok-1.png" width="820" alt="Step 1">
+
+**Step 2. Upload it to Home Assistant**
+
+Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
+
+<img src="img/instalacja/krok-2.png" width="820" alt="Step 2">
+
+**Step 3. Open Dashboards**
+
+Click **Settings** at the bottom of the left menu, then **Dashboards**.
+
+<img src="img/instalacja/krok-3.png" width="820" alt="Step 3">
+
+**Step 4. Open Resources**
+
+Click the three dots **⋮** top right, then **Resources**.
+
+<img src="img/instalacja/krok-4.png" width="820" alt="Step 4">
+
+**Step 4a. No “Resources”? Turn on Advanced mode**
+
+Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
+
+<img src="img/instalacja/krok-7.png" width="820" alt="Step 4a">
+
+**Step 5. Add the card as a resource**
+
+Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
+
+<img src="img/instalacja/krok-5.png" width="820" alt="Step 5">
 
 ---
 
@@ -203,10 +236,23 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 Dashboard → pencil (Edit) → **＋ Add card** → type **Roleta** → click the card. The wizard opens by itself:
 
-| 1️⃣ Pick the blind | 2️⃣ What was detected | 3️⃣ Pick a look |
-|:---:|:---:|:---:|
-| <img src="img/kreator-1.png" width="250"> | <img src="img/kreator-2.png" width="250"> | <img src="img/kreator-3.png" width="250"> |
-| Blind groups are listed first. | Motor, contact sensors, weather. Nothing to add. | 6 styles: modern, wood, Scandinavian, dark, walnut, colourful. |
+**1️⃣ Pick the blind**
+
+Blind groups (2-sash windows) are listed first.
+
+<img src="img/kreator-1.png" width="480" alt="1️⃣ Pick the blind">
+
+**2️⃣ See what was detected**
+
+Motor, contact sensors and weather. Nothing to add.
+
+<img src="img/kreator-2.png" width="480" alt="2️⃣ See what was detected">
+
+**3️⃣ Pick a look**
+
+6 styles: modern, wood, Scandinavian, dark, walnut, colourful.
+
+<img src="img/kreator-3.png" width="480" alt="3️⃣ Pick a look">
 
 ---
 
@@ -224,7 +270,7 @@ Dashboard → pencil (Edit) → **＋ Add card** → type **Roleta** → click t
 
 A dashed **“→ 50%”** line shows where the blind is going.
 
-<img src="img/edytor/linia-celu.png" width="420" alt="Target line"> <img src="img/edytor/uchwyty.png" width="360" alt="Handles">
+<img src="img/edytor/linia-celu.png" width="520" alt="Target line"> <img src="img/edytor/uchwyty.png" width="520" alt="Handles">
 
 ---
 
@@ -240,7 +286,7 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 | ⚙️ Advanced | Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo. |
 | 🌍 Global | **Save as default** for all blind cards. |
 
-<img src="img/edytor/podglad.png" width="380" alt="Preview"> <img src="img/edytor/kontaktrony.png" width="420" alt="Contact sensors">
+<img src="img/edytor/podglad.png" width="520" alt="Preview"> <img src="img/edytor/kontaktrony.png" width="520" alt="Contact sensors">
 
 ---
 
