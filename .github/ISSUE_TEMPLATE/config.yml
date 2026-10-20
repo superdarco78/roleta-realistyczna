@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 💬 Forum Home Assistant (EN)
+    url: https://community.home-assistant.io/
+    about: Pytania i pomoc od społeczności / Questions and community help
+  - name: 💬 Forum arturhome.pl (PL)
+    url: https://forum.arturhome.pl/
+    about: Polskie forum Home Assistanta
+  - name: 📖 Instrukcja / Documentation
+    url: https://github.com/superdarco78/roleta-realistyczna#-spis-treści
+    about: Instalacja, kreator, opcje i FAQ

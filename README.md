@@ -27,7 +27,7 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 > [!TIP]
 > Karta działa z **każdą roletą** w Home Assistancie (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i innymi. Najlepiej wygląda z roletą dzień-noc (zebra) i oknem 2-skrzydłowym, ale ustawisz też 1 skrzydło. Po dodaniu karty **kreator ustawi wszystko sam**.
 
-<p align="center"><img src="img/animacja.gif" width="380" alt="Animacja rolety"></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animacja rolety"></picture></p>
 
 ## 🚀 Start w 4 krokach
 
@@ -112,7 +112,7 @@ Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 
 Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz palcem, animacja jest zsynchronizowana z silnikiem, a za szybą widać aktualną pogodę i porę dnia.
 
-<p align="center"><img src="img/opis-elementow.png" width="100%" alt="Opis elementów karty"></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Opis elementów karty"></picture></p>
 
 ### Cele
 

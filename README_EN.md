@@ -27,7 +27,7 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 > [!TIP]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
 
-<p align="center"><img src="img/animacja.gif" width="380" alt="Animation"></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animation"></picture></p>
 
 ## 🚀 Start in 4 steps
 
@@ -94,7 +94,7 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
-<p align="center"><img src="img/opis-elementow.png" width="100%" alt="Card elements"></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Card elements"></picture></p>
 
 ### Goals
 
