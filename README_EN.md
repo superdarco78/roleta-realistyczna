@@ -371,3 +371,6 @@ If you like the card, leave a ⭐ at the top of the page. Thank you!
 ---
 
 [CC BY-NC-SA 4.0](LICENSE) © [superdarco78](https://github.com/superdarco78). Personal, non-commercial use with attribution.
+
+> [!NOTE]
+> **© 2026 superdarco78.** The card, graphics and texts are licensed under [CC BY-NC-SA 4.0](LICENSE). Free for use in your home. Selling, reselling, republishing as your own or any commercial use only with the author's permission. Official source: [github.com/superdarco78/roleta-realistyczna](https://github.com/superdarco78/roleta-realistyczna).

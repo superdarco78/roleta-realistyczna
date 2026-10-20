@@ -1,3 +1,11 @@
+/*!
+ * Roleta dzień-noc (roleta-realistyczna)
+ * © 2026 superdarco78 – https://github.com/superdarco78/roleta-realistyczna
+ * Licencja / License: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/
+ * Użytek niekomercyjny z podaniem autora. Sprzedaż, odsprzedaż i użycie komercyjne
+ * tylko za pisemną zgodą autora. / Non-commercial use with attribution only.
+ * Commercial use, resale or redistribution for profit requires the author's written permission.
+ */
 /* roleta-realistyczna v7 – roleta dzień-noc (zebra) na oknie 2-skrzydłowym, z animacją (Dom v2)
    type: custom:roleta-realistyczna
    entity (cover lub grupa coverów – każde skrzydło dostaje swoją roletę), name,
@@ -78,7 +86,7 @@
    v22 – 🪄 kreator w 3 krokach (wybierz roletę → co karta wykryła sama → gotowy wygląd), sam się otwiera przy nowej karcie;
         menu w rozwijanych działach: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane; w każdym „↺ Przywróć domyślne” */
 const RR_WERSJA = 'v22';
-console.info('%c roleta-realistyczna ' + RR_WERSJA + ' ', 'background:#232427;color:#fff;border-radius:3px');
+console.info('%c roleta-realistyczna ' + RR_WERSJA + ' %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ', 'background:#232427;color:#fff;border-radius:3px 0 0 3px', 'background:#ff8f00;color:#fff;border-radius:0 3px 3px 0');
 const RR_KOLORY = {
   czarny: '#232427', grafit: '#3a3d42', szary: '#6d7076', bezowy: '#bfae94', kremowy: '#e6dcc8',
   bialy: '#efefec', braz: '#5a4030', granat: '#25324d', pomaranczowy: '#fc9907',
