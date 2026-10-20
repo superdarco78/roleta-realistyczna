@@ -74,6 +74,7 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 - [❓ FAQ](#faq)
 - [🙋 Help wanted](#help-wanted)
 - [🌍 Translations](#translations)
+- [🧱 Project structure](#project-structure)
 - [☕ Support](#support)
 
 ---
@@ -425,7 +426,12 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 | 🇵🇱 Polski | ✅ 100% |
 | 🇬🇧 English | ✅ 100% |
 
-Want your language? Open an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose). Texts live in `RR_TXT` and `RR_ED` in `roleta-realistyczna.js`.
+Want your language? Copy [`translations/en.json`](translations/en.json) to `translations/<code>.json`, translate it and send it in an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or a pull request.
+
+<a name="project-structure"></a>
+## 🧱 Project structure
+
+Source code is split into modules in [`src/`](src) (card, editor, weather, detection, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
 
 <a name="support"></a>
 ## ☕ Support

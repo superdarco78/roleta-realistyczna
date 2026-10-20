@@ -86,6 +86,7 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 - [❓ Pytania i problemy](#pytania-i-problemy)
 - [🙋 Pomoc mile widziana](#pomoc-mile-widziana)
 - [🌍 Tłumaczenia](#tlumaczenia)
+- [🧱 Budowa projektu](#budowa-projektu)
 - [☕ Wsparcie](#wsparcie)
 
 ---
@@ -591,7 +592,32 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 | 🇵🇱 Polski | ✅ 100% |
 | 🇬🇧 English | ✅ 100% |
 
-Chcesz dodać swój język? Napisz w [zgłoszeniach](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose). Teksty karty są w obiektach `RR_TXT` i `RR_ED` w pliku `roleta-realistyczna.js`.
+Chcesz dodać swój język? Skopiuj [`translations/en.json`](translations/en.json) jako `translations/<kod>.json`, przetłumacz teksty i wyślij w [zgłoszeniu](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo jako pull request.
+
+<a name="budowa-projektu"></a>
+## 🧱 Budowa projektu
+
+```
+src/                    kod źródłowy (moduły)
+├─ index.js             rejestracja karty i edytora w HA
+├─ karta.js             karta: okno, roleta, przeciąganie, animacja w tempie silnika
+├─ karta-styl.js        wygląd karty (CSS)
+├─ edytor.js            edytor graficzny, kreator, kalibracja
+├─ edytor-styl.js       wygląd edytora (CSS)
+├─ pogoda.js            niebo, pogoda, rysowany widok, pogoda z internetu
+├─ wykrywanie.js        automatyczne wykrywanie silnika, kontaktronów, pogody
+├─ silnik.js            czas przejazdu (prędkość, nauka, kalibracja)
+├─ kolory.js            tkaniny, ramy i okleiny
+├─ globalne.js          ustawienia globalne (profil użytkownika HA)
+├─ jezyk.js             wybór języka wg HA
+└─ stale.js             wersja, ustawienia domyślne
+translations/           pl.json, en.json
+test/                   testy (`npm test`)
+scripts/build.mjs       składanie w jeden plik (esbuild)
+dist/roleta-realistyczna.js   gotowy plik dla HACS
+```
+
+`npm install` → `npm run check` (sprawdzenie kodu, testy, budowanie). GitHub sprawdza to samo przy każdej zmianie.
 
 <a name="wsparcie"></a>
 ## ☕ Wsparcie

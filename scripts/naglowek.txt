@@ -1,0 +1,8 @@
+/*!
+ * Roleta dzień-noc (roleta-realistyczna)
+ * © 2026 superdarco78 – https://github.com/superdarco78/roleta-realistyczna
+ * Licencja / License: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/
+ * Użytek niekomercyjny z podaniem autora. Sprzedaż, odsprzedaż i użycie komercyjne
+ * tylko za pisemną zgodą autora. / Non-commercial use with attribution only.
+ * Commercial use, resale or redistribution for profit requires the author's written permission.
+ */
