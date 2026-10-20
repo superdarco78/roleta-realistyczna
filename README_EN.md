@@ -1,7 +1,15 @@
-[![Release](https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge)](https://github.com/superdarco78/roleta-realistyczna/releases)
-[![Commit activity](https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge)](https://github.com/superdarco78/roleta-realistyczna/commits/main)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=for-the-badge)](LICENSE)
-[![HACS](https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge)](https://hacs.xyz)
+<p align="center">
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=release&color=0288d1" alt="Wersja"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/total?style=for-the-badge&label=downloads&color=2e7d32" alt="Pobrania"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge&label=commit%20activity&color=0288d1" alt="Aktywność"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/last-commit/superdarco78/roleta-realistyczna?style=for-the-badge&label=last%20commit&color=6a1b9a" alt="Ostatnia zmiana"></a>
+  <br>
+  <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
+  <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="Licencja"></a>
+  <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/badge/forum-community-41BDF5?style=for-the-badge&logo=discourse&logoColor=white" alt="Forum HA"></a>
+  <img src="https://img.shields.io/badge/language-PL%20%7C%20EN-orange?style=for-the-badge" alt="Język">
+</p>
 
 # 🪟 Day-night roller blind
 
