@@ -1,0 +1,9 @@
+name: 💡 Pomysł / Feature request
+description: Zaproponuj nową funkcję / Suggest a new feature
+labels: [enhancement]
+body:
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co karta mogłaby robić? / What could the card do?
+    validations: { required: true }

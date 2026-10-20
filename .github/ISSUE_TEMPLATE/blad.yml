@@ -1,0 +1,21 @@
+name: 🐞 Zgłoś błąd / Bug report
+description: Coś nie działa / Something doesn't work
+labels: [bug]
+body:
+  - type: input
+    id: wersja
+    attributes:
+      label: Wersja karty i Home Assistanta / Card and HA version
+      placeholder: v22, HA 2026.10
+    validations: { required: true }
+  - type: input
+    id: silnik
+    attributes:
+      label: Silnik rolety / Blind motor
+      placeholder: Moes TS0601 (zigbee2mqtt)
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co się dzieje? / What happens?
+      description: Opis, zrzut ekranu i konfiguracja karty (YAML) / Description, screenshot and card YAML
+    validations: { required: true }
