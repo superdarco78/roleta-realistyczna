@@ -3,10 +3,11 @@ name: 🚀 Wydanie
 # Nowa wersja = nowy pierwszy nagłówek „## vNN – tytuł” w CHANGELOG.md.
 # Po wysłaniu na main powstaje wydanie vNN z plikiem dist/roleta-realistyczna.js,
 # a HACS pokazuje je w Home Assistancie jako aktualizację.
+# Wygląd opisu wydania: .github/release-notes.md, obrazek wersji: img/wydania/vNN.png.
 on:
   push:
     branches: [main]
-    paths: ['CHANGELOG.md', 'dist/**']
+    paths: ['CHANGELOG.md', 'dist/**', '.github/release-notes.md', 'img/wydania/**', 'scripts/notatki-wydania.mjs']
   workflow_dispatch:
 
 permissions:
@@ -22,19 +23,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          head=$(grep -m1 -E '^## v[0-9]+' CHANGELOG.md)
-          ver=$(echo "$head" | grep -oE 'v[0-9]+(\.[0-9]+)*' | head -1)
-          title=$(echo "$head" | sed -E 's/^## //')
-          awk -v h="$head" '$0==h{f=1;next} /^## v/{if(f)exit} f' CHANGELOG.md > body.md
-          prev=$(grep -E '^## v[0-9]+' CHANGELOG.md | sed -n 2p | grep -oE 'v[0-9]+(\.[0-9]+)*' || true)
-          {
-            echo "## Co nowego / What's Changed"
-            cat body.md
-            echo
-            echo "---"
-            echo "⬇️ **Instalacja / aktualizacja:** HACS → Roleta dzień-noc → Pobierz, albo plik \`roleta-realistyczna.js\` poniżej."
-            [ -n "$prev" ] && echo "**Pełna lista zmian / Full Changelog:** https://github.com/$GITHUB_REPOSITORY/compare/$prev...$ver"
-          } > notes.md
+          node scripts/notatki-wydania.mjs "$GITHUB_REPOSITORY" > notes.md
+          ver=$(grep -m1 -E '^## v[0-9]+' CHANGELOG.md | grep -oE 'v[0-9]+(\.[0-9]+)*' | head -1)
+          title=$(grep -m1 -E '^## v[0-9]+' CHANGELOG.md | sed -E 's/^## //')
           if gh release view "$ver" >/dev/null 2>&1; then
             gh release edit "$ver" --title "$title" --notes-file notes.md
             gh release upload "$ver" dist/roleta-realistyczna.js --clobber

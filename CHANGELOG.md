@@ -3,18 +3,18 @@
 ## v23 – Kreator dla początkujących w 7 krokach
 
 - 🪄 Nowy kreator: roleta → okno i skrzydła → prędkość silnika → czujniki okna → pogoda → wygląd i nazwa → podsumowanie i miejsce karty
-- W każdym kroku krótko: **co** wybierasz i **po co**
-- Wygląd jak w Home Assistancie: komunikaty, pola wyboru, ikony i kolory Twojego motywu (jasny i ciemny)
-- Karta sama znajduje rolety, silniki, kontaktrony i pogodę i układa je od najlepiej pasujących (to samo urządzenie, to samo pomieszczenie, „lewe/prawe” w nazwie) – przy każdej pozycji widać dlaczego
-- W listach tylko pasujące encje: bez bram, garaży, czujników ruchu i zwykłych liczb
-- Gdy czegoś brakuje albo coś nie działa, kreator mówi dokładnie co zrobić i jednym przyciskiem otwiera właściwe miejsce w HA (integracje, pomocnicy, urządzenie, lokalizacja domu, HACS, zasoby)
-- Pomiar czasu przejazdu prosto z kreatora
-- Sprawdzenie instalacji: czy jest nowsza wersja i czy karta nie jest dodana dwa razy w zasobach
-- Kopia karty na inny panel albo nowy widok „Rolety” jednym kliknięciem – bez pisania kodu
-- Kreator odświeża się sam, gdy w HA pojawi się nowe urządzenie
-- Język kreatora, karty i menu automatycznie wg profilu HA
-- Te same ścisłe filtry w zwykłym menu karty
-- Kod karty podzielony na moduły (`src/`, `translations/`) z testami i automatycznym budowaniem
+- 💬 W każdym kroku krótko: **co** wybierasz i **po co**
+- 🏠 Wygląd jak w Home Assistancie: komunikaty, pola wyboru, ikony i kolory Twojego motywu (jasny i ciemny)
+- 🔎 Karta sama znajduje rolety, silniki, kontaktrony i pogodę i układa je od najlepiej pasujących (to samo urządzenie, to samo pomieszczenie, „lewe/prawe” w nazwie) – przy każdej pozycji widać dlaczego
+- 🎯 W listach tylko pasujące encje: bez bram, garaży, czujników ruchu i zwykłych liczb
+- 🆘 Gdy czegoś brakuje albo coś nie działa, kreator mówi dokładnie co zrobić i jednym przyciskiem otwiera właściwe miejsce w HA (integracje, pomocnicy, urządzenie, lokalizacja domu, HACS, zasoby)
+- ⏱ Pomiar czasu przejazdu prosto z kreatora
+- ✅ Sprawdzenie instalacji: czy jest nowsza wersja i czy karta nie jest dodana dwa razy w zasobach
+- ➕ Kopia karty na inny panel albo nowy widok „Rolety” jednym kliknięciem – bez pisania kodu
+- 🔄 Kreator odświeża się sam, gdy w HA pojawi się nowe urządzenie
+- 🌍 Język kreatora, karty i menu automatycznie wg profilu HA
+- 🧹 Te same ścisłe filtry w zwykłym menu karty
+- 🧱 Kod karty podzielony na moduły (`src/`, `translations/`) z testami i automatycznym budowaniem
 
 ## v22 – Kreator w 3 krokach
 
