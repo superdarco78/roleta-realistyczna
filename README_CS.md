@@ -76,7 +76,7 @@
 Tlačítko otevře HACS ve tvém Home Assistant. Obrázek ukazuje, kam kliknout.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/cs/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/cs/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -86,7 +86,7 @@ Tlačítko otevře HACS ve tvém Home Assistant. Obrázek ukazuje, kam kliknout.
 Stáhni kartu do svého Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/cs/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/cs/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -96,7 +96,7 @@ Stáhni kartu do svého Home Assistant.
 Přidej kartu na svou nástěnku.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/cs/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/cs/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 

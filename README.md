@@ -78,7 +78,7 @@
 Przycisk otworzy HACS w Twoim Home Assistant. Co kliknąć, pokazuje obrazek.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/hacs-1.png" width="100%" alt="Krok 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/hacs-1.png" width="100%" alt="Krok 1"></a></p>
 
 <br>
 
@@ -88,7 +88,7 @@ Przycisk otworzy HACS w Twoim Home Assistant. Co kliknąć, pokazuje obrazek.
 Pobierz kartę do swojego Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/hacs-2.png" width="100%" alt="Krok 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/hacs-2.png" width="100%" alt="Krok 2"></a></p>
 
 <br>
 
@@ -98,7 +98,7 @@ Pobierz kartę do swojego Home Assistant.
 Dodaj kartę na swój pulpit.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/dodaj-karte.png" width="100%" alt="Krok 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/dodaj-karte.png" width="100%" alt="Krok 3"></a></p>
 
 <br>
 
@@ -588,18 +588,17 @@ tlo: /local/widok-sypialnia.jpg
 <a name="obr-15"></a>
 <p align="center"><a href="#obr-15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
-**Jedno skrzydło, bez pogody, po angielsku:**
+**Jedno skrzydło, bez pogody:**
 
 ```yaml
 type: custom:roleta-realistyczna
-entity: cover.bedroom
+entity: cover.roleta_sypialnia
 skrzydla: 1
 zrodlo: brak
-jezyk: en
 ```
 
 <a name="obr-16"></a>
-<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 ---
 
@@ -649,37 +648,37 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 Wejdź w [najnowsze wydanie](https://github.com/superdarco78/roleta-realistyczna/releases/latest) i kliknij `roleta-realistyczna.js`. Plik zapisze się w folderze Pobrane.
 
-<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-1.png" width="100%" alt="Krok 1"></a>
+<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-1.png" width="100%" alt="Krok 1"></a>
 
 **Krok 2. Wgraj plik do Home Assistanta**
 
 Otwórz **File editor**. Kliknij ikonę folderu, wejdź do folderu `www` i wgraj plik strzałką w górę.
 
-<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-2.png" width="100%" alt="Krok 2"></a>
+<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-2.png" width="100%" alt="Krok 2"></a>
 
 **Krok 3. Otwórz Pulpity**
 
 Kliknij **Ustawienia** na dole menu po lewej, potem **Pulpity**.
 
-<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-3.png" width="100%" alt="Krok 3"></a>
+<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-3.png" width="100%" alt="Krok 3"></a>
 
 **Krok 4. Otwórz Zasoby**
 
 Kliknij trzy kropki **⋮** w prawym górnym rogu, potem **Zasoby**.
 
-<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-4.png" width="100%" alt="Krok 4"></a>
+<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-4.png" width="100%" alt="Krok 4"></a>
 
 **Krok 4a. Nie widzisz „Zasoby”? Włącz tryb zaawansowany**
 
 Kliknij swoje imię na dole menu po lewej i włącz **Tryb zaawansowany**. Potem wróć do kroku 4.
 
-<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-7.png" width="100%" alt="Krok 4a"></a>
+<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-7.png" width="100%" alt="Krok 4a"></a>
 
 **Krok 5. Dodaj kartę jako zasób**
 
 Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Moduł JavaScript** i kliknij **Utwórz**. Na koniec odśwież stronę: **Ctrl + Shift + R**.
 
-<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/pl/krok-5.png" width="100%" alt="Krok 5"></a>
+<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/pl/krok-5.png" width="100%" alt="Krok 5"></a>
 
 **Przycisk HACS nie działa?**
 

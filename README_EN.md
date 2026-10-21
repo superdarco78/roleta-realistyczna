@@ -76,7 +76,7 @@
 The button opens HACS in your Home Assistant. The picture shows what to click.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -86,7 +86,7 @@ The button opens HACS in your Home Assistant. The picture shows what to click.
 Download the card to your Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -96,7 +96,7 @@ Download the card to your Home Assistant.
 Add the card to your dashboard.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
@@ -508,37 +508,37 @@ Screenshots show the Polish HA interface; the buttons are in the same places in 
 
 Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
 
-<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-1.png" width="100%" alt="Step 1"></a>
+<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-1.png" width="100%" alt="Step 1"></a>
 
 **Step 2. Upload it to Home Assistant**
 
 Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
 
-<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-2.png" width="100%" alt="Step 2"></a>
+<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-2.png" width="100%" alt="Step 2"></a>
 
 **Step 3. Open Dashboards**
 
 Click **Settings** at the bottom of the left menu, then **Dashboards**.
 
-<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-3.png" width="100%" alt="Step 3"></a>
+<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-3.png" width="100%" alt="Step 3"></a>
 
 **Step 4. Open Resources**
 
 Click the three dots **⋮** top right, then **Resources**.
 
-<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-4.png" width="100%" alt="Step 4"></a>
+<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-4.png" width="100%" alt="Step 4"></a>
 
 **Step 4a. No “Resources”? Turn on Advanced mode**
 
 Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
 
-<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-7.png" width="100%" alt="Step 4a"></a>
+<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-7.png" width="100%" alt="Step 4a"></a>
 
 **Step 5. Add the card as a resource**
 
 Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
 
-<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/en/krok-5.png" width="100%" alt="Step 5"></a>
+<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/zrzuty/en/krok-5.png" width="100%" alt="Step 5"></a>
 
 **HACS button not working?**
 
