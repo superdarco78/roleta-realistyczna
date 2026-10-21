@@ -101,10 +101,11 @@
    v26 – typ osłony (dzień-noc, pełna, plisa, rzymska, żaluzja, zewnętrzna) w edytorze i kreatorze; promienie słońca wpadające
         przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
    v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
-        boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…) */
+        boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
+   v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v27";
+  var RR_WERSJA = "v28";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -2246,7 +2247,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     }) : null;
     return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
   }
-  var rrNumerWersji = (v) => parseInt(String(v || "").replace(/\D+/g, ""), 10) || 0;
+  var rrNumerWersji = (v) => parseInt(String(v || "").replace(/^\D+/, ""), 10) || 0;
 
   // src/kreator.js
   var RR_KROKI = [

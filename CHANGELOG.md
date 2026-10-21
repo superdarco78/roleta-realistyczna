@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v28 – Kreator nie myli się przy wersjach „.1”
+
+- 🩹 Kreator nie pokazuje już żółtej ramki „jest nowsza wersja”, gdy wyszło tylko wydanie z nowym opisem (np. v27.1). Liczy się numer karty
+- ✅ Wygląd i ustawienia bez zmian
+
 ## v27.1 – Opis jasny i ciemny
 
 - 🌗 Obrazki w opisie same zmieniają się na ciemne, gdy masz ciemny motyw (w HACS i na GitHubie)
