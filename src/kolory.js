@@ -31,3 +31,18 @@ export function rrRgba(hex, a) {
   const h = rrShade(hex, 0).replace('#', ''), n = parseInt(h, 16);
   return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`;
 }
+/* v37: napis na kolorze motywu (głównym, akcencie) – biały albo czarny, zależnie od jasności koloru z profilu HA */
+const RR_PROBNIK = typeof document !== 'undefined' ? document.createElement('canvas').getContext('2d') : null;
+function rrNaKolorze(kolor) {
+  if (!RR_PROBNIK || !kolor) return '';
+  RR_PROBNIK.fillStyle = '#000'; RR_PROBNIK.fillStyle = kolor.trim();
+  const m = /^#([0-9a-f]{6})$/i.exec(RR_PROBNIK.fillStyle); if (!m) return '';
+  const [r, g, b] = [0, 2, 4].map(i => { const c = parseInt(m[1].slice(i, i + 2), 16) / 255; return c <= .03928 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; });
+  return .2126 * r + .7152 * g + .0722 * b > .4 ? '#212121' : '#fff';
+}
+export function rrKontrast(el) {
+  if (!el || !el.isConnected) return;
+  const s = getComputedStyle(el), g = rrNaKolorze(s.getPropertyValue('--primary-color')), a = rrNaKolorze(s.getPropertyValue('--accent-color'));
+  if (g && el.style.getPropertyValue('--rr-na-glownym') !== g) el.style.setProperty('--rr-na-glownym', g);
+  if (a && el.style.getPropertyValue('--rr-na-akcencie') !== a) el.style.setProperty('--rr-na-akcencie', a);
+}

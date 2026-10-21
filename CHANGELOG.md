@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v37 – Czytelne napisy przy każdym kolorze
+
+- 🔤 Napisy na przyciskach w kolorze motywu są białe albo czarne, zależnie od jasności Twojego koloru (np. czarne na żółtym akcencie)
+- 🐞 Naprawiony pierwszy krok kreatora karty (błąd przy sprawdzaniu wersji z v36)
+
 ## v36 – Kreator w kolorach Twojego motywu
 
 - 🎨 Podsumowanie i podpowiedzi kreatora: zamiast zielonych znaczków ✅ i zielonych ramek są ikony i ramki w kolorze głównym Twojego motywu HA, na żywo

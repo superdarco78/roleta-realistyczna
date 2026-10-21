@@ -153,8 +153,8 @@ export class RrKreator {
     rrSprawdzInstalacje(this.h).then(w => {
       if (!box.isConnected) return;
       if (w.najnowsza && rrNumerWersji(w.najnowsza) > rrNumerWersji(w.wersja))
-        this._html(box, this._alert('warning', W.verNowa(w.najnowsza, w.wersja), [[W.btnHacs, '/hacs/dashboard'], [W.btnPrzeladuj, 'reload']]));
-      else this._html(box, this._alert('success', W.verOk(w.wersja)));
+        this._html(box, this._alert('warning', W.verNowa, [[W.btnHacs, '/hacs/dashboard'], [W.btnPrzeladuj, 'reload']]));
+      else this._html(box, this._alert('success', W.verOk));
       if (w.zasoby > 1) this._html(box, this._alert('warning', W.zasobyDup(w.zasoby), [[W.btnZasoby, '/config/lovelace/resources']]));
     });
   }
