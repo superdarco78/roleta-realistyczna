@@ -2,7 +2,7 @@ import { RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex, rrKontrast } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
-import { RR_ED, RR_TXT, RR_KOL_NAZWY, rrJezyk } from './jezyk.js';
+import { RR_ED, RR_TXT, RR_KOL_NAZWY, RR_JEZYKI, RR_NAZWY_JEZYKOW, rrJezyk } from './jezyk.js';
 import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, RR_GKLUCZE, rrGlobLoad, rrGlobSave } from './globalne.js';
 import { RR_EDYTOR_STYL } from './edytor-styl.js';
@@ -123,7 +123,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   <div class="kalw"><b id="kalV">0.0 s</b><button class="play" id="kalZap" hidden>${L.kzap}</button></div></div>
  <button class="rst" data-rst="ruch">${L.rst}</button></details>
  <details class="sec" data-sec="zaaw"><summary>${L.sec_zaaw}</summary>
- <div class="grp"><div class="lb">${L.jez}</div><div class="seg">${[['auto', L.jauto], ['pl', 'Polski'], ['en', 'English']].map(([v, t]) => `<button data-jz="${v}">${t}</button>`).join('')}</div></div>
+ <div class="grp"><div class="lb">${L.jez}</div><div class="seg osl">${[['auto', L.jauto], ...Object.keys(RR_JEZYKI).map(k => [k, RR_NAZWY_JEZYKOW[k] || k])].map(([v, t]) => `<button data-jz="${v}">${t}</button>`).join('')}</div></div>
  <div class="grp"><div class="lb">${L.opc}</div>
   ${RR_PRZEL.map(k => `<label class="sw">${L[k]} <ha-switch id="${k}"></ha-switch></label>`).join('')}</div>
  <div class="grp"><div class="lb">${L.glob}</div><p class="hint">${L.globh}</p>

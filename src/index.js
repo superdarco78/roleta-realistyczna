@@ -4,7 +4,7 @@
 import { RR_WERSJA } from './stale.js';
 import { RoletaRealistyczna } from './karta.js';
 import { RoletaRealistycznaEditor } from './edytor.js';
-import { RR_TXT } from './jezyk.js';
+import { RR_TXT, rrKod } from './jezyk.js';
 
 console.info('%c Motor HA ' + RR_WERSJA + ' %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ', 'background:#232427;color:#fff;border-radius:3px 0 0 3px', 'background:#ff8f00;color:#fff;border-radius:0 3px 3px 0');
 
@@ -15,7 +15,7 @@ rej('okno-ha-editor', RoletaRealistycznaEditor);
 rej('roleta-realistyczna', class extends RoletaRealistyczna {});
 rej('roleta-realistyczna-editor', class extends RoletaRealistycznaEditor {});
 
-const T = RR_TXT[String(document.documentElement.lang || navigator.language || 'pl').startsWith('pl') ? 'pl' : 'en'];
+const T = RR_TXT[rrKod(document.documentElement.lang || navigator.language || 'pl')];
 window.customCards = window.customCards || [];
 window.customCards.push({ type: 'okno-ha', name: T.nazwaKarty, description: T.opisKarty, preview: true, documentationURL: 'https://github.com/superdarco78/roleta-realistyczna#readme',
   /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Motor HA dla okien z integracji i dla rolet */
