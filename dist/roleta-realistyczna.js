@@ -93,10 +93,13 @@
         i otwiera właściwe miejsce w HA; pomiar czasu przejazdu w kreatorze; sprawdza, czy jest nowsza wersja i czy karta nie jest
         dodana dwa razy w zasobach; dodaje kopię karty na inny panel albo nowy widok „Rolety” jednym kliknięciem; kreator odświeża się
         sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
-        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie */
+        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
+   v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
+        edytora i kreatora; link do instrukcji w oknie wyboru kart */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v23";
+  var RR_WERSJA = "v24";
+  var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
     rama: "#f4f4f2",
@@ -1307,7 +1310,7 @@
 .ver{font-size:10px;font-weight:500;color:var(--secondary-text-color);border:1px solid var(--divider-color,rgba(127,127,127,.4));border-radius:8px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .sb{font-size:13px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
-.win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? 0.55 : 0.9))}px;margin:0 auto;padding:6px;border-radius:3px;
+.win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? 0.72 : 0.9))}px;margin:0 auto;padding:6px;border-radius:3px;
  background:${sloje ? sloje + "," : ""}${rama};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 3px 10px rgba(0,0,0,.45)}
 .win.stal .slot+.slot{margin-left:10px}
 .win.ruch .slot{margin:0;box-shadow:inset 0 8px 8px -8px rgba(0,0,0,.6),inset 0 -8px 8px -8px rgba(0,0,0,.6)}
@@ -1436,7 +1439,7 @@
       this._render();
     }
     getCardSize() {
-      return Math.ceil((this._cfg?.wysokosc || 260) / 50) + 2;
+      return Math.ceil(rrWysOkna(this._cfg || {}, +this._cfg?.skrzydla === 1 ? 1 : 2) / 50) + 2;
     }
     getGridOptions() {
       return { columns: 12, min_columns: 6, rows: "auto" };
@@ -1503,7 +1506,7 @@
       return out.map((e, i) => wyb[i] && this._hass.states[wyb[i]] ? wyb[i] : e);
     }
     _build(n) {
-      const c = this._cfg, col = rrHex(c.kolor), H = c.wysokosc, rama = c.rama, T = this._t;
+      const c = this._cfg, col = rrHex(c.kolor), H = rrWysOkna(c, n), rama = c.rama, T = this._t;
       const sloje = RR_RAMY[rama]?.[2] ? "repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 4px,rgba(255,255,255,.05) 4px 5px,transparent 5px 9px),repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 5px,rgba(255,255,255,.04) 5px 6px,transparent 6px 11px)" : "";
       const ruch = n > 1 && c.slupek === "ruchomy";
       const root = this.shadowRoot || this.attachShadow({ mode: "open" });
@@ -1821,7 +1824,7 @@
       this._el.sash.forEach((S, i) => {
         const o = this._sh[i];
         if (!o) return;
-        const gh = S.glass.clientHeight || this._cfg.wysokosc - 26;
+        const gh = S.glass.clientHeight || rrWysOkna(this._cfg, this._n) - 26;
         if (!this._dr) {
           const g = o.cmd && Math.abs(o.shown - o.cmd.p) > 0.5 ? o.cmd.p : null;
           if (g === null) S.ghost.style.display = "none";
@@ -2899,5 +2902,5 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   if (!customElements.get("roleta-realistyczna")) customElements.define("roleta-realistyczna", RoletaRealistyczna);
   if (!customElements.get("roleta-realistyczna-editor")) customElements.define("roleta-realistyczna-editor", RoletaRealistycznaEditor);
   window.customCards = window.customCards || [];
-  window.customCards.push({ type: "roleta-realistyczna", name: "Roleta dzień-noc " + RR_WERSJA, description: "Realistyczna roleta dzień-noc na oknie 2-skrzydłowym z animacją, przeciąganiem i prawdziwą pogodą za oknem", preview: true });
+  window.customCards.push({ type: "roleta-realistyczna", name: "Roleta dzień-noc " + RR_WERSJA, description: "Realistyczna roleta dzień-noc na oknie 2-skrzydłowym z animacją, przeciąganiem i prawdziwą pogodą za oknem", preview: true, documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme" });
 })();

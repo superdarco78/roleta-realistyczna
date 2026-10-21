@@ -10,4 +10,4 @@ if (!customElements.get('roleta-realistyczna')) customElements.define('roleta-re
 if (!customElements.get('roleta-realistyczna-editor')) customElements.define('roleta-realistyczna-editor', RoletaRealistycznaEditor);
 
 window.customCards = window.customCards || [];
-window.customCards.push({ type: 'roleta-realistyczna', name: 'Roleta dzień-noc ' + RR_WERSJA, description: 'Realistyczna roleta dzień-noc na oknie 2-skrzydłowym z animacją, przeciąganiem i prawdziwą pogodą za oknem', preview: true });
+window.customCards.push({ type: 'roleta-realistyczna', name: 'Roleta dzień-noc ' + RR_WERSJA, description: 'Realistyczna roleta dzień-noc na oknie 2-skrzydłowym z animacją, przeciąganiem i prawdziwą pogodą za oknem', preview: true, documentationURL: 'https://github.com/superdarco78/roleta-realistyczna#readme' });

@@ -11,7 +11,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .ver{font-size:10px;font-weight:500;color:var(--secondary-text-color);border:1px solid var(--divider-color,rgba(127,127,127,.4));border-radius:8px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .sb{font-size:13px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
-.win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? .55 : .9))}px;margin:0 auto;padding:6px;border-radius:3px;
+.win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? .72 : .9))}px;margin:0 auto;padding:6px;border-radius:3px;
  background:${sloje ? sloje + ',' : ''}${rama};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 3px 10px rgba(0,0,0,.45)}
 .win.stal .slot+.slot{margin-left:10px}
 .win.ruch .slot{margin:0;box-shadow:inset 0 8px 8px -8px rgba(0,0,0,.6),inset 0 -8px 8px -8px rgba(0,0,0,.6)}

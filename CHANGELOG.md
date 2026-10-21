@@ -1,5 +1,11 @@
 # 📝 Historia zmian
 
+## v24 – Większe okno jednoskrzydłowe
+
+- 🪟 Okno z jednym skrzydłem jest teraz większe: wyższe i szersze, wypełnia kartę tak jak okno z dwoma skrzydłami
+- 👀 To samo w podglądzie edytora i kreatora
+- 📖 W oknie wyboru kart jest link do instrukcji
+
 ## v23 – Kreator dla początkujących w 7 krokach
 
 - 🪄 Nowy kreator: roleta → okno i skrzydła → prędkość silnika → czujniki okna → pogoda → wygląd i nazwa → podsumowanie i miejsce karty
