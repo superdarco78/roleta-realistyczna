@@ -18,7 +18,7 @@ const zmiany = log.slice(od + 1, naglowki[1]?.[1] ?? log.length).join('\n').trim
 const url = `https://github.com/${repo}`;
 const raw = `https://raw.githubusercontent.com/${repo}/main`;
 const obrazek = existsSync(`img/wydania/${wersja}.png`)
-  ? `<p align="center"><img src="${raw}/img/wydania/${wersja}.png" width="100%" alt="${wersja}"></p>` : '';
+  ? `<p align="center"><a name="r0" href="#r0"><img src="${raw}/img/wydania/${wersja}.png" width="100%" alt="${wersja}"></a></p>` : '';
 const pola = {
   REPO: repo, REPO_URL: url, RAW: raw, WLASCICIEL: wlasciciel, NAZWA: nazwa, WERSJA: wersja, TYTUL: tytul, ZMIANY: zmiany, OBRAZEK: obrazek,
   POBIERZ: `${url}/releases/download/${wersja}/roleta-realistyczna.js`,
