@@ -1,5 +1,11 @@
 # 📝 Historia zmian
 
+## v26.1 – Poprawiony opis w HACS
+
+- 📄 Opis karty w HACS wygląda teraz tak samo jak na GitHubie: obrazki zamiast kodu, nic nie wychodzi poza ekran
+- 🌅 Nowy baner na górze opisu
+- ✅ Sama karta bez zmian
+
 ## v26 – Typy osłon, promienie słońca i dźwięk silnika
 
 - 🪟 **Typ osłony** do wyboru: dzień-noc, pełna, plisa, rzymska, żaluzja i roleta zewnętrzna. Wybierasz w edytorze (🎨 Wygląd) albo w kreatorze
