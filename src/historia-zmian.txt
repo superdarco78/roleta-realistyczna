@@ -24,7 +24,7 @@
         uchwyt do podnoszenia na środku dolnej listwy każdego skrzydła
    v9 – pogoda rusza się też na telefonie z włączonym „ograniczeniem ruchu” / oszczędzaniem baterii (v8 ją wtedy zamrażała);
         błysk burzy w obu skrzydłach naraz
-   v10 – animacja nie skacze od fałszywych meldunków Moes (test Dariusza 20.10 19:28: przy „50%” silniki meldowały 0 i 100
+   v10 – animacja nie skacze od fałszywych meldunków Moes (test 20.10 19:28: przy „50%” silniki meldowały 0 i 100
         w trakcie jazdy, prawy nawet na końcu 100, choć oba stanęły w połowie): po komendzie z karty liczy się cel komendy,
         meldunki 0/100 niezgodne z celem są pomijane, a każdy meldunek brany jest tylko raz; po przeciągnięciu lub kliknięciu
         przerywana linia z „→ 50%” pokazuje, gdzie roleta jedzie, aż dojedzie; w nagłówku „32% → 50%”
