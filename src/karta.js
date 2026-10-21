@@ -6,11 +6,13 @@ import { RR_TXT, rrJezyk } from './jezyk.js';
 import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, rrGlobLoad } from './globalne.js';
 import { rrKartaStyl } from './karta-styl.js';
+import { rrSamoOdswiez } from './panele.js';
 
 /* Karta: okno z roletą dzień-noc, animacja w tempie silnika, pogoda za oknem, kontaktrony */
 export class RoletaRealistyczna extends HTMLElement {
   static getStubConfig(hass) {
-    const e = rrKandydaci(hass, 'cover')[0]?.id;   // v23: najlepiej dopasowana roleta (najpierw grupa = okno 2-skrzydłowe)
+    /* v29: najpierw okno z integracji Okno HA, potem najlepiej dopasowana roleta (v23: najpierw grupa = okno 2-skrzydłowe) */
+    const e = Object.keys(hass?.states || {}).find(k => k.startsWith('cover.') && hass.states[k].attributes?.okno_ha) || rrKandydaci(hass, 'cover')[0]?.id;
     return { entity: e || 'cover.roleta' };
   }
   static getConfigElement() { return document.createElement('okno-ha-editor'); }
@@ -18,12 +20,16 @@ export class RoletaRealistyczna extends HTMLElement {
   setConfig(cfg) {
     if (!cfg || !cfg.entity) throw new Error('Wybierz encję rolety (cover.*)');
     this._raw = cfg;
-    this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, cfg);
+    /* v29: ustawienia z integracji Okno HA (atrybut okno_ha encji) – karta z samą encją wygląda jak w kreatorze integracji */
+    this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, this._urz || {}, cfg);
     this._built = false; this._sh = [];
     if (this._hass) this._render();
   }
   set hass(h) {
     this._hass = h;
+    rrSamoOdswiez(h);
+    const urz = h?.states?.[this._raw?.entity]?.attributes?.okno_ha, uk = JSON.stringify(urz || null);
+    if (uk !== this._uk) { this._uk = uk; this._urz = urz && typeof urz === 'object' ? urz : null; if (this._raw) { this.setConfig(this._raw); return; } }
     if (!this._gok) { this._gok = 1; rrGlobLoad(h).then(() => { if (this._raw) this.setConfig(this._raw); }); }
     this._render();
   }

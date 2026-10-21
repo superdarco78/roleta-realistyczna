@@ -102,10 +102,12 @@
         przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
    v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
         boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
-   v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki) */
+   v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
+   v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
+        po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v28";
+  var RR_WERSJA = "v29";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -1638,10 +1640,75 @@
 ${rrOslonaStyl(c.oslona, col, rama)}
 `;
 
+  // src/panele.js
+  var rrBiezacyPanel = () => {
+    const p = decodeURIComponent(location.pathname.split("/")[1] || "");
+    return p === "lovelace" ? null : p;
+  };
+  async function rrPanele(hass) {
+    const lista = await hass.callWS({ type: "lovelace/dashboards/list" }).catch(() => []);
+    return [{ url_path: null, title: null, mode: "storage" }, ...lista.filter((d) => d.url_path && d.url_path !== "map")];
+  }
+  var rrKonfigPanelu = (hass, url_path) => hass.callWS({ type: "lovelace/config", url_path, force: true });
+  async function rrDodajDoPanelu(hass, url_path, widok, karta, tytul) {
+    const cfg = await rrKonfigPanelu(hass, url_path);
+    if (cfg.strategy) throw new Error("strategy");
+    const views = cfg.views || (cfg.views = []);
+    let v = views[widok];
+    if (widok === "nowy") {
+      let path = "rolety", i = 2;
+      while (views.some((x) => x.path === path)) path = "rolety-" + i++;
+      v = { title: tytul, path, icon: "mdi:roller-shade", type: "sections", sections: [{ type: "grid", cards: [] }] };
+      views.push(v);
+    }
+    if (!v || v.strategy || v.type === "panel") throw new Error("view");
+    if (v.type === "sections" || v.sections) {
+      const s = v.sections || (v.sections = []);
+      if (!s.length) s.push({ type: "grid", cards: [] });
+      const ost = s[s.length - 1];
+      (ost.cards || (ost.cards = [])).push(karta);
+    } else (v.cards || (v.cards = [])).push(karta);
+    await hass.callWS({ type: "lovelace/config/save", url_path, config: cfg });
+    return v;
+  }
+  var RR_INST = { t: 0, p: null };
+  function rrSprawdzInstalacje(hass) {
+    if (RR_INST.p && Date.now() - RR_INST.t < 36e5) return RR_INST.p;
+    RR_INST.t = Date.now();
+    const wynik = { wersja: RR_WERSJA };
+    const gh = fetch("https://api.github.com/repos/superdarco78/roleta-realistyczna/releases/latest").then((r) => r.ok ? r.json() : null).then((j) => {
+      if (j?.tag_name) wynik.najnowsza = j.tag_name;
+    }).catch(() => {
+    });
+    const zas = hass?.user?.is_admin && hass.callWS ? hass.callWS({ type: "lovelace/resources" }).then((l) => {
+      wynik.zasoby = (l || []).filter((x) => /roleta-realistyczna|okno-ha/.test(x.url)).length;
+    }).catch(() => {
+    }) : null;
+    return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
+  }
+  var rrNumerWersji = (v) => parseInt(String(v || "").replace(/^\D+/, ""), 10) || 0;
+  var RR_ODSW = { z: 0 };
+  function rrSamoOdswiez(hass) {
+    if (RR_ODSW.z) return;
+    RR_ODSW.z = 1;
+    const upd = Object.values(hass?.states || {}).find((s) => s.entity_id?.startsWith("update.") && /roleta-realistyczna|okno-ha/.test(String(s.attributes?.release_url || "") + String(s.attributes?.title || "") + s.entity_id));
+    const inst = upd?.attributes?.installed_version;
+    if (!inst || rrNumerWersji(inst) <= rrNumerWersji(RR_WERSJA)) return;
+    const klucz = "okno-ha-odswiezone-" + inst;
+    try {
+      if (sessionStorage.getItem(klucz)) return;
+      sessionStorage.setItem(klucz, "1");
+    } catch (e) {
+      return;
+    }
+    console.info("Okno HA: zainstalowana " + inst + ", działa " + RR_WERSJA + " – przeładowuję stronę");
+    setTimeout(() => location.reload(), 300);
+  }
+
   // src/karta.js
   var RoletaRealistyczna = class extends HTMLElement {
     static getStubConfig(hass) {
-      const e = rrKandydaci(hass, "cover")[0]?.id;
+      const e = Object.keys(hass?.states || {}).find((k) => k.startsWith("cover.") && hass.states[k].attributes?.okno_ha) || rrKandydaci(hass, "cover")[0]?.id;
       return { entity: e || "cover.roleta" };
     }
     static getConfigElement() {
@@ -1650,13 +1717,23 @@ ${rrOslonaStyl(c.oslona, col, rama)}
     setConfig(cfg) {
       if (!cfg || !cfg.entity) throw new Error("Wybierz encję rolety (cover.*)");
       this._raw = cfg;
-      this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, cfg);
+      this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, this._urz || {}, cfg);
       this._built = false;
       this._sh = [];
       if (this._hass) this._render();
     }
     set hass(h) {
       this._hass = h;
+      rrSamoOdswiez(h);
+      const urz = h?.states?.[this._raw?.entity]?.attributes?.okno_ha, uk = JSON.stringify(urz || null);
+      if (uk !== this._uk) {
+        this._uk = uk;
+        this._urz = urz && typeof urz === "object" ? urz : null;
+        if (this._raw) {
+          this.setConfig(this._raw);
+          return;
+        }
+      }
       if (!this._gok) {
         this._gok = 1;
         rrGlobLoad(h).then(() => {
@@ -2200,54 +2277,6 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .kal{display:flex;flex-wrap:wrap;gap:8px}.kal .ok{background:#2e7d32}.play[disabled]{opacity:.4;cursor:default}
 .kalw{display:flex;align-items:center;gap:12px;font-size:20px;font-variant-numeric:tabular-nums;color:var(--primary-text-color)}
 `;
-
-  // src/panele.js
-  var rrBiezacyPanel = () => {
-    const p = decodeURIComponent(location.pathname.split("/")[1] || "");
-    return p === "lovelace" ? null : p;
-  };
-  async function rrPanele(hass) {
-    const lista = await hass.callWS({ type: "lovelace/dashboards/list" }).catch(() => []);
-    return [{ url_path: null, title: null, mode: "storage" }, ...lista.filter((d) => d.url_path && d.url_path !== "map")];
-  }
-  var rrKonfigPanelu = (hass, url_path) => hass.callWS({ type: "lovelace/config", url_path, force: true });
-  async function rrDodajDoPanelu(hass, url_path, widok, karta, tytul) {
-    const cfg = await rrKonfigPanelu(hass, url_path);
-    if (cfg.strategy) throw new Error("strategy");
-    const views = cfg.views || (cfg.views = []);
-    let v = views[widok];
-    if (widok === "nowy") {
-      let path = "rolety", i = 2;
-      while (views.some((x) => x.path === path)) path = "rolety-" + i++;
-      v = { title: tytul, path, icon: "mdi:roller-shade", type: "sections", sections: [{ type: "grid", cards: [] }] };
-      views.push(v);
-    }
-    if (!v || v.strategy || v.type === "panel") throw new Error("view");
-    if (v.type === "sections" || v.sections) {
-      const s = v.sections || (v.sections = []);
-      if (!s.length) s.push({ type: "grid", cards: [] });
-      const ost = s[s.length - 1];
-      (ost.cards || (ost.cards = [])).push(karta);
-    } else (v.cards || (v.cards = [])).push(karta);
-    await hass.callWS({ type: "lovelace/config/save", url_path, config: cfg });
-    return v;
-  }
-  var RR_INST = { t: 0, p: null };
-  function rrSprawdzInstalacje(hass) {
-    if (RR_INST.p && Date.now() - RR_INST.t < 36e5) return RR_INST.p;
-    RR_INST.t = Date.now();
-    const wynik = { wersja: RR_WERSJA };
-    const gh = fetch("https://api.github.com/repos/superdarco78/roleta-realistyczna/releases/latest").then((r) => r.ok ? r.json() : null).then((j) => {
-      if (j?.tag_name) wynik.najnowsza = j.tag_name;
-    }).catch(() => {
-    });
-    const zas = hass?.user?.is_admin && hass.callWS ? hass.callWS({ type: "lovelace/resources" }).then((l) => {
-      wynik.zasoby = (l || []).filter((x) => /roleta-realistyczna|okno-ha/.test(x.url)).length;
-    }).catch(() => {
-    }) : null;
-    return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
-  }
-  var rrNumerWersji = (v) => parseInt(String(v || "").replace(/^\D+/, ""), 10) || 0;
 
   // src/kreator.js
   var RR_KROKI = [

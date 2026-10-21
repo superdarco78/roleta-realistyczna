@@ -1,5 +1,12 @@
 # 📝 Historia zmian
 
+## v29 – Współpraca z integracją Okno HA
+
+- 🔌 Karta sama bierze ustawienia z integracji **Okno HA** (Ustawienia → Integracje). Wystarczy wybrać okno z listy
+- ✏️ Zmiany w integracji („Konfiguruj”) od razu widać na karcie
+- 🔄 Po aktualizacji w HACS karta sama raz przeładowuje stronę, gdy przeglądarka trzyma starą wersję. Nie trzeba czyścić pamięci ani naciskać Ctrl + F5
+- ✅ Karty bez integracji działają jak wcześniej
+
 ## v28.1 – Klikalne kafelki i przyciski w HACS
 
 - 👆 Kafelki, spis treści i przyciski kreatora w opisie działają też w HACS (otwierają właściwe miejsce na GitHubie)
