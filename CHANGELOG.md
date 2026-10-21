@@ -1,5 +1,11 @@
 # 📝 Historia zmian
 
+## v32 – Edytor z dużym podglądem obok
+
+- 🖥️ Na szerokim ekranie edytor ma dwie kolumny: ustawienia po lewej, duży podgląd po prawej. Podgląd zostaje na miejscu przy przewijaniu, a każda zmiana widać od razu
+- 🎨 Kółka kolorów pokazują prawdziwe kolory i układają się w kilka rzędów. Bez paska przewijania i suwaka pod kolorami
+- 📌 Przypięty podgląd w wąskim oknie jest większy (75% zamiast 50%)
+
 ## v31 – Edytor zapisuje w urządzeniu Okno HA
 
 - 🔗 Gdy karta pokazuje okno z integracji **Okno HA**, każda zmiana w edytorze (także w kreatorze z kółkami) zapisuje się sama w urządzeniu, tak jak „Konfiguruj”. Na pulpicie zostaje tylko wybór okna
