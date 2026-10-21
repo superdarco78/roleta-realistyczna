@@ -1,5 +1,11 @@
 # 📝 Historia zmian
 
+## v31 – Edytor zapisuje w urządzeniu Okno HA
+
+- 🔗 Gdy karta pokazuje okno z integracji **Okno HA**, każda zmiana w edytorze (także w kreatorze z kółkami) zapisuje się sama w urządzeniu, tak jak „Konfiguruj”. Na pulpicie zostaje tylko wybór okna
+- ➕ „Dodaj do panelu” na stronie urządzenia proponuje kartę Okno HA (Home Assistant 2026.6 i nowszy)
+- 🪟 Panel **Okno HA** w menu bocznym używa tego samego kreatora
+
 ## v30 – Aktualizacja jednym kliknięciem
 
 - 🔔 Z integracją **Okno HA** nowa wersja karty pokazuje się sama w **Ustawienia → Aktualizacje** (sprawdza co 2 minuty), bez wchodzenia w HACS

@@ -97,4 +97,5 @@
    v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
    v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
         po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
-   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie */
+   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
+   v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia */

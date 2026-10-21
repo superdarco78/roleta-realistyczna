@@ -225,7 +225,8 @@
       "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
     ],
     "osw": "W pokoju",
-    "osz": "Na zewnątrz"
+    "osz": "Na zewnątrz",
+    "urz": "🔗 To okno z integracji Okno HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
   },
   "kolory": {
     "bezowy": "beżowy",
