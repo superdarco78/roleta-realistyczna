@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF } from './stale.js';
+import { RR_WERSJA, RR_DEF, RR_OSLONY, RR_OSL_IKONY } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
@@ -11,7 +11,7 @@ import { RrKreator, rrKreatorPotrzebny } from './kreator.js';
 /* Edytor graficzny (v6): jak symulator – kółka kolorów, suwaki, przełączniki i żywy podgląd z animacją.
    Podgląd steruje udawanym silnikiem, nigdy prawdziwą roletą. */
 export const RR_POLA = ['entity', 'name', 'roleta_lewa', 'roleta_prawa', 'predkosc_lewa', 'predkosc_prawa', 'zrodlo', 'pogoda', 'tlo', 'czujnik_lewe', 'tryb_lewe', 'czujnik_prawe', 'tryb_prawe'];
-export const RR_PRZEL = ['auto_czujniki', 'klamki', 'wibracja', 'przyciski', 'niebo', 'widok', 'uchwyty', 'uchwyt_srodek', 'osobno', 'odwroc'];
+export const RR_PRZEL = ['auto_czujniki', 'klamki', 'promienie', 'dzwiek', 'wibracja', 'przyciski', 'niebo', 'widok', 'uchwyty', 'uchwyt_srodek', 'osobno', 'odwroc'];
 export class RoletaRealistycznaEditor extends HTMLElement {
   setConfig(c) { this._cfg = Object.assign({}, c); this._go(); }
   set hass(h) { this._hass = h; this._go(); }
@@ -58,6 +58,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
+ <div class="grp"><div class="lb">${L.osl}</div><div class="seg osl">${RR_OSLONY.map((v, k) => `<button data-osl="${v}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[k]}</button>`).join('')}</div><p class="hint">${L.d_osl}</p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map(k => chip('kolor', k, RR_KOLORY[k], KN[k] || k)).join('')}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>
@@ -116,7 +117,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     $('#kalOk').onclick = () => this._kalOk();
     $('#akal').onclick = () => this._akal();
     /* v22: przywracanie domyślnych w każdym dziale */
-    const RST = { wyg: ['kolor', 'siatka', 'rama', 'skrzydla', 'slupek', 'wysokosc'], okn: ['kat_uchyl', 'otwarcie'], ruch: ['czas', 'krok', 'pozycje'], zaaw: ['jezyk', ...RR_PRZEL] };
+    const RST = { wyg: ['oslona', 'kolor', 'siatka', 'rama', 'skrzydla', 'slupek', 'wysokosc'], okn: ['kat_uchyl', 'otwarcie'], ruch: ['czas', 'krok', 'pozycje'], zaaw: ['jezyk', ...RR_PRZEL] };
     root.querySelectorAll('[data-rst]').forEach(b => b.onclick = () => RST[b.dataset.rst].forEach(k => this._set(k, null)));
     /* v23: kreator w 7 krokach (src/kreator.js) – nowa karta = kreator od razu, później przycisk 🪄 */
     this._kr = new RrKreator(this, $('.wiz'));
@@ -148,6 +149,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     $('#siaOwn').oninput = e => this._set('siatka', e.target.value);
     $('#ramOwn').oninput = e => this._set('rama', e.target.value);
     root.querySelectorAll('[data-sk]').forEach(b => b.onclick = () => this._set('skrzydla', +b.dataset.sk));
+    root.querySelectorAll('[data-osl]').forEach(b => b.onclick = () => this._set('oslona', b.dataset.osl));
     root.querySelectorAll('[data-sl]').forEach(b => b.onclick = () => this._set('slupek', b.dataset.sl));
     $('#wys').oninput = e => this._set('wysokosc', +e.target.value);
     $('#uch').oninput = e => { this._okp = 'uchyl'; this._set('kat_uchyl', +e.target.value); };
@@ -319,6 +321,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     r.querySelector('#kolOwn').value = /^#[0-9a-f]{6}$/i.test(rrHex(kol)) ? rrHex(kol) : '#232427';
     r.querySelector('#ramOwn').value = /^#[0-9a-f]{6}$/i.test(rama) ? rama : '#f4f4f2';
     r.querySelectorAll('[data-sk]').forEach(b => b.setAttribute('aria-pressed', +b.dataset.sk === +this._val('skrzydla')));
+    r.querySelectorAll('[data-osl]').forEach(b => b.setAttribute('aria-pressed', b.dataset.osl === this._val('oslona')));
     r.querySelectorAll('[data-sl]').forEach(b => b.setAttribute('aria-pressed', b.dataset.sl === this._val('slupek')));
     r.querySelector('#slGrp').style.display = +this._val('skrzydla') === 1 ? 'none' : '';
     const set = (id, v, txt) => { const el = r.querySelector('#' + id); if (r.activeElement !== el) el.value = v; r.querySelector('#' + id + 'V').textContent = txt; };

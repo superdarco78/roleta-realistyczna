@@ -97,10 +97,12 @@
    v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
         edytora i kreatora; link do instrukcji w oknie wyboru kart
    v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
-        stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą */
+        stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą
+   v26 – typ osłony (dzień-noc, pełna, plisa, rzymska, żaluzja, zewnętrzna) w edytorze i kreatorze; promienie słońca wpadające
+        przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v25";
+  var RR_WERSJA = "v26";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -135,8 +137,13 @@
     wibracja: true,
     slupek: "staly",
     klamki: true,
-    auto_czujniki: true
+    auto_czujniki: true,
+    oslona: "zebra",
+    promienie: true,
+    dzwiek: false
   };
+  var RR_OSLONY = ["zebra", "pelna", "plisa", "rzymska", "zaluzja", "zewnetrzna"];
+  var RR_OSL_IKONY = { zebra: "mdi:roller-shade", pelna: "mdi:roller-shade-closed", plisa: "mdi:blinds", rzymska: "mdi:curtains", zaluzja: "mdi:blinds-horizontal", zewnetrzna: "mdi:window-shutter" };
   var RR_PAS = 16;
   var RR_SIATKA = 10;
   var RR_OKRES = RR_PAS + RR_SIATKA;
@@ -583,7 +590,19 @@
           "otworz",
           "otwarte (na zawiasach do środka)"
         ]
-      ]
+      ],
+      osl: "Typ osłony",
+      osln: [
+        "Dzień-noc",
+        "Pełna",
+        "Plisa",
+        "Rzymska",
+        "Żaluzja",
+        "Zewnętrzna"
+      ],
+      d_osl: "Jak wygląda materiał. Dzień-noc ma pasy pełne i przezroczyste. Żaluzja ma listewki. Zewnętrzna to roleta za oknem z aluminiowych profili.",
+      promienie: "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
+      dzwiek: "Cichy dźwięk silnika przy ruchu (po kliknięciu)"
     },
     kolory: {
       bezowy: "beżowy",
@@ -939,7 +958,19 @@
           "otworz",
           "open (on hinges, inward)"
         ]
-      ]
+      ],
+      osl: "Shade type",
+      osln: [
+        "Day-night",
+        "Blackout",
+        "Pleated",
+        "Roman",
+        "Venetian",
+        "Shutter"
+      ],
+      d_osl: "How the material looks. Day-night has solid and sheer stripes. Venetian has slats. Shutter is an outside roller shutter made of aluminium profiles.",
+      promienie: "Sun rays coming through the window (daytime, when sunny)",
+      dzwiek: "Quiet motor sound while moving (after a tap)"
     },
     kolory: {
       czarny: "black",
@@ -1279,7 +1310,10 @@
     "otwarcie",
     "jezyk",
     "zrodlo",
-    "auto_czujniki"
+    "auto_czujniki",
+    "oslona",
+    "promienie",
+    "dzwiek"
   ];
   var RR_G = { v: null, p: null };
   var rrGlobLoad = (hass) => {
@@ -1307,6 +1341,32 @@
   };
 
   // src/karta-styl.js
+  function rrTkanina(typ, col, c) {
+    const S = (k) => rrShade(col, k), A = (x, a) => rrRgba(x, a);
+    const brzegi = "linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2))";
+    const splot = "repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px)", bez = "linear-gradient(transparent,transparent)";
+    const h = RR_OKRES / 2;
+    switch (typ) {
+      case "pelna":
+        return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-0.06)} ${h}px,${col} ${RR_OKRES}px)`;
+      case "plisa":
+        return `${brzegi},${bez},linear-gradient(180deg,${A(S(0.2), 0.94)} 0,${A(col, 0.94)} 5px,${A(S(-0.24), 0.96)} ${h - 0.5}px,${A(S(0.2), 0.94)} ${h}px,${A(col, 0.94)} ${h + 5}px,${A(S(-0.24), 0.96)} ${RR_OKRES - 0.5}px,${A(S(0.2), 0.94)} ${RR_OKRES}px)`;
+      case "rzymska":
+        return `${brzegi},${splot},linear-gradient(180deg,${A(col, 0.93)} 0,${A(S(0.12), 0.93)} 17px,${A(S(-0.28), 0.96)} ${RR_OKRES - 1}px,${A(S(0.1), 0.93)} ${RR_OKRES}px)`;
+      case "zaluzja": {
+        const lam = (o) => `${S(0.32)} ${o}px,${col} ${o + 4}px,${S(-0.3)} ${o + 10}px,rgba(0,0,0,.35) ${o + 10}px,transparent ${o + 11}px,transparent ${o + h}px`;
+        return `${bez},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
+      }
+      case "zewnetrzna": {
+        const pro = (o) => `${S(0.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-0.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
+        return `${brzegi},${bez},linear-gradient(180deg,${pro(0)},${pro(h)})`;
+      }
+      default:
+        return `${brzegi},${splot},linear-gradient(180deg,
+   ${S(0.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-0.25)} ${RR_PAS}px,
+   ${A(c.siatka ? rrHex(c.siatka) : S(0.3), 0.62)} ${RR_PAS}px,${A(c.siatka ? rrShade(rrHex(c.siatka), 0.1) : S(0.4), 0.55)} ${RR_OKRES}px)`;
+    }
+  }
   var rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 :host{display:block}
 .rr{padding:14px 14px 12px;user-select:none;-webkit-user-select:none}
@@ -1373,13 +1433,14 @@
 .cas:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 0 6px;box-shadow:1px 0 0 rgba(0,0,0,.08)}
 .cas:after{content:"";position:absolute;right:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 6px 0;box-shadow:-1px 0 0 rgba(0,0,0,.08)}
 .fabric{position:absolute;left:1px;right:1px;top:${RR_KASETA - 2}px;height:0;z-index:2;
- background:
-  linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2)),
-  repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px),
-  linear-gradient(180deg,
-   ${rrShade(col, 0.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${rrShade(col, -0.25)} ${RR_PAS}px,
-   ${rrRgba(c.siatka ? rrHex(c.siatka) : rrShade(col, 0.3), 0.62)} ${RR_PAS}px,${rrRgba(c.siatka ? rrShade(rrHex(c.siatka), 0.1) : rrShade(col, 0.4), 0.55)} ${RR_OKRES}px);
+ background:${rrTkanina(c.oslona, col, c)};
  background-size:100% 100%,100% 100%,100% ${RR_OKRES}px}
+/* v26: promienie słońca wpadające przez okno (tylko w dzień, przy słońcu) */
+.ray{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.5s;mix-blend-mode:screen;
+ background:linear-gradient(115deg,rgba(255,214,120,0) 15%,rgba(255,214,120,.26) 40%,rgba(255,214,120,0) 62%),
+  linear-gradient(115deg,rgba(255,236,190,0) 55%,rgba(255,236,190,.16) 70%,rgba(255,236,190,0) 82%);filter:blur(2px)}
+.sash.slonce .ray{opacity:1;animation:rrray 7s ease-in-out infinite alternate}
+@keyframes rrray{from{opacity:.75}to{opacity:1}}
 .bar{position:absolute;left:0;right:0;height:${RR_LISTWA}px;top:${RR_KASETA}px;z-index:3;border-radius:1px;
  background:linear-gradient(180deg,#fafafa,#bdbdbd);box-shadow:0 2px 3px rgba(0,0,0,.4)}
 /* uchwyt do podnoszenia na środku dolnej listwy – złap i przeciągnij */
@@ -1454,6 +1515,7 @@
     disconnectedCallback() {
       cancelAnimationFrame(this._raf);
       this._raf = null;
+      this._szum(false);
       if (this._gl) window.removeEventListener("rr-glob", this._gl);
     }
     connectedCallback() {
@@ -1471,6 +1533,39 @@
       if (st.state === "closed" && p === 100 && goal !== 100) return null;
       if (goal !== void 0 && (p === 0 || p === 100) && p !== goal) return null;
       return p;
+    }
+    /* v26: cichy szum silnika z WebAudio – włącza się przy ruchu po kliknięciu, gaśnie, gdy roleta stanie */
+    _szum(on) {
+      try {
+        if (!on) {
+          if (this._au) {
+            const { ctx: ctx2, g: g2 } = this._au;
+            g2.gain.setTargetAtTime(0, ctx2.currentTime, 0.08);
+            setTimeout(() => ctx2.close(), 400);
+            this._au = null;
+          }
+          return;
+        }
+        if (this._au) return;
+        const ctx = new (window.AudioContext || window.webkitAudioContext)(), o = ctx.createOscillator(), o2 = ctx.createOscillator(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+        o.type = "sawtooth";
+        o.frequency.value = 92;
+        o2.type = "sine";
+        o2.frequency.value = 184;
+        f.type = "lowpass";
+        f.frequency.value = 420;
+        g.gain.value = 0;
+        o.connect(f);
+        o2.connect(f);
+        f.connect(g);
+        g.connect(ctx.destination);
+        o.start();
+        o2.start();
+        g.gain.setTargetAtTime(0.035, ctx.currentTime, 0.1);
+        this._au = { ctx, g };
+      } catch (x) {
+        this._au = null;
+      }
     }
     _call(svc, ent, data) {
       ent = ent || this._cfg.entity;
@@ -1494,6 +1589,7 @@
         }
       });
       this._tick();
+      if (this._cfg.dzwiek) this._szum(true);
       if (this._cfg.wibracja !== false) try {
         navigator.vibrate?.(12);
       } catch (x) {
@@ -1523,7 +1619,7 @@
   <div class="slot"><div class="out"><div class="osky"></div><div class="wx owx"></div></div><div class="sash" data-i="${i}">
    <div class="glass"><div class="sky"></div><div class="wx"></div>
     <div class="refl"></div>
-    <div class="fabric"></div><div class="bar"></div>
+    <div class="fabric"></div><i class="ray"></i><div class="bar"></div>
     <div class="cas"></div>
     <div class="ghost"><span></span></div>
     <div class="mv"><ha-icon></ha-icon></div>
@@ -1533,7 +1629,7 @@
       card.innerHTML = `
 <style>${rrKartaStyl({ H, n, sloje, rama, col, c })}</style>
 <div class="rr">
- <div class="hd"><ha-icon icon="mdi:roller-shade"></ha-icon>
+ <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
   <div><div><span class="nm"></span><span class="ver">${RR_WERSJA}</span></div><div class="sb"></div></div><div class="pc"></div></div>
  <div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T2.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div>
  <div class="bt">
@@ -1704,6 +1800,7 @@
       const night = sun?.state === "below_horizon" || !sun && ws?.state === "clear-night";
       const pora = night ? typeof el === "number" && el > -7 ? "zmierzch" : "noc" : typeof el === "number" && el < 8 ? "zloto" : "dzien";
       const typ = !c.niebo ? "plain" : ws ? RR_WX[ws.state] || "cloudy" : "sun", wkey = typ + pora + (c.tlo || "") + (c.widok !== false);
+      const slonce = c.promienie !== false && !night && pora !== "zmierzch" && (typ === "sun" || typ === "partly");
       mem.forEach((e, i) => {
         const S = E.sash[i], ms = this._hass.states[e] || st, mst = ms.state;
         const o0 = this._sh[i];
@@ -1714,6 +1811,7 @@
         const spoko = o0 && o0.rest && now < o0.rest.t ? o0.rest.p : void 0;
         if (o0 && stamp !== o0.stamp) mp = this._pos(ms, o0.cmd ? o0.cmd.p : o0.auto ? o0.auto.p : spoko);
         if (!o0) mp = typeof raw === "number" ? c.odwroc ? 100 - raw : raw : mst === "open" ? 100 : 0;
+        S.root.classList.toggle("slonce", slonce);
         S.root.classList.toggle("uchyl", okno[i] === "uchyl");
         S.root.classList.toggle("otw", okno[i] === "otw");
         const okey = okno[i] ? wkey : "";
@@ -1819,6 +1917,7 @@
         });
         this._paint();
         this._raf = busy ? requestAnimationFrame(step) : null;
+        if (!busy) this._szum(false);
       };
       this._raf = requestAnimationFrame(step);
     }
@@ -1927,6 +2026,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .dot[aria-pressed="true"]{color:var(--primary-text-color)}
 .own{position:relative;width:34px;height:34px;border-radius:50%;overflow:hidden;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}
 .own input{position:absolute;inset:-8px;width:50px;height:50px;opacity:0;cursor:pointer}
+.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:18px}
 .seg{display:inline-flex;border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .seg button{border:none;background:none;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color)}
 .seg button[aria-pressed="true"]{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
@@ -2286,6 +2386,8 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     /* ---------- krok 6: wygląd i nazwa ---------- */
     _k_wyglad(B) {
       const W = this.W, L = this.ed._L, P = RR_PRESETY;
+      this._html(B, `<div class="lb">${esc(L.osl)}</div>`);
+      this._seg(B, RR_OSLONY.map((v, k) => [v, L.osln[k]]), this.ed._val("oslona"), (v) => this._ustaw({ oslona: v }));
       const d = document.createElement("div");
       d.className = "wzl";
       d.innerHTML = P.map((p, i) => `<button data-wp="${i}" aria-pressed="${this.ed._val("rama") === p.rama && this.ed._val("kolor") === p.kolor}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span><span><span class="wzn1">${esc(L.pre[i])}</span></span></button>`).join("");
@@ -2403,7 +2505,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 
   // src/edytor.js
   var RR_POLA = ["entity", "name", "roleta_lewa", "roleta_prawa", "predkosc_lewa", "predkosc_prawa", "zrodlo", "pogoda", "tlo", "czujnik_lewe", "tryb_lewe", "czujnik_prawe", "tryb_prawe"];
-  var RR_PRZEL = ["auto_czujniki", "klamki", "wibracja", "przyciski", "niebo", "widok", "uchwyty", "uchwyt_srodek", "osobno", "odwroc"];
+  var RR_PRZEL = ["auto_czujniki", "klamki", "promienie", "dzwiek", "wibracja", "przyciski", "niebo", "widok", "uchwyty", "uchwyt_srodek", "osobno", "odwroc"];
   var RoletaRealistycznaEditor = class extends HTMLElement {
     setConfig(c) {
       this._cfg = Object.assign({}, c);
@@ -2486,6 +2588,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
+ <div class="grp"><div class="lb">${L.osl}</div><div class="seg osl">${RR_OSLONY.map((v, k) => `<button data-osl="${v}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[k]}</button>`).join("")}</div><p class="hint">${L.d_osl}</p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map((k) => chip("kolor", k, RR_KOLORY[k], KN[k] || k)).join("")}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>
@@ -2545,7 +2648,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       root.querySelectorAll("[data-kal]").forEach((b) => b.onclick = () => this._kal(b.dataset.kal));
       $("#kalOk").onclick = () => this._kalOk();
       $("#akal").onclick = () => this._akal();
-      const RST = { wyg: ["kolor", "siatka", "rama", "skrzydla", "slupek", "wysokosc"], okn: ["kat_uchyl", "otwarcie"], ruch: ["czas", "krok", "pozycje"], zaaw: ["jezyk", ...RR_PRZEL] };
+      const RST = { wyg: ["oslona", "kolor", "siatka", "rama", "skrzydla", "slupek", "wysokosc"], okn: ["kat_uchyl", "otwarcie"], ruch: ["czas", "krok", "pozycje"], zaaw: ["jezyk", ...RR_PRZEL] };
       root.querySelectorAll("[data-rst]").forEach((b) => b.onclick = () => RST[b.dataset.rst].forEach((k) => this._set(k, null)));
       this._kr = new RrKreator(this, $(".wiz"));
       $(".wzo").onclick = () => this._kr.otworz(0);
@@ -2603,6 +2706,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       $("#siaOwn").oninput = (e) => this._set("siatka", e.target.value);
       $("#ramOwn").oninput = (e) => this._set("rama", e.target.value);
       root.querySelectorAll("[data-sk]").forEach((b) => b.onclick = () => this._set("skrzydla", +b.dataset.sk));
+      root.querySelectorAll("[data-osl]").forEach((b) => b.onclick = () => this._set("oslona", b.dataset.osl));
       root.querySelectorAll("[data-sl]").forEach((b) => b.onclick = () => this._set("slupek", b.dataset.sl));
       $("#wys").oninput = (e) => this._set("wysokosc", +e.target.value);
       $("#uch").oninput = (e) => {
@@ -2873,6 +2977,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       r.querySelector("#kolOwn").value = /^#[0-9a-f]{6}$/i.test(rrHex(kol)) ? rrHex(kol) : "#232427";
       r.querySelector("#ramOwn").value = /^#[0-9a-f]{6}$/i.test(rama) ? rama : "#f4f4f2";
       r.querySelectorAll("[data-sk]").forEach((b) => b.setAttribute("aria-pressed", +b.dataset.sk === +this._val("skrzydla")));
+      r.querySelectorAll("[data-osl]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.osl === this._val("oslona")));
       r.querySelectorAll("[data-sl]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.sl === this._val("slupek")));
       r.querySelector("#slGrp").style.display = +this._val("skrzydla") === 1 ? "none" : "";
       const set = (id, v, txt) => {

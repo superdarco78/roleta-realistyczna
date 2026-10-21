@@ -104,3 +104,14 @@ test('v23: tłumaczenia kreatora mają te same klucze', () => {
   const klucze = (o, p = '') => Object.entries(o).flatMap(([k, v]) => v && typeof v === 'object' && !Array.isArray(v) ? klucze(v, p + k + '.') : [p + k]).sort();
   assert.deepEqual(klucze(pl.kreator), klucze(en.kreator));
 });
+
+test('v26: każdy typ osłony ma 3 warstwy materiału', async () => {
+  const { rrTkanina } = await import('../src/karta-styl.js');
+  const { RR_OSLONY, RR_OSL_IKONY } = await import('../src/stale.js');
+  for (const t of [...RR_OSLONY, undefined]) {
+    const s = rrTkanina(t, '#232427', {});
+    assert.equal(s.split(/,(?=\s*(?:repeating-)?linear-gradient)/).length, 3, t);
+    assert.ok(!s.includes('NaN') && !s.includes('undefined'), t);
+  }
+  RR_OSLONY.forEach(t => assert.match(RR_OSL_IKONY[t], /^mdi:/));
+});
