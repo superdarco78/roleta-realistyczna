@@ -93,21 +93,6 @@
     "sec_zaaw": "⚙️ Advanced",
     "rst": "↺ Restore defaults",
     "wz": "🪄 Wizard",
-    "wzK": "step {0} of 3",
-    "wzW": "← Back",
-    "wzD": "Next →",
-    "wzG": "Done ✔",
-    "wzGr": "group: {0} blinds ({0}-sash window)",
-    "wz1": "Pick a blind or a blind group. Groups are at the top.",
-    "wz2": "The card checked your home by itself:",
-    "wz3": "Pick a ready-made look. You can change everything later in 🎨 Look.",
-    "wzR": "Blind: {0} → sashes: {1}",
-    "wzS": "Motor: {0} rpm → travel approx. {1} s",
-    "wzS0": "The motor does not report speed – the card will learn the time (or calibrate in ⏱)",
-    "wzC": "Window contact sensors: {0}",
-    "wzC0": "No contact sensors found in this room (add them later in 🪟)",
-    "wzP": "Weather: {0}",
-    "wzP0": "Weather: from the internet (Open-Meteo, home location)",
     "pre": [
       "Modern (anthracite + graphite)",
       "Classic wood (golden oak + beige)",
@@ -198,8 +183,7 @@
         "otworz",
         "open (on hinges, inward)"
       ]
-    ],
-    "wzR0": "Blind: {0}"
+    ]
   },
   "kolory": {
     "czarny": "black",
@@ -237,5 +221,158 @@
     "musztardowy": "mustard",
     "terakota": "terracotta",
     "sliwkowy": "plum"
+  },
+  "kreator": {
+    "tytul": "Card wizard",
+    "krok": "step {0} of {1}",
+    "zamknij": "Close wizard",
+    "co": "What:",
+    "poco": "Why:",
+    "wstecz": "← Back",
+    "dalej": "Next →",
+    "gotowe": "Done ✔",
+    "kroki": {
+      "roleta": {
+        "t": "Pick your blind",
+        "co": "the blind or blind group this card shows and controls. Only blinds are listed – no gates, garage doors or other devices.",
+        "poco": "the card sends it commands (open, close, set %) and draws its real position."
+      },
+      "okno": {
+        "t": "Window and sashes",
+        "co": "how many sashes the window has and which blind hangs on which sash.",
+        "poco": "each sash on the card moves together with its real blind."
+      },
+      "silnik": {
+        "t": "Motor speed",
+        "co": "an entity with the motor speed (rpm), if your motor reports it (e.g. Moes, Tuya). Only speed entities are listed.",
+        "poco": "the animation moves exactly at the speed of the real blind. Without it the card learns the time by itself."
+      },
+      "czujniki": {
+        "t": "Window sensors",
+        "co": "contact sensors of the window – left and right sash separately. Only window, door and opening sensors are listed.",
+        "poco": "when you tilt or open the window, the card shows it. This step is optional."
+      },
+      "pogoda": {
+        "t": "Weather outside",
+        "co": "where the card takes the weather from.",
+        "poco": "you see the real sky behind the glass: sun, clouds, rain, snow, night and the temperature."
+      },
+      "wyglad": {
+        "t": "Look and name",
+        "co": "a ready-made set of frame and blind colours and the name on the card.",
+        "poco": "so the card looks like your window. You can change every colour later in 🎨 Look."
+      },
+      "gdzie": {
+        "t": "Done – check and save",
+        "co": "a summary of what the card found and where it should appear.",
+        "poco": "so nothing is left to fix. If something needs doing, it says what and where."
+      }
+    },
+    "najlepsze": "best match",
+    "auto": "picked automatically",
+    "inna": "Other (matching entities only)",
+    "inne": "Matching entities: {0}. Find the rest in the “Other” list below.",
+    "bez": "No sensor",
+    "niedost": "unavailable",
+    "otwarte": "open",
+    "zamkniete": "closed",
+    "why": {
+      "grupa": "blind group",
+      "poz": "reports position %",
+      "czlonek": "from the chosen group",
+      "urz": "same device",
+      "pom": "same room",
+      "nazwa": "name matches",
+      "nazwa2": "similar name",
+      "lewa": "“left” in name",
+      "prawa": "“right” in name",
+      "okno": "window sensor",
+      "drzwi": "door sensor",
+      "rpm": "rpm unit",
+      "typowa": "main HA weather",
+      "off": "⚠ unavailable"
+    },
+    "znaleziono": "I found {0} matching blinds. The best ones are on top.",
+    "brakRolet": "There is no blind in Home Assistant yet. Add your blind motor first: Settings → Devices & services → “+ Add integration” (e.g. Zigbee2MQTT, ZHA, Tuya, Shelly). Then come back – the wizard will find it.",
+    "btnIntegr": "Open Devices & services",
+    "niedostepna": "“{0}” is unavailable right now. Check the motor power and range (Zigbee / Wi-Fi). You can add the card now – it will work once the blind is back.",
+    "bezPoz": "“{0}” does not report a position in %. The card will only show “open / closed”, and dragging will send open or close.",
+    "grupaOk": "This is a group of {0} blinds – I set a 2-sash window, each sash with its own blind.",
+    "wybierz": "Pick a blind from the list to continue.",
+    "sk1": "1 sash",
+    "sk2": "2 sashes",
+    "skL": "Left sash",
+    "skP": "Right sash",
+    "skJ": "Window",
+    "jednaNaDwa": "One blind for two sashes: both halves on the card move together. If each sash has its own blind, pick them below or create a group: Settings → Devices & services → Helpers → “+ Create helper” → Group → Cover group.",
+    "btnPomocnicy": "Open Helpers",
+    "rpmOk": "{0}: motor {1} rpm → full travel approx. {2} s",
+    "rpmBrak": "{0}: the motor does not report speed – no problem, the card learns the travel time from the first moves.",
+    "rpmZadnej": "There is no motor speed entity in HA. That is normal for most motors – the card learns the travel time by itself. Want it now? Measure it with the button below.",
+    "kal": "🤖 Measure the time now (the blind goes up → down → up)",
+    "czBrak": "There are no window sensors in HA (binary sensor of type window, door or opening). You can skip this step – the card works without them.",
+    "czBezPom": "The blind has no room (area), so the wizard cannot tell which sensors are in the same room. Assign a room to the blind’s device (Settings → Devices → blind → ✏️ → Area) for better matches.",
+    "btnUrz": "Open the blind’s device",
+    "czAuto": "Sensors picked automatically from the same room. You can choose others.",
+    "tryb": "When the sensor reports “open”, the sash is:",
+    "zr": [
+      [
+        "auto",
+        "🔎 Automatic"
+      ],
+      [
+        "internet",
+        "🌐 From the internet"
+      ],
+      [
+        "brak",
+        "🚫 No weather"
+      ]
+    ],
+    "wxTeraz": "Outside right now: {0}",
+    "wxBrak": "There is no weather integration in HA – the card takes the weather from the internet (Open-Meteo: free, no account or key) for your home location.",
+    "wxBezLok": "HA does not know your home location, so internet weather will not work. Set it: Settings → System → General → pin on the map.",
+    "btnOgolne": "Open general settings",
+    "wxNiedost": "“{0}” is unavailable – check the weather integration. Until it is fixed the card uses internet weather.",
+    "wxNic": "Without weather the glass shows a plain day / night sky.",
+    "nazwa": "Name on the card (empty = blind name)",
+    "podglad": "The live preview is below – every change shows up right away.",
+    "jezyk": "The wizard and card speak {0} – same as your HA profile. Change it in ⚙️ Advanced.",
+    "jezykNazwa": "English",
+    "pods": "Summary",
+    "pRoleta": "Blind: {0}",
+    "pSk": "Sashes: {0}",
+    "pSil": "Motor: {0}",
+    "pSilU": "Travel time: the card learns it",
+    "pCz": "Window sensors: {0}",
+    "pCzB": "Window sensors: none (fine, they are optional)",
+    "pWx": "Weather: {0}",
+    "pWxI": "Weather: from the internet (Open-Meteo)",
+    "pWxB": "Weather: off",
+    "pWyg": "Look: frame – {0}, stripes – {1}",
+    "gdzieT": "Where the card goes",
+    "tutaj": "The card goes to the view you are editing now. Click “Save” at the bottom of this dialog – done.",
+    "tez": "Want it on another dashboard too? Pick a dashboard and view – I will add a copy there right away.",
+    "panel": "Dashboard",
+    "widok": "View",
+    "nowyWidok": "➕ New view “Blinds”",
+    "nowyTytul": "Blinds",
+    "dodaj": "Add a copy there",
+    "dodano": "Added ✔ {0} → {1}",
+    "blad": "Failed: {0}",
+    "bezAdmina": "Adding cards to other dashboards needs an HA administrator account.",
+    "domyslny": "Overview (default)",
+    "tenPanel": " (this one – just “Save”)",
+    "autoPanel": " (automatic – not possible)",
+    "yaml": " (YAML – manual only)",
+    "widokPanel": " (panel – 1 card only)",
+    "wczytuje": "Loading dashboards…",
+    "verOk": "Card installed correctly – you have the latest version {0} ✔",
+    "verNowa": "A newer version {0} is available (you have {1}). Update: HACS → Roleta dzień-noc → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
+    "btnHacs": "Open HACS",
+    "btnPrzeladuj": "🔄 Reload page",
+    "zasobyDup": "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",
+    "btnZasoby": "Open Resources",
+    "obr": "rpm"
   }
 }

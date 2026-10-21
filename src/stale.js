@@ -1,5 +1,5 @@
 /* Stałe karty: wersja, ustawienia domyślne, wymiary rolety, gotowe wyglądy kreatora */
-export const RR_WERSJA = 'v22';
+export const RR_WERSJA = 'v23';
 export const RR_DEF = { kolor: 'czarny', rama: '#f4f4f2', czas: 'auto', wysokosc: 260, skrzydla: 2, przyciski: true, niebo: true, osobno: false, odwroc: false, pogoda: 'auto', tlo: '', widok: true, czujnik_lewe: '', tryb_lewe: 'uchyl', czujnik_prawe: '', tryb_prawe: 'uchyl',
   roleta_lewa: '', roleta_prawa: '', predkosc_lewa: '', predkosc_prawa: '', zrodlo: 'auto', jezyk: 'auto', uchwyty: true, uchwyt_srodek: true, kat_uchyl: 14, otwarcie: 40, krok: 5, siatka: '', pozycje: '100,75,50,25,0', wibracja: true, slupek: 'staly', klamki: true, auto_czujniki: true };
 export const RR_PAS = 16, RR_SIATKA = 10;          // wysokość pasa pełnego i półprzezroczystego (px)
