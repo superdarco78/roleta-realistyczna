@@ -2,7 +2,7 @@
 export const RR_EDYTOR_STYL = `
 :host{display:block;container-type:inline-size}
 .ed{display:grid;gap:16px}
-/* v32: szeroki ekran (np. strona Okno HA) – ustawienia po lewej, duży podgląd po prawej, zawsze na wierzchu */
+/* v32: szeroki ekran (np. strona Motor HA) – ustawienia po lewej, duży podgląd po prawej, zawsze na wierzchu */
 @container (min-width:900px){
  .ed{grid-template-columns:minmax(0,1fr) minmax(380px,44%);column-gap:24px;align-items:start}
  .ed>*{grid-column:1}

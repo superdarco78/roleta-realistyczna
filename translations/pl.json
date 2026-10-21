@@ -1,6 +1,6 @@
 {
   "karta": {
-    "nazwaKarty": "Okno HA",
+    "nazwaKarty": "Motor HA",
     "opisKarty": "Realistyczne okno z roletą dzień-noc: animacja w tempie silnika, przeciąganie, prawdziwa pogoda za oknem i kreator dla początkujących",
     "open": "Zwinięta",
     "closed": "Opuszczona",
@@ -226,7 +226,7 @@
     ],
     "osw": "W pokoju",
     "osz": "Na zewnątrz",
-    "urz": "🔗 To okno z integracji Okno HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
+    "urz": "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
   },
   "kolory": {
     "bezowy": "beżowy",
@@ -389,7 +389,7 @@
     "widokPanel": " (pełny ekran – tylko 1 karta)",
     "wczytuje": "Wczytuję panele…",
     "verOk": "Karta zainstalowana poprawnie – masz najnowszą wersję.",
-    "verNowa": "Jest nowsza wersja Okna HA. Zaktualizuj ją w Ustawienia → Aktualizacje, potem przeładuj stronę.",
+    "verNowa": "Jest nowsza wersja Motoru HA. Zaktualizuj ją w Ustawienia → Aktualizacje, potem przeładuj stronę.",
     "btnHacs": "Otwórz HACS",
     "btnPrzeladuj": "🔄 Przeładuj stronę",
     "zasobyDup": "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",

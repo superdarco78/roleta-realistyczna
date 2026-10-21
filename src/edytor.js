@@ -12,14 +12,14 @@ import { RrKreator, rrKreatorPotrzebny } from './kreator.js';
    Podgląd steruje udawanym silnikiem, nigdy prawdziwą roletą. */
 export const RR_POLA = ['entity', 'name', 'roleta_lewa', 'roleta_prawa', 'predkosc_lewa', 'predkosc_prawa', 'zrodlo', 'pogoda', 'tlo', 'czujnik_lewe', 'tryb_lewe', 'czujnik_prawe', 'tryb_prawe'];
 export const RR_PRZEL = ['auto_czujniki', 'klamki', 'promienie', 'dzwiek', 'wibracja', 'przyciski', 'niebo', 'widok', 'uchwyty', 'uchwyt_srodek', 'osobno', 'odwroc'];
-/* klucze, które zostają w karcie na pulpicie, gdy ustawienia trzyma urządzenie Okno HA */
+/* klucze, które zostają w karcie na pulpicie, gdy ustawienia trzyma urządzenie Motor HA */
 const RR_KARTA_KLUCZE = ['type', 'entity', 'grid_options', 'view_layout', 'visibility'];
 export const rrTylkoKarta = c => Object.fromEntries(Object.entries(c).filter(([k]) => RR_KARTA_KLUCZE.includes(k)));
 
 export class RoletaRealistycznaEditor extends HTMLElement {
   setConfig(c) { this._cfg = Object.assign({}, c); this._go(); }
   set hass(h) { this._hass = h; this._go(); this._wersja(); }
-  /* v34: jeden numer – wersja integracji Okno HA (karta jest w jej środku); bez integracji nic */
+  /* v34: jeden numer – wersja integracji Motor HA (karta jest w jej środku); bez integracji nic */
   _wersja() {
     const w = this.shadowRoot?.querySelector('#wer'); if (!w || !this._hass) return;
     const u = Object.values(this._hass.states).find(s => s.entity_id.startsWith('update.') && String(s.attributes?.release_url || '').includes('okno-ha-integracja') && s.attributes?.installed_version);
@@ -33,7 +33,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     const c = Object.assign({}, this._cfg);
     if (v === RR_DEF[k] || v === '' || v == null) delete c[k]; else c[k] = v;   // zapisujemy tylko to, co różni się od domyślnych
     this._cfg = c;
-    /* v31: okno z integracji Okno HA – ustawienia idą do urządzenia, na pulpicie zostaje sama encja */
+    /* v31: okno z integracji Motor HA – ustawienia idą do urządzenia, na pulpicie zostaje sama encja */
     const urz = this._urz();
     this.dispatchEvent(new CustomEvent('config-changed', { detail: { config: urz ? rrTylkoKarta(c) : c }, bubbles: true, composed: true }));
     if (urz) this._zapiszUrz();
@@ -45,7 +45,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   _zapiszUrz() {
     clearTimeout(this._urzT);
     this._urzT = setTimeout(() => this._hass.callWS({ type: 'okno_ha/zapisz', entity_id: this._cfg.entity, karta: this._cfg })
-      .catch(e => console.warn('Okno HA: nie zapisałem w urządzeniu', e)), 600);
+      .catch(e => console.warn('Motor HA: nie zapisałem w urządzeniu', e)), 600);
   }
   _go() {
     if (!this._hass || !this._cfg) return;

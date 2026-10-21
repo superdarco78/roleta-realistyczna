@@ -1,5 +1,5 @@
 /*!
- * Okno HA (dawniej Roleta dzień-noc, roleta-realistyczna)
+ * Motor HA (dawniej Roleta dzień-noc, roleta-realistyczna)
  * © 2026 superdarco78 – https://github.com/superdarco78/roleta-realistyczna
  * Licencja / License: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/
  * Użytek niekomercyjny z podaniem autora. Sprzedaż, odsprzedaż i użycie komercyjne
@@ -96,16 +96,16 @@
         kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
    v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
         edytora i kreatora; link do instrukcji w oknie wyboru kart
-   v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
+   v25 – nowa nazwa karty: Motor HA (HA Motor) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
         stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą
    v26 – typ osłony (dzień-noc, pełna, plisa, rzymska, żaluzja, zewnętrzna) w edytorze i kreatorze; promienie słońca wpadające
         przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
    v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
         boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
    v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
-   v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
+   v29 – ustawienia z integracji Motor HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
         po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
-   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
+   v30 – samo przeładowanie strony także z encją aktualizacji integracji Motor HA i przy otwartej stronie
    v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia
    v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
    v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
@@ -473,7 +473,7 @@
   // translations/pl.json
   var pl_default = {
     karta: {
-      nazwaKarty: "Okno HA",
+      nazwaKarty: "Motor HA",
       opisKarty: "Realistyczne okno z roletą dzień-noc: animacja w tempie silnika, przeciąganie, prawdziwa pogoda za oknem i kreator dla początkujących",
       open: "Zwinięta",
       closed: "Opuszczona",
@@ -699,7 +699,7 @@
       ],
       osw: "W pokoju",
       osz: "Na zewnątrz",
-      urz: "🔗 To okno z integracji Okno HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
+      urz: "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
     },
     kolory: {
       bezowy: "beżowy",
@@ -862,7 +862,7 @@
       widokPanel: " (pełny ekran – tylko 1 karta)",
       wczytuje: "Wczytuję panele…",
       verOk: "Karta zainstalowana poprawnie – masz najnowszą wersję.",
-      verNowa: "Jest nowsza wersja Okna HA. Zaktualizuj ją w Ustawienia → Aktualizacje, potem przeładuj stronę.",
+      verNowa: "Jest nowsza wersja Motoru HA. Zaktualizuj ją w Ustawienia → Aktualizacje, potem przeładuj stronę.",
       btnHacs: "Otwórz HACS",
       btnPrzeladuj: "🔄 Przeładuj stronę",
       zasobyDup: "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",
@@ -874,7 +874,7 @@
   // translations/en.json
   var en_default = {
     karta: {
-      nazwaKarty: "HA Window",
+      nazwaKarty: "HA Motor",
       opisKarty: "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
       open: "Open",
       closed: "Closed",
@@ -1100,7 +1100,7 @@
       ],
       osw: "Inside",
       osz: "Outside",
-      urz: "🔗 This window comes from the HA Window integration – every change is saved to the device automatically (same as “Configure”)."
+      urz: "🔗 This window comes from the HA Motor integration – every change is saved to the device automatically (same as “Configure”)."
     },
     kolory: {
       czarny: "black",
@@ -1289,7 +1289,7 @@
       widokPanel: " (panel – 1 card only)",
       wczytuje: "Loading dashboards…",
       verOk: "Card installed correctly – you have the latest version.",
-      verNowa: "A newer version of Okno HA is available. Update it in Settings → Updates, then reload the page.",
+      verNowa: "A newer version of Motor HA is available. Update it in Settings → Updates, then reload the page.",
       btnHacs: "Open HACS",
       btnPrzeladuj: "🔄 Reload page",
       zasobyDup: "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",
@@ -1739,7 +1739,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
     } catch (e) {
       return;
     }
-    console.info("Okno HA: zainstalowana " + inst + ", działa " + RR_WERSJA + " – przeładowuję stronę");
+    console.info("Motor HA: zainstalowana " + inst + ", działa " + RR_WERSJA + " – przeładowuję stronę");
     setTimeout(() => location.reload(), 300);
   }
 
@@ -2230,7 +2230,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
   var RR_EDYTOR_STYL = `
 :host{display:block;container-type:inline-size}
 .ed{display:grid;gap:16px}
-/* v32: szeroki ekran (np. strona Okno HA) – ustawienia po lewej, duży podgląd po prawej, zawsze na wierzchu */
+/* v32: szeroki ekran (np. strona Motor HA) – ustawienia po lewej, duży podgląd po prawej, zawsze na wierzchu */
 @container (min-width:900px){
  .ed{grid-template-columns:minmax(0,1fr) minmax(380px,44%);column-gap:24px;align-items:start}
  .ed>*{grid-column:1}
@@ -2775,7 +2775,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       this._go();
       this._wersja();
     }
-    /* v34: jeden numer – wersja integracji Okno HA (karta jest w jej środku); bez integracji nic */
+    /* v34: jeden numer – wersja integracji Motor HA (karta jest w jej środku); bez integracji nic */
     _wersja() {
       const w = this.shadowRoot?.querySelector("#wer");
       if (!w || !this._hass) return;
@@ -2822,7 +2822,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     }
     _zapiszUrz() {
       clearTimeout(this._urzT);
-      this._urzT = setTimeout(() => this._hass.callWS({ type: "okno_ha/zapisz", entity_id: this._cfg.entity, karta: this._cfg }).catch((e) => console.warn("Okno HA: nie zapisałem w urządzeniu", e)), 600);
+      this._urzT = setTimeout(() => this._hass.callWS({ type: "okno_ha/zapisz", entity_id: this._cfg.entity, karta: this._cfg }).catch((e) => console.warn("Motor HA: nie zapisałem w urządzeniu", e)), 600);
     }
     _go() {
       if (!this._hass || !this._cfg) return;
@@ -3293,7 +3293,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   };
 
   // src/index.js
-  console.info("%c Okno HA " + RR_WERSJA + " %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ", "background:#232427;color:#fff;border-radius:3px 0 0 3px", "background:#ff8f00;color:#fff;border-radius:0 3px 3px 0");
+  console.info("%c Motor HA " + RR_WERSJA + " %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ", "background:#232427;color:#fff;border-radius:3px 0 0 3px", "background:#ff8f00;color:#fff;border-radius:0 3px 3px 0");
   var rej = (nazwa, klasa) => {
     if (!customElements.get(nazwa)) customElements.define(nazwa, klasa);
   };
@@ -3311,7 +3311,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     description: T.opisKarty,
     preview: true,
     documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme",
-    /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Okno HA dla okien z integracji i dla rolet */
+    /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Motor HA dla okien z integracji i dla rolet */
     getEntitySuggestion: (hass, entityId) => {
       if (!String(entityId).startsWith("cover.")) return null;
       return { label: T.nazwaKarty, config: { type: "custom:okno-ha", entity: entityId } };

@@ -1,6 +1,6 @@
 {
   "karta": {
-    "nazwaKarty": "HA Window",
+    "nazwaKarty": "HA Motor",
     "opisKarty": "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
     "open": "Open",
     "closed": "Closed",
@@ -226,7 +226,7 @@
     ],
     "osw": "Inside",
     "osz": "Outside",
-    "urz": "🔗 This window comes from the HA Window integration – every change is saved to the device automatically (same as “Configure”)."
+    "urz": "🔗 This window comes from the HA Motor integration – every change is saved to the device automatically (same as “Configure”)."
   },
   "kolory": {
     "czarny": "black",
@@ -415,7 +415,7 @@
     "widokPanel": " (panel – 1 card only)",
     "wczytuje": "Loading dashboards…",
     "verOk": "Card installed correctly – you have the latest version.",
-    "verNowa": "A newer version of Okno HA is available. Update it in Settings → Updates, then reload the page.",
+    "verNowa": "A newer version of Motor HA is available. Update it in Settings → Updates, then reload the page.",
     "btnHacs": "Open HACS",
     "btnPrzeladuj": "🔄 Reload page",
     "zasobyDup": "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",

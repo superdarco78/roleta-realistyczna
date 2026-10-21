@@ -50,7 +50,7 @@ export const rrNumerWersji = v => parseInt(String(v || '').replace(/^\D+/, ''), 
 
 /* v29: po aktualizacji w HACS przeglądarka potrafi trzymać stary plik karty. HACS zmienia adres zasobu (hacstag),
    więc wystarczy raz przeładować stronę – karta robi to sama, gdy HACS ma nowszą wersję niż ta, która działa */
-/* v30: działa też z encją aktualizacji z integracji Okno HA i przy otwartej stronie – gdy w trakcie
+/* v30: działa też z encją aktualizacji z integracji Motor HA i przy otwartej stronie – gdy w trakcie
    klikniesz „Zainstaluj”, karta od razu przeładuje stronę na nową wersję */
 const RR_ODSW = { id: null, szukane: 0 };
 export function rrSamoOdswiez(hass) {
@@ -63,6 +63,6 @@ export function rrSamoOdswiez(hass) {
   if (!inst || rrNumerWersji(inst) <= rrNumerWersji(RR_WERSJA)) return;
   const klucz = 'okno-ha-odswiezone-' + inst;
   try { if (sessionStorage.getItem(klucz)) return; sessionStorage.setItem(klucz, '1'); } catch (e) { return; }   // najwyżej raz
-  console.info('Okno HA: zainstalowana ' + inst + ', działa ' + RR_WERSJA + ' – przeładowuję stronę');
+  console.info('Motor HA: zainstalowana ' + inst + ', działa ' + RR_WERSJA + ' – przeładowuję stronę');
   setTimeout(() => location.reload(), 300);
 }
