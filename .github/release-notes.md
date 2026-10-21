@@ -40,7 +40,7 @@
 
 ### <a name="r5" href="#r5"><img src="{{RAW}}/img/v23/ikony/numeric-2-circle.png" height="26" align="absmiddle"></a> Kliknij „Pobierz” i wybierz wersję {{WERSJA}}
 
-<p align="center"><a name="r6" href="#r6"><img src="{{RAW}}/img/v23/instrukcja/pl/hacs-1.png" width="49%" alt="Krok 1"></a>&nbsp;<a name="r7" href="#r7"><img src="{{RAW}}/img/v23/instrukcja/pl/hacs-2.png" width="49%" alt="Krok 2"></a></p>
+<p align="center"><a name="r6" href="#r6"><img src="{{RAW}}/img/v23/zrzuty/pl/hacs-1.png" width="49%" alt="Krok 1"></a>&nbsp;<a name="r7" href="#r7"><img src="{{RAW}}/img/v23/zrzuty/pl/hacs-2.png" width="49%" alt="Krok 2"></a></p>
 
 ### <a name="r8" href="#r8"><img src="{{RAW}}/img/v23/ikony/numeric-3-circle.png" height="26" align="absmiddle"></a> Odśwież stronę Home Assistant
 
