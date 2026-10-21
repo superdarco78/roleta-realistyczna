@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES } from './stale.js';
+import { RR_WERSJA, RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna } from './stale.js';
 import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
@@ -27,7 +27,7 @@ export class RoletaRealistyczna extends HTMLElement {
     if (!this._gok) { this._gok = 1; rrGlobLoad(h).then(() => { if (this._raw) this.setConfig(this._raw); }); }
     this._render();
   }
-  getCardSize() { return Math.ceil((this._cfg?.wysokosc || 260) / 50) + 2; }
+  getCardSize() { return Math.ceil(rrWysOkna(this._cfg || {}, +this._cfg?.skrzydla === 1 ? 1 : 2) / 50) + 2; }
   getGridOptions() { return { columns: 12, min_columns: 6, rows: 'auto' }; }
   disconnectedCallback() { cancelAnimationFrame(this._raf); this._raf = null; if (this._gl) window.removeEventListener('rr-glob', this._gl); }
   connectedCallback() {
@@ -84,7 +84,7 @@ export class RoletaRealistyczna extends HTMLElement {
   }
 
   _build(n) {
-    const c = this._cfg, col = rrHex(c.kolor), H = c.wysokosc, rama = c.rama, T = this._t;
+    const c = this._cfg, col = rrHex(c.kolor), H = rrWysOkna(c, n), rama = c.rama, T = this._t;
     /* v19: okleina drewnopodobna = delikatne słoje na ramie i skrzydłach */
     const sloje = RR_RAMY[rama]?.[2] ? 'repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 4px,rgba(255,255,255,.05) 4px 5px,transparent 5px 9px),repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 5px,rgba(255,255,255,.04) 5px 6px,transparent 6px 11px)' : '';
     const ruch = n > 1 && c.slupek === 'ruchomy';
@@ -331,7 +331,7 @@ export class RoletaRealistyczna extends HTMLElement {
     }
     this._el.sash.forEach((S, i) => {
       const o = this._sh[i]; if (!o) return;
-      const gh = S.glass.clientHeight || this._cfg.wysokosc - 26;
+      const gh = S.glass.clientHeight || rrWysOkna(this._cfg, this._n) - 26;
       if (!this._dr) {   // linia celu zostaje, aż roleta dojedzie
         const g = o.cmd && Math.abs(o.shown - o.cmd.p) > .5 ? o.cmd.p : null;
         if (g === null) S.ghost.style.display = 'none';

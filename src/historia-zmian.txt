@@ -85,4 +85,6 @@
         i otwiera właściwe miejsce w HA; pomiar czasu przejazdu w kreatorze; sprawdza, czy jest nowsza wersja i czy karta nie jest
         dodana dwa razy w zasobach; dodaje kopię karty na inny panel albo nowy widok „Rolety” jednym kliknięciem; kreator odświeża się
         sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
-        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie */
+        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
+   v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
+        edytora i kreatora; link do instrukcji w oknie wyboru kart */
