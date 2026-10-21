@@ -27,11 +27,11 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 > [!TIP]
 > Karta działa z **każdą roletą** w Home Assistancie (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i innymi. Najlepiej wygląda z roletą dzień-noc (zebra) i oknem 2-skrzydłowym, ale ustawisz też 1 skrzydło. Po dodaniu karty **kreator ustawi wszystko sam**.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="420" alt="Animacja rolety"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="49%" alt="Animacja rolety"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp" width="49%" alt="Animacja rolety"></a></p>
 
 <table>
-<tr><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/weather-partly-cloudy.png" height="48" align="absmiddle"><br><b>Prawdziwa pogoda</b><br><sub>Deszcz, śnieg, burza, słońce i noc za szybą</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-swipe-vertical.png" height="48" align="absmiddle"><br><b>Sterowanie palcem</b><br><sub>Ciągniesz roletę jak prawdziwą</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/auto-fix.png" height="48" align="absmiddle"><br><b>Kreator</b><br><sub>Sam znajduje roletę, silnik i czujniki</sub></td></tr>
-<tr><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="48" align="absmiddle"><br><b>Okno jak w domu</b><br><sub>Uchylone i otwarte według czujników</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/theme-light-dark.png" height="48" align="absmiddle"><br><b>Motyw HA</b><br><sub>Jasny i ciemny, wygląd jak w Home Assistancie</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="48" align="absmiddle"><br><b>Polski i angielski</b><br><sub>Język według Twojego profilu HA</sub></td></tr>
+<tr><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/weather-partly-cloudy.png" height="48" align="absmiddle"><br><b>Prawdziwa pogoda</b><br><sub>Za szybą widać deszcz, śnieg, słońce i noc</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-swipe-vertical.png" height="48" align="absmiddle"><br><b>Sterowanie palcem</b><br><sub>Przesuwasz roletę palcem</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/auto-fix.png" height="48" align="absmiddle"><br><b>Kreator</b><br><sub>Znajduje wszystko sam</sub></td></tr>
+<tr><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="48" align="absmiddle"><br><b>Okno jak w domu</b><br><sub>Pokazuje, czy okno jest otwarte</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/theme-light-dark.png" height="48" align="absmiddle"><br><b>Motyw HA</b><br><sub>Jasny i ciemny, jak w HA</sub></td><td align="center" width="33%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="48" align="absmiddle"><br><b>Polski i angielski</b><br><sub>Język sam się ustawia</sub></td></tr>
 </table>
 
 <a name="spis-tresci"></a>
@@ -106,9 +106,9 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Karta sama znajduje roletę, s
 > [!TIP]
 > Nie wiesz, co wybrać? Zostaw to, co jest zaznaczone na górze listy. Karta wybrała najlepiej pasujące.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png" width="560" alt="Kreator: wybierz roletę"></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png" width="100%" alt="Kreator: wybierz roletę"></a></p>
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png" width="560" alt="Kreator: podsumowanie"></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png" width="100%" alt="Kreator: podsumowanie"></a></p>
 
 > [!IMPORTANT]
 > ✅ **Gotowe.** Kliknij **Zapisz**. Karta działa.
@@ -194,7 +194,7 @@ Odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikacj�
 
 Otwórz edytor karty, dział **Ruch i kalibracja**, kliknij **Kalibruj automatycznie**. Karta sama zmierzy czas. Karta uczy się też z każdego ruchu.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png" width="440" alt=""></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png" width="49%" alt=""></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png" width="49%" alt=""></a></p>
 
 <br>
 
@@ -208,7 +208,7 @@ To złe meldunki silnika. Karta je pomija. Jeśli dalej skacze, [zgłoś błąd]
 
 Otwórz edytor, dział **Zaawansowane**, ustaw źródło pogody **auto** albo **internet**. Karta weźmie pogodę dla lokalizacji Twojego domu.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/deszcz.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png" width="360" alt=""></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png" width="49%" alt=""></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/deszcz.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/deszcz.png" width="49%" alt=""></a></p>
 
 <br>
 
@@ -216,7 +216,7 @@ Otwórz edytor, dział **Zaawansowane**, ustaw źródło pogody **auto** albo **
 
 Otwórz edytor, dział **Zaawansowane**, włącz **Odwróć pozycję**.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png" width="440" alt=""></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png" width="49%" alt=""></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png" width="49%" alt=""></a></p>
 
 <br>
 
@@ -224,7 +224,7 @@ Otwórz edytor, dział **Zaawansowane**, włącz **Odwróć pozycję**.
 
 Karta bierze język z Twojego profilu HA. Możesz też wybrać **Polski** w dziale **Zaawansowane**, pole **Język karty**.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png" width="360" alt=""></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png" width="49%" alt=""></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/en.png" width="49%" alt=""></a></p>
 
 <br>
 
@@ -232,7 +232,7 @@ Karta bierze język z Twojego profilu HA. Możesz też wybrać **Polski** w dzia
 
 Otwórz edytor, dział **Okno**. Wybierz czujnik lewego i prawego skrzydła. Ustaw, czy okno się **uchyla**, czy **otwiera**.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png" width="440" alt=""></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png" width="49%" alt=""></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png" width="49%" alt=""></a></p>
 
 Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo napisz na [forum HA](https://community.home-assistant.io/) / [forum arturhome.pl](https://forum.arturhome.pl/).
 
@@ -368,7 +368,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 Najlepiej pasująca roleta jest na górze, z dopiskiem „najlepsze dopasowanie”.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png" width="560" alt="Kreator: wybierz roletę"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-1-roleta-jasny-pl.png" width="100%" alt="Kreator: wybierz roletę"></a>
 
 <br>
 
@@ -376,7 +376,7 @@ Najlepiej pasująca roleta jest na górze, z dopiskiem „najlepsze dopasowanie�
 
 Karta znajduje silnik rolety sama. Możesz też zmierzyć czas przejazdu prosto z kreatora.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-3-silnik-ciemny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-3-silnik-ciemny-pl.png" width="560" alt="Kreator: prędkość silnika"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-3-silnik-ciemny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-3-silnik-ciemny-pl.png" width="100%" alt="Kreator: prędkość silnika"></a>
 
 <br>
 
@@ -384,7 +384,7 @@ Karta znajduje silnik rolety sama. Możesz też zmierzyć czas przejazdu prosto 
 
 Na liście są tylko czujniki okien i drzwi z tego samego pomieszczenia.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-4-czujniki-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-4-czujniki-jasny-pl.png" width="560" alt="Kreator: czujniki okna"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-4-czujniki-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-4-czujniki-jasny-pl.png" width="100%" alt="Kreator: czujniki okna"></a>
 
 <br>
 
@@ -392,7 +392,7 @@ Na liście są tylko czujniki okien i drzwi z tego samego pomieszczenia.
 
 Wybierz gotowy zestaw kolorów. Każdy kolor zmienisz później w menu karty.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-6-wyglad-ciemny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-6-wyglad-ciemny-pl.png" width="560" alt="Kreator: wygląd"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-6-wyglad-ciemny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-6-wyglad-ciemny-pl.png" width="100%" alt="Kreator: wygląd"></a>
 
 <br>
 
@@ -400,7 +400,7 @@ Wybierz gotowy zestaw kolorów. Każdy kolor zmienisz później w menu karty.
 
 Widzisz wszystko, co karta znalazła. Kopię karty dodasz tu na inny panel albo do nowego widoku „Rolety”.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png" width="560" alt="Kreator: podsumowanie i miejsce karty"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/kreator-7-gdzie-jasny-pl.png" width="100%" alt="Kreator: podsumowanie i miejsce karty"></a>
 
 ✅ **Gotowe.** Kliknij **Zapisz**. Wszystko inne zmienisz później w [edytorze](#edytor).
 
@@ -416,35 +416,35 @@ Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia 
 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad.png" width="440" alt="przeglad"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad.png" width="49%" alt="przeglad"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/przeglad-ciemny.png" width="49%" alt="przeglad"></a></p>
 
 <a name="wyglad"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/palette.png" height="26" align="absmiddle"> Wygląd
 
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png" width="440" alt="wyglad"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png" width="49%" alt="wyglad"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad-ciemny.png" width="49%" alt="wyglad"></a></p>
 
 <a name="okno-i-kontaktrony"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="26" align="absmiddle"> Okno i czujniki okna
 
 Wybierz czujnik okna lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png" width="440" alt="okno"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png" width="49%" alt="okno"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png" width="49%" alt="okno"></a></p>
 
 <a name="ruch-i-kalibracja"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/timer-outline.png" height="26" align="absmiddle"> Ruch i kalibracja
 
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png" width="440" alt="kalibracja"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja.png" width="49%" alt="kalibracja"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/kalibracja-ciemny.png" width="49%" alt="kalibracja"></a></p>
 
 <a name="zaawansowane"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/cog.png" height="26" align="absmiddle"> Zaawansowane
 
 Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwrócona pozycja, źródło pogody i własne zdjęcie zza okna.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png" width="440" alt="Zaawansowane"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane.png" width="49%" alt="Zaawansowane"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/zaawansowane-ciemny.png" width="49%" alt="Zaawansowane"></a></p>
 
 <a name="ustawienia-globalne"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/earth.png" height="26" align="absmiddle"> Ustawienia globalne
@@ -545,7 +545,7 @@ type: custom:roleta-realistyczna
 entity: cover.zaluzje_salon
 ```
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png" width="400" alt="Wygląd"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Okno 2-skrzydłowe z osobnymi roletami i czujnikami okna:**
 
@@ -561,7 +561,7 @@ czujnik_prawe: binary_sensor.okno_salon_prawe
 tryb_prawe: otworz
 ```
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2.png" width="400" alt="Wygląd"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Drewniane okno (złoty dąb) z beżową tkaniną:**
 
@@ -574,7 +574,7 @@ rama: '#8a5a3b'
 wysokosc: 300
 ```
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3.png" width="400" alt="Wygląd"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex3-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Własne zdjęcie widoku zza okna:**
 
@@ -584,7 +584,7 @@ entity: cover.zaluzje_sypialnia
 tlo: /local/widok-sypialnia.jpg
 ```
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4.png" width="400" alt="Wygląd"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex4-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Jedno skrzydło, bez pogody, po angielsku:**
 
@@ -596,7 +596,7 @@ zrodlo: brak
 jezyk: en
 ```
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5.png" width="400" alt="Wygląd"></picture></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 ---
 
