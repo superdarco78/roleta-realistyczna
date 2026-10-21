@@ -12,6 +12,10 @@ import { RrKreator, rrKreatorPotrzebny } from './kreator.js';
    Podgląd steruje udawanym silnikiem, nigdy prawdziwą roletą. */
 export const RR_POLA = ['entity', 'name', 'roleta_lewa', 'roleta_prawa', 'predkosc_lewa', 'predkosc_prawa', 'zrodlo', 'pogoda', 'tlo', 'czujnik_lewe', 'tryb_lewe', 'czujnik_prawe', 'tryb_prawe'];
 export const RR_PRZEL = ['auto_czujniki', 'klamki', 'promienie', 'dzwiek', 'wibracja', 'przyciski', 'niebo', 'widok', 'uchwyty', 'uchwyt_srodek', 'osobno', 'odwroc'];
+/* klucze, które zostają w karcie na pulpicie, gdy ustawienia trzyma urządzenie Okno HA */
+const RR_KARTA_KLUCZE = ['type', 'entity', 'grid_options', 'view_layout', 'visibility'];
+export const rrTylkoKarta = c => Object.fromEntries(Object.entries(c).filter(([k]) => RR_KARTA_KLUCZE.includes(k)));
+
 export class RoletaRealistycznaEditor extends HTMLElement {
   setConfig(c) { this._cfg = Object.assign({}, c); this._go(); }
   set hass(h) { this._hass = h; this._go(); }
@@ -23,13 +27,27 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     const c = Object.assign({}, this._cfg);
     if (v === RR_DEF[k] || v === '' || v == null) delete c[k]; else c[k] = v;   // zapisujemy tylko to, co różni się od domyślnych
     this._cfg = c;
-    this.dispatchEvent(new CustomEvent('config-changed', { detail: { config: c }, bubbles: true, composed: true }));
+    /* v31: okno z integracji Okno HA – ustawienia idą do urządzenia, na pulpicie zostaje sama encja */
+    const urz = this._urz();
+    this.dispatchEvent(new CustomEvent('config-changed', { detail: { config: urz ? rrTylkoKarta(c) : c }, bubbles: true, composed: true }));
+    if (urz) this._zapiszUrz();
     this._sync(); this._preview();
     /* v19: mignięcie podglądu – widać, że ustawienie już działa */
     const pv = this._r?.querySelector('.pv'); if (pv) { pv.classList.add('fl'); clearTimeout(this._flT); this._flT = setTimeout(() => pv.classList.remove('fl'), 500); }
   }
+  _urz() { return !!this._hass?.states?.[this._cfg?.entity]?.attributes?.okno_ha; }
+  _zapiszUrz() {
+    clearTimeout(this._urzT);
+    this._urzT = setTimeout(() => this._hass.callWS({ type: 'okno_ha/zapisz', entity_id: this._cfg.entity, karta: this._cfg })
+      .catch(e => console.warn('Okno HA: nie zapisałem w urządzeniu', e)), 600);
+  }
   _go() {
     if (!this._hass || !this._cfg) return;
+    /* v31: edycja okna z integracji – edytor startuje z ustawieniami zapisanymi w urządzeniu */
+    if (this._urz() && this._urzE !== this._cfg.entity) {
+      this._urzE = this._cfg.entity;
+      this._cfg = Object.assign({}, this._cfg, this._hass.states[this._cfg.entity].attributes.okno_ha, rrTylkoKarta(this._cfg));
+    }
     const lang = rrJezyk(this._cfg, this._hass);
     if (this._built && lang !== this._lang) { clearInterval(this._loop); this._loop = null; this._built = false; }   // zmiana języka = nowy edytor
     if (!this._built) { this._lang = lang; this._build(); }
@@ -49,6 +67,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
 <style>${RR_EDYTOR_STYL}</style>
 </style>
 <div class="ed">
+ <p class="hint urz" hidden>${L.urz}</p>
  <div class="wiz" hidden></div>
  <div class="f"></div>
  <div class="pv">

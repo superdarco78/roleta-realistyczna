@@ -105,10 +105,11 @@
    v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
    v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
         po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
-   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie */
+   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
+   v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v30";
+  var RR_WERSJA = "v31";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -672,7 +673,8 @@
         "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
       ],
       osw: "W pokoju",
-      osz: "Na zewnątrz"
+      osz: "Na zewnątrz",
+      urz: "🔗 To okno z integracji Okno HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
     },
     kolory: {
       bezowy: "beżowy",
@@ -1068,7 +1070,8 @@
         "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view."
       ],
       osw: "Inside",
-      osz: "Outside"
+      osz: "Outside",
+      urz: "🔗 This window comes from the HA Window integration – every change is saved to the device automatically (same as “Configure”)."
     },
     kolory: {
       czarny: "black",
@@ -2702,6 +2705,8 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   // src/edytor.js
   var RR_POLA = ["entity", "name", "roleta_lewa", "roleta_prawa", "predkosc_lewa", "predkosc_prawa", "zrodlo", "pogoda", "tlo", "czujnik_lewe", "tryb_lewe", "czujnik_prawe", "tryb_prawe"];
   var RR_PRZEL = ["auto_czujniki", "klamki", "promienie", "dzwiek", "wibracja", "przyciski", "niebo", "widok", "uchwyty", "uchwyt_srodek", "osobno", "odwroc"];
+  var RR_KARTA_KLUCZE = ["type", "entity", "grid_options", "view_layout", "visibility"];
+  var rrTylkoKarta = (c) => Object.fromEntries(Object.entries(c).filter(([k]) => RR_KARTA_KLUCZE.includes(k)));
   var RoletaRealistycznaEditor = class extends HTMLElement {
     setConfig(c) {
       this._cfg = Object.assign({}, c);
@@ -2734,7 +2739,9 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       if (v === RR_DEF[k] || v === "" || v == null) delete c[k];
       else c[k] = v;
       this._cfg = c;
-      this.dispatchEvent(new CustomEvent("config-changed", { detail: { config: c }, bubbles: true, composed: true }));
+      const urz = this._urz();
+      this.dispatchEvent(new CustomEvent("config-changed", { detail: { config: urz ? rrTylkoKarta(c) : c }, bubbles: true, composed: true }));
+      if (urz) this._zapiszUrz();
       this._sync();
       this._preview();
       const pv = this._r?.querySelector(".pv");
@@ -2744,8 +2751,19 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
         this._flT = setTimeout(() => pv.classList.remove("fl"), 500);
       }
     }
+    _urz() {
+      return !!this._hass?.states?.[this._cfg?.entity]?.attributes?.okno_ha;
+    }
+    _zapiszUrz() {
+      clearTimeout(this._urzT);
+      this._urzT = setTimeout(() => this._hass.callWS({ type: "okno_ha/zapisz", entity_id: this._cfg.entity, karta: this._cfg }).catch((e) => console.warn("Okno HA: nie zapisałem w urządzeniu", e)), 600);
+    }
     _go() {
       if (!this._hass || !this._cfg) return;
+      if (this._urz() && this._urzE !== this._cfg.entity) {
+        this._urzE = this._cfg.entity;
+        this._cfg = Object.assign({}, this._cfg, this._hass.states[this._cfg.entity].attributes.okno_ha, rrTylkoKarta(this._cfg));
+      }
       const lang = rrJezyk(this._cfg, this._hass);
       if (this._built && lang !== this._lang) {
         clearInterval(this._loop);
@@ -2775,6 +2793,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 <style>${RR_EDYTOR_STYL}</style>
 </style>
 <div class="ed">
+ <p class="hint urz" hidden>${L.urz}</p>
  <div class="wiz" hidden></div>
  <div class="f"></div>
  <div class="pv">
@@ -3219,5 +3238,17 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   });
   var T = RR_TXT[String(document.documentElement.lang || navigator.language || "pl").startsWith("pl") ? "pl" : "en"];
   window.customCards = window.customCards || [];
-  window.customCards.push({ type: "okno-ha", name: T.nazwaKarty + " " + RR_WERSJA, description: T.opisKarty, preview: true, documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme" });
+  window.customCards.push({
+    type: "okno-ha",
+    name: T.nazwaKarty + " " + RR_WERSJA,
+    description: T.opisKarty,
+    preview: true,
+    documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme",
+    /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Okno HA dla okien z integracji i dla rolet */
+    getEntitySuggestion: (hass, entityId) => {
+      if (!String(entityId).startsWith("cover.")) return null;
+      const okno = !!hass?.states?.[entityId]?.attributes?.okno_ha;
+      return { label: T.nazwaKarty + (okno ? " 🪟" : ""), config: { type: "custom:okno-ha", entity: entityId } };
+    }
+  });
 })();

@@ -1,5 +1,5 @@
 /* Stałe karty: wersja, ustawienia domyślne, wymiary rolety, gotowe wyglądy kreatora */
-export const RR_WERSJA = 'v30';
+export const RR_WERSJA = 'v31';
 /* v24: okno jednoskrzydłowe większe – wyższe o 25% i szersze, zajmuje tyle miejsca co okno 2-skrzydłowe */
 export const rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
 export const RR_DEF = { kolor: 'czarny', rama: '#f4f4f2', czas: 'auto', wysokosc: 260, skrzydla: 2, przyciski: true, niebo: true, osobno: false, odwroc: false, pogoda: 'auto', tlo: '', widok: true, czujnik_lewe: '', tryb_lewe: 'uchyl', czujnik_prawe: '', tryb_prawe: 'uchyl',

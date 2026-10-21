@@ -225,7 +225,8 @@
       "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view."
     ],
     "osw": "Inside",
-    "osz": "Outside"
+    "osz": "Outside",
+    "urz": "🔗 This window comes from the HA Window integration – every change is saved to the device automatically (same as “Configure”)."
   },
   "kolory": {
     "czarny": "black",
