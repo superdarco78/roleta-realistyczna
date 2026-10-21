@@ -43,10 +43,10 @@
 </table>
 
 <a name="table-of-contents"></a>
-## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/format-list-bulleted.png" height="30" align="absmiddle"></a> Sommaire
+## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/format-list-bulleted.png" height="36" align="absmiddle"></a> Sommaire
 
 
-**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="22" align="absmiddle"></a> [Partie 1. Pour débutants](#for-beginners)** · cela suffit
+**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="26" align="absmiddle"></a> [Partie 1. Pour débutants](#for-beginners)** · cela suffit
 - [Clique sur le bouton bleu](#krok-1)
 - [Clique sur « Télécharger »](#krok-2)
 - [Ajoute la carte](#krok-3)
@@ -56,19 +56,19 @@
 - [Lexique : que veulent dire ces mots ?](#glossary)
 - [Questions et problèmes](#faq)
 
-**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="22" align="absmiddle"></a> [Partie 2. Avancé](#advanced)** · facultatif
+**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="26" align="absmiddle"></a> [Partie 2. Avancé](#advanced)** · facultatif
 
 ---
 
 <a name="for-beginners"></a>
-# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="40" align="absmiddle"></a> Partie 1. Pour débutants
+# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="46" align="absmiddle"></a> Partie 1. Pour débutants
 
 <a name="start-in-4-steps"></a>
 > [!TIP]
 > **C’est tout ce qu’il faut.** 4 étapes, environ une minute. L’assistant fait le reste. Tu peux sauter la partie 2.
 
 <a name="krok-1"></a>
-### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="26" align="absmiddle"></a> Clique sur le bouton bleu
+### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="32" align="absmiddle"></a> Clique sur le bouton bleu
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Ouvrir dans HACS" height="56"></a></p>
 
@@ -80,7 +80,7 @@ Le bouton ouvre HACS dans ton Home Assistant. L’image montre où cliquer.
 <br>
 
 <a name="krok-2"></a>
-### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="26" align="absmiddle"></a> Clique sur « Télécharger »
+### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="32" align="absmiddle"></a> Clique sur « Télécharger »
 
 Télécharge la carte dans ton Home Assistant.
 
@@ -90,7 +90,7 @@ Télécharge la carte dans ton Home Assistant.
 <br>
 
 <a name="krok-3"></a>
-### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="26" align="absmiddle"></a> Ajoute la carte
+### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="32" align="absmiddle"></a> Ajoute la carte
 
 Ajoute la carte à ton tableau de bord.
 
@@ -100,7 +100,7 @@ Ajoute la carte à ton tableau de bord.
 <br>
 
 <a name="krok-4"></a>
-### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-4-circle.png" height="26" align="absmiddle"></a> L’assistant fait le reste
+### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-4-circle.png" height="32" align="absmiddle"></a> L’assistant fait le reste
 
 L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-même le store, le moteur, les capteurs de fenêtre et la météo.
 
@@ -166,7 +166,7 @@ L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-
 ---
 
 <a name="actions-how-to-control-it"></a>
-### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-tap.png" height="26" align="absmiddle"></a> Comment l’utiliser
+### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-tap.png" height="32" align="absmiddle"></a> Comment l’utiliser
 
 <table>
 <tr><th align="center"><a name="i36" href="#i36"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="90" height="0"></a><br>Icône</th><th align="left"><a name="i37" href="#i37"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="330" height="0"></a><br>Ce que tu fais</th><th align="left"><a name="i38" href="#i38"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="480" height="0"></a><br>Ce qui se passe</th></tr>
@@ -186,7 +186,7 @@ L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-
 ---
 
 <a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/update.png" height="26" align="absmiddle"></a> Mise à jour vers v23
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/update.png" height="32" align="absmiddle"></a> Mise à jour vers v23
 
 > [!IMPORTANT]
 > La version 23 **ne change pas** tes réglages. Les cartes existantes continuent de marcher.
@@ -205,7 +205,7 @@ L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-
 ---
 
 <a name="glossary"></a>
-### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/book-open-variant.png" height="26" align="absmiddle"></a> Lexique : que veulent dire ces mots ?
+### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/book-open-variant.png" height="32" align="absmiddle"></a> Lexique : que veulent dire ces mots ?
 
 
 <table>
@@ -224,39 +224,39 @@ L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-
 ---
 
 <a name="faq"></a>
-### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/help-circle.png" height="26" align="absmiddle"></a> Questions et problèmes
+### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/help-circle.png" height="32" align="absmiddle"></a> Questions et problèmes
 
 <br>
 
-#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> La carte n’est pas dans « Ajouter une carte »
+#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> La carte n’est pas dans « Ajouter une carte »
 
 Recharge la page : **Ctrl + Maj + R**. Sur téléphone, rouvre l’application HA. Puis tape **Roleta** dans la recherche.
 
 
 <br>
 
-#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> L’animation va plus vite ou plus lentement que le store
+#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> L’animation va plus vite ou plus lentement que le store
 
 Ouvre l’éditeur, section **Ruch i kalibracja** (mouvement), clique sur **Kalibruj automatycznie**. La carte mesure le temps seule.
 
 
 <br>
 
-#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> Pas de météo derrière la vitre
+#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Pas de météo derrière la vitre
 
 Ouvre l’éditeur, section **Zaawansowane** (avancé), source météo **auto** ou **internet**.
 
 
 <br>
 
-#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> Le store va dans le mauvais sens
+#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Le store va dans le mauvais sens
 
 Ouvre l’éditeur, section **Zaawansowane** (avancé), active **Inverser la position**.
 
 
 <br>
 
-#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> Le capteur de fenêtre ne marche pas
+#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Le capteur de fenêtre ne marche pas
 
 Ouvre l’éditeur, section **Okno** (fenêtre). Choisis le capteur de chaque battant et **entrouvert** ou **ouvert**.
 
@@ -266,7 +266,7 @@ Toujours bloqué ? [Signale un problème](https://github.com/superdarco78/roleta
 ---
 
 <a name="advanced"></a>
-# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="40" align="absmiddle"></a> Partie 2. Avancé
+# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="46" align="absmiddle"></a> Partie 2. Avancé
 
 Toutes les options, les exemples YAML, l’éditeur et l’installation sans HACS sont décrits en détail, avec images, dans le guide en anglais.
 

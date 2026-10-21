@@ -43,10 +43,10 @@
 </table>
 
 <a name="table-of-contents"></a>
-## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/format-list-bulleted.png" height="30" align="absmiddle"></a> Contents
+## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/format-list-bulleted.png" height="36" align="absmiddle"></a> Contents
 
 
-**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="22" align="absmiddle"></a> [Part 1. For beginners](#for-beginners)** · this is enough
+**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="26" align="absmiddle"></a> [Part 1. For beginners](#for-beginners)** · this is enough
 - [Click the blue button](#krok-1)
 - [Click “Download”](#krok-2)
 - [Add the card](#krok-3)
@@ -56,19 +56,19 @@
 - [Glossary: what do these words mean?](#glossary)
 - [FAQ](#faq)
 
-**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="22" align="absmiddle"></a> [Part 2. Advanced](#advanced)** · optional
+**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="26" align="absmiddle"></a> [Part 2. Advanced](#advanced)** · optional
 
 ---
 
 <a name="for-beginners"></a>
-# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="40" align="absmiddle"></a> Part 1. For beginners
+# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="46" align="absmiddle"></a> Part 1. For beginners
 
 <a name="start-in-4-steps"></a>
 > [!TIP]
 > **This is all you need.** 4 steps, about a minute. The wizard does the rest. You can skip Part 2.
 
 <a name="krok-1"></a>
-### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="26" align="absmiddle"></a> Click the blue button
+### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="32" align="absmiddle"></a> Click the blue button
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="56"></a></p>
 
@@ -80,7 +80,7 @@ The button opens HACS in your Home Assistant. The picture shows what to click.
 <br>
 
 <a name="krok-2"></a>
-### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="26" align="absmiddle"></a> Click “Download”
+### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="32" align="absmiddle"></a> Click “Download”
 
 Download the card to your Home Assistant.
 
@@ -90,7 +90,7 @@ Download the card to your Home Assistant.
 <br>
 
 <a name="krok-3"></a>
-### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="26" align="absmiddle"></a> Add the card
+### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="32" align="absmiddle"></a> Add the card
 
 Add the card to your dashboard.
 
@@ -100,7 +100,7 @@ Add the card to your dashboard.
 <br>
 
 <a name="krok-4"></a>
-### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-4-circle.png" height="26" align="absmiddle"></a> The wizard does the rest
+### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-4-circle.png" height="32" align="absmiddle"></a> The wizard does the rest
 
 The wizard opens by itself. It has 7 short steps. The card finds your blind, motor, window sensors and weather by itself.
 
@@ -166,7 +166,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ---
 
 <a name="actions-how-to-control-it"></a>
-### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-tap.png" height="26" align="absmiddle"></a> How to control it
+### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-tap.png" height="32" align="absmiddle"></a> How to control it
 
 <table>
 <tr><th align="center"><a name="i36" href="#i36"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="90" height="0"></a><br>Icon</th><th align="left"><a name="i37" href="#i37"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="330" height="0"></a><br>What you do</th><th align="left"><a name="i38" href="#i38"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="480" height="0"></a><br>What happens</th></tr>
@@ -186,7 +186,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ---
 
 <a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/update.png" height="26" align="absmiddle"></a> Upgrading to v23
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/update.png" height="32" align="absmiddle"></a> Upgrading to v23
 
 > [!IMPORTANT]
 > Version 23 **does not change** your settings. Existing cards keep working.
@@ -205,7 +205,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ---
 
 <a name="glossary"></a>
-### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/book-open-variant.png" height="26" align="absmiddle"></a> Glossary: what do these words mean?
+### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/book-open-variant.png" height="32" align="absmiddle"></a> Glossary: what do these words mean?
 
 
 <table>
@@ -224,39 +224,39 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ---
 
 <a name="faq"></a>
-### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/help-circle.png" height="26" align="absmiddle"></a> Questions and problems
+### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/help-circle.png" height="32" align="absmiddle"></a> Questions and problems
 
 <br>
 
-#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> The card is not in “Add card”
+#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> The card is not in “Add card”
 
 Refresh the page: **Ctrl + Shift + R**. On a phone, close and reopen the HA app. Then type **Roleta** in the card search.
 
 
 <br>
 
-#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> The animation is faster or slower than the blind
+#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> The animation is faster or slower than the blind
 
 Open the card editor, section **Motion and calibration**, click **Auto-calibrate**. The card measures the time by itself.
 
 
 <br>
 
-#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> No weather behind the glass
+#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> No weather behind the glass
 
 Open the editor, section **Advanced**, set the weather source to **auto** or **internet**.
 
 
 <br>
 
-#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> The blind moves the wrong way
+#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> The blind moves the wrong way
 
 Open the editor, section **Advanced**, turn on **Invert position**.
 
 
 <br>
 
-#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="22" align="absmiddle"></a> The window sensor does not work
+#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> The window sensor does not work
 
 Open the editor, section **Window**. Pick the sensor for each sash and choose **tilt** or **open**.
 
@@ -266,7 +266,7 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 ---
 
 <a name="advanced"></a>
-# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="40" align="absmiddle"></a> Part 2. Advanced
+# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="46" align="absmiddle"></a> Part 2. Advanced
 
 > [!NOTE]
 > **You do not need to read this.** The wizard has already set everything up. Here are the details: all wizard screens, the editor, options, YAML and installing without HACS.
@@ -286,7 +286,7 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 ---
 
 <a name="the-roleta-dzien-noc-card"></a>
-## <a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/window-shutter.png" height="30" align="absmiddle"></a> The Roleta dzień-noc card
+## <a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/window-shutter.png" height="36" align="absmiddle"></a> The Roleta dzień-noc card
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
@@ -365,7 +365,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 ---
 
 <a name="editor"></a>
-## <a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/tune.png" height="30" align="absmiddle"></a> Editor
+## <a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/tune.png" height="36" align="absmiddle"></a> Editor
 
 Settings are grouped in collapsible sections, each with **↺ Restore defaults**. The live preview at the top **never moves the real blind**; pin it 📌 to see every change.
 
@@ -396,7 +396,7 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 ---
 
 <a name="options"></a>
-## <a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/file-document-outline.png" height="30" align="absmiddle"></a> Options
+## <a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/file-document-outline.png" height="36" align="absmiddle"></a> Options
 
 Everything can be set in the editor; the tables are for YAML fans. Option names are Polish.
 
@@ -437,7 +437,7 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 ---
 
 <a name="examples"></a>
-## <a name="i67" href="#i67"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/flask-outline.png" height="30" align="absmiddle"></a> Examples
+## <a name="i67" href="#i67"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/flask-outline.png" height="36" align="absmiddle"></a> Examples
 
 ```yaml
 type: custom:roleta-realistyczna
@@ -478,7 +478,7 @@ jezyk: en
 ---
 
 <a name="auto-detection"></a>
-## <a name="i68" href="#i68"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/magnify.png" height="30" align="absmiddle"></a> Auto-detection
+## <a name="i68" href="#i68"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/magnify.png" height="36" align="absmiddle"></a> Auto-detection
 
 <table>
 <tr><th align="left"><a name="i69" href="#i69"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="260" height="0"></a><br>What</th><th align="left"><a name="i70" href="#i70"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="640" height="0"></a><br>How</th></tr>
@@ -492,21 +492,21 @@ jezyk: en
 ---
 
 <a name="moes-tuya-motors"></a>
-## <a name="i71" href="#i71"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/power-plug.png" height="30" align="absmiddle"></a> Moes / Tuya motors
+## <a name="i71" href="#i71"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/power-plug.png" height="36" align="absmiddle"></a> Moes / Tuya motors
 
 Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2 + 394 / rpm. False 0% / 100% reports while moving are ignored.
 
 ---
 
 <a name="card-elements"></a>
-## <a name="i72" href="#i72"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/puzzle.png" height="30" align="absmiddle"></a> Card elements
+## <a name="i72" href="#i72"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/puzzle.png" height="36" align="absmiddle"></a> Card elements
 
 All card elements, numbered, are in the picture in [How to control it](#actions-how-to-control-it).
 
 ---
 
 <a name="manual"></a>
-## <a name="i73" href="#i73"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/toolbox.png" height="30" align="absmiddle"></a> Install without HACS (manual)
+## <a name="i73" href="#i73"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/toolbox.png" height="36" align="absmiddle"></a> Install without HACS (manual)
 
 Screenshots show the Polish HA interface; the buttons are in the same places in English.
 
@@ -557,14 +557,14 @@ Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScrip
 ---
 
 <a name="help-wanted"></a>
-## <a name="i74" href="#i74"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/hand-wave.png" height="30" align="absmiddle"></a> Help wanted
+## <a name="i74" href="#i74"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/hand-wave.png" height="36" align="absmiddle"></a> Help wanted
 
 Different blind or motor? Tell us how it works with the card, with a screenshot. Ideas: [request a feature](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
 
 ---
 
 <a name="translations"></a>
-## <a name="i75" href="#i75"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/translate.png" height="30" align="absmiddle"></a> Translations
+## <a name="i75" href="#i75"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/translate.png" height="36" align="absmiddle"></a> Translations
 
 <table>
 <tr><th align="left"><a name="i76" href="#i76"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="260" height="0"></a><br>Language</th><th align="left"><a name="i77" href="#i77"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="640" height="0"></a><br>Status</th></tr>
@@ -577,14 +577,14 @@ Want your language? Copy [`translations/en.json`](translations/en.json) to `tran
 ---
 
 <a name="project-structure"></a>
-## <a name="i78" href="#i78"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/code-braces.png" height="30" align="absmiddle"></a> Project structure
+## <a name="i78" href="#i78"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/code-braces.png" height="36" align="absmiddle"></a> Project structure
 
 Source code is split into modules in [`src/`](src) (card, editor, 7-step wizard, dashboards, weather, detection and ranking, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
 
 ---
 
 <a name="support"></a>
-## <a name="i79" href="#i79"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/coffee.png" height="30" align="absmiddle"></a> Support
+## <a name="i79" href="#i79"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/coffee.png" height="36" align="absmiddle"></a> Support
 
 If you like the card, leave a ⭐ at the top of the page. Thank you!
 
