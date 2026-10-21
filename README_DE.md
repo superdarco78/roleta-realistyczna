@@ -1,4 +1,4 @@
-<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/hero-en.png" alt="Roleta dzień-noc" width="100%"></a></p>
+<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/hero-ha-en.png" alt="Roleta dzień-noc" width="100%"></a></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=Version&color=0288d1" alt="release"></a>
@@ -39,15 +39,15 @@
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/animacja-en.webp" width="49%" alt="Animation"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/animacja-ciemna-en.webp" width="49%" alt="Animation"></a></p>
 
 <table>
-<tr><td align="center" valign="top" width="25%"><a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#how-it-looks"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/weather-partly-cloudy.png" height="56" alt=""><br><b>Wetter</b><br><sub>Regen, Schnee, Sonne oder Nacht draußen</sub></a></td><td align="center" valign="top" width="25%"><a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#actions-how-to-control-it"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/gesture-swipe-vertical.png" height="56" alt=""><br><b>Wischen</b><br><sub>Mit einem Finger nach oben oder unten</sub></a></td><td align="center" valign="top" width="25%"><a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/auto-fix.png" height="56" alt=""><br><b>Assistent</b><br><sub>Findet deine Geräte selbst</sub></a></td><td align="center" valign="top" width="25%"><a name="i61" href="#i61"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#auto-detection"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/window-open-variant.png" height="56" alt=""><br><b>Offenes Fenster</b><br><sub>Zeigt offene und gekippte Fenster</sub></a></td></tr>
-<tr><td align="center" valign="top" width="25%"><a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#options"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/timer-outline.png" height="56" alt=""><br><b>Motortempo</b><br><sub>Fährt so schnell wie dein Motor</sub></a></td><td align="center" valign="top" width="25%"><a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#colours-and-wood-finishes"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/palette.png" height="56" alt=""><br><b>Farben</b><br><sub>Eiche, Nussbaum, Anthrazit und mehr</sub></a></td><td align="center" valign="top" width="25%"><a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#editor"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/theme-light-dark.png" height="56" alt=""><br><b>Hell und dunkel</b><br><sub>Passt zu deinem Home-Assistant-Design</sub></a></td><td align="center" valign="top" width="25%"><a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#translations"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/translate.png" height="56" alt=""><br><b>Polnisch und Englisch</b><br><sub>Sprache aus deinem Profil</sub></a></td></tr>
+<tr><td align="center" valign="top" width="25%"><a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#how-it-looks"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/weather-partly-cloudy.png" height="56" alt=""><br><b>Wetter</b><br><sub>Regen, Schnee, Sonne oder Nacht draußen</sub></a></td><td align="center" valign="top" width="25%"><a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#actions-how-to-control-it"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/gesture-swipe-vertical.png" height="56" alt=""><br><b>Wischen</b><br><sub>Mit einem Finger nach oben oder unten</sub></a></td><td align="center" valign="top" width="25%"><a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/auto-fix.png" height="56" alt=""><br><b>Assistent</b><br><sub>Findet deine Geräte selbst</sub></a></td><td align="center" valign="top" width="25%"><a name="i61" href="#i61"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#auto-detection"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/window-open-variant.png" height="56" alt=""><br><b>Offenes Fenster</b><br><sub>Zeigt offene und gekippte Fenster</sub></a></td></tr>
+<tr><td align="center" valign="top" width="25%"><a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#options"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/timer-outline.png" height="56" alt=""><br><b>Motortempo</b><br><sub>Fährt so schnell wie dein Motor</sub></a></td><td align="center" valign="top" width="25%"><a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#colours-and-wood-finishes"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/palette.png" height="56" alt=""><br><b>Farben</b><br><sub>Eiche, Nussbaum, Anthrazit und mehr</sub></a></td><td align="center" valign="top" width="25%"><a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#editor"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/theme-light-dark.png" height="56" alt=""><br><b>Hell und dunkel</b><br><sub>Passt zu deinem Home-Assistant-Design</sub></a></td><td align="center" valign="top" width="25%"><a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#translations"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/translate.png" height="56" alt=""><br><b>Polnisch und Englisch</b><br><sub>Sprache aus deinem Profil</sub></a></td></tr>
 </table>
 
 <a name="table-of-contents"></a>
-## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/format-list-bulleted.png" height="30" align="absmiddle"></a> Inhalt
+## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/format-list-bulleted.png" height="30" align="absmiddle"></a> Inhalt
 
 
-**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/rocket-launch.png" height="22" align="absmiddle"></a> [Teil 1. Für Einsteiger](#for-beginners)** · das reicht
+**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/rocket-launch.png" height="22" align="absmiddle"></a> [Teil 1. Für Einsteiger](#for-beginners)** · das reicht
 - [Klicke auf den blauen Knopf](#krok-1)
 - [Klicke auf „Herunterladen“](#krok-2)
 - [Karte hinzufügen](#krok-3)
@@ -57,19 +57,19 @@
 - [Wörterbuch: was bedeuten diese Wörter?](#glossary)
 - [Fragen und Probleme](#faq)
 
-**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/wrench.png" height="22" align="absmiddle"></a> [Teil 2. Für Fortgeschrittene](#advanced)** · optional
+**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/wrench.png" height="22" align="absmiddle"></a> [Teil 2. Für Fortgeschrittene](#advanced)** · optional
 
 ---
 
 <a name="for-beginners"></a>
-# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/rocket-launch.png" height="40" align="absmiddle"></a> Teil 1. Für Einsteiger
+# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/rocket-launch.png" height="40" align="absmiddle"></a> Teil 1. Für Einsteiger
 
 <a name="start-in-4-steps"></a>
 > [!TIP]
 > **Mehr brauchst du nicht.** 4 Schritte, etwa eine Minute. Den Rest macht der Assistent. Teil 2 kannst du überspringen.
 
 <a name="krok-1"></a>
-### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/numeric-1-circle.png" height="26" align="absmiddle"></a> Klicke auf den blauen Knopf
+### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/numeric-1-circle.png" height="26" align="absmiddle"></a> Klicke auf den blauen Knopf
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="In HACS öffnen" height="56"></a></p>
 
@@ -81,7 +81,7 @@ Der Knopf öffnet HACS in deinem Home Assistant. Das Bild zeigt, was du klicken 
 <br>
 
 <a name="krok-2"></a>
-### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/numeric-2-circle.png" height="26" align="absmiddle"></a> Klicke auf „Herunterladen“
+### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/numeric-2-circle.png" height="26" align="absmiddle"></a> Klicke auf „Herunterladen“
 
 Lade die Karte in deinen Home Assistant herunter.
 
@@ -91,7 +91,7 @@ Lade die Karte in deinen Home Assistant herunter.
 <br>
 
 <a name="krok-3"></a>
-### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/numeric-3-circle.png" height="26" align="absmiddle"></a> Karte hinzufügen
+### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/numeric-3-circle.png" height="26" align="absmiddle"></a> Karte hinzufügen
 
 Füge die Karte zu deinem Dashboard hinzu.
 
@@ -101,7 +101,7 @@ Füge die Karte zu deinem Dashboard hinzu.
 <br>
 
 <a name="krok-4"></a>
-### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/numeric-4-circle.png" height="26" align="absmiddle"></a> Den Rest macht der Assistent
+### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/numeric-4-circle.png" height="26" align="absmiddle"></a> Den Rest macht der Assistent
 
 Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet Rollo, Motor, Fenstersensoren und Wetter selbst.
 
@@ -160,7 +160,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 ---
 
 <a name="actions-how-to-control-it"></a>
-### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/gesture-tap.png" height="26" align="absmiddle"></a> Bedienung
+### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/gesture-tap.png" height="26" align="absmiddle"></a> Bedienung
 
 <table>
 <tr><th align="center"><a name="i36" href="#i36"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="90" height="0"></a><br>Symbol</th><th align="left"><a name="i37" href="#i37"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="330" height="0"></a><br>Was du tust</th><th align="left"><a name="i38" href="#i38"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="480" height="0"></a><br>Was passiert</th></tr>
@@ -180,7 +180,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 ---
 
 <a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/update.png" height="26" align="absmiddle"></a> Update auf v23
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/update.png" height="26" align="absmiddle"></a> Update auf v23
 
 > [!IMPORTANT]
 > Version 23 **ändert deine Einstellungen nicht**. Vorhandene Karten funktionieren weiter.
@@ -199,7 +199,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 ---
 
 <a name="glossary"></a>
-### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/book-open-variant.png" height="26" align="absmiddle"></a> Wörterbuch: was bedeuten diese Wörter?
+### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/book-open-variant.png" height="26" align="absmiddle"></a> Wörterbuch: was bedeuten diese Wörter?
 
 
 <table>
@@ -218,39 +218,39 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 ---
 
 <a name="faq"></a>
-### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/help-circle.png" height="26" align="absmiddle"></a> Fragen und Probleme
+### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/help-circle.png" height="26" align="absmiddle"></a> Fragen und Probleme
 
 <br>
 
-#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/alert-circle-outline.png" height="22" align="absmiddle"></a> Die Karte fehlt unter „Karte hinzufügen“
+#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/alert-circle-outline.png" height="22" align="absmiddle"></a> Die Karte fehlt unter „Karte hinzufügen“
 
 Seite neu laden: **Strg + Umschalt + R**. Am Handy die HA-App neu öffnen. Dann **Roleta** in der Kartensuche eingeben.
 
 
 <br>
 
-#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/alert-circle-outline.png" height="22" align="absmiddle"></a> Die Animation ist schneller oder langsamer als das Rollo
+#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/alert-circle-outline.png" height="22" align="absmiddle"></a> Die Animation ist schneller oder langsamer als das Rollo
 
 Öffne den Karten-Editor, Bereich **Ruch i kalibracja** (Bewegung), klicke **Kalibruj automatycznie**. Die Karte misst die Zeit selbst.
 
 
 <br>
 
-#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/alert-circle-outline.png" height="22" align="absmiddle"></a> Kein Wetter hinter dem Glas
+#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/alert-circle-outline.png" height="22" align="absmiddle"></a> Kein Wetter hinter dem Glas
 
 Öffne den Editor, Bereich **Zaawansowane** (Erweitert), Wetterquelle **auto** oder **internet**.
 
 
 <br>
 
-#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/alert-circle-outline.png" height="22" align="absmiddle"></a> Das Rollo fährt falsch herum
+#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/alert-circle-outline.png" height="22" align="absmiddle"></a> Das Rollo fährt falsch herum
 
 Öffne den Editor, Bereich **Zaawansowane** (Erweitert), schalte **Position umkehren** ein.
 
 
 <br>
 
-#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/alert-circle-outline.png" height="22" align="absmiddle"></a> Der Fenstersensor geht nicht
+#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/alert-circle-outline.png" height="22" align="absmiddle"></a> Der Fenstersensor geht nicht
 
 Öffne den Editor, Bereich **Okno** (Fenster). Wähle den Sensor für jeden Flügel und **gekippt** oder **offen**.
 
@@ -260,7 +260,7 @@ Noch Fragen? [Problem melden](https://github.com/superdarco78/roleta-realistyczn
 ---
 
 <a name="advanced"></a>
-# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony/wrench.png" height="40" align="absmiddle"></a> Teil 2. Für Fortgeschrittene
+# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha/wrench.png" height="40" align="absmiddle"></a> Teil 2. Für Fortgeschrittene
 
 Alle Optionen, YAML-Beispiele, der Editor und die Installation ohne HACS stehen ausführlich mit Bildern in der englischen Anleitung.
 
