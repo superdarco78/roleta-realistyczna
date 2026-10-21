@@ -102,10 +102,11 @@
         przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
    v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
         boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
-   v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki) */
+   v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
+   v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v28";
+  var RR_WERSJA = "v29";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -1641,7 +1642,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
   // src/karta.js
   var RoletaRealistyczna = class extends HTMLElement {
     static getStubConfig(hass) {
-      const e = rrKandydaci(hass, "cover")[0]?.id;
+      const e = Object.keys(hass?.states || {}).find((k) => k.startsWith("cover.") && hass.states[k].attributes?.okno_ha) || rrKandydaci(hass, "cover")[0]?.id;
       return { entity: e || "cover.roleta" };
     }
     static getConfigElement() {
@@ -1650,13 +1651,22 @@ ${rrOslonaStyl(c.oslona, col, rama)}
     setConfig(cfg) {
       if (!cfg || !cfg.entity) throw new Error("Wybierz encję rolety (cover.*)");
       this._raw = cfg;
-      this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, cfg);
+      this._cfg = Object.assign({}, RR_DEF, RR_G.v || {}, this._urz || {}, cfg);
       this._built = false;
       this._sh = [];
       if (this._hass) this._render();
     }
     set hass(h) {
       this._hass = h;
+      const urz = h?.states?.[this._raw?.entity]?.attributes?.okno_ha, uk = JSON.stringify(urz || null);
+      if (uk !== this._uk) {
+        this._uk = uk;
+        this._urz = urz && typeof urz === "object" ? urz : null;
+        if (this._raw) {
+          this.setConfig(this._raw);
+          return;
+        }
+      }
       if (!this._gok) {
         this._gok = 1;
         rrGlobLoad(h).then(() => {
