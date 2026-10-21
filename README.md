@@ -65,7 +65,7 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 
 Kliknij **Otwórz link**. Za pierwszym razem strona zapyta o adres Twojego HA. Gdy HACS zapyta „Dodać repozytorium?”, kliknij **Dodaj**.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-1.png" width="100%" alt="Krok 1"></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-1.png" width="100%" alt="Krok 1"></a></p>
 
 <br>
 
@@ -74,7 +74,7 @@ Kliknij **Otwórz link**. Za pierwszym razem strona zapyta o adres Twojego HA. G
 
 Kliknij **Pobierz** na dole po prawej, potem jeszcze raz **Pobierz** w okienku. Potem odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-2.png" width="100%" alt="Krok 2"></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-2.png" width="100%" alt="Krok 2"></a></p>
 
 <br>
 
@@ -83,7 +83,7 @@ Kliknij **Pobierz** na dole po prawej, potem jeszcze raz **Pobierz** w okienku. 
 
 Na pulpicie kliknij ołówek, potem **＋ Dodaj kartę**. Wpisz **Roleta** i kliknij kartę.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png" width="100%" alt="Krok 3"></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png" width="100%" alt="Krok 3"></a></p>
 
 <br>
 
@@ -186,7 +186,7 @@ Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 
 Odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA. Potem wpisz **Roleta** w wyszukiwarce kart.
 
-<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png" width="100%" alt=""></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png" width="100%" alt=""></a></p>
 
 <br>
 
@@ -659,37 +659,37 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 Wejdź w [najnowsze wydanie](https://github.com/superdarco78/roleta-realistyczna/releases/latest) i kliknij `roleta-realistyczna.js`. Plik zapisze się w folderze Pobrane.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-1.png" width="100%" alt="Krok 1"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-1.png" width="100%" alt="Krok 1"></a>
 
 **Krok 2. Wgraj plik do Home Assistanta**
 
 Otwórz **File editor**. Kliknij ikonę folderu, wejdź do folderu `www` i wgraj plik strzałką w górę.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-2.png" width="100%" alt="Krok 2"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-2.png" width="100%" alt="Krok 2"></a>
 
 **Krok 3. Otwórz Pulpity**
 
 Kliknij **Ustawienia** na dole menu po lewej, potem **Pulpity**.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-3.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-3.png" width="100%" alt="Krok 3"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-3.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-3.png" width="100%" alt="Krok 3"></a>
 
 **Krok 4. Otwórz Zasoby**
 
 Kliknij trzy kropki **⋮** w prawym górnym rogu, potem **Zasoby**.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-4.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-4.png" width="100%" alt="Krok 4"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-4.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-4.png" width="100%" alt="Krok 4"></a>
 
 **Krok 4a. Nie widzisz „Zasoby”? Włącz tryb zaawansowany**
 
 Kliknij swoje imię na dole menu po lewej i włącz **Tryb zaawansowany**. Potem wróć do kroku 4.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-7.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-7.png" width="100%" alt="Krok 4a"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-7.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-7.png" width="100%" alt="Krok 4a"></a>
 
 **Krok 5. Dodaj kartę jako zasób**
 
 Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Moduł JavaScript** i kliknij **Utwórz**. Na koniec odśwież stronę: **Ctrl + Shift + R**.
 
-<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-5.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-5.png" width="100%" alt="Krok 5"></a>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-5.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-5.png" width="100%" alt="Krok 5"></a>
 
 **Przycisk HACS nie działa?**
 
