@@ -45,4 +45,5 @@ export function rrSprawdzInstalacje(hass) {
     .then(l => { wynik.zasoby = (l || []).filter(x => /roleta-realistyczna|okno-ha/.test(x.url)).length; }).catch(() => {}) : null;
   return (RR_INST.p = Promise.all([gh, zas]).then(() => wynik));
 }
-export const rrNumerWersji = v => parseInt(String(v || '').replace(/\D+/g, ''), 10) || 0;
+/* v28: liczy się tylko główny numer (v27.1 = 27) – wydania „.1” zmieniają sam opis, nie kartę */
+export const rrNumerWersji = v => parseInt(String(v || '').replace(/^\D+/, ''), 10) || 0;

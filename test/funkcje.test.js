@@ -127,3 +127,11 @@ test('v27: rodzaje osłon – grupy, nazwy, opisy i style', async () => {
     assert.ok(!s.includes('NaN') && !s.includes('undefined'), t);
   }
 });
+
+test('v28: wydania z samym opisem (v27.1) nie są „nowszą wersją” karty', async () => {
+  const { rrNumerWersji } = await import('../src/panele.js');
+  assert.equal(rrNumerWersji('v27.1'), 27);
+  assert.equal(rrNumerWersji('v27'), 27);
+  assert.ok(rrNumerWersji('v28') > rrNumerWersji('v27.1'));
+  assert.equal(rrNumerWersji(undefined), 0);
+});
