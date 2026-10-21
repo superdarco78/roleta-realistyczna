@@ -282,7 +282,7 @@ Motor, contact sensors and weather. Nothing to add.
 
 A dashed **“→ 50%”** line shows where the blind is going.
 
-<img src="img/edytor/linia-celu.png" width="520" alt="Target line"> <img src="img/edytor/uchwyty.png" width="520" alt="Handles">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Handles and buttons"></picture>
 
 ---
 
@@ -299,7 +299,11 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 | ⚙️ Advanced | Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo. |
 | 🌍 Global | **Save as default** for all blind cards. |
 
-<img src="img/edytor/podglad.png" width="520" alt="Preview"> <img src="img/edytor/kontaktrony.png" width="520" alt="Contact sensors">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/podglad.png"><img src="img/edytor-jasne/podglad.png" width="520" alt="Preview"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/dzialy.png"><img src="img/edytor-jasne/dzialy.png" width="520" alt="Editor sections"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/kontaktrony-ciemne.png"><img src="img/edytor-jasne/kontaktrony.png" width="100%" alt="Contact sensors"></picture>
 
 ---
 

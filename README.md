@@ -189,7 +189,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
-<details><summary>🎨 Więcej: okleiny ze słojami i klamki</summary><img src="img/okleiny.png" width="300"> <img src="img/edytor/klamki.png" width="520"></details>
+<details><summary>🎨 Więcej: okleiny ze słojami i klamki</summary><img src="img/okleiny.png" width="420"></details>
 
 ---
 
@@ -314,7 +314,7 @@ Silnik, kontaktrony i pogoda. Niczego nie musisz dodawać.
 
 Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta jedzie, a w nagłówku widać np. „30% → 50%”.
 
-<img src="img/edytor/linia-celu.png" width="520" alt="Linia celu"> <img src="img/edytor/uchwyty.png" width="520" alt="Uchwyty">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Uchwyty i przyciski"></picture>
 
 ---
 
@@ -323,35 +323,37 @@ Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta j
 
 Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia są w rozwijanych działach. W każdym jest **↺ Przywróć domyślne**.
 
-<img src="img/edytor/dzialy.png" width="520" alt="Działy edytora">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/dzialy.png"><img src="img/edytor-jasne/dzialy.png" width="520" alt="Działy edytora"></picture>
 
 <a name="podglad-na-zywo"></a>
 ### Podgląd na żywo
 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
-<img src="img/edytor/podglad.png" width="520" alt="Podgląd"> <img src="img/edytor/przypiety.png" width="520" alt="Podgląd przypięty">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/podglad.png"><img src="img/edytor-jasne/podglad.png" width="520" alt="Podgląd na żywo"></picture>
 
 <a name="wyglad"></a>
 ### 🎨 Wygląd
 
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
-<img src="img/edytor/wyglad.png" width="520" alt="Wygląd"> <img src="img/edytor/palety.png" width="520" alt="Palety">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/wyglad.png"><img src="img/edytor-jasne/wyglad.png" width="520" alt="Wygląd"></picture>
 
 <a name="okno-i-kontaktrony"></a>
 ### 🪟 Okno i kontaktrony
 
 Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
 
-<img src="img/edytor/kontaktrony.png" width="760" alt="Kontaktrony: zamknięte, uchylone, otwarte">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/okno.png"><img src="img/edytor-jasne/okno.png" width="520" alt="Okno i kontaktrony"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/kontaktrony-ciemne.png"><img src="img/edytor-jasne/kontaktrony.png" width="100%" alt="Zamknięte, lewe uchylone, prawe otwarte, oba"></picture>
 
 <a name="ruch-i-kalibracja"></a>
 ### ⏱ Ruch i kalibracja
 
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
-<img src="img/edytor/kalibracja.png" width="520" alt="Kalibracja">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/kalibracja.png"><img src="img/edytor-jasne/kalibracja.png" width="520" alt="Kalibracja"></picture>
 
 <a name="zaawansowane"></a>
 ### ⚙️ Zaawansowane
@@ -363,7 +365,7 @@ Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwr�
 
 **🌍 Zapisz jako domyślne** przenosi Twój wygląd na wszystkie karty rolet, także nowe. Każda karta może go nadal zmienić u siebie.
 
-<img src="img/edytor/globalne.png" width="520" alt="Ustawienia globalne">
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/globalne.png"><img src="img/edytor-jasne/globalne.png" width="520" alt="Zaawansowane i ustawienia globalne"></picture>
 
 ---
 
