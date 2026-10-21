@@ -115,7 +115,7 @@
    v37 – napis na kolorze motywu biały albo czarny (kontrast z kolorem z profilu); naprawa kreatora (komunikat o wersji) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v39";
+  var RR_WERSJA = "v40";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -170,12 +170,16 @@
     "perforowana",
     "fasadowa",
     "fasadowaz",
-    "screen"
+    "screen",
+    "kasetowa",
+    "markiza"
   ];
-  var RR_OSL_GRUPY = {
-    wew: ["zebra", "pelna", "zaciemniajaca", "plisa", "plaster", "rzymska", "zaluzja", "drewniana"],
-    zew: ["zewnetrzna", "natynkowa", "podtynkowa", "perforowana", "fasadowa", "fasadowaz", "screen"]
+  var RR_OSL_PODGRUPY = {
+    wew: { rolety: ["pelna", "kasetowa", "zebra", "zaciemniajaca"], plisy: ["plisa", "plaster", "rzymska"], zaluzje: ["zaluzja", "drewniana"] },
+    zew: { zrolety: ["natynkowa", "podtynkowa", "zewnetrzna", "perforowana"], fasadowe: ["fasadowa", "fasadowaz"], taras: ["markiza", "screen"] }
   };
+  var RR_OSL_GRUPY = Object.fromEntries(Object.entries(RR_OSL_PODGRUPY).map(([g, p]) => [g, Object.values(p).flat()]));
+  var rrZew = (t) => RR_OSL_GRUPY.zew.includes(t);
   var RR_OSL_IKONY = {
     zebra: "mdi:roller-shade",
     pelna: "mdi:roller-shade-closed",
@@ -191,7 +195,9 @@
     perforowana: "mdi:window-shutter-open",
     fasadowa: "mdi:blinds-horizontal-closed",
     fasadowaz: "mdi:blinds-horizontal-closed",
-    screen: "mdi:roller-shade"
+    screen: "mdi:roller-shade",
+    kasetowa: "mdi:roller-shade",
+    markiza: "mdi:awning-outline"
   };
   var RR_PAS = 16;
   var RR_SIATKA = 10;
@@ -662,20 +668,22 @@
       osl: "Typ osłony",
       osln: [
         "Dzień-noc",
-        "Materiałowa",
+        "Roleta wolnowisząca",
         "Plisa",
         "Rzymska",
         "Żaluzja aluminiowa",
         "Roleta nadstawna",
         "Zaciemniająca",
         "Plaster miodu",
-        "Żaluzja drewniana",
+        "Żaluzja drewniana / bambusowa",
         "Roleta natynkowa",
         "Roleta podtynkowa",
         "Roleta z perforacją",
         "Żaluzja fasadowa C80",
         "Żaluzja fasadowa Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Roleta w kasecie",
+        "Markiza tarasowa"
       ],
       d_osl: "Wybierz, co masz w oknie. Karta dopasuje wygląd tkaniny, kasety, prowadnic i listwy.",
       promienie: "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
@@ -683,23 +691,33 @@
       osld: [
         "Pasy pełne i przezroczyste. Przesuwasz, a światło przechodzi przez paski.",
         "Zwykła roleta z jednolitej tkaniny. Rozprasza światło.",
-        "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
         "Tkanina złożona w harmonijkę.",
-        "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
         "Tkanina układa się w miękkie fałdy.",
         "Cienkie aluminiowe listewki 25 mm na sznurkach.",
-        "Szerokie drewniane lamele 50 mm na taśmach.",
         "Kaseta nad oknem w kolorze ramy, montowana razem z oknem. Pancerz z profili PVC lub aluminium.",
+        "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
+        "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
+        "Szerokie drewniane lamele 50 mm na taśmach.",
         "Skrzynka na elewacji ze ściętym frontem. Dobra do gotowych domów.",
         "Skrzynka schowana w ścianie pod tynkiem. Widać tylko pancerz i prowadnice.",
         "Profile z małymi otworami. Przy opuszczonej rolecie wpada trochę światła.",
         "Wygięte lamele aluminiowe 80 mm na taśmach. Można je przechylać.",
         "Płaskie lamele 90 mm w kształcie Z z uszczelką. Szczelnie zaciemniają.",
-        "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
+        "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje.",
+        "Tkanina w kasecie z prowadnicami po bokach. Przylega do okna, z boków nie wpada światło.",
+        "Tkanina w pasy rozwijana nad tarasem, z falbaną na końcu. Daje cień na tarasie i przed oknem."
       ],
-      osw: "W pokoju",
+      osw: "Wewnątrz pomieszczenia",
       osz: "Na zewnątrz",
-      urz: "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
+      urz: "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”).",
+      oslg: {
+        rolety: "Rolety",
+        plisy: "Plisy i rzymskie",
+        zaluzje: "Żaluzje",
+        zrolety: "Rolety zewnętrzne",
+        fasadowe: "Żaluzje fasadowe",
+        taras: "Taras"
+      }
     },
     kolory: {
       bezowy: "beżowy",
@@ -1063,20 +1081,22 @@
       osl: "Shade type",
       osln: [
         "Day-night",
-        "Fabric roller",
+        "Free-hanging roller",
         "Pleated",
         "Roman",
         "Aluminium venetian",
         "Top-mounted shutter",
         "Blackout",
         "Honeycomb",
-        "Wooden venetian",
+        "Wooden / bamboo venetian",
         "Surface-mounted shutter",
         "Concealed shutter",
         "Perforated shutter",
         "External venetian C80",
         "External venetian Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Cassette roller",
+        "Patio awning"
       ],
       d_osl: "Pick what you have in your window. The card matches the fabric, box, side guides and bottom bar.",
       promienie: "Sun rays coming through the window (daytime, when sunny)",
@@ -1084,23 +1104,33 @@
       osld: [
         "Solid and sheer stripes. Slide them to let light through the sheer stripes.",
         "A plain roller of solid fabric. Diffuses the light.",
-        "Dense coated fabric. Runs in white side channels and blocks the light.",
         "Fabric folded like an accordion.",
-        "Double pleat. Honeycomb cells keep the warmth in.",
         "Fabric gathers in soft folds.",
         "Thin 25 mm aluminium slats on cords.",
-        "Wide 50 mm wooden slats on tapes.",
         "Box above the window in the frame colour, fitted with the window. Curtain of PVC or aluminium profiles.",
+        "Dense coated fabric. Runs in white side channels and blocks the light.",
+        "Double pleat. Honeycomb cells keep the warmth in.",
+        "Wide 50 mm wooden slats on tapes.",
         "Box on the outside wall with a bevelled front. Good for existing houses.",
         "Box hidden in the wall under the plaster. Only the curtain and guides are visible.",
         "Profiles with small holes. Some light comes in when closed.",
         "Curved 80 mm aluminium slats on tapes. They can tilt.",
         "Flat 90 mm Z-shaped slats with a seal. Very dark when closed.",
-        "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view."
+        "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view.",
+        "Fabric in a cassette with side guides. Sits close to the window, no light leaks at the sides.",
+        "Striped fabric unrolled over the patio, with a valance at the end. Shades the patio and the window."
       ],
       osw: "Inside",
       osz: "Outside",
-      urz: "🔗 This window comes from the Motor HA integration – every change is saved to the device automatically (same as “Configure”)."
+      urz: "🔗 This window comes from the Motor HA integration – every change is saved to the device automatically (same as “Configure”).",
+      oslg: {
+        rolety: "Roller blinds",
+        plisy: "Pleated and Roman",
+        zaluzje: "Venetian blinds",
+        zrolety: "Roller shutters",
+        fasadowe: "External venetians",
+        taras: "Patio"
+      }
     },
     kolory: {
       czarny: "black",
@@ -1490,20 +1520,22 @@
       osl: "Art der Beschattung",
       osln: [
         "Doppelrollo",
-        "Stoffrollo",
+        "Freihängendes Rollo",
         "Plissee",
         "Raffrollo",
         "Alu-Jalousie",
         "Aufsatzrollladen",
         "Verdunkelungsrollo",
         "Wabenplissee",
-        "Holzjalousie",
+        "Holz- / Bambusjalousie",
         "Vorbaurollladen",
         "Unterputzrollladen",
         "Gelochter Rollladen",
         "Raffstore C80",
         "Raffstore Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Kassettenrollo",
+        "Terrassenmarkise"
       ],
       d_osl: "Wähle, was du am Fenster hast. Die Karte passt Stoff, Kasten, Seitenführungen und Endleiste an.",
       promienie: "Sonnenstrahlen durch das Fenster (tagsüber, bei Sonne)",
@@ -1511,23 +1543,33 @@
       osld: [
         "Blickdichte und transparente Streifen. Verschiebe sie, um Licht durch die transparenten Streifen zu lassen.",
         "Ein einfaches Rollo aus dichtem Stoff. Streut das Licht.",
-        "Dichter beschichteter Stoff. Läuft in weißen Seitenschienen und sperrt das Licht aus.",
         "Stoff, der wie eine Ziehharmonika gefaltet ist.",
-        "Doppelplissee. Die Wabenkammern halten die Wärme.",
         "Der Stoff legt sich in weiche Falten.",
         "Dünne 25-mm-Alulamellen an Schnüren.",
-        "Breite 50-mm-Holzlamellen an Bändern.",
         "Kasten über dem Fenster in Rahmenfarbe, mit dem Fenster montiert. Panzer aus PVC- oder Aluprofilen.",
+        "Dichter beschichteter Stoff. Läuft in weißen Seitenschienen und sperrt das Licht aus.",
+        "Doppelplissee. Die Wabenkammern halten die Wärme.",
+        "Breite 50-mm-Holzlamellen an Bändern.",
         "Kasten an der Außenwand mit abgeschrägter Front. Gut für bestehende Häuser.",
         "Kasten in der Wand unter dem Putz. Sichtbar sind nur Panzer und Führungen.",
         "Profile mit kleinen Löchern. Geschlossen kommt noch etwas Licht herein.",
         "Gebogene 80-mm-Alulamellen an Bändern. Sie lassen sich kippen.",
         "Flache 90-mm-Lamellen in Z-Form mit Dichtung. Geschlossen sehr dunkel.",
-        "Außenliegendes Gewebe in Seitenführungen mit Reißverschluss. Hält die Sonne ab, die Aussicht bleibt."
+        "Außenliegendes Gewebe in Seitenführungen mit Reißverschluss. Hält die Sonne ab, die Aussicht bleibt.",
+        "Stoff in einer Kassette mit Seitenführungen. Liegt am Fenster an, seitlich kommt kein Licht durch.",
+        "Gestreifter Stoff über der Terrasse, mit Volant am Ende. Spendet Schatten auf Terrasse und Fenster."
       ],
       osw: "Innen",
       osz: "Außen",
-      urz: "🔗 Dieses Fenster stammt aus der Motor HA-Integration – jede Änderung wird automatisch im Gerät gespeichert (wie bei „Konfigurieren“)."
+      urz: "🔗 Dieses Fenster stammt aus der Motor HA-Integration – jede Änderung wird automatisch im Gerät gespeichert (wie bei „Konfigurieren“).",
+      oslg: {
+        rolety: "Rollos",
+        plisy: "Plissees und Raffrollos",
+        zaluzje: "Jalousien",
+        zrolety: "Rollläden",
+        fasadowe: "Raffstores",
+        taras: "Terrasse"
+      }
     },
     kolory: {
       czarny: "schwarz",
@@ -1917,20 +1959,22 @@
       osl: "Type de store",
       osln: [
         "Jour-nuit",
-        "Store enrouleur",
+        "Store enrouleur libre",
         "Plissé",
         "Store bateau",
         "Vénitien alu",
         "Volet roulant traditionnel",
         "Occultant",
         "Plissé nid d’abeille",
-        "Vénitien bois",
+        "Vénitien bois / bambou",
         "Volet roulant en applique",
         "Volet roulant encastré",
         "Volet roulant ajouré",
         "Brise-soleil orientable C80",
         "Brise-soleil orientable Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Store coffre",
+        "Store banne"
       ],
       d_osl: "Choisissez ce que vous avez à la fenêtre. La carte adapte la toile, le coffre, les coulisses et la barre de charge.",
       promienie: "Rayons du soleil à travers la fenêtre (le jour, quand il fait beau)",
@@ -1938,23 +1982,33 @@
       osld: [
         "Bandes opaques et voilées. Faites-les glisser pour laisser passer la lumière par les bandes voilées.",
         "Un simple enrouleur en toile opaque. Diffuse la lumière.",
-        "Toile dense enduite. Coulisse dans des glissières blanches et bloque la lumière.",
         "Toile pliée en accordéon.",
-        "Double plissé. Les alvéoles gardent la chaleur.",
         "La toile se replie en plis souples.",
         "Fines lames alu de 25 mm sur cordons.",
-        "Larges lames bois de 50 mm sur rubans.",
         "Coffre au-dessus de la fenêtre dans la couleur du cadre, posé avec la fenêtre. Tablier en lames PVC ou alu.",
+        "Toile dense enduite. Coulisse dans des glissières blanches et bloque la lumière.",
+        "Double plissé. Les alvéoles gardent la chaleur.",
+        "Larges lames bois de 50 mm sur rubans.",
         "Coffre sur le mur extérieur avec façade biseautée. Idéal pour la rénovation.",
         "Coffre caché dans le mur sous l’enduit. Seuls le tablier et les coulisses sont visibles.",
         "Lames avec petits trous. Un peu de lumière passe quand il est fermé.",
         "Lames alu bombées de 80 mm sur rubans. Elles s’orientent.",
         "Lames plates de 90 mm en Z avec joint. Très sombre une fois fermé.",
-        "Toile extérieure dans des coulisses à fermeture éclair. Arrête le soleil, garde la vue."
+        "Toile extérieure dans des coulisses à fermeture éclair. Arrête le soleil, garde la vue.",
+        "Tissu dans un coffre avec coulisses latérales. Plaqué contre la fenêtre, sans fuite de lumière sur les côtés.",
+        "Toile rayée déroulée au-dessus de la terrasse, avec un lambrequin. Fait de l'ombre sur la terrasse et la fenêtre."
       ],
       osw: "Intérieur",
       osz: "Extérieur",
-      urz: "🔗 Cette fenêtre vient de l’intégration Motor HA – chaque modification est enregistrée automatiquement dans l’appareil (comme avec « Configurer »)."
+      urz: "🔗 Cette fenêtre vient de l’intégration Motor HA – chaque modification est enregistrée automatiquement dans l’appareil (comme avec « Configurer »).",
+      oslg: {
+        rolety: "Stores enrouleurs",
+        plisy: "Plissés et bateaux",
+        zaluzje: "Stores vénitiens",
+        zrolety: "Volets roulants",
+        fasadowe: "Brise-soleil orientables",
+        taras: "Terrasse"
+      }
     },
     kolory: {
       czarny: "noir",
@@ -2344,20 +2398,22 @@
       osl: "Tipo de cortina",
       osln: [
         "Día-noche",
-        "Estor enrollable",
+        "Estor libre",
         "Plisado",
         "Estor paquete",
         "Veneciana de aluminio",
         "Persiana con cajón superior",
         "Opaco",
         "Plisado nido de abeja",
-        "Veneciana de madera",
+        "Veneciana de madera / bambú",
         "Persiana de cajón exterior",
         "Persiana de cajón empotrado",
         "Persiana microperforada",
         "Veneciana exterior C80",
         "Veneciana exterior Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Estor con cajón",
+        "Toldo de terraza"
       ],
       d_osl: "Elige lo que tienes en la ventana. La tarjeta ajusta la tela, el cajón, las guías y la barra inferior.",
       promienie: "Rayos de sol a través de la ventana (de día, con sol)",
@@ -2365,23 +2421,33 @@
       osld: [
         "Franjas opacas y translúcidas. Deslízalas para dejar pasar la luz por las translúcidas.",
         "Un estor enrollable sencillo de tela opaca. Difumina la luz.",
-        "Tela densa recubierta. Va en guías laterales blancas y bloquea la luz.",
         "Tela plegada como un acordeón.",
-        "Doble plisado. Las celdas guardan el calor.",
         "La tela se recoge en pliegues suaves.",
         "Lamas finas de aluminio de 25 mm con cordones.",
-        "Lamas anchas de madera de 50 mm con cintas.",
         "Cajón sobre la ventana del color del marco, montado con la ventana. Lamas de PVC o aluminio.",
+        "Tela densa recubierta. Va en guías laterales blancas y bloquea la luz.",
+        "Doble plisado. Las celdas guardan el calor.",
+        "Lamas anchas de madera de 50 mm con cintas.",
         "Cajón en la fachada con frente biselado. Ideal para casas existentes.",
         "Cajón oculto en el muro bajo el revoque. Solo se ven las lamas y las guías.",
         "Perfiles con pequeños agujeros. Entra algo de luz cuando está cerrada.",
         "Lamas curvas de aluminio de 80 mm con cintas. Se pueden orientar.",
         "Lamas planas en Z de 90 mm con junta. Muy oscura al cerrar.",
-        "Tejido exterior en guías con cremallera. Frena el sol y deja ver."
+        "Tejido exterior en guías con cremallera. Frena el sol y deja ver.",
+        "Tejido en cajón con guías laterales. Queda pegado a la ventana, sin fugas de luz a los lados.",
+        "Lona a rayas desplegada sobre la terraza, con faldón. Da sombra a la terraza y a la ventana."
       ],
       osw: "Interior",
       osz: "Exterior",
-      urz: "🔗 Esta ventana viene de la integración Motor HA – cada cambio se guarda automáticamente en el dispositivo (igual que «Configurar»)."
+      urz: "🔗 Esta ventana viene de la integración Motor HA – cada cambio se guarda automáticamente en el dispositivo (igual que «Configurar»).",
+      oslg: {
+        rolety: "Estores",
+        plisy: "Plisados y paqueto",
+        zaluzje: "Venecianas",
+        zrolety: "Persianas",
+        fasadowe: "Venecianas exteriores",
+        taras: "Terraza"
+      }
     },
     kolory: {
       czarny: "negro",
@@ -2771,20 +2837,22 @@
       osl: "Tipo di schermatura",
       osln: [
         "Giorno-notte",
-        "Tenda a rullo",
+        "Tenda a rullo libera",
         "Plissettata",
         "Tenda a pacchetto",
         "Veneziana in alluminio",
         "Tapparella con cassonetto superiore",
         "Oscurante",
         "Plissé a nido d’ape",
-        "Veneziana in legno",
+        "Veneziana in legno / bambù",
         "Tapparella con cassonetto esterno",
         "Tapparella con cassonetto a scomparsa",
         "Tapparella forata",
         "Frangisole C80",
         "Frangisole Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Tenda a cassonetto",
+        "Tenda da terrazzo"
       ],
       d_osl: "Scegli cosa hai alla finestra. La scheda adatta tessuto, cassonetto, guide laterali e barra finale.",
       promienie: "Raggi di sole attraverso la finestra (di giorno, con il sole)",
@@ -2792,23 +2860,33 @@
       osld: [
         "Strisce oscuranti e trasparenti. Falle scorrere per far passare la luce da quelle trasparenti.",
         "Un semplice rullo in tessuto pieno. Diffonde la luce.",
-        "Tessuto denso spalmato. Scorre in guide laterali bianche e blocca la luce.",
         "Tessuto piegato a fisarmonica.",
-        "Doppio plissé. Le celle trattengono il calore.",
         "Il tessuto si raccoglie in morbide pieghe.",
         "Sottili lamelle in alluminio da 25 mm con cordini.",
-        "Larghe lamelle in legno da 50 mm con nastri.",
         "Cassonetto sopra la finestra nel colore del telaio, montato con la finestra. Avvolgibile in PVC o alluminio.",
+        "Tessuto denso spalmato. Scorre in guide laterali bianche e blocca la luce.",
+        "Doppio plissé. Le celle trattengono il calore.",
+        "Larghe lamelle in legno da 50 mm con nastri.",
         "Cassonetto sulla facciata con frontale smussato. Ideale per case esistenti.",
         "Cassonetto nascosto nel muro sotto l’intonaco. Si vedono solo avvolgibile e guide.",
         "Profili con piccoli fori. Da chiusa entra un po’ di luce.",
         "Lamelle curve in alluminio da 80 mm su nastri. Si possono orientare.",
         "Lamelle piatte a Z da 90 mm con guarnizione. Molto buio da chiuso.",
-        "Tessuto esterno in guide con zip. Ferma il sole, lascia la vista."
+        "Tessuto esterno in guide con zip. Ferma il sole, lascia la vista.",
+        "Tessuto in un cassonetto con guide laterali. Aderisce alla finestra, niente luce dai lati.",
+        "Tela a righe srotolata sopra il terrazzo, con mantovana. Fa ombra al terrazzo e alla finestra."
       ],
       osw: "Interno",
       osz: "Esterno",
-      urz: "🔗 Questa finestra viene dall’integrazione Motor HA – ogni modifica è salvata automaticamente nel dispositivo (come con «Configura»)."
+      urz: "🔗 Questa finestra viene dall’integrazione Motor HA – ogni modifica è salvata automaticamente nel dispositivo (come con «Configura»).",
+      oslg: {
+        rolety: "Tende a rullo",
+        plisy: "Plissettate e a pacchetto",
+        zaluzje: "Veneziane",
+        zrolety: "Tapparelle",
+        fasadowe: "Frangisole",
+        taras: "Terrazzo"
+      }
     },
     kolory: {
       czarny: "nero",
@@ -3198,20 +3276,22 @@
       osl: "Soort zonwering",
       osln: [
         "Duo-rolgordijn",
-        "Rolgordijn",
+        "Vrijhangend rolgordijn",
         "Plissé",
         "Vouwgordijn",
         "Aluminium jaloezie",
         "Rolluik met opbouwkast boven",
         "Verduisterend",
         "Dupligordijn",
-        "Houten jaloezie",
+        "Houten / bamboe jaloezie",
         "Opbouwrolluik",
         "Inbouwrolluik",
         "Geperforeerd rolluik",
         "Buitenjaloezie C80",
         "Buitenjaloezie Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Cassetterolgordijn",
+        "Terrasscherm"
       ],
       d_osl: "Kies wat je in je raam hebt. De kaart past stof, kast, zijgeleiders en onderlat aan.",
       promienie: "Zonnestralen door het raam (overdag, bij zon)",
@@ -3219,23 +3299,33 @@
       osld: [
         "Dichte en transparante strepen. Schuif ze om licht door de transparante strepen te laten.",
         "Een eenvoudig rolgordijn van dichte stof. Verspreidt het licht.",
-        "Dichte gecoate stof. Loopt in witte zijgeleiders en houdt het licht tegen.",
         "Stof gevouwen als een accordeon.",
-        "Dubbel plissé. De honingraatcellen houden de warmte vast.",
         "De stof plooit in zachte vouwen.",
         "Dunne aluminium lamellen van 25 mm aan koorden.",
-        "Brede houten lamellen van 50 mm aan ladderbanden.",
         "Kast boven het raam in kozijnkleur, samen met het raam geplaatst. Pantser van pvc- of aluminium profielen.",
+        "Dichte gecoate stof. Loopt in witte zijgeleiders en houdt het licht tegen.",
+        "Dubbel plissé. De honingraatcellen houden de warmte vast.",
+        "Brede houten lamellen van 50 mm aan ladderbanden.",
         "Kast op de buitenmuur met schuine voorkant. Goed voor bestaande huizen.",
         "Kast verborgen in de muur onder het stucwerk. Alleen pantser en geleiders zijn zichtbaar.",
         "Profielen met kleine gaatjes. Gesloten valt er nog wat licht binnen.",
         "Gebogen aluminium lamellen van 80 mm aan banden. Ze kunnen kantelen.",
         "Vlakke Z-vormige lamellen van 90 mm met afdichting. Gesloten erg donker.",
-        "Buitendoek in zijgeleiders met rits. Houdt de zon buiten, het uitzicht blijft."
+        "Buitendoek in zijgeleiders met rits. Houdt de zon buiten, het uitzicht blijft.",
+        "Stof in een cassette met zijgeleiders. Sluit aan op het raam, geen licht langs de zijkanten.",
+        "Gestreept doek boven het terras, met een volant. Geeft schaduw op terras en raam."
       ],
       osw: "Binnen",
       osz: "Buiten",
-      urz: "🔗 Dit raam komt uit de Motor HA-integratie – elke wijziging wordt automatisch in het apparaat opgeslagen (net als bij ‘Configureren’)."
+      urz: "🔗 Dit raam komt uit de Motor HA-integratie – elke wijziging wordt automatisch in het apparaat opgeslagen (net als bij ‘Configureren’).",
+      oslg: {
+        rolety: "Rolgordijnen",
+        plisy: "Plissés en vouwgordijnen",
+        zaluzje: "Jaloezieën",
+        zrolety: "Rolluiken",
+        fasadowe: "Screens en lamellen",
+        taras: "Terras"
+      }
     },
     kolory: {
       czarny: "zwart",
@@ -3625,20 +3715,22 @@
       osl: "Typ stínění",
       osln: [
         "Den-noc",
-        "Látková roleta",
+        "Volně visící roleta",
         "Plisé",
         "Římská roleta",
         "Hliníková žaluzie",
         "Předokenní roleta s horním boxem",
         "Zatemňovací",
         "Plisé voštinové",
-        "Dřevěná žaluzie",
+        "Dřevěná / bambusová žaluzie",
         "Předokenní roleta s nástěnným boxem",
         "Podomítková roleta",
         "Perforovaná roleta",
         "Venkovní žaluzie C80",
         "Venkovní žaluzie Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Roleta v kazetě",
+        "Terasová markýza"
       ],
       d_osl: "Vyber, co máš v okně. Karta upraví látku, box, boční vedení a koncovou lištu.",
       promienie: "Sluneční paprsky oknem (ve dne, když svítí slunce)",
@@ -3646,23 +3738,33 @@
       osld: [
         "Plné a průsvitné pruhy. Posuň je, aby světlo prošlo průsvitnými pruhy.",
         "Jednoduchá roleta z plné látky. Rozptyluje světlo.",
-        "Hustá potažená látka. Jede v bílých bočních lištách a nepropustí světlo.",
         "Látka skládaná jako harmonika.",
-        "Dvojité plisé. Voštinové komůrky drží teplo.",
         "Látka se skládá do měkkých záhybů.",
         "Tenké hliníkové lamely 25 mm na šňůrkách.",
-        "Široké dřevěné lamely 50 mm na páskách.",
         "Box nad oknem v barvě rámu, montovaný s oknem. Pancíř z PVC nebo hliníkových profilů.",
+        "Hustá potažená látka. Jede v bílých bočních lištách a nepropustí světlo.",
+        "Dvojité plisé. Voštinové komůrky drží teplo.",
+        "Široké dřevěné lamely 50 mm na páskách.",
         "Box na venkovní zdi se zkoseným čelem. Vhodné pro stávající domy.",
         "Box skrytý ve zdi pod omítkou. Viditelný je jen pancíř a vedení.",
         "Profily s malými otvory. Po zavření projde trochu světla.",
         "Prohnuté hliníkové lamely 80 mm na páskách. Dají se naklápět.",
         "Ploché lamely 90 mm ve tvaru Z s těsněním. Po zavření velmi tma.",
-        "Venkovní tkanina v bočních vedeních se zipem. Zastaví slunce, výhled zůstane."
+        "Venkovní tkanina v bočních vedeních se zipem. Zastaví slunce, výhled zůstane.",
+        "Látka v kazetě s bočními lištami. Přiléhá k oknu, ze stran neprosvítá.",
+        "Pruhovaná látka nad terasou s volánem na konci. Stíní terasu i okno."
       ],
       osw: "Uvnitř",
       osz: "Venku",
-      urz: "🔗 Toto okno pochází z integrace Motor HA – každá změna se automaticky uloží do zařízení (stejně jako „Nastavit“)."
+      urz: "🔗 Toto okno pochází z integrace Motor HA – každá změna se automaticky uloží do zařízení (stejně jako „Nastavit“).",
+      oslg: {
+        rolety: "Rolety",
+        plisy: "Plisé a římské",
+        zaluzje: "Žaluzie",
+        zrolety: "Venkovní rolety",
+        fasadowe: "Venkovní žaluzie",
+        taras: "Terasa"
+      }
     },
     kolory: {
       czarny: "černá",
@@ -4052,20 +4154,22 @@
       osl: "Typ tienenia",
       osln: [
         "Deň-noc",
-        "Látková roleta",
+        "Voľne visiaca roleta",
         "Plisé",
         "Rímska roleta",
         "Hliníková žalúzia",
         "Predokenná roleta s horným boxom",
         "Zatemňovacia",
         "Plisé voštinové",
-        "Drevená žalúzia",
+        "Drevená / bambusová žalúzia",
         "Predokenná roleta s nástenným boxom",
         "Podomietková roleta",
         "Perforovaná roleta",
         "Vonkajšia žalúzia C80",
         "Vonkajšia žalúzia Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Roleta v kazete",
+        "Terasová markíza"
       ],
       d_osl: "Vyber, čo máš v okne. Karta upraví látku, box, bočné vedenie a koncovú lištu.",
       promienie: "Slnečné lúče cez okno (cez deň, keď svieti slnko)",
@@ -4073,23 +4177,33 @@
       osld: [
         "Plné a priesvitné pásy. Posuň ich, aby svetlo prešlo priesvitnými pásmi.",
         "Jednoduchá roleta z plnej látky. Rozptyľuje svetlo.",
-        "Hustá potiahnutá látka. Ide v bielych bočných lištách a nepustí svetlo.",
         "Látka skladaná ako harmonika.",
-        "Dvojité plisé. Voštinové komôrky držia teplo.",
         "Látka sa skladá do mäkkých záhybov.",
         "Tenké hliníkové lamely 25 mm na šnúrkach.",
-        "Široké drevené lamely 50 mm na páskach.",
         "Box nad oknom vo farbe rámu, montovaný s oknom. Pancier z PVC alebo hliníkových profilov.",
+        "Hustá potiahnutá látka. Ide v bielych bočných lištách a nepustí svetlo.",
+        "Dvojité plisé. Voštinové komôrky držia teplo.",
+        "Široké drevené lamely 50 mm na páskach.",
         "Box na vonkajšej stene so skoseným čelom. Vhodné pre existujúce domy.",
         "Box skrytý v stene pod omietkou. Vidno len pancier a vedenie.",
         "Profily s malými otvormi. Po zatvorení prejde trochu svetla.",
         "Prehnuté hliníkové lamely 80 mm na páskach. Dajú sa nakláňať.",
         "Ploché lamely 90 mm v tvare Z s tesnením. Po zatvorení veľmi tma.",
-        "Vonkajšia tkanina v bočných vedeniach so zipsom. Zastaví slnko, výhľad zostane."
+        "Vonkajšia tkanina v bočných vedeniach so zipsom. Zastaví slnko, výhľad zostane.",
+        "Látka v kazete s bočnými lištami. Prilieha k oknu, zo strán nepresvitá.",
+        "Pásikavá látka nad terasou s volánom na konci. Tieni terasu aj okno."
       ],
       osw: "Vnútri",
       osz: "Vonku",
-      urz: "🔗 Toto okno pochádza z integrácie Motor HA – každá zmena sa automaticky uloží do zariadenia (rovnako ako „Konfigurovať“)."
+      urz: "🔗 Toto okno pochádza z integrácie Motor HA – každá zmena sa automaticky uloží do zariadenia (rovnako ako „Konfigurovať“).",
+      oslg: {
+        rolety: "Rolety",
+        plisy: "Plisé a rímske",
+        zaluzje: "Žalúzie",
+        zrolety: "Vonkajšie rolety",
+        fasadowe: "Vonkajšie žalúzie",
+        taras: "Terasa"
+      }
     },
     kolory: {
       czarny: "čierna",
@@ -4479,20 +4593,22 @@
       osl: "Тип штори",
       osln: [
         "День-ніч",
-        "Тканинна ролета",
+        "Вільновисна ролета",
         "Плісе",
         "Римська штора",
         "Алюмінієві жалюзі",
         "Ролета з верхнім коробом",
         "Затемнювальна",
         "Плісе «соти»",
-        "Дерев’яні жалюзі",
+        "Дерев’яні / бамбукові жалюзі",
         "Накладна ролета",
         "Прихована ролета",
         "Перфорована ролета",
         "Фасадні жалюзі C80",
         "Фасадні жалюзі Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Ролета в касеті",
+        "Терасна маркіза"
       ],
       d_osl: "Виберіть, що у вас на вікні. Картка підбере тканину, короб, бічні напрямні й нижню планку.",
       promienie: "Сонячні промені крізь вікно (вдень, коли сонячно)",
@@ -4500,23 +4616,33 @@
       osld: [
         "Щільні та прозорі смуги. Посуньте їх, щоб світло проходило крізь прозорі смуги.",
         "Проста ролета зі щільної тканини. Розсіює світло.",
-        "Щільна тканина з покриттям. Іде в білих бічних напрямних і не пропускає світло.",
         "Тканина, складена як гармошка.",
-        "Подвійне плісе. Комірки-соти тримають тепло.",
         "Тканина збирається в м’які складки.",
         "Тонкі алюмінієві ламелі 25 мм на шнурах.",
-        "Широкі дерев’яні ламелі 50 мм на стрічках.",
         "Короб над вікном у кольорі рами, монтується разом із вікном. Полотно з ПВХ або алюмінієвих профілів.",
+        "Щільна тканина з покриттям. Іде в білих бічних напрямних і не пропускає світло.",
+        "Подвійне плісе. Комірки-соти тримають тепло.",
+        "Широкі дерев’яні ламелі 50 мм на стрічках.",
         "Короб на зовнішній стіні зі скошеним фасадом. Добре для вже збудованих будинків.",
         "Короб схований у стіні під штукатуркою. Видно лише полотно й напрямні.",
         "Профілі з дрібними отворами. Закрита пропускає трохи світла.",
         "Вигнуті алюмінієві ламелі 80 мм на стрічках. Їх можна нахиляти.",
         "Пласкі Z-подібні ламелі 90 мм з ущільнювачем. Закриті – дуже темно.",
-        "Зовнішня сітка в напрямних із блискавкою. Затримує сонце, зберігає вид."
+        "Зовнішня сітка в напрямних із блискавкою. Затримує сонце, зберігає вид.",
+        "Тканина в касеті з боковими напрямними. Прилягає до вікна, світло збоку не проходить.",
+        "Смугаста тканина над терасою з воланом на кінці. Дає тінь на терасі й перед вікном."
       ],
       osw: "Усередині",
       osz: "Зовні",
-      urz: "🔗 Це вікно з інтеграції Motor HA – кожна зміна автоматично зберігається в пристрої (так само, як «Налаштувати»)."
+      urz: "🔗 Це вікно з інтеграції Motor HA – кожна зміна автоматично зберігається в пристрої (так само, як «Налаштувати»).",
+      oslg: {
+        rolety: "Ролети",
+        plisy: "Плісе та римські",
+        zaluzje: "Жалюзі",
+        zrolety: "Зовнішні ролети",
+        fasadowe: "Фасадні жалюзі",
+        taras: "Тераса"
+      }
     },
     kolory: {
       czarny: "чорний",
@@ -4906,20 +5032,22 @@
       osl: "Тип шторы",
       osln: [
         "День-ночь",
-        "Тканевая рулонная",
+        "Свободновисящая рулонная",
         "Плиссе",
         "Римская штора",
         "Алюминиевые жалюзи",
         "Рольставня с верхним коробом",
         "Блэкаут",
         "Плиссе «соты»",
-        "Деревянные жалюзи",
+        "Деревянные / бамбуковые жалюзи",
         "Накладная рольставня",
         "Встроенная рольставня",
         "Перфорированная рольставня",
         "Фасадные жалюзи C80",
         "Фасадные жалюзи Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Кассетная рулонная",
+        "Террасная маркиза"
       ],
       d_osl: "Выберите, что у вас на окне. Карточка подберёт ткань, короб, боковые направляющие и нижнюю планку.",
       promienie: "Солнечные лучи сквозь окно (днём, когда солнечно)",
@@ -4927,23 +5055,33 @@
       osld: [
         "Плотные и прозрачные полосы. Сдвиньте их, чтобы свет проходил сквозь прозрачные полосы.",
         "Простая рулонная штора из плотной ткани. Рассеивает свет.",
-        "Плотная ткань с покрытием. Идёт в белых боковых направляющих и не пропускает свет.",
         "Ткань, сложенная гармошкой.",
-        "Двойное плиссе. Ячейки-соты сохраняют тепло.",
         "Ткань собирается в мягкие складки.",
         "Тонкие алюминиевые ламели 25 мм на шнурах.",
-        "Широкие деревянные ламели 50 мм на лентах.",
         "Короб над окном в цвет рамы, монтируется вместе с окном. Полотно из ПВХ или алюминиевых профилей.",
+        "Плотная ткань с покрытием. Идёт в белых боковых направляющих и не пропускает свет.",
+        "Двойное плиссе. Ячейки-соты сохраняют тепло.",
+        "Широкие деревянные ламели 50 мм на лентах.",
         "Короб на наружной стене со скошенным фасадом. Хорошо для готовых домов.",
         "Короб спрятан в стене под штукатуркой. Видно только полотно и направляющие.",
         "Профили с мелкими отверстиями. В закрытом виде пропускает немного света.",
         "Изогнутые алюминиевые ламели 80 мм на лентах. Их можно наклонять.",
         "Плоские Z-образные ламели 90 мм с уплотнителем. В закрытом виде очень темно.",
-        "Наружная сетка в направляющих с молнией. Задерживает солнце, сохраняет вид."
+        "Наружная сетка в направляющих с молнией. Задерживает солнце, сохраняет вид.",
+        "Ткань в кассете с боковыми направляющими. Прилегает к окну, свет по бокам не проходит.",
+        "Полосатая ткань над террасой с воланом на конце. Даёт тень на террасе и у окна."
       ],
       osw: "Внутри",
       osz: "Снаружи",
-      urz: "🔗 Это окно из интеграции Motor HA – каждое изменение автоматически сохраняется в устройстве (так же, как «Настроить»)."
+      urz: "🔗 Это окно из интеграции Motor HA – каждое изменение автоматически сохраняется в устройстве (так же, как «Настроить»).",
+      oslg: {
+        rolety: "Рулонные шторы",
+        plisy: "Плиссе и римские",
+        zaluzje: "Жалюзи",
+        zrolety: "Рольставни",
+        fasadowe: "Фасадные жалюзи",
+        taras: "Терраса"
+      }
     },
     kolory: {
       czarny: "чёрный",
@@ -5333,20 +5471,22 @@
       osl: "Tipo de cortina",
       osln: [
         "Dia-noite",
-        "Estore de rolo",
+        "Estore livre",
         "Plissado",
         "Estore romano",
         "Veneziana de alumínio",
         "Persiana com caixa superior",
         "Blackout",
         "Plissado favo de mel",
-        "Veneziana de madeira",
+        "Veneziana de madeira / bambu",
         "Persiana de caixa exterior",
         "Persiana de caixa embutida",
         "Persiana perfurada",
         "Veneziana exterior C80",
         "Veneziana exterior Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "Estore com caixa",
+        "Toldo de terraço"
       ],
       d_osl: "Escolha o que tem na janela. O cartão ajusta o tecido, a caixa, as guias e a barra inferior.",
       promienie: "Raios de sol através da janela (de dia, com sol)",
@@ -5354,23 +5494,33 @@
       osld: [
         "Faixas opacas e translúcidas. Deslize-as para deixar passar luz pelas translúcidas.",
         "Um estore de rolo simples em tecido opaco. Difunde a luz.",
-        "Tecido denso revestido. Corre em guias laterais brancas e bloqueia a luz.",
         "Tecido dobrado em acordeão.",
-        "Plissado duplo. As células guardam o calor.",
         "O tecido recolhe em pregas suaves.",
         "Lâminas finas de alumínio de 25 mm em cordões.",
-        "Lâminas largas de madeira de 50 mm em fitas.",
         "Caixa por cima da janela na cor do caixilho, montada com a janela. Lâminas de PVC ou alumínio.",
+        "Tecido denso revestido. Corre em guias laterais brancas e bloqueia a luz.",
+        "Plissado duplo. As células guardam o calor.",
+        "Lâminas largas de madeira de 50 mm em fitas.",
         "Caixa na parede exterior com frente chanfrada. Boa para casas existentes.",
         "Caixa escondida na parede sob o reboco. Só se veem as lâminas e as guias.",
         "Perfis com pequenos furos. Fechada deixa entrar alguma luz.",
         "Lâminas curvas de alumínio de 80 mm em fitas. Podem orientar-se.",
         "Lâminas planas em Z de 90 mm com vedante. Muito escuro quando fechada.",
-        "Tela exterior em guias com fecho de correr. Trava o sol e mantém a vista."
+        "Tela exterior em guias com fecho de correr. Trava o sol e mantém a vista.",
+        "Tecido numa caixa com guias laterais. Fica junto à janela, sem fugas de luz nos lados.",
+        "Lona às riscas sobre o terraço, com sanefa. Dá sombra ao terraço e à janela."
       ],
       osw: "Interior",
       osz: "Exterior",
-      urz: "🔗 Esta janela vem da integração Motor HA – cada alteração é guardada automaticamente no dispositivo (tal como «Configurar»)."
+      urz: "🔗 Esta janela vem da integração Motor HA – cada alteração é guardada automaticamente no dispositivo (tal como «Configurar»).",
+      oslg: {
+        rolety: "Estores de rolo",
+        plisy: "Plissados e romanos",
+        zaluzje: "Venezianas",
+        zrolety: "Persianas exteriores",
+        fasadowe: "Venezianas exteriores",
+        taras: "Terraço"
+      }
     },
     kolory: {
       czarny: "preto",
@@ -5760,20 +5910,22 @@
       osl: "遮阳类型",
       osln: [
         "日夜帘",
-        "布艺卷帘",
+        "自由悬挂卷帘",
         "风琴帘",
         "罗马帘",
         "铝百叶",
         "上置卷帘窗",
         "遮光帘",
         "蜂巢帘",
-        "木百叶",
+        "木/竹百叶",
         "外挂式卷帘窗",
         "暗装卷帘窗",
         "穿孔卷帘窗",
         "外遮阳百叶 C80",
         "外遮阳百叶 Z90",
-        "Screen ZIP 拉链帘"
+        "Screen ZIP 拉链帘",
+        "盒式卷帘",
+        "露台遮阳篷"
       ],
       d_osl: "选择你窗户上的类型。卡片会匹配面料、帘盒、侧轨和底杆。",
       promienie: "阳光透过窗户（白天、晴天时）",
@@ -5781,23 +5933,33 @@
       osld: [
         "遮光条纹和透光条纹。滑动它们让光线从透光条纹透过。",
         "简单的全遮布艺卷帘。可以柔化光线。",
-        "致密涂层面料。在白色侧轨中运行并挡住光线。",
         "像手风琴一样折叠的面料。",
-        "双层风琴帘。蜂巢格能保暖。",
         "面料收拢成柔和的褶皱。",
         "细 25 毫米铝叶片，用拉绳。",
-        "宽 50 毫米木叶片，用梯带。",
         "窗户上方与窗框同色的帘盒，随窗户一起安装。帘片为 PVC 或铝型材。",
+        "致密涂层面料。在白色侧轨中运行并挡住光线。",
+        "双层风琴帘。蜂巢格能保暖。",
+        "宽 50 毫米木叶片，用梯带。",
         "外墙上带斜面的帘盒。适合已建成的房子。",
         "藏在墙内抹灰下的帘盒。只看得到帘片和导轨。",
         "带小孔的型材。关闭时仍有少量光线进入。",
         "弧形 80 毫米铝叶片，用带子。可以调角度。",
         "平直 Z 形 90 毫米叶片，带密封条。关闭时非常暗。",
-        "室外网布，装在带拉链的侧轨中。挡住阳光，保留视野。"
+        "室外网布，装在带拉链的侧轨中。挡住阳光，保留视野。",
+        "面料装在盒内，两侧有导轨。贴合窗户，侧面不漏光。",
+        "条纹面料在露台上方展开，末端带垂边。为露台和窗户遮阳。"
       ],
       osw: "室内",
       osz: "室外",
-      urz: "🔗 这扇窗户来自 Motor HA 集成 – 每次更改都会自动保存到设备（与“配置”相同）。"
+      urz: "🔗 这扇窗户来自 Motor HA 集成 – 每次更改都会自动保存到设备（与“配置”相同）。",
+      oslg: {
+        rolety: "卷帘",
+        plisy: "风琴帘和罗马帘",
+        zaluzje: "百叶帘",
+        zrolety: "外卷帘",
+        fasadowe: "外遮阳百叶",
+        taras: "露台"
+      }
     },
     kolory: {
       czarny: "黑色",
@@ -6187,20 +6349,22 @@
       osl: "シェードの種類",
       osln: [
         "調光ロールスクリーン",
-        "ロールスクリーン",
+        "フリーハングロールスクリーン",
         "プリーツスクリーン",
         "シェード（ローマン）",
         "アルミブラインド",
         "上部ボックス付きシャッター",
         "遮光スクリーン",
         "ハニカムスクリーン",
-        "木製ブラインド",
+        "木製・竹製ブラインド",
         "外付けシャッター",
         "埋め込みシャッター",
         "パンチングシャッター",
         "外付けブラインド C80",
         "外付けブラインド Z90",
-        "Screen ZIP"
+        "Screen ZIP",
+        "ボックス付きロールスクリーン",
+        "テラスオーニング"
       ],
       d_osl: "窓に付いているものを選んでください。カードが生地、ボックス、サイドレール、ボトムバーを合わせます。",
       promienie: "窓から差し込む日差し（昼間、晴れのとき）",
@@ -6208,23 +6372,33 @@
       osld: [
         "遮光と透過のストライプ。ずらすと透過ストライプから光が入ります。",
         "遮光生地のシンプルなロールスクリーン。光をやわらげます。",
-        "目の詰まったコーティング生地。白いサイドレールを走り、光を遮ります。",
         "アコーディオンのように折りたたまれた生地。",
-        "ダブルプリーツ。ハニカム構造が暖かさを保ちます。",
         "生地がやわらかいひだにまとまります。",
         "コードで吊った 25 mm の薄いアルミスラット。",
-        "テープで吊った 50 mm の幅広い木製スラット。",
         "窓の上に窓枠と同色のボックス、窓と一緒に取り付け。PVC またはアルミのスラット。",
+        "目の詰まったコーティング生地。白いサイドレールを走り、光を遮ります。",
+        "ダブルプリーツ。ハニカム構造が暖かさを保ちます。",
+        "テープで吊った 50 mm の幅広い木製スラット。",
         "外壁に付ける面取り前面のボックス。既存の家に最適。",
         "壁の中、しっくいの下に隠したボックス。見えるのはスラットとレールだけ。",
         "小さな穴のあるスラット。閉じても少し光が入ります。",
         "テープで吊った 80 mm の湾曲アルミスラット。角度を変えられます。",
         "シール付きの 90 mm 平らな Z 形スラット。閉じるととても暗くなります。",
-        "ファスナー付きサイドレールの屋外メッシュ。日差しを遮り、眺めは残ります。"
+        "ファスナー付きサイドレールの屋外メッシュ。日差しを遮り、眺めは残ります。",
+        "ボックスとサイドレール付きの生地。窓に密着し、横から光が漏れません。",
+        "テラスの上に広げるストライプ生地。先端にバランス付き。テラスと窓に日陰を作ります。"
       ],
       osw: "室内",
       osz: "屋外",
-      urz: "🔗 この窓は Motor HA 統合から来ています – 変更はすべて自動でデバイスに保存されます（「設定」と同じ）。"
+      urz: "🔗 この窓は Motor HA 統合から来ています – 変更はすべて自動でデバイスに保存されます（「設定」と同じ）。",
+      oslg: {
+        rolety: "ロールスクリーン",
+        plisy: "プリーツ・シェード",
+        zaluzje: "ブラインド",
+        zrolety: "シャッター",
+        fasadowe: "外付けブラインド",
+        taras: "テラス"
+      }
     },
     kolory: {
       czarny: "ブラック",
@@ -6616,6 +6790,7 @@
     const pancerz = (o) => `${S(0.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-0.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
     switch (typ) {
       case "pelna":
+      case "kasetowa":
         return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-0.06)} ${h}px,${col} ${RR_OKRES}px)`;
       /* v27: zaciemniająca – gęsta tkanina z powłoką, lekki połysk, bez prześwitu */
       case "zaciemniajaca":
@@ -6660,6 +6835,9 @@
       /* v27: screen ZIP – zewnętrzna tkanina z siatki, przez którą trochę widać */
       case "screen":
         return `${brzegi},repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 2px),linear-gradient(180deg,${A(col, 0.82)} 0,${A(S(0.06), 0.8)} ${h}px,${A(col, 0.82)} ${RR_OKRES}px)`;
+      /* v40: markiza tarasowa – szerokie pasy, lekkie fałdy w poprzek */
+      case "markiza":
+        return `${brzegi},repeating-linear-gradient(90deg,${col} 0 14px,${A("#f3efe6", 0.97)} 14px 28px),linear-gradient(180deg,rgba(255,255,255,.1) 0,rgba(0,0,0,.12) ${h}px,rgba(255,255,255,.1) ${RR_OKRES}px)`;
       default:
         return `${brzegi},${splot},linear-gradient(180deg,
    ${S(0.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-0.25)} ${RR_PAS}px,
@@ -6677,6 +6855,15 @@
     switch (typ) {
       case "zaciemniajaca":
         return prow(4, "linear-gradient(90deg,#c9c9c9,#fafafa 45%,#b5b5b5)");
+      /* v40: wolnowisząca – sam wałek z tkaniną na uchwytach, bez kasety i prowadnic */
+      case "pelna":
+        return `.cas{left:3px;right:3px;height:${RR_KASETA - 2}px;border-radius:${RR_KASETA}px;background:linear-gradient(180deg,${S(0.3)},${col} 50%,${S(-0.38)})}.cas:before,.cas:after{width:5px;background:linear-gradient(90deg,#d8d8d8,#fafafa,#bdbdbd);border-radius:2px}`;
+      /* v40: w kasecie – kaseta i prowadnice w kolorze ramy okna */
+      case "kasetowa":
+        return `.cas{background:linear-gradient(180deg,${R(0.06)},${rama} 50%,${R(-0.18)});border-radius:0 0 3px 3px}.cas:before,.cas:after{background:${R(-0.06)};border-radius:0}` + prow(4, `linear-gradient(90deg,${R(-0.2)},${R(0.06)} 45%,${R(-0.14)})`);
+      /* v40: markiza – kaseta aluminiowa i profil przedni z falbaną */
+      case "markiza":
+        return kas(`linear-gradient(180deg,#e8eaec,#c3c7cb 60%,#8d9297)`, `height:${RR_KASETA + 4}px;box-shadow:0 3px 5px rgba(0,0,0,.45)`) + `.bar{height:16px;background:linear-gradient(180deg,#eef0f2,#a7acb1) top/100% ${RR_LISTWA}px no-repeat,radial-gradient(circle at 7px 0,${col} 6.5px,transparent 7px) 0 ${RR_LISTWA}px/14px 11px repeat-x;box-shadow:none;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35))}`;
       case "zaluzja":
       case "drewniana":
         return kas(`linear-gradient(180deg,${S(0.3)},${col} 55%,${S(-0.35)})`) + lamela;
@@ -6806,6 +6993,22 @@
 .qk button{flex:1;height:32px;border:none;border-radius:var(--ha-card-border-radius,12px);font-size:13px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
+/* v40: osłona zewnętrzna – widok z zewnątrz: okno w ścianie z tynkiem, parapet, za szybą ciemny pokój (wieczorem zapalone światło),
+   deszcz i śnieg padają przed osłoną; skrzydło otwiera się do środka, więc osłona na ścianie zostaje na miejscu */
+.zew .elew{position:relative;margin:0 -12px;padding:22px 16px 20px;
+ background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.08),transparent 40%),repeating-linear-gradient(45deg,rgba(0,0,0,.018) 0 2px,transparent 2px 5px),linear-gradient(180deg,#e2ddd3,#d3cdc1)}
+.zew .win{box-shadow:0 0 0 5px #c4bdb0,0 0 0 6px rgba(0,0,0,.08),-4px 4px 10px 6px rgba(0,0,0,.28)}
+.zew .win:after{content:"";position:absolute;left:-14px;right:-14px;bottom:-12px;height:9px;z-index:9;border-radius:1px 1px 2px 2px;
+ background:linear-gradient(180deg,#f2f3f4,#b9bec3 55%,#8a9096);box-shadow:0 4px 5px rgba(0,0,0,.35)}
+.zew .handle,.zew .ray,.zew .out,.zew .wx .scn,.zew .wx .sun,.zew .wx .moon,.zew .wx .cl,.zew .wx .st{display:none}
+.zew .slot{background:#2c2723!important}
+.zew .glass .wx{z-index:5}
+.zew .refl{background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.16) 38%,transparent 46%),linear-gradient(180deg,rgba(150,185,215,.32),rgba(150,185,215,0) 45%),linear-gradient(180deg,rgba(28,25,22,.74),rgba(44,38,33,.66))}
+.zew.noc .elew{background:repeating-linear-gradient(45deg,rgba(0,0,0,.03) 0 2px,transparent 2px 5px),linear-gradient(180deg,#5d5953,#4f4b46)}
+.zew.noc .refl{background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.06) 38%,transparent 46%),radial-gradient(ellipse 70% 45% at 50% 22%,rgba(255,206,130,.62),rgba(96,66,38,.86) 70%,rgba(40,28,18,.92))}
+.zew .sash.uchyl,.zew .sash.otw{transform:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.16)}
+.zew .sash.uchyl .refl{box-shadow:inset 0 22px 14px -10px rgba(0,0,0,.7)}
+.zew .sash.otw .refl{box-shadow:inset 0 0 0 999px rgba(12,10,8,.55),inset 6px 0 6px -2px rgba(0,0,0,.6)}
 `;
 
   // src/panele.js
@@ -7037,7 +7240,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 <div class="rr">
  <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
   <div><div><span class="nm"></span></div><div class="sb"></div></div><div class="pc"></div></div>
- <div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T2.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div>
+ <div class="elew"><div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T2.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div></div>
  <div class="bt">
   <button class="up" title="${T2.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
   <button class="stop" title="${T2.stop}"><ha-icon icon="mdi:stop"></ha-icon></button>
@@ -7049,6 +7252,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
       root.appendChild(card);
       const q = (s) => card.querySelector(s);
       this._el = {
+        card,
         nm: q(".nm"),
         sb: q(".sb"),
         pc: q(".pc"),
@@ -7087,6 +7291,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
         E.qkw.style.display = "none";
       }
       if (c.uchwyty === false) card.classList.add("bezuch");
+      if (rrZew(c.oslona)) card.classList.add("zew");
       card.style.setProperty("--rr-uch", Math.min(30, Math.max(3, +c.kat_uchyl || 14)));
       card.style.setProperty("--rr-otw", Math.round(Math.acos(1 - Math.min(90, Math.max(5, +c.otwarcie || 40)) / 100) * 180 / Math.PI));
       E.mid = q(".mid");
@@ -7207,6 +7412,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
       const night = sun?.state === "below_horizon" || !sun && ws?.state === "clear-night";
       const pora = night ? typeof el === "number" && el > -7 ? "zmierzch" : "noc" : typeof el === "number" && el < 8 ? "zloto" : "dzien";
       const typ = !c.niebo ? "plain" : ws ? RR_WX[ws.state] || "cloudy" : "sun", wkey = typ + pora + (c.tlo || "") + (c.widok !== false);
+      E.card?.classList.toggle("noc", night);
       const slonce = c.promienie !== false && !night && pora !== "zmierzch" && (typ === "sun" || typ === "partly");
       mem.forEach((e, i) => {
         const S = E.sash[i], ms = this._hass.states[e] || st, mst = ms.state;
@@ -7450,7 +7656,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .dot[aria-pressed="true"]{color:var(--primary-text-color)}
 .own{position:relative;width:34px;height:34px;border-radius:50%;overflow:hidden;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}
 .own input{position:absolute;inset:-8px;width:50px;height:50px;opacity:0;cursor:pointer}
-.osg{font-size:13.5px;font-weight:500;color:var(--primary-text-color);margin-top:4px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:20px}
+.osg{font-size:15px;font-weight:500;color:var(--primary-text-color);margin-top:10px}.osp{font-size:13px;color:var(--secondary-text-color);margin:6px 0 2px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:20px}
 .seg{display:inline-flex;border-radius:var(--rr-r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--rr-ramka)}
 .seg button{border:none;background:none;min-height:40px;padding:0 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color)}
 .seg button[aria-pressed="true"]{background:var(--rr-akc);color:var(--rr-na-akcencie,#fff)}
@@ -7768,10 +7974,13 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     _k_wyglad(B) {
       const W = this.W, L = this.ed._L, P = RR_PRESETY;
       this._html(B, `<div class="lb">${esc(L.osl)}</div>`);
-      for (const [g, typy] of Object.entries(RR_OSL_GRUPY)) {
+      for (const [g, pod] of Object.entries(RR_OSL_PODGRUPY)) {
         this._html(B, `<div class="osg">${esc(g === "wew" ? L.osw : L.osz)}</div>`);
-        this._seg(B, typy.map((v) => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val("oslona"), (v) => this._ustaw({ oslona: v }));
-        B.lastElementChild.classList.add("osl");
+        for (const [p, typy] of Object.entries(pod)) {
+          this._html(B, `<div class="osp">${esc(L.oslg?.[p] || "")}</div>`);
+          this._seg(B, typy.map((v) => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val("oslona"), (v) => this._ustaw({ oslona: v }));
+          B.lastElementChild.classList.add("osl");
+        }
       }
       this._html(B, `<p class="hint">${esc(L.osld[Math.max(0, RR_OSLONY.indexOf(this.ed._val("oslona")))])}</p>`);
       const d = document.createElement("div");
@@ -8010,7 +8219,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
- <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_GRUPY).map(([g, typy]) => `<div class="osg">${g === "wew" ? L.osw : L.osz}</div><div class="seg osl">${typy.map((v) => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join("")}</div>`).join("")}<p class="hint" id="oslD"></p></div>
+ <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_PODGRUPY).map(([g, pod]) => `<div class="osg">${g === "wew" ? L.osw : L.osz}</div>${Object.entries(pod).map(([p, typy]) => `<div class="osp">${L.oslg?.[p] || ""}</div><div class="seg osl">${typy.map((v) => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join("")}</div>`).join("")}`).join("")}<p class="hint" id="oslD"></p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map((k) => chip("kolor", k, RR_KOLORY[k], KN[k] || k)).join("")}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>

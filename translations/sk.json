@@ -189,20 +189,22 @@
     "osl": "Typ tienenia",
     "osln": [
       "Deň-noc",
-      "Látková roleta",
+      "Voľne visiaca roleta",
       "Plisé",
       "Rímska roleta",
       "Hliníková žalúzia",
       "Predokenná roleta s horným boxom",
       "Zatemňovacia",
       "Plisé voštinové",
-      "Drevená žalúzia",
+      "Drevená / bambusová žalúzia",
       "Predokenná roleta s nástenným boxom",
       "Podomietková roleta",
       "Perforovaná roleta",
       "Vonkajšia žalúzia C80",
       "Vonkajšia žalúzia Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Roleta v kazete",
+      "Terasová markíza"
     ],
     "d_osl": "Vyber, čo máš v okne. Karta upraví látku, box, bočné vedenie a koncovú lištu.",
     "promienie": "Slnečné lúče cez okno (cez deň, keď svieti slnko)",
@@ -210,23 +212,33 @@
     "osld": [
       "Plné a priesvitné pásy. Posuň ich, aby svetlo prešlo priesvitnými pásmi.",
       "Jednoduchá roleta z plnej látky. Rozptyľuje svetlo.",
-      "Hustá potiahnutá látka. Ide v bielych bočných lištách a nepustí svetlo.",
       "Látka skladaná ako harmonika.",
-      "Dvojité plisé. Voštinové komôrky držia teplo.",
       "Látka sa skladá do mäkkých záhybov.",
       "Tenké hliníkové lamely 25 mm na šnúrkach.",
-      "Široké drevené lamely 50 mm na páskach.",
       "Box nad oknom vo farbe rámu, montovaný s oknom. Pancier z PVC alebo hliníkových profilov.",
+      "Hustá potiahnutá látka. Ide v bielych bočných lištách a nepustí svetlo.",
+      "Dvojité plisé. Voštinové komôrky držia teplo.",
+      "Široké drevené lamely 50 mm na páskach.",
       "Box na vonkajšej stene so skoseným čelom. Vhodné pre existujúce domy.",
       "Box skrytý v stene pod omietkou. Vidno len pancier a vedenie.",
       "Profily s malými otvormi. Po zatvorení prejde trochu svetla.",
       "Prehnuté hliníkové lamely 80 mm na páskach. Dajú sa nakláňať.",
       "Ploché lamely 90 mm v tvare Z s tesnením. Po zatvorení veľmi tma.",
-      "Vonkajšia tkanina v bočných vedeniach so zipsom. Zastaví slnko, výhľad zostane."
+      "Vonkajšia tkanina v bočných vedeniach so zipsom. Zastaví slnko, výhľad zostane.",
+      "Látka v kazete s bočnými lištami. Prilieha k oknu, zo strán nepresvitá.",
+      "Pásikavá látka nad terasou s volánom na konci. Tieni terasu aj okno."
     ],
     "osw": "Vnútri",
     "osz": "Vonku",
-    "urz": "🔗 Toto okno pochádza z integrácie Motor HA – každá zmena sa automaticky uloží do zariadenia (rovnako ako „Konfigurovať“)."
+    "urz": "🔗 Toto okno pochádza z integrácie Motor HA – každá zmena sa automaticky uloží do zariadenia (rovnako ako „Konfigurovať“).",
+    "oslg": {
+      "rolety": "Rolety",
+      "plisy": "Plisé a rímske",
+      "zaluzje": "Žalúzie",
+      "zrolety": "Vonkajšie rolety",
+      "fasadowe": "Vonkajšie žalúzie",
+      "taras": "Terasa"
+    }
   },
   "kolory": {
     "czarny": "čierna",

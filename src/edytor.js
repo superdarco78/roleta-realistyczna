@@ -1,4 +1,4 @@
-import { RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
+import { RR_DEF, RR_OSLONY, RR_OSL_PODGRUPY, RR_OSL_IKONY } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex, rrKontrast } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
@@ -84,7 +84,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
- <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_GRUPY).map(([g, typy]) => `<div class="osg">${g === 'wew' ? L.osw : L.osz}</div><div class="seg osl">${typy.map(v => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join('')}</div>`).join('')}<p class="hint" id="oslD"></p></div>
+ <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_PODGRUPY).map(([g, pod]) => `<div class="osg">${g === 'wew' ? L.osw : L.osz}</div>${Object.entries(pod).map(([p, typy]) => `<div class="osp">${L.oslg?.[p] || ''}</div><div class="seg osl">${typy.map(v => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join('')}</div>`).join('')}`).join('')}<p class="hint" id="oslD"></p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map(k => chip('kolor', k, RR_KOLORY[k], KN[k] || k)).join('')}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>

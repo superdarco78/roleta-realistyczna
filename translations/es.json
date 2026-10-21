@@ -189,20 +189,22 @@
     "osl": "Tipo de cortina",
     "osln": [
       "Día-noche",
-      "Estor enrollable",
+      "Estor libre",
       "Plisado",
       "Estor paquete",
       "Veneciana de aluminio",
       "Persiana con cajón superior",
       "Opaco",
       "Plisado nido de abeja",
-      "Veneciana de madera",
+      "Veneciana de madera / bambú",
       "Persiana de cajón exterior",
       "Persiana de cajón empotrado",
       "Persiana microperforada",
       "Veneciana exterior C80",
       "Veneciana exterior Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Estor con cajón",
+      "Toldo de terraza"
     ],
     "d_osl": "Elige lo que tienes en la ventana. La tarjeta ajusta la tela, el cajón, las guías y la barra inferior.",
     "promienie": "Rayos de sol a través de la ventana (de día, con sol)",
@@ -210,23 +212,33 @@
     "osld": [
       "Franjas opacas y translúcidas. Deslízalas para dejar pasar la luz por las translúcidas.",
       "Un estor enrollable sencillo de tela opaca. Difumina la luz.",
-      "Tela densa recubierta. Va en guías laterales blancas y bloquea la luz.",
       "Tela plegada como un acordeón.",
-      "Doble plisado. Las celdas guardan el calor.",
       "La tela se recoge en pliegues suaves.",
       "Lamas finas de aluminio de 25 mm con cordones.",
-      "Lamas anchas de madera de 50 mm con cintas.",
       "Cajón sobre la ventana del color del marco, montado con la ventana. Lamas de PVC o aluminio.",
+      "Tela densa recubierta. Va en guías laterales blancas y bloquea la luz.",
+      "Doble plisado. Las celdas guardan el calor.",
+      "Lamas anchas de madera de 50 mm con cintas.",
       "Cajón en la fachada con frente biselado. Ideal para casas existentes.",
       "Cajón oculto en el muro bajo el revoque. Solo se ven las lamas y las guías.",
       "Perfiles con pequeños agujeros. Entra algo de luz cuando está cerrada.",
       "Lamas curvas de aluminio de 80 mm con cintas. Se pueden orientar.",
       "Lamas planas en Z de 90 mm con junta. Muy oscura al cerrar.",
-      "Tejido exterior en guías con cremallera. Frena el sol y deja ver."
+      "Tejido exterior en guías con cremallera. Frena el sol y deja ver.",
+      "Tejido en cajón con guías laterales. Queda pegado a la ventana, sin fugas de luz a los lados.",
+      "Lona a rayas desplegada sobre la terraza, con faldón. Da sombra a la terraza y a la ventana."
     ],
     "osw": "Interior",
     "osz": "Exterior",
-    "urz": "🔗 Esta ventana viene de la integración Motor HA – cada cambio se guarda automáticamente en el dispositivo (igual que «Configurar»)."
+    "urz": "🔗 Esta ventana viene de la integración Motor HA – cada cambio se guarda automáticamente en el dispositivo (igual que «Configurar»).",
+    "oslg": {
+      "rolety": "Estores",
+      "plisy": "Plisados y paqueto",
+      "zaluzje": "Venecianas",
+      "zrolety": "Persianas",
+      "fasadowe": "Venecianas exteriores",
+      "taras": "Terraza"
+    }
   },
   "kolory": {
     "czarny": "negro",

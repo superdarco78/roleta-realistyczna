@@ -1,4 +1,4 @@
-import { RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY } from './stale.js';
+import { RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY, rrZew } from './stale.js';
 import { RR_RAMY, rrHex, rrKontrast } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
@@ -126,7 +126,7 @@ export class RoletaRealistyczna extends HTMLElement {
 <div class="rr">
  <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
   <div><div><span class="nm"></span></div><div class="sb"></div></div><div class="pc"></div></div>
- <div class="win ${ruch ? 'ruch' : 'stal'}">${Array.from({ length: n }, (_, i) => sash(i)).join('')}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ''}</div>
+ <div class="elew"><div class="win ${ruch ? 'ruch' : 'stal'}">${Array.from({ length: n }, (_, i) => sash(i)).join('')}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ''}</div></div>
  <div class="bt">
   <button class="up" title="${T.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
   <button class="stop" title="${T.stop}"><ha-icon icon="mdi:stop"></ha-icon></button>
@@ -139,7 +139,7 @@ export class RoletaRealistyczna extends HTMLElement {
     root.appendChild(card);
     const q = s => card.querySelector(s);
     this._el = {
-      nm: q('.nm'), sb: q('.sb'), pc: q('.pc'),
+      card, nm: q('.nm'), sb: q('.sb'), pc: q('.pc'),
       up: q('.up'), stop: q('.stop'), down: q('.down'), qk: card.querySelectorAll('.qk button'),
       bt: q('.bt'), qkw: q('.qk'),
       sash: [...card.querySelectorAll('.sash')].map(s => ({
@@ -160,6 +160,8 @@ export class RoletaRealistyczna extends HTMLElement {
     });
     if (!c.przyciski) { E.bt.style.display = 'none'; E.qkw.style.display = 'none'; }
     if (c.uchwyty === false) card.classList.add('bezuch');
+    /* v40: osłona zewnętrzna – okno widziane z zewnątrz, na tle elewacji (za szybą pokój) */
+    if (rrZew(c.oslona)) card.classList.add('zew');
     /* jak mocno uchylone (stopnie) i jak szeroko otwarte (% szerokości → kąt: szczelina = 1 − cos) */
     card.style.setProperty('--rr-uch', Math.min(30, Math.max(3, +c.kat_uchyl || 14)));
     card.style.setProperty('--rr-otw', Math.round(Math.acos(1 - Math.min(90, Math.max(5, +c.otwarcie || 40)) / 100) * 180 / Math.PI));
@@ -257,6 +259,7 @@ export class RoletaRealistyczna extends HTMLElement {
     const pora = night ? (typeof el === 'number' && el > -7 ? 'zmierzch' : 'noc') : typeof el === 'number' && el < 8 ? 'zloto' : 'dzien';
     const typ = !c.niebo ? 'plain' : ws ? (RR_WX[ws.state] || 'cloudy') : 'sun', wkey = typ + pora + (c.tlo || '') + (c.widok !== false);
     /* v26: promienie słońca – dzień, słońce albo małe chmurki, rysowane niebo */
+    E.card?.classList.toggle('noc', night);
     const slonce = c.promienie !== false && !night && pora !== 'zmierzch' && (typ === 'sun' || typ === 'partly');
     mem.forEach((e, i) => {
       const S = E.sash[i], ms = this._hass.states[e] || st, mst = ms.state;

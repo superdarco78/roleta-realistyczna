@@ -189,20 +189,22 @@
     "osl": "Soort zonwering",
     "osln": [
       "Duo-rolgordijn",
-      "Rolgordijn",
+      "Vrijhangend rolgordijn",
       "Plissé",
       "Vouwgordijn",
       "Aluminium jaloezie",
       "Rolluik met opbouwkast boven",
       "Verduisterend",
       "Dupligordijn",
-      "Houten jaloezie",
+      "Houten / bamboe jaloezie",
       "Opbouwrolluik",
       "Inbouwrolluik",
       "Geperforeerd rolluik",
       "Buitenjaloezie C80",
       "Buitenjaloezie Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Cassetterolgordijn",
+      "Terrasscherm"
     ],
     "d_osl": "Kies wat je in je raam hebt. De kaart past stof, kast, zijgeleiders en onderlat aan.",
     "promienie": "Zonnestralen door het raam (overdag, bij zon)",
@@ -210,23 +212,33 @@
     "osld": [
       "Dichte en transparante strepen. Schuif ze om licht door de transparante strepen te laten.",
       "Een eenvoudig rolgordijn van dichte stof. Verspreidt het licht.",
-      "Dichte gecoate stof. Loopt in witte zijgeleiders en houdt het licht tegen.",
       "Stof gevouwen als een accordeon.",
-      "Dubbel plissé. De honingraatcellen houden de warmte vast.",
       "De stof plooit in zachte vouwen.",
       "Dunne aluminium lamellen van 25 mm aan koorden.",
-      "Brede houten lamellen van 50 mm aan ladderbanden.",
       "Kast boven het raam in kozijnkleur, samen met het raam geplaatst. Pantser van pvc- of aluminium profielen.",
+      "Dichte gecoate stof. Loopt in witte zijgeleiders en houdt het licht tegen.",
+      "Dubbel plissé. De honingraatcellen houden de warmte vast.",
+      "Brede houten lamellen van 50 mm aan ladderbanden.",
       "Kast op de buitenmuur met schuine voorkant. Goed voor bestaande huizen.",
       "Kast verborgen in de muur onder het stucwerk. Alleen pantser en geleiders zijn zichtbaar.",
       "Profielen met kleine gaatjes. Gesloten valt er nog wat licht binnen.",
       "Gebogen aluminium lamellen van 80 mm aan banden. Ze kunnen kantelen.",
       "Vlakke Z-vormige lamellen van 90 mm met afdichting. Gesloten erg donker.",
-      "Buitendoek in zijgeleiders met rits. Houdt de zon buiten, het uitzicht blijft."
+      "Buitendoek in zijgeleiders met rits. Houdt de zon buiten, het uitzicht blijft.",
+      "Stof in een cassette met zijgeleiders. Sluit aan op het raam, geen licht langs de zijkanten.",
+      "Gestreept doek boven het terras, met een volant. Geeft schaduw op terras en raam."
     ],
     "osw": "Binnen",
     "osz": "Buiten",
-    "urz": "🔗 Dit raam komt uit de Motor HA-integratie – elke wijziging wordt automatisch in het apparaat opgeslagen (net als bij ‘Configureren’)."
+    "urz": "🔗 Dit raam komt uit de Motor HA-integratie – elke wijziging wordt automatisch in het apparaat opgeslagen (net als bij ‘Configureren’).",
+    "oslg": {
+      "rolety": "Rolgordijnen",
+      "plisy": "Plissés en vouwgordijnen",
+      "zaluzje": "Jaloezieën",
+      "zrolety": "Rolluiken",
+      "fasadowe": "Screens en lamellen",
+      "taras": "Terras"
+    }
   },
   "kolory": {
     "czarny": "zwart",

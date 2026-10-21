@@ -189,20 +189,22 @@
     "osl": "Tipo de cortina",
     "osln": [
       "Dia-noite",
-      "Estore de rolo",
+      "Estore livre",
       "Plissado",
       "Estore romano",
       "Veneziana de alumínio",
       "Persiana com caixa superior",
       "Blackout",
       "Plissado favo de mel",
-      "Veneziana de madeira",
+      "Veneziana de madeira / bambu",
       "Persiana de caixa exterior",
       "Persiana de caixa embutida",
       "Persiana perfurada",
       "Veneziana exterior C80",
       "Veneziana exterior Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Estore com caixa",
+      "Toldo de terraço"
     ],
     "d_osl": "Escolha o que tem na janela. O cartão ajusta o tecido, a caixa, as guias e a barra inferior.",
     "promienie": "Raios de sol através da janela (de dia, com sol)",
@@ -210,23 +212,33 @@
     "osld": [
       "Faixas opacas e translúcidas. Deslize-as para deixar passar luz pelas translúcidas.",
       "Um estore de rolo simples em tecido opaco. Difunde a luz.",
-      "Tecido denso revestido. Corre em guias laterais brancas e bloqueia a luz.",
       "Tecido dobrado em acordeão.",
-      "Plissado duplo. As células guardam o calor.",
       "O tecido recolhe em pregas suaves.",
       "Lâminas finas de alumínio de 25 mm em cordões.",
-      "Lâminas largas de madeira de 50 mm em fitas.",
       "Caixa por cima da janela na cor do caixilho, montada com a janela. Lâminas de PVC ou alumínio.",
+      "Tecido denso revestido. Corre em guias laterais brancas e bloqueia a luz.",
+      "Plissado duplo. As células guardam o calor.",
+      "Lâminas largas de madeira de 50 mm em fitas.",
       "Caixa na parede exterior com frente chanfrada. Boa para casas existentes.",
       "Caixa escondida na parede sob o reboco. Só se veem as lâminas e as guias.",
       "Perfis com pequenos furos. Fechada deixa entrar alguma luz.",
       "Lâminas curvas de alumínio de 80 mm em fitas. Podem orientar-se.",
       "Lâminas planas em Z de 90 mm com vedante. Muito escuro quando fechada.",
-      "Tela exterior em guias com fecho de correr. Trava o sol e mantém a vista."
+      "Tela exterior em guias com fecho de correr. Trava o sol e mantém a vista.",
+      "Tecido numa caixa com guias laterais. Fica junto à janela, sem fugas de luz nos lados.",
+      "Lona às riscas sobre o terraço, com sanefa. Dá sombra ao terraço e à janela."
     ],
     "osw": "Interior",
     "osz": "Exterior",
-    "urz": "🔗 Esta janela vem da integração Motor HA – cada alteração é guardada automaticamente no dispositivo (tal como «Configurar»)."
+    "urz": "🔗 Esta janela vem da integração Motor HA – cada alteração é guardada automaticamente no dispositivo (tal como «Configurar»).",
+    "oslg": {
+      "rolety": "Estores de rolo",
+      "plisy": "Plissados e romanos",
+      "zaluzje": "Venezianas",
+      "zrolety": "Persianas exteriores",
+      "fasadowe": "Venezianas exteriores",
+      "taras": "Terraço"
+    }
   },
   "kolory": {
     "czarny": "preto",

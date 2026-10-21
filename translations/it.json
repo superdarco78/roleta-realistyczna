@@ -189,20 +189,22 @@
     "osl": "Tipo di schermatura",
     "osln": [
       "Giorno-notte",
-      "Tenda a rullo",
+      "Tenda a rullo libera",
       "Plissettata",
       "Tenda a pacchetto",
       "Veneziana in alluminio",
       "Tapparella con cassonetto superiore",
       "Oscurante",
       "Plissé a nido d’ape",
-      "Veneziana in legno",
+      "Veneziana in legno / bambù",
       "Tapparella con cassonetto esterno",
       "Tapparella con cassonetto a scomparsa",
       "Tapparella forata",
       "Frangisole C80",
       "Frangisole Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Tenda a cassonetto",
+      "Tenda da terrazzo"
     ],
     "d_osl": "Scegli cosa hai alla finestra. La scheda adatta tessuto, cassonetto, guide laterali e barra finale.",
     "promienie": "Raggi di sole attraverso la finestra (di giorno, con il sole)",
@@ -210,23 +212,33 @@
     "osld": [
       "Strisce oscuranti e trasparenti. Falle scorrere per far passare la luce da quelle trasparenti.",
       "Un semplice rullo in tessuto pieno. Diffonde la luce.",
-      "Tessuto denso spalmato. Scorre in guide laterali bianche e blocca la luce.",
       "Tessuto piegato a fisarmonica.",
-      "Doppio plissé. Le celle trattengono il calore.",
       "Il tessuto si raccoglie in morbide pieghe.",
       "Sottili lamelle in alluminio da 25 mm con cordini.",
-      "Larghe lamelle in legno da 50 mm con nastri.",
       "Cassonetto sopra la finestra nel colore del telaio, montato con la finestra. Avvolgibile in PVC o alluminio.",
+      "Tessuto denso spalmato. Scorre in guide laterali bianche e blocca la luce.",
+      "Doppio plissé. Le celle trattengono il calore.",
+      "Larghe lamelle in legno da 50 mm con nastri.",
       "Cassonetto sulla facciata con frontale smussato. Ideale per case esistenti.",
       "Cassonetto nascosto nel muro sotto l’intonaco. Si vedono solo avvolgibile e guide.",
       "Profili con piccoli fori. Da chiusa entra un po’ di luce.",
       "Lamelle curve in alluminio da 80 mm su nastri. Si possono orientare.",
       "Lamelle piatte a Z da 90 mm con guarnizione. Molto buio da chiuso.",
-      "Tessuto esterno in guide con zip. Ferma il sole, lascia la vista."
+      "Tessuto esterno in guide con zip. Ferma il sole, lascia la vista.",
+      "Tessuto in un cassonetto con guide laterali. Aderisce alla finestra, niente luce dai lati.",
+      "Tela a righe srotolata sopra il terrazzo, con mantovana. Fa ombra al terrazzo e alla finestra."
     ],
     "osw": "Interno",
     "osz": "Esterno",
-    "urz": "🔗 Questa finestra viene dall’integrazione Motor HA – ogni modifica è salvata automaticamente nel dispositivo (come con «Configura»)."
+    "urz": "🔗 Questa finestra viene dall’integrazione Motor HA – ogni modifica è salvata automaticamente nel dispositivo (come con «Configura»).",
+    "oslg": {
+      "rolety": "Tende a rullo",
+      "plisy": "Plissettate e a pacchetto",
+      "zaluzje": "Veneziane",
+      "zrolety": "Tapparelle",
+      "fasadowe": "Frangisole",
+      "taras": "Terrazzo"
+    }
   },
   "kolory": {
     "czarny": "nero",

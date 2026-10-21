@@ -11,7 +11,7 @@ export function rrTkanina(typ, col, c) {
   const tasmy = (k, w) => `linear-gradient(90deg,transparent calc(25% - ${w / 2}px),${k} calc(25% - ${w / 2}px),${k} calc(25% + ${w / 2}px),transparent calc(25% + ${w / 2}px),transparent calc(75% - ${w / 2}px),${k} calc(75% - ${w / 2}px),${k} calc(75% + ${w / 2}px),transparent calc(75% + ${w / 2}px))`;
   const pancerz = o => `${S(.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
   switch (typ) {
-    case 'pelna': return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-.06)} ${h}px,${col} ${RR_OKRES}px)`;
+    case 'pelna': case 'kasetowa': return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-.06)} ${h}px,${col} ${RR_OKRES}px)`;
     /* v27: zaciemniająca – gęsta tkanina z powłoką, lekki połysk, bez prześwitu */
     case 'zaciemniajaca': return `${brzegi},linear-gradient(90deg,rgba(255,255,255,0) 20%,rgba(255,255,255,.07) 45%,rgba(255,255,255,0) 70%),linear-gradient(180deg,${col} 0,${S(.03)} ${h}px,${col} ${RR_OKRES}px)`;
     case 'plisa': return `${brzegi},${bez},linear-gradient(180deg,${A(S(.2), .94)} 0,${A(col, .94)} 5px,${A(S(-.24), .96)} ${h - .5}px,${A(S(.2), .94)} ${h}px,${A(col, .94)} ${h + 5}px,${A(S(-.24), .96)} ${RR_OKRES - .5}px,${A(S(.2), .94)} ${RR_OKRES}px)`;
@@ -48,6 +48,8 @@ export function rrTkanina(typ, col, c) {
     }
     /* v27: screen ZIP – zewnętrzna tkanina z siatki, przez którą trochę widać */
     case 'screen': return `${brzegi},repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 2px),linear-gradient(180deg,${A(col, .82)} 0,${A(S(.06), .8)} ${h}px,${A(col, .82)} ${RR_OKRES}px)`;
+    /* v40: markiza tarasowa – szerokie pasy, lekkie fałdy w poprzek */
+    case 'markiza': return `${brzegi},repeating-linear-gradient(90deg,${col} 0 14px,${A('#f3efe6', .97)} 14px 28px),linear-gradient(180deg,rgba(255,255,255,.1) 0,rgba(0,0,0,.12) ${h}px,rgba(255,255,255,.1) ${RR_OKRES}px)`;
     default: return `${brzegi},${splot},linear-gradient(180deg,
    ${S(.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-.25)} ${RR_PAS}px,
    ${A(c.siatka ? rrHex(c.siatka) : S(.3), .62)} ${RR_PAS}px,${A(c.siatka ? rrShade(rrHex(c.siatka), .1) : S(.4), .55)} ${RR_OKRES}px)`;
@@ -65,6 +67,13 @@ export function rrOslonaStyl(typ, col, rama) {
   const lamela = `.bar{background:linear-gradient(180deg,${S(.3)},${col} 50%,${S(-.3)})}`;
   switch (typ) {
     case 'zaciemniajaca': return prow(4, 'linear-gradient(90deg,#c9c9c9,#fafafa 45%,#b5b5b5)');
+    /* v40: wolnowisząca – sam wałek z tkaniną na uchwytach, bez kasety i prowadnic */
+    case 'pelna': return `.cas{left:3px;right:3px;height:${RR_KASETA - 2}px;border-radius:${RR_KASETA}px;background:linear-gradient(180deg,${S(.3)},${col} 50%,${S(-.38)})}.cas:before,.cas:after{width:5px;background:linear-gradient(90deg,#d8d8d8,#fafafa,#bdbdbd);border-radius:2px}`;
+    /* v40: w kasecie – kaseta i prowadnice w kolorze ramy okna */
+    case 'kasetowa': return `.cas{background:linear-gradient(180deg,${R(.06)},${rama} 50%,${R(-.18)});border-radius:0 0 3px 3px}.cas:before,.cas:after{background:${R(-.06)};border-radius:0}` + prow(4, `linear-gradient(90deg,${R(-.2)},${R(.06)} 45%,${R(-.14)})`);
+    /* v40: markiza – kaseta aluminiowa i profil przedni z falbaną */
+    case 'markiza': return kas(`linear-gradient(180deg,#e8eaec,#c3c7cb 60%,#8d9297)`, `height:${RR_KASETA + 4}px;box-shadow:0 3px 5px rgba(0,0,0,.45)`) +
+      `.bar{height:16px;background:linear-gradient(180deg,#eef0f2,#a7acb1) top/100% ${RR_LISTWA}px no-repeat,radial-gradient(circle at 7px 0,${col} 6.5px,transparent 7px) 0 ${RR_LISTWA}px/14px 11px repeat-x;box-shadow:none;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35))}`;
     case 'zaluzja': case 'drewniana': return kas(`linear-gradient(180deg,${S(.3)},${col} 55%,${S(-.35)})`) + lamela;
     case 'zewnetrzna': case 'perforowana':   // nadstawna: kaseta nad oknem w kolorze ramy
       return `.cas{background:linear-gradient(180deg,${R(.05)},${rama} 45%,${R(-.16)});border-radius:0;box-shadow:inset 0 -2px 0 rgba(0,0,0,.12),0 2px 3px rgba(0,0,0,.35)}.cas:before,.cas:after{background:${R(-.08)};border-radius:0}` + prow(5, alu) + listwa;
@@ -189,4 +198,20 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .qk button{flex:1;height:32px;border:none;border-radius:var(--ha-card-border-radius,12px);font-size:13px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
+/* v40: osłona zewnętrzna – widok z zewnątrz: okno w ścianie z tynkiem, parapet, za szybą ciemny pokój (wieczorem zapalone światło),
+   deszcz i śnieg padają przed osłoną; skrzydło otwiera się do środka, więc osłona na ścianie zostaje na miejscu */
+.zew .elew{position:relative;margin:0 -12px;padding:22px 16px 20px;
+ background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.08),transparent 40%),repeating-linear-gradient(45deg,rgba(0,0,0,.018) 0 2px,transparent 2px 5px),linear-gradient(180deg,#e2ddd3,#d3cdc1)}
+.zew .win{box-shadow:0 0 0 5px #c4bdb0,0 0 0 6px rgba(0,0,0,.08),-4px 4px 10px 6px rgba(0,0,0,.28)}
+.zew .win:after{content:"";position:absolute;left:-14px;right:-14px;bottom:-12px;height:9px;z-index:9;border-radius:1px 1px 2px 2px;
+ background:linear-gradient(180deg,#f2f3f4,#b9bec3 55%,#8a9096);box-shadow:0 4px 5px rgba(0,0,0,.35)}
+.zew .handle,.zew .ray,.zew .out,.zew .wx .scn,.zew .wx .sun,.zew .wx .moon,.zew .wx .cl,.zew .wx .st{display:none}
+.zew .slot{background:#2c2723!important}
+.zew .glass .wx{z-index:5}
+.zew .refl{background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.16) 38%,transparent 46%),linear-gradient(180deg,rgba(150,185,215,.32),rgba(150,185,215,0) 45%),linear-gradient(180deg,rgba(28,25,22,.74),rgba(44,38,33,.66))}
+.zew.noc .elew{background:repeating-linear-gradient(45deg,rgba(0,0,0,.03) 0 2px,transparent 2px 5px),linear-gradient(180deg,#5d5953,#4f4b46)}
+.zew.noc .refl{background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.06) 38%,transparent 46%),radial-gradient(ellipse 70% 45% at 50% 22%,rgba(255,206,130,.62),rgba(96,66,38,.86) 70%,rgba(40,28,18,.92))}
+.zew .sash.uchyl,.zew .sash.otw{transform:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.16)}
+.zew .sash.uchyl .refl{box-shadow:inset 0 22px 14px -10px rgba(0,0,0,.7)}
+.zew .sash.otw .refl{box-shadow:inset 0 0 0 999px rgba(12,10,8,.55),inset 6px 0 6px -2px rgba(0,0,0,.6)}
 `;

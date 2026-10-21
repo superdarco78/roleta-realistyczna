@@ -189,20 +189,22 @@
     "osl": "Art der Beschattung",
     "osln": [
       "Doppelrollo",
-      "Stoffrollo",
+      "Freihängendes Rollo",
       "Plissee",
       "Raffrollo",
       "Alu-Jalousie",
       "Aufsatzrollladen",
       "Verdunkelungsrollo",
       "Wabenplissee",
-      "Holzjalousie",
+      "Holz- / Bambusjalousie",
       "Vorbaurollladen",
       "Unterputzrollladen",
       "Gelochter Rollladen",
       "Raffstore C80",
       "Raffstore Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Kassettenrollo",
+      "Terrassenmarkise"
     ],
     "d_osl": "Wähle, was du am Fenster hast. Die Karte passt Stoff, Kasten, Seitenführungen und Endleiste an.",
     "promienie": "Sonnenstrahlen durch das Fenster (tagsüber, bei Sonne)",
@@ -210,23 +212,33 @@
     "osld": [
       "Blickdichte und transparente Streifen. Verschiebe sie, um Licht durch die transparenten Streifen zu lassen.",
       "Ein einfaches Rollo aus dichtem Stoff. Streut das Licht.",
-      "Dichter beschichteter Stoff. Läuft in weißen Seitenschienen und sperrt das Licht aus.",
       "Stoff, der wie eine Ziehharmonika gefaltet ist.",
-      "Doppelplissee. Die Wabenkammern halten die Wärme.",
       "Der Stoff legt sich in weiche Falten.",
       "Dünne 25-mm-Alulamellen an Schnüren.",
-      "Breite 50-mm-Holzlamellen an Bändern.",
       "Kasten über dem Fenster in Rahmenfarbe, mit dem Fenster montiert. Panzer aus PVC- oder Aluprofilen.",
+      "Dichter beschichteter Stoff. Läuft in weißen Seitenschienen und sperrt das Licht aus.",
+      "Doppelplissee. Die Wabenkammern halten die Wärme.",
+      "Breite 50-mm-Holzlamellen an Bändern.",
       "Kasten an der Außenwand mit abgeschrägter Front. Gut für bestehende Häuser.",
       "Kasten in der Wand unter dem Putz. Sichtbar sind nur Panzer und Führungen.",
       "Profile mit kleinen Löchern. Geschlossen kommt noch etwas Licht herein.",
       "Gebogene 80-mm-Alulamellen an Bändern. Sie lassen sich kippen.",
       "Flache 90-mm-Lamellen in Z-Form mit Dichtung. Geschlossen sehr dunkel.",
-      "Außenliegendes Gewebe in Seitenführungen mit Reißverschluss. Hält die Sonne ab, die Aussicht bleibt."
+      "Außenliegendes Gewebe in Seitenführungen mit Reißverschluss. Hält die Sonne ab, die Aussicht bleibt.",
+      "Stoff in einer Kassette mit Seitenführungen. Liegt am Fenster an, seitlich kommt kein Licht durch.",
+      "Gestreifter Stoff über der Terrasse, mit Volant am Ende. Spendet Schatten auf Terrasse und Fenster."
     ],
     "osw": "Innen",
     "osz": "Außen",
-    "urz": "🔗 Dieses Fenster stammt aus der Motor HA-Integration – jede Änderung wird automatisch im Gerät gespeichert (wie bei „Konfigurieren“)."
+    "urz": "🔗 Dieses Fenster stammt aus der Motor HA-Integration – jede Änderung wird automatisch im Gerät gespeichert (wie bei „Konfigurieren“).",
+    "oslg": {
+      "rolety": "Rollos",
+      "plisy": "Plissees und Raffrollos",
+      "zaluzje": "Jalousien",
+      "zrolety": "Rollläden",
+      "fasadowe": "Raffstores",
+      "taras": "Terrasse"
+    }
   },
   "kolory": {
     "czarny": "schwarz",

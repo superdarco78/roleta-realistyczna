@@ -189,20 +189,22 @@
     "osl": "Typ osłony",
     "osln": [
       "Dzień-noc",
-      "Materiałowa",
+      "Roleta wolnowisząca",
       "Plisa",
       "Rzymska",
       "Żaluzja aluminiowa",
       "Roleta nadstawna",
       "Zaciemniająca",
       "Plaster miodu",
-      "Żaluzja drewniana",
+      "Żaluzja drewniana / bambusowa",
       "Roleta natynkowa",
       "Roleta podtynkowa",
       "Roleta z perforacją",
       "Żaluzja fasadowa C80",
       "Żaluzja fasadowa Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Roleta w kasecie",
+      "Markiza tarasowa"
     ],
     "d_osl": "Wybierz, co masz w oknie. Karta dopasuje wygląd tkaniny, kasety, prowadnic i listwy.",
     "promienie": "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
@@ -210,23 +212,33 @@
     "osld": [
       "Pasy pełne i przezroczyste. Przesuwasz, a światło przechodzi przez paski.",
       "Zwykła roleta z jednolitej tkaniny. Rozprasza światło.",
-      "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
       "Tkanina złożona w harmonijkę.",
-      "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
       "Tkanina układa się w miękkie fałdy.",
       "Cienkie aluminiowe listewki 25 mm na sznurkach.",
-      "Szerokie drewniane lamele 50 mm na taśmach.",
       "Kaseta nad oknem w kolorze ramy, montowana razem z oknem. Pancerz z profili PVC lub aluminium.",
+      "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
+      "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
+      "Szerokie drewniane lamele 50 mm na taśmach.",
       "Skrzynka na elewacji ze ściętym frontem. Dobra do gotowych domów.",
       "Skrzynka schowana w ścianie pod tynkiem. Widać tylko pancerz i prowadnice.",
       "Profile z małymi otworami. Przy opuszczonej rolecie wpada trochę światła.",
       "Wygięte lamele aluminiowe 80 mm na taśmach. Można je przechylać.",
       "Płaskie lamele 90 mm w kształcie Z z uszczelką. Szczelnie zaciemniają.",
-      "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
+      "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje.",
+      "Tkanina w kasecie z prowadnicami po bokach. Przylega do okna, z boków nie wpada światło.",
+      "Tkanina w pasy rozwijana nad tarasem, z falbaną na końcu. Daje cień na tarasie i przed oknem."
     ],
-    "osw": "W pokoju",
+    "osw": "Wewnątrz pomieszczenia",
     "osz": "Na zewnątrz",
-    "urz": "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”)."
+    "urz": "🔗 To okno z integracji Motor HA – każda zmiana zapisuje się sama w urządzeniu (to samo, co „Konfiguruj”).",
+    "oslg": {
+      "rolety": "Rolety",
+      "plisy": "Plisy i rzymskie",
+      "zaluzje": "Żaluzje",
+      "zrolety": "Rolety zewnętrzne",
+      "fasadowe": "Żaluzje fasadowe",
+      "taras": "Taras"
+    }
   },
   "kolory": {
     "bezowy": "beżowy",

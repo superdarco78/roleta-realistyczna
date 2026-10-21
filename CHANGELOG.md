@@ -1,5 +1,13 @@
 # 📝 Historia zmian
 
+## v40 – Rodzaje osłon jak w sklepie
+
+- Osłony zewnętrzne widać od strony elewacji: okno w ścianie z tynkiem i parapetem, za szybą pokój (wieczorem zapalone światło), deszcz i śnieg padają przed osłoną
+- Osłony wewnętrzne bez zmian – widok z pokoju na pogodę za oknem
+- Nowe rodzaje: roleta w kasecie z prowadnicami, markiza tarasowa; „Materiałowa” to teraz „Roleta wolnowisząca” (sam wałek, bez kasety), żaluzja drewniana także bambusowa
+- Wybór rodzaju w grupach: w pomieszczeniu (rolety, plisy i rzymskie, żaluzje) i na zewnątrz (rolety zewnętrzne, żaluzje fasadowe, taras)
+- Poprawka: opisy pod rodzajami osłon były przesunięte (np. przy „Rzymska” był opis plisy)
+
 ## v39 – Czytelniej
 
 - „Co:” i „Po co:” w kreatorze w kolorze akcentu, opis jaśniejszy

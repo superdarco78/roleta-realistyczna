@@ -90,7 +90,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .dot[aria-pressed="true"]{color:var(--primary-text-color)}
 .own{position:relative;width:34px;height:34px;border-radius:50%;overflow:hidden;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}
 .own input{position:absolute;inset:-8px;width:50px;height:50px;opacity:0;cursor:pointer}
-.osg{font-size:13.5px;font-weight:500;color:var(--primary-text-color);margin-top:4px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:20px}
+.osg{font-size:15px;font-weight:500;color:var(--primary-text-color);margin-top:10px}.osp{font-size:13px;color:var(--secondary-text-color);margin:6px 0 2px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:20px}
 .seg{display:inline-flex;border-radius:var(--rr-r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--rr-ramka)}
 .seg button{border:none;background:none;min-height:40px;padding:0 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color)}
 .seg button[aria-pressed="true"]{background:var(--rr-akc);color:var(--rr-na-akcencie,#fff)}

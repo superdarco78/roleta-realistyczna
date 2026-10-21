@@ -1,5 +1,5 @@
 /* Stałe karty: wersja, ustawienia domyślne, wymiary rolety, gotowe wyglądy kreatora */
-export const RR_WERSJA = 'v39';
+export const RR_WERSJA = 'v40';
 /* v24: okno jednoskrzydłowe większe – wyższe o 25% i szersze, zajmuje tyle miejsca co okno 2-skrzydłowe */
 export const rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
 export const RR_DEF = { kolor: 'czarny', rama: '#f4f4f2', czas: 'auto', wysokosc: 260, skrzydla: 2, przyciski: true, niebo: true, osobno: false, odwroc: false, pogoda: 'auto', tlo: '', widok: true, czujnik_lewe: '', tryb_lewe: 'uchyl', czujnik_prawe: '', tryb_prawe: 'uchyl',
@@ -7,14 +7,18 @@ export const RR_DEF = { kolor: 'czarny', rama: '#f4f4f2', czas: 'auto', wysokosc
 /* v26: typy osłon – ten sam silnik i ruch, inny materiał */
 /* v27: rodzaje osłon – kolejność = kolejność nazw w tłumaczeniach (osln, osld); nowe typy zawsze na końcu */
 export const RR_OSLONY = ['zebra', 'pelna', 'plisa', 'rzymska', 'zaluzja', 'zewnetrzna',
-  'zaciemniajaca', 'plaster', 'drewniana', 'natynkowa', 'podtynkowa', 'perforowana', 'fasadowa', 'fasadowaz', 'screen'];
-export const RR_OSL_GRUPY = {
-  wew: ['zebra', 'pelna', 'zaciemniajaca', 'plisa', 'plaster', 'rzymska', 'zaluzja', 'drewniana'],
-  zew: ['zewnetrzna', 'natynkowa', 'podtynkowa', 'perforowana', 'fasadowa', 'fasadowaz', 'screen']
+  'zaciemniajaca', 'plaster', 'drewniana', 'natynkowa', 'podtynkowa', 'perforowana', 'fasadowa', 'fasadowaz', 'screen', 'kasetowa', 'markiza'];
+/* v40: rodzaje osłon w grupach jak w sklepie: w pomieszczeniu (widok z pokoju) i na zewnątrz (widok z elewacji); nazwy podgrup = edytor.oslg */
+export const RR_OSL_PODGRUPY = {
+  wew: { rolety: ['pelna', 'kasetowa', 'zebra', 'zaciemniajaca'], plisy: ['plisa', 'plaster', 'rzymska'], zaluzje: ['zaluzja', 'drewniana'] },
+  zew: { zrolety: ['natynkowa', 'podtynkowa', 'zewnetrzna', 'perforowana'], fasadowe: ['fasadowa', 'fasadowaz'], taras: ['markiza', 'screen'] }
 };
+export const RR_OSL_GRUPY = Object.fromEntries(Object.entries(RR_OSL_PODGRUPY).map(([g, p]) => [g, Object.values(p).flat()]));
+/* osłona zewnętrzna = karta pokazuje okno od strony elewacji */
+export const rrZew = t => RR_OSL_GRUPY.zew.includes(t);
 export const RR_OSL_IKONY = { zebra: 'mdi:roller-shade', pelna: 'mdi:roller-shade-closed', plisa: 'mdi:blinds', rzymska: 'mdi:curtains', zaluzja: 'mdi:blinds-horizontal', zewnetrzna: 'mdi:window-shutter',
   zaciemniajaca: 'mdi:roller-shade-closed', plaster: 'mdi:blinds', drewniana: 'mdi:blinds-horizontal', natynkowa: 'mdi:window-shutter', podtynkowa: 'mdi:window-shutter',
-  perforowana: 'mdi:window-shutter-open', fasadowa: 'mdi:blinds-horizontal-closed', fasadowaz: 'mdi:blinds-horizontal-closed', screen: 'mdi:roller-shade' };
+  perforowana: 'mdi:window-shutter-open', fasadowa: 'mdi:blinds-horizontal-closed', fasadowaz: 'mdi:blinds-horizontal-closed', screen: 'mdi:roller-shade', kasetowa: 'mdi:roller-shade', markiza: 'mdi:awning-outline' };
 export const RR_PAS = 16, RR_SIATKA = 10;          // wysokość pasa pełnego i półprzezroczystego (px)
 export const RR_OKRES = RR_PAS + RR_SIATKA;
 export const RR_KASETA = 12, RR_LISTWA = 5;

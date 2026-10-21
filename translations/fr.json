@@ -189,20 +189,22 @@
     "osl": "Type de store",
     "osln": [
       "Jour-nuit",
-      "Store enrouleur",
+      "Store enrouleur libre",
       "Plissé",
       "Store bateau",
       "Vénitien alu",
       "Volet roulant traditionnel",
       "Occultant",
       "Plissé nid d’abeille",
-      "Vénitien bois",
+      "Vénitien bois / bambou",
       "Volet roulant en applique",
       "Volet roulant encastré",
       "Volet roulant ajouré",
       "Brise-soleil orientable C80",
       "Brise-soleil orientable Z90",
-      "Screen ZIP"
+      "Screen ZIP",
+      "Store coffre",
+      "Store banne"
     ],
     "d_osl": "Choisissez ce que vous avez à la fenêtre. La carte adapte la toile, le coffre, les coulisses et la barre de charge.",
     "promienie": "Rayons du soleil à travers la fenêtre (le jour, quand il fait beau)",
@@ -210,23 +212,33 @@
     "osld": [
       "Bandes opaques et voilées. Faites-les glisser pour laisser passer la lumière par les bandes voilées.",
       "Un simple enrouleur en toile opaque. Diffuse la lumière.",
-      "Toile dense enduite. Coulisse dans des glissières blanches et bloque la lumière.",
       "Toile pliée en accordéon.",
-      "Double plissé. Les alvéoles gardent la chaleur.",
       "La toile se replie en plis souples.",
       "Fines lames alu de 25 mm sur cordons.",
-      "Larges lames bois de 50 mm sur rubans.",
       "Coffre au-dessus de la fenêtre dans la couleur du cadre, posé avec la fenêtre. Tablier en lames PVC ou alu.",
+      "Toile dense enduite. Coulisse dans des glissières blanches et bloque la lumière.",
+      "Double plissé. Les alvéoles gardent la chaleur.",
+      "Larges lames bois de 50 mm sur rubans.",
       "Coffre sur le mur extérieur avec façade biseautée. Idéal pour la rénovation.",
       "Coffre caché dans le mur sous l’enduit. Seuls le tablier et les coulisses sont visibles.",
       "Lames avec petits trous. Un peu de lumière passe quand il est fermé.",
       "Lames alu bombées de 80 mm sur rubans. Elles s’orientent.",
       "Lames plates de 90 mm en Z avec joint. Très sombre une fois fermé.",
-      "Toile extérieure dans des coulisses à fermeture éclair. Arrête le soleil, garde la vue."
+      "Toile extérieure dans des coulisses à fermeture éclair. Arrête le soleil, garde la vue.",
+      "Tissu dans un coffre avec coulisses latérales. Plaqué contre la fenêtre, sans fuite de lumière sur les côtés.",
+      "Toile rayée déroulée au-dessus de la terrasse, avec un lambrequin. Fait de l'ombre sur la terrasse et la fenêtre."
     ],
     "osw": "Intérieur",
     "osz": "Extérieur",
-    "urz": "🔗 Cette fenêtre vient de l’intégration Motor HA – chaque modification est enregistrée automatiquement dans l’appareil (comme avec « Configurer »)."
+    "urz": "🔗 Cette fenêtre vient de l’intégration Motor HA – chaque modification est enregistrée automatiquement dans l’appareil (comme avec « Configurer »).",
+    "oslg": {
+      "rolety": "Stores enrouleurs",
+      "plisy": "Plissés et bateaux",
+      "zaluzje": "Stores vénitiens",
+      "zrolety": "Volets roulants",
+      "fasadowe": "Brise-soleil orientables",
+      "taras": "Terrasse"
+    }
   },
   "kolory": {
     "czarny": "noir",

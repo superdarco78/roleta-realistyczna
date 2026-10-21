@@ -1,4 +1,4 @@
-import { RR_PRESETY, RR_DEF, RR_OSLONY, RR_OSL_GRUPY } from './stale.js';
+import { RR_PRESETY, RR_DEF, RR_OSLONY, RR_OSL_PODGRUPY } from './stale.js';
 import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas } from './silnik.js';
 import { RR_JEZYKI, RR_KOL_NAZWY } from './jezyk.js';
@@ -239,10 +239,13 @@ export class RrKreator {
   _k_wyglad(B) {
     const W = this.W, L = this.ed._L, P = RR_PRESETY;
     this._html(B, `<div class="lb">${esc(L.osl)}</div>`);
-    for (const [g, typy] of Object.entries(RR_OSL_GRUPY)) {
+    for (const [g, pod] of Object.entries(RR_OSL_PODGRUPY)) {
       this._html(B, `<div class="osg">${esc(g === 'wew' ? L.osw : L.osz)}</div>`);
-      this._seg(B, typy.map(v => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val('oslona'), v => this._ustaw({ oslona: v }));
-      B.lastElementChild.classList.add('osl');
+      for (const [p, typy] of Object.entries(pod)) {
+        this._html(B, `<div class="osp">${esc(L.oslg?.[p] || '')}</div>`);
+        this._seg(B, typy.map(v => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val('oslona'), v => this._ustaw({ oslona: v }));
+        B.lastElementChild.classList.add('osl');
+      }
     }
     this._html(B, `<p class="hint">${esc(L.osld[Math.max(0, RR_OSLONY.indexOf(this.ed._val('oslona')))])}</p>`);
     const d = document.createElement('div'); d.className = 'wzl';
