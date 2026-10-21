@@ -6,7 +6,7 @@ import { RR_ED, RR_TXT, RR_KOL_NAZWY, RR_JEZYKI, RR_NAZWY_JEZYKOW, rrJezyk } fro
 import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, RR_GKLUCZE, rrGlobLoad, rrGlobSave } from './globalne.js';
 import { RR_EDYTOR_STYL } from './edytor-styl.js';
-import { RrKreator, rrKreatorPotrzebny } from './kreator.js';
+import { RrKreator } from './kreator.js';
 
 /* Edytor graficzny (v6): jak symulator – kółka kolorów, suwaki, przełączniki i żywy podgląd z animacją.
    Podgląd steruje udawanym silnikiem, nigdy prawdziwą roletą. */
@@ -148,7 +148,8 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     /* v23: kreator w 7 krokach (src/kreator.js) – nowa karta = kreator od razu, później przycisk 🪄 */
     this._kr = new RrKreator(this, $('.wiz'));
     $('.wzo').onclick = () => this._kr.otworz(0);
-    if (rrKreatorPotrzebny(this._cfg)) this._kr.otworz(0);
+    /* v38: edytor zawsze zaczyna od kreatora (krok 1), tak samo jak „Dodaj okno” w integracji */
+    this._kr.otworz(0);
     /* v21: ustawienia globalne */
     const gInfo = () => { const n = Object.keys(RR_G.v || {}).length; $('#gInfo').textContent = n ? L.gIle(n) : L.gBrak; };
     rrGlobLoad(this._hass).then(() => { gInfo(); this._sync(); this._preview(); });

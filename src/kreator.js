@@ -23,8 +23,9 @@ export class RrKreator {
   get c() { return this.ed._cfg; }
   get otwarty() { return !this.el.hidden; }
 
-  otworz(n = 0) { this.el.hidden = false; this.pokaz(n); }
-  zamknij() { this.el.hidden = true; }
+  /* v38: otwarty kreator = jedyna rzecz w edytorze (obok podglądu); po „Gotowe” albo ✕ – wszystkie ustawienia */
+  otworz(n = 0) { this.el.hidden = false; this.el.parentElement?.classList.add('kr'); this.pokaz(n); }
+  zamknij() { this.el.hidden = true; this.el.parentElement?.classList.remove('kr'); }
   /* dynamicznie: gdy w HA pojawi się nowe urządzenie albo zmieni się stan wybranych encji, krok rysuje się od nowa */
   _klucz() {
     const h = this.h, s = id => id ? h.states[id]?.state : '';

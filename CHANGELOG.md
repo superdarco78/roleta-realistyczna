@@ -3,6 +3,8 @@
 ## v38 – Jedna karta Motor HA na liście
 
 - Na liście „Dodaj do panelu” zawsze jedna pozycja „Motor HA” (wcześniej mogła być podwójna)
+- Edytor zawsze zaczyna od kreatora w 7 krokach; po „Gotowe” albo ✕ – wszystkie ustawienia
+- Edytor i kreator w stylu kafelków z opisu: tło w kolorze motywu, zaokrąglona ramka, cień; zaznaczone rzeczy w kolorze akcentu
 
 ## v37 – Czytelne napisy przy każdym kolorze
 
