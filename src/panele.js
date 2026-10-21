@@ -50,12 +50,16 @@ export const rrNumerWersji = v => parseInt(String(v || '').replace(/^\D+/, ''), 
 
 /* v29: po aktualizacji w HACS przeglądarka potrafi trzymać stary plik karty. HACS zmienia adres zasobu (hacstag),
    więc wystarczy raz przeładować stronę – karta robi to sama, gdy HACS ma nowszą wersję niż ta, która działa */
-const RR_ODSW = { z: 0 };
+/* v30: działa też z encją aktualizacji z integracji Okno HA i przy otwartej stronie – gdy w trakcie
+   klikniesz „Zainstaluj”, karta od razu przeładuje stronę na nową wersję */
+const RR_ODSW = { id: null, szukane: 0 };
 export function rrSamoOdswiez(hass) {
-  if (RR_ODSW.z) return; RR_ODSW.z = 1;
-  const upd = Object.values(hass?.states || {}).find(s => s.entity_id?.startsWith('update.') &&
-    /roleta-realistyczna|okno-ha/.test(String(s.attributes?.release_url || '') + String(s.attributes?.title || '') + s.entity_id));
-  const inst = upd?.attributes?.installed_version;
+  const st = hass?.states || {};
+  if (!RR_ODSW.id && !RR_ODSW.szukane) {
+    RR_ODSW.szukane = 1;
+    RR_ODSW.id = Object.keys(st).find(k => k.startsWith('update.') && /roleta-realistyczna/.test(String(st[k].attributes?.release_url || ''))) || null;
+  }
+  const inst = RR_ODSW.id && st[RR_ODSW.id]?.attributes?.installed_version;
   if (!inst || rrNumerWersji(inst) <= rrNumerWersji(RR_WERSJA)) return;
   const klucz = 'okno-ha-odswiezone-' + inst;
   try { if (sessionStorage.getItem(klucz)) return; sessionStorage.setItem(klucz, '1'); } catch (e) { return; }   // najwyżej raz
