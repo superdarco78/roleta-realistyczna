@@ -174,7 +174,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .sash.otw[data-i="1"]{transform-origin:100% 50%;transform:rotateY(calc(1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw{box-shadow:0 0 14px rgba(0,0,0,.55)}
 .ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--accent-color,#ff9800);z-index:6;display:none}
-.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,#ff9800);color:var(--text-accent-color,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
+.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,#ff9800);color:var(--rr-na-akcencie,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .mv{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:5;color:#fff;background:rgba(0,0,0,.5);
  width:26px;height:26px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .mv ha-icon{--mdc-icon-size:18px;animation:rrb 1s ease-in-out infinite}
@@ -187,6 +187,6 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .bt ha-icon{--mdc-icon-size:22px}
 .qk{display:flex;gap:6px;margin-top:8px}
 .qk button{flex:1;height:28px;border:none;border-radius:9px;font-size:12px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
-.qk button.on{color:var(--text-primary-color,#fff);background:var(--primary-color,#009ac7);box-shadow:none}
+.qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
 `;

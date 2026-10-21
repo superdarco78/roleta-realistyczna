@@ -1,5 +1,5 @@
 import { RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
-import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
+import { RR_KOLORY, RR_RAMY, rrHex, rrKontrast } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
 import { RR_ED, RR_TXT, RR_KOL_NAZWY, rrJezyk } from './jezyk.js';
@@ -49,6 +49,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   }
   _go() {
     if (!this._hass || !this._cfg) return;
+    rrKontrast(this);   // v37: napisy na kolorach motywu czytelne przy każdym kolorze z profilu
     /* v31: edycja okna z integracji – edytor startuje z ustawieniami zapisanymi w urządzeniu */
     if (this._urz() && this._urzE !== this._cfg.entity) {
       this._urzE = this._cfg.entity;

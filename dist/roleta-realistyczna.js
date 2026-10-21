@@ -111,10 +111,11 @@
    v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
    v34 – kolory z motywu HA: akcent (uchwyt, linia celu, przyciski animacji), bez numeru karty – w edytorze wersja integracji
    v35 – zapasowe kolory = domyślne kolory HA: główny #009ac7, akcent #ff9800
-   v36 – kreator bez stałych kolorów: ikony mdi i ramki w kolorze głównym motywu, bez numeru karty w komunikatach */
+   v36 – kreator bez stałych kolorów: ikony mdi i ramki w kolorze głównym motywu, bez numeru karty w komunikatach
+   v37 – napis na kolorze motywu biały albo czarny (kontrast z kolorem z profilu); naprawa kreatora (komunikat o wersji) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v36";
+  var RR_WERSJA = "v37";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -290,6 +291,25 @@
   function rrRgba(hex, a) {
     const h = rrShade(hex, 0).replace("#", ""), n = parseInt(h, 16);
     return `rgba(${n >> 16},${n >> 8 & 255},${n & 255},${a})`;
+  }
+  var RR_PROBNIK = typeof document !== "undefined" ? document.createElement("canvas").getContext("2d") : null;
+  function rrNaKolorze(kolor) {
+    if (!RR_PROBNIK || !kolor) return "";
+    RR_PROBNIK.fillStyle = "#000";
+    RR_PROBNIK.fillStyle = kolor.trim();
+    const m = /^#([0-9a-f]{6})$/i.exec(RR_PROBNIK.fillStyle);
+    if (!m) return "";
+    const [r, g, b] = [0, 2, 4].map((i) => {
+      const c = parseInt(m[1].slice(i, i + 2), 16) / 255;
+      return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.4 ? "#212121" : "#fff";
+  }
+  function rrKontrast(el) {
+    if (!el || !el.isConnected) return;
+    const s = getComputedStyle(el), g = rrNaKolorze(s.getPropertyValue("--primary-color")), a = rrNaKolorze(s.getPropertyValue("--accent-color"));
+    if (g && el.style.getPropertyValue("--rr-na-glownym") !== g) el.style.setProperty("--rr-na-glownym", g);
+    if (a && el.style.getPropertyValue("--rr-na-akcencie") !== a) el.style.setProperty("--rr-na-akcencie", a);
   }
 
   // src/silnik.js
@@ -1639,7 +1659,7 @@
 .sash.otw[data-i="1"]{transform-origin:100% 50%;transform:rotateY(calc(1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw{box-shadow:0 0 14px rgba(0,0,0,.55)}
 .ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--accent-color,#ff9800);z-index:6;display:none}
-.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,#ff9800);color:var(--text-accent-color,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
+.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,#ff9800);color:var(--rr-na-akcencie,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .mv{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:5;color:#fff;background:rgba(0,0,0,.5);
  width:26px;height:26px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .mv ha-icon{--mdc-icon-size:18px;animation:rrb 1s ease-in-out infinite}
@@ -1652,7 +1672,7 @@
 .bt ha-icon{--mdc-icon-size:22px}
 .qk{display:flex;gap:6px;margin-top:8px}
 .qk button{flex:1;height:28px;border:none;border-radius:9px;font-size:12px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
-.qk button.on{color:var(--text-primary-color,#fff);background:var(--primary-color,#009ac7);box-shadow:none}
+.qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
 `;
 
@@ -2003,6 +2023,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
     }
     _render() {
       if (!this._hass || !this._cfg) return;
+      rrKontrast(this);
       const c = this._cfg, st = this._hass.states[c.entity];
       const mem = this._members();
       const lang = rrJezyk(c, this._hass);
@@ -2227,9 +2248,9 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .pin-b{border:none;background:none;cursor:pointer;font-size:16px;opacity:.45;padding:2px 4px}.pv.pin .pin-b{opacity:1}
 .wxp{display:flex;flex-wrap:wrap;gap:6px}
 .wxp button{border:none;border-radius:14px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;color:var(--primary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
-.wxp button[aria-pressed="true"]{background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff);box-shadow:none}
+.wxp button[aria-pressed="true"]{background:var(--primary-color,#009ac7);color:var(--rr-na-glownym,var(--text-primary-color,#fff));box-shadow:none}
 .pvh{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--secondary-text-color)}
-.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--accent-color,#ff9800);color:var(--text-accent-color,#fff)}
+.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--accent-color,#ff9800);color:var(--rr-na-akcencie,#fff)}
 .grp{display:grid;gap:8px}
 .lb{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--secondary-text-color)}
 .dots{display:flex;flex-wrap:wrap;gap:6px;padding:6px 2px 6px}
@@ -2249,7 +2270,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wzd{flex:none;width:34px;height:34px;padding:0;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;--mdc-icon-size:18px;
  background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color);transition:background .2s,box-shadow .2s}
 .wzd.ok{background:color-mix(in srgb,var(--primary-color,#009ac7) 22%,transparent);color:var(--primary-color,#009ac7)}
-.wzd.on{background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff);box-shadow:0 0 0 4px color-mix(in srgb,var(--primary-color,#009ac7) 25%,transparent)}
+.wzd.on{background:var(--primary-color,#009ac7);color:var(--rr-na-glownym,var(--text-primary-color,#fff));box-shadow:0 0 0 4px color-mix(in srgb,var(--primary-color,#009ac7) 25%,transparent)}
 .wzt{display:flex;align-items:center;gap:12px}.wzt h3{margin:0;font-size:20px;font-weight:400;color:var(--primary-text-color)}
 .wzt ha-icon{--mdc-icon-size:26px;color:var(--primary-color,#009ac7);background:color-mix(in srgb,var(--primary-color,#009ac7) 15%,transparent);border-radius:50%;padding:8px}
 .wzc{font-size:14px;line-height:1.45;color:var(--secondary-text-color);background:var(--secondary-background-color,rgba(127,127,127,.12));border-radius:10px;padding:8px 12px}
@@ -2267,7 +2288,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wor{display:flex;flex-wrap:wrap;gap:10px}.wo{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:12px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4));font-size:14px;font-weight:500;color:var(--primary-text-color)}.wo .sw2{width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}.wown{display:grid;gap:8px;margin-top:4px}
 .wzl .sw2{flex:none;display:inline-block;width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.4)}
 .wzn{display:flex;gap:8px;align-items:center;border-top:1px solid var(--divider-color,rgba(127,127,127,.3));padding-top:12px}.wzn span{flex:1}
-.wb{border:none;border-radius:20px;padding:9px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff)}
+.wb{border:none;border-radius:20px;padding:9px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;background:var(--primary-color,#009ac7);color:var(--rr-na-glownym,var(--text-primary-color,#fff))}
 .wb.sec{background:transparent;color:var(--primary-color,#009ac7);box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .wb.sm{padding:5px 12px;font-size:13px}.wb[disabled]{opacity:.4;cursor:default}.wb[hidden]{display:none}
 .wzg{display:grid;gap:10px}.wzg>.wb{justify-self:start}
@@ -2294,7 +2315,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .osg{font-size:12px;font-weight:500;color:var(--primary-text-color);margin-top:4px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:18px}
 .seg{display:inline-flex;border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .seg button{border:none;background:none;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color)}
-.seg button[aria-pressed="true"]{background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff)}
+.seg button[aria-pressed="true"]{background:var(--primary-color,#009ac7);color:var(--rr-na-glownym,var(--text-primary-color,#fff))}
 .sl{display:grid;gap:2px}
 .sl div{display:flex;justify-content:space-between;font-size:14px;color:var(--primary-text-color)}
 .sl b{font-weight:500;font-variant-numeric:tabular-nums}
@@ -2500,8 +2521,8 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       rrSprawdzInstalacje(this.h).then((w) => {
         if (!box.isConnected) return;
         if (w.najnowsza && rrNumerWersji(w.najnowsza) > rrNumerWersji(w.wersja))
-          this._html(box, this._alert("warning", W.verNowa(w.najnowsza, w.wersja), [[W.btnHacs, "/hacs/dashboard"], [W.btnPrzeladuj, "reload"]]));
-        else this._html(box, this._alert("success", W.verOk(w.wersja)));
+          this._html(box, this._alert("warning", W.verNowa, [[W.btnHacs, "/hacs/dashboard"], [W.btnPrzeladuj, "reload"]]));
+        else this._html(box, this._alert("success", W.verOk));
         if (w.zasoby > 1) this._html(box, this._alert("warning", W.zasobyDup(w.zasoby), [[W.btnZasoby, "/config/lovelace/resources"]]));
       });
     }
@@ -2805,6 +2826,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     }
     _go() {
       if (!this._hass || !this._cfg) return;
+      rrKontrast(this);
       if (this._urz() && this._urzE !== this._cfg.entity) {
         this._urzE = this._cfg.entity;
         this._cfg = Object.assign({}, this._cfg, this._hass.states[this._cfg.entity].attributes.okno_ha, rrTylkoKarta(this._cfg));

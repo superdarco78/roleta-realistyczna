@@ -1,5 +1,5 @@
 import { RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY } from './stale.js';
-import { RR_RAMY, rrHex } from './kolory.js';
+import { RR_RAMY, rrHex, rrKontrast } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
 import { RR_TXT, rrJezyk } from './jezyk.js';
@@ -214,6 +214,7 @@ export class RoletaRealistyczna extends HTMLElement {
   }
   _render() {
     if (!this._hass || !this._cfg) return;
+    rrKontrast(this);   // v37: napisy na kolorach motywu czytelne przy każdym kolorze z profilu
     const c = this._cfg, st = this._hass.states[c.entity];
     const mem = this._members();
     const lang = rrJezyk(c, this._hass);
