@@ -1,5 +1,9 @@
 # 📝 Historia zmian
 
+## v35 – Domyślne kolory Home Assistanta
+
+- 🎨 Gdy motyw nie podaje kolorów, karta używa domyślnych kolorów HA: główny #009AC7 i akcent #FF9800. Kolory z Twojego profilu dalej mają pierwszeństwo, na żywo
+
 ## v34 – Kolory z motywu Home Assistanta
 
 - 🎨 Karta, kreator i edytor biorą kolory z Twojego profilu HA na żywo: kolor główny i kolor akcentu (uchwyt, linia celu, przycisk animacji). Zmiana koloru w profilu od razu zmienia kartę
