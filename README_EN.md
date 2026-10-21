@@ -92,15 +92,16 @@ On your dashboard click the pencil, then **＋ Add card**. Type **Roleta** and c
 
 The wizard opens by itself. It has 7 short steps. The card finds your blind, motor, window sensors and weather by itself.
 
-| Step | What you pick | Why |
-|:---:|---|---|
-| 1 | 🪟 **Blind** | Which blind (or blind group) the card controls |
-| 2 | 🔲 **Window** | How many sashes and which blind is on which |
-| 3 | ⏱ **Motor** | So the animation moves as fast as the real blind |
-| 4 | 🚪 **Window sensors** | So the card shows a tilted or open window |
-| 5 | 🌦 **Weather** | Real weather behind the glass |
-| 6 | 🎨 **Look and name** | A ready colour set and the card title |
-| 7 | ✅ **Summary** | Check everything and choose where the card goes |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br>Step</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>What you pick</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>Why</th></tr>
+<tr><td align="center">1</td><td align="left">🪟 <b>Blind</b></td><td align="left">Which blind (or blind group) the card controls</td></tr>
+<tr><td align="center">2</td><td align="left">🔲 <b>Window</b></td><td align="left">How many sashes and which blind is on which</td></tr>
+<tr><td align="center">3</td><td align="left">⏱ <b>Motor</b></td><td align="left">So the animation moves as fast as the real blind</td></tr>
+<tr><td align="center">4</td><td align="left">🚪 <b>Window sensors</b></td><td align="left">So the card shows a tilted or open window</td></tr>
+<tr><td align="center">5</td><td align="left">🌦 <b>Weather</b></td><td align="left">Real weather behind the glass</td></tr>
+<tr><td align="center">6</td><td align="left">🎨 <b>Look and name</b></td><td align="left">A ready colour set and the card title</td></tr>
+<tr><td align="center">7</td><td align="left">✅ <b>Summary</b></td><td align="left">Check everything and choose where the card goes</td></tr>
+</table>
 
 > [!TIP]
 > Not sure? Keep what is selected at the top of the list. The card picked the best match.
@@ -117,16 +118,17 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 <a name="actions-how-to-control-it"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-tap.png" height="26" align="absmiddle"> How to control it
 
-| | What you do | What happens |
-|:---:|---|---|
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Drag the handle on the bottom of a sash | Only that sash moves |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Drag the round handle in the middle | Both sashes move |
-| 👆 | Drag on the glass | Both sashes move |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Tap STOP, or tap the blind while it moves | The blind stops |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Tap the up arrow | The blind goes fully up |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Tap the down arrow | The blind goes fully down |
-| **▲&nbsp;5%** | Tap a small step | The blind moves 5% up |
-| **75%** | Tap a ready position | The blind goes there |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br></th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>What you do</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>What happens</th></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"></td><td align="left">Drag the handle on the bottom of a sash</td><td align="left">Only that sash moves</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"></td><td align="left">Drag the round handle in the middle</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center">👆</td><td align="left">Drag on the glass</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"></td><td align="left">Tap STOP, or tap the blind while it moves</td><td align="left">The blind stops</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"></td><td align="left">Tap the up arrow</td><td align="left">The blind goes fully up</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"></td><td align="left">Tap the down arrow</td><td align="left">The blind goes fully down</td></tr>
+<tr><td align="center"><b>▲&nbsp;5%</b></td><td align="left">Tap a small step</td><td align="left">The blind moves 5% up</td></tr>
+<tr><td align="center"><b>75%</b></td><td align="left">Tap a ready position</td><td align="left">The blind goes there</td></tr>
+</table>
 
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png" width="100%" alt="Handles and buttons"></picture></a></p>
 
@@ -155,17 +157,18 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/book-open-variant.png" height="26" align="absmiddle"> Glossary: what do these words mean?
 
 
-| Word | In plain words |
-|---|---|
-| **Home Assistant (HA)** | The app that runs your smart home. |
-| **HACS** | An “app store” for HA add-ons. You install the card and its updates from here. |
-| **Card** | A tile on your HA screen, like this blind. |
-| **Dashboard** | An HA screen that holds cards. |
-| **`cover.…` entity** | Your blind, as HA sees it. |
-| **Contact sensor** | A window sensor: knows if it is closed, tilted or open. |
-| **Open / 100%** | Blind fully up, window uncovered. |
-| **Closed / 0%** | Blind fully down, window covered. |
-| **YAML** | Typing settings by hand. **Not needed here.** |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Word</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>In plain words</th></tr>
+<tr><td align="left"><b>Home Assistant (HA)</b></td><td align="left">The app that runs your smart home.</td></tr>
+<tr><td align="left"><b>HACS</b></td><td align="left">An “app store” for HA add-ons. You install the card and its updates from here.</td></tr>
+<tr><td align="left"><b>Card</b></td><td align="left">A tile on your HA screen, like this blind.</td></tr>
+<tr><td align="left"><b>Dashboard</b></td><td align="left">An HA screen that holds cards.</td></tr>
+<tr><td align="left"><b><code>cover.…</code> entity</b></td><td align="left">Your blind, as HA sees it.</td></tr>
+<tr><td align="left"><b>Contact sensor</b></td><td align="left">A window sensor: knows if it is closed, tilted or open.</td></tr>
+<tr><td align="left"><b>Open / 100%</b></td><td align="left">Blind fully up, window uncovered.</td></tr>
+<tr><td align="left"><b>Closed / 0%</b></td><td align="left">Blind fully down, window covered.</td></tr>
+<tr><td align="left"><b>YAML</b></td><td align="left">Typing settings by hand. <b>Not needed here.</b></td></tr>
+</table>
 
 ---
 
@@ -341,13 +344,14 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 Settings are grouped in collapsible sections, each with **↺ Restore defaults**. The live preview at the top **never moves the real blind**; pin it 📌 to see every change.
 
-| Section | What you set |
-|---|---|
-| 🎨 Look | Stripe colours, frame colour (wood finishes and plain), sashes, mullion, height. |
-| 🪟 Window | Contact sensors per sash, tilted or opened, how much. |
-| ⏱ Motion & calibration | Travel time from motor speed, learned, or **🤖 Auto-calibrate**. |
-| ⚙️ Advanced | Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo. |
-| 🌍 Global | **Save as default** for all blind cards. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Section</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>What you set</th></tr>
+<tr><td align="left">🎨 Look</td><td align="left">Stripe colours, frame colour (wood finishes and plain), sashes, mullion, height.</td></tr>
+<tr><td align="left">🪟 Window</td><td align="left">Contact sensors per sash, tilted or opened, how much.</td></tr>
+<tr><td align="left">⏱ Motion & calibration</td><td align="left">Travel time from motor speed, learned, or <b>🤖 Auto-calibrate</b>.</td></tr>
+<tr><td align="left">⚙️ Advanced</td><td align="left">Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo.</td></tr>
+<tr><td align="left">🌍 Global</td><td align="left"><b>Save as default</b> for all blind cards.</td></tr>
+</table>
 
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png" width="440" alt="Look"></picture></a></p>
 
@@ -366,38 +370,39 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 
 Everything can be set in the editor; the tables are for YAML fans. Option names are Polish.
 
-| Name | Type | Default | Description |
-|---|---|---|---|
-| `type` | text | **required** | custom:roleta-realistyczna |
-| `entity` | entity | **required** | cover.* or a blind group (left + right). |
-| `name` | text | entity name | Card title. |
-| `jezyk` | text | auto | auto (HA language), pl, en. |
-| `kolor` | text | czarny | Solid stripe colour (palette name or #rrggbb). |
-| `siatka` | text | like solid | Sheer stripe colour. |
-| `rama` | text | #f4f4f2 | Frame colour, e.g. #8a5a3b golden oak, #3b3f45 anthracite. |
-| `skrzydla` | number | 2 | Sashes: 1 or 2. |
-| `slupek` | text | staly | Mullion: staly (fixed) or ruchomy (moving). |
-| `klamki` | bool | true | Handles turn when tilted/opened. |
-| `wysokosc` | number | 260 | Window height in px. |
-| `czujnik_lewe` / `czujnik_prawe` | entity | auto | Contact sensor per sash. |
-| `tryb_lewe` / `tryb_prawe` | text | uchyl | uchyl (tilt) or otworz (open). |
-| `kat_uchyl` | number | 14 | Tilt angle. |
-| `otwarcie` | number | 40 | Opening width (%). |
-| `auto_czujniki` | bool | true | Find contact sensors in the blind's area. |
-| `roleta_lewa` / `roleta_prawa` | entity | – | Separate blinds per sash. |
-| `czas` | number / auto | auto | Full travel time (s). |
-| `predkosc_lewa` / `predkosc_prawa` | entity | auto | Motor speed number.*. |
-| `odwroc` | bool | false | Inverted position. |
-| `zrodlo` | text | auto | Weather: auto, internet, brak (none). |
-| `pogoda` | entity | auto | weather.* entity. |
-| `niebo` / `widok` | bool | true | Sky & weather / drawn street view. |
-| `tlo` | text | – | Own background photo, e.g. /local/view.jpg. |
-| `przyciski` | bool | true | Buttons and quick positions. |
-| `pozycje` | text | 100,75,50,25,0 | Quick positions (100 = open). |
-| `krok` | number | 5 | ▲/▼ step in %, 0 = off. |
-| `uchwyty` / `uchwyt_srodek` | bool | true | Rail handles / centre handle. |
-| `osobno` | bool | false | Dragging the glass moves one sash only. |
-| `wibracja` | bool | true | Haptic feedback. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Name</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Type</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Default</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Description</th></tr>
+<tr><td align="left"><code>type</code></td><td align="left">text</td><td align="left"><b>required</b></td><td align="left">custom:roleta-realistyczna</td></tr>
+<tr><td align="left"><code>entity</code></td><td align="left">entity</td><td align="left"><b>required</b></td><td align="left">cover.* or a blind group (left + right).</td></tr>
+<tr><td align="left"><code>name</code></td><td align="left">text</td><td align="left">entity name</td><td align="left">Card title.</td></tr>
+<tr><td align="left"><code>jezyk</code></td><td align="left">text</td><td align="left">auto</td><td align="left">auto (HA language), pl, en.</td></tr>
+<tr><td align="left"><code>kolor</code></td><td align="left">text</td><td align="left">czarny</td><td align="left">Solid stripe colour (palette name or #rrggbb).</td></tr>
+<tr><td align="left"><code>siatka</code></td><td align="left">text</td><td align="left">like solid</td><td align="left">Sheer stripe colour.</td></tr>
+<tr><td align="left"><code>rama</code></td><td align="left">text</td><td align="left">#f4f4f2</td><td align="left">Frame colour, e.g. #8a5a3b golden oak, #3b3f45 anthracite.</td></tr>
+<tr><td align="left"><code>skrzydla</code></td><td align="left">number</td><td align="left">2</td><td align="left">Sashes: 1 or 2.</td></tr>
+<tr><td align="left"><code>slupek</code></td><td align="left">text</td><td align="left">staly</td><td align="left">Mullion: staly (fixed) or ruchomy (moving).</td></tr>
+<tr><td align="left"><code>klamki</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Handles turn when tilted/opened.</td></tr>
+<tr><td align="left"><code>wysokosc</code></td><td align="left">number</td><td align="left">260</td><td align="left">Window height in px.</td></tr>
+<tr><td align="left"><code>czujnik_lewe</code> / <code>czujnik_prawe</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">Contact sensor per sash.</td></tr>
+<tr><td align="left"><code>tryb_lewe</code> / <code>tryb_prawe</code></td><td align="left">text</td><td align="left">uchyl</td><td align="left">uchyl (tilt) or otworz (open).</td></tr>
+<tr><td align="left"><code>kat_uchyl</code></td><td align="left">number</td><td align="left">14</td><td align="left">Tilt angle.</td></tr>
+<tr><td align="left"><code>otwarcie</code></td><td align="left">number</td><td align="left">40</td><td align="left">Opening width (%).</td></tr>
+<tr><td align="left"><code>auto_czujniki</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Find contact sensors in the blind's area.</td></tr>
+<tr><td align="left"><code>roleta_lewa</code> / <code>roleta_prawa</code></td><td align="left">entity</td><td align="left">–</td><td align="left">Separate blinds per sash.</td></tr>
+<tr><td align="left"><code>czas</code></td><td align="left">number / auto</td><td align="left">auto</td><td align="left">Full travel time (s).</td></tr>
+<tr><td align="left"><code>predkosc_lewa</code> / <code>predkosc_prawa</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">Motor speed number.*.</td></tr>
+<tr><td align="left"><code>odwroc</code></td><td align="left">bool</td><td align="left">false</td><td align="left">Inverted position.</td></tr>
+<tr><td align="left"><code>zrodlo</code></td><td align="left">text</td><td align="left">auto</td><td align="left">Weather: auto, internet, brak (none).</td></tr>
+<tr><td align="left"><code>pogoda</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">weather.* entity.</td></tr>
+<tr><td align="left"><code>niebo</code> / <code>widok</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Sky & weather / drawn street view.</td></tr>
+<tr><td align="left"><code>tlo</code></td><td align="left">text</td><td align="left">–</td><td align="left">Own background photo, e.g. /local/view.jpg.</td></tr>
+<tr><td align="left"><code>przyciski</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Buttons and quick positions.</td></tr>
+<tr><td align="left"><code>pozycje</code></td><td align="left">text</td><td align="left">100,75,50,25,0</td><td align="left">Quick positions (100 = open).</td></tr>
+<tr><td align="left"><code>krok</code></td><td align="left">number</td><td align="left">5</td><td align="left">▲/▼ step in %, 0 = off.</td></tr>
+<tr><td align="left"><code>uchwyty</code> / <code>uchwyt_srodek</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Rail handles / centre handle.</td></tr>
+<tr><td align="left"><code>osobno</code></td><td align="left">bool</td><td align="left">false</td><td align="left">Dragging the glass moves one sash only.</td></tr>
+<tr><td align="left"><code>wibracja</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Haptic feedback.</td></tr>
+</table>
 
 ---
 
@@ -442,13 +447,14 @@ jezyk: en
 <a name="auto-detection"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/magnify.png" height="30" align="absmiddle"> Auto-detection
 
-| What | How |
-|---|---|
-| **Blind group** | Suggested first for a new card. |
-| **Motor speed** | `number.*_motor_speed` on the same device. |
-| **Contact sensors** | Window/door `binary_sensor.*` in the same area; left/right by name. |
-| **Weather** | `weather.*`; if none, Open-Meteo for your home location (no API key). |
-| **Language** | From your HA profile. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>What</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>How</th></tr>
+<tr><td align="left"><b>Blind group</b></td><td align="left">Suggested first for a new card.</td></tr>
+<tr><td align="left"><b>Motor speed</b></td><td align="left"><code>number.*_motor_speed</code> on the same device.</td></tr>
+<tr><td align="left"><b>Contact sensors</b></td><td align="left">Window/door <code>binary_sensor.*</code> in the same area; left/right by name.</td></tr>
+<tr><td align="left"><b>Weather</b></td><td align="left"><code>weather.*</code>; if none, Open-Meteo for your home location (no API key).</td></tr>
+<tr><td align="left"><b>Language</b></td><td align="left">From your HA profile.</td></tr>
+</table>
 
 ---
 
@@ -462,17 +468,18 @@ Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2
 <a name="card-elements"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/puzzle.png" height="30" align="absmiddle"> Card elements
 
-| Element | Meaning |
-|:---:|---|
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/roleta.png" height="24" align="absmiddle"> | Blind icon: opens the entity details. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Centre handle: both sashes. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Rail handle: one sash. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/klamki.png" height="24" align="absmiddle"> | Handles: down = closed, sideways = open, up = tilted. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Open fully. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Stop. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Close fully. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/slonce.png" height="24" align="absmiddle"> | Sun: daytime from `sun.sun`. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/ksiezyc.png" height="24" align="absmiddle"> | Moon and stars: night. |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Element</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Meaning</th></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/roleta.png" height="24" align="absmiddle"></td><td align="left">Blind icon: opens the entity details.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"></td><td align="left">Centre handle: both sashes.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"></td><td align="left">Rail handle: one sash.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/klamki.png" height="24" align="absmiddle"></td><td align="left">Handles: down = closed, sideways = open, up = tilted.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"></td><td align="left">Open fully.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"></td><td align="left">Stop.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"></td><td align="left">Close fully.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/slonce.png" height="24" align="absmiddle"></td><td align="left">Sun: daytime from <code>sun.sun</code>.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/ksiezyc.png" height="24" align="absmiddle"></td><td align="left">Moon and stars: night.</td></tr>
+</table>
 
 ---
 
@@ -537,10 +544,11 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 <a name="translations"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="30" align="absmiddle"> Translations
 
-| Language | Status |
-|---|---|
-| 🇵🇱 Polski | ✅ 100% |
-| 🇬🇧 English | ✅ 100% |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Language</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Status</th></tr>
+<tr><td align="left">🇵🇱 Polski</td><td align="left">✅ 100%</td></tr>
+<tr><td align="left">🇬🇧 English</td><td align="left">✅ 100%</td></tr>
+</table>
 
 Want your language? Copy [`translations/en.json`](translations/en.json) to `translations/<code>.json`, translate it and send it in an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or a pull request.
 

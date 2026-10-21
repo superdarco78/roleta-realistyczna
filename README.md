@@ -92,15 +92,16 @@ Na pulpicie kliknij ołówek, potem **＋ Dodaj kartę**. Wpisz **Roleta** i kli
 
 Kreator otwiera się sam. Ma 7 krótkich kroków. Karta sama znajduje roletę, silnik, czujniki okna i pogodę.
 
-| Krok | Co wybierasz | Po co |
-|:---:|---|---|
-| 1 | 🪟 **Roleta** | Którą roletą (albo grupą rolet) karta ma sterować |
-| 2 | 🔲 **Okno** | Ile skrzydeł i która roleta jest na którym |
-| 3 | ⏱ **Silnik** | Żeby animacja jechała tak szybko jak prawdziwa roleta |
-| 4 | 🚪 **Czujniki okna** | Żeby karta pokazała uchylone albo otwarte okno |
-| 5 | 🌦 **Pogoda** | Żeby za szybą było widać prawdziwą pogodę |
-| 6 | 🎨 **Wygląd i nazwa** | Gotowy zestaw kolorów i nazwa na karcie |
-| 7 | ✅ **Podsumowanie** | Sprawdzasz wszystko i wybierasz, gdzie ma być karta |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br>Krok</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>Co wybierasz</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>Po co</th></tr>
+<tr><td align="center">1</td><td align="left">🪟 <b>Roleta</b></td><td align="left">Którą roletą (albo grupą rolet) karta ma sterować</td></tr>
+<tr><td align="center">2</td><td align="left">🔲 <b>Okno</b></td><td align="left">Ile skrzydeł i która roleta jest na którym</td></tr>
+<tr><td align="center">3</td><td align="left">⏱ <b>Silnik</b></td><td align="left">Żeby animacja jechała tak szybko jak prawdziwa roleta</td></tr>
+<tr><td align="center">4</td><td align="left">🚪 <b>Czujniki okna</b></td><td align="left">Żeby karta pokazała uchylone albo otwarte okno</td></tr>
+<tr><td align="center">5</td><td align="left">🌦 <b>Pogoda</b></td><td align="left">Żeby za szybą było widać prawdziwą pogodę</td></tr>
+<tr><td align="center">6</td><td align="left">🎨 <b>Wygląd i nazwa</b></td><td align="left">Gotowy zestaw kolorów i nazwa na karcie</td></tr>
+<tr><td align="center">7</td><td align="left">✅ <b>Podsumowanie</b></td><td align="left">Sprawdzasz wszystko i wybierasz, gdzie ma być karta</td></tr>
+</table>
 
 > [!TIP]
 > Nie wiesz, co wybrać? Zostaw to, co jest zaznaczone na górze listy. Karta wybrała najlepiej pasujące.
@@ -117,16 +118,17 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Karta sama znajduje roletę, s
 <a name="akcje-jak-sterowac"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-tap.png" height="26" align="absmiddle"> Jak sterować
 
-| | Co robisz | Co się dzieje |
-|:---:|---|---|
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Ciągniesz uchwyt na dole skrzydła | Jedzie tylko to skrzydło |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Ciągniesz okrągły uchwyt na środku | Jadą oba skrzydła |
-| 👆 | Ciągniesz palcem po szybie | Jadą oba skrzydła |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Klikasz STOP albo dotykasz rolety, gdy jedzie | Roleta staje |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Klikasz strzałkę w górę | Roleta jedzie na samą górę |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Klikasz strzałkę w dół | Roleta jedzie na sam dół |
-| **▲&nbsp;5%** | Klikasz mały krok | Roleta jedzie o&nbsp;5% w górę |
-| **75%** | Klikasz gotową pozycję | Roleta jedzie do tej pozycji |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br></th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>Co robisz</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>Co się dzieje</th></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"></td><td align="left">Ciągniesz uchwyt na dole skrzydła</td><td align="left">Jedzie tylko to skrzydło</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"></td><td align="left">Ciągniesz okrągły uchwyt na środku</td><td align="left">Jadą oba skrzydła</td></tr>
+<tr><td align="center">👆</td><td align="left">Ciągniesz palcem po szybie</td><td align="left">Jadą oba skrzydła</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"></td><td align="left">Klikasz STOP albo dotykasz rolety, gdy jedzie</td><td align="left">Roleta staje</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"></td><td align="left">Klikasz strzałkę w górę</td><td align="left">Roleta jedzie na samą górę</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"></td><td align="left">Klikasz strzałkę w dół</td><td align="left">Roleta jedzie na sam dół</td></tr>
+<tr><td align="center"><b>▲&nbsp;5%</b></td><td align="left">Klikasz mały krok</td><td align="left">Roleta jedzie o&nbsp;5% w górę</td></tr>
+<tr><td align="center"><b>75%</b></td><td align="left">Klikasz gotową pozycję</td><td align="left">Roleta jedzie do tej pozycji</td></tr>
+</table>
 
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png" width="100%" alt="Uchwyty i przyciski"></picture></a></p>
 
@@ -160,17 +162,18 @@ Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/book-open-variant.png" height="26" align="absmiddle"> Słowniczek: co znaczą te słowa?
 
 
-| Słowo | Po ludzku |
-|---|---|
-| **Home Assistant (HA)** | Program, który steruje Twoim domem. |
-| **HACS** | „Sklep” z dodatkami do HA. Stąd instalujesz kartę i jej aktualizacje. |
-| **Karta** | Okienko na ekranie HA, np. ta roleta. |
-| **Pulpit** | Ekran w HA, na którym leżą karty. |
-| **Encja cover.…** | Twoja roleta, tak jak widzi ją HA. |
-| **Kontaktron** | Czujnik na oknie: wie, czy okno jest zamknięte, uchylone czy otwarte. |
-| **Zwinięta / 100%** | Roleta na samej górze, okno odsłonięte. |
-| **Opuszczona / 0%** | Roleta na samym dole, okno zasłonięte. |
-| **YAML** | Ręczne pisanie ustawień. **Tu niepotrzebne.** |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Słowo</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Po ludzku</th></tr>
+<tr><td align="left"><b>Home Assistant (HA)</b></td><td align="left">Program, który steruje Twoim domem.</td></tr>
+<tr><td align="left"><b>HACS</b></td><td align="left">„Sklep” z dodatkami do HA. Stąd instalujesz kartę i jej aktualizacje.</td></tr>
+<tr><td align="left"><b>Karta</b></td><td align="left">Okienko na ekranie HA, np. ta roleta.</td></tr>
+<tr><td align="left"><b>Pulpit</b></td><td align="left">Ekran w HA, na którym leżą karty.</td></tr>
+<tr><td align="left"><b>Encja cover.…</b></td><td align="left">Twoja roleta, tak jak widzi ją HA.</td></tr>
+<tr><td align="left"><b>Czujnik okna</b></td><td align="left">Czujnik na oknie: wie, czy okno jest zamknięte, uchylone czy otwarte.</td></tr>
+<tr><td align="left"><b>Zwinięta / 100%</b></td><td align="left">Roleta na samej górze, okno odsłonięte.</td></tr>
+<tr><td align="left"><b>Opuszczona / 0%</b></td><td align="left">Roleta na samym dole, okno zasłonięte.</td></tr>
+<tr><td align="left"><b>YAML</b></td><td align="left">Ręczne pisanie ustawień. <b>Tu niepotrzebne.</b></td></tr>
+</table>
 
 ---
 
@@ -249,14 +252,14 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 - [Edytor](#edytor)
   - [Podgląd na żywo](#podglad-na-zywo)
   - [Wygląd](#wyglad)
-  - [Okno i kontaktrony](#okno-i-kontaktrony)
+  - [Okno i czujniki okna](#okno-i-kontaktrony)
   - [Ruch i kalibracja](#ruch-i-kalibracja)
   - [Zaawansowane](#zaawansowane)
   - [Ustawienia globalne](#ustawienia-globalne)
 - [Opcje](#opcje)
   - [Podstawowe](#podstawowe)
   - [Wygląd](#wyglad-1)
-  - [Okno i kontaktrony](#okno-i-kontaktrony-1)
+  - [Okno i czujniki okna](#okno-i-kontaktrony-1)
   - [Ruch](#ruch)
   - [Pogoda i widok](#pogoda-i-widok)
   - [Przyciski i sterowanie](#przyciski-i-sterowanie)
@@ -326,7 +329,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
-**Okno (według kontaktronów):**
+**Okno (według czujników okna):**
 
 <table>
 <tr>
@@ -423,9 +426,9 @@ Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolor
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/wyglad.png" width="440" alt="wyglad"></picture></a></p>
 
 <a name="okno-i-kontaktrony"></a>
-### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="26" align="absmiddle"> Okno i kontaktrony
+### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="26" align="absmiddle"> Okno i czujniki okna
 
-Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
+Wybierz czujnik okna lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
 
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor/okno.png" width="440" alt="okno"></picture></a></p>
 
@@ -458,71 +461,77 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 <a name="podstawowe"></a>
 ### Podstawowe
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `type` | tekst | **wymagane** | custom:roleta-realistyczna |
-| `entity` | encja | **wymagane** | Roleta cover.* albo grupa rolet (lewa + prawa). Przykład: cover.zaluzje_salon |
-| `name` | tekst | nazwa encji | Nazwa na karcie. |
-| `jezyk` | tekst | auto | auto (wg języka HA), pl albo en. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>type</code></td><td align="left">tekst</td><td align="left"><b>wymagane</b></td><td align="left">custom:roleta-realistyczna</td></tr>
+<tr><td align="left"><code>entity</code></td><td align="left">encja</td><td align="left"><b>wymagane</b></td><td align="left">Roleta cover.* albo grupa rolet (lewa + prawa). Przykład: cover.zaluzje_salon</td></tr>
+<tr><td align="left"><code>name</code></td><td align="left">tekst</td><td align="left">nazwa encji</td><td align="left">Nazwa na karcie.</td></tr>
+<tr><td align="left"><code>jezyk</code></td><td align="left">tekst</td><td align="left">auto</td><td align="left">auto (wg języka HA), pl albo en.</td></tr>
+</table>
 
 <a name="wyglad-1"></a>
 ### Wygląd
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `kolor` | tekst | czarny | Kolor pełnych pasów: nazwa z palety (np. bezowy, grafit, turkus) albo #rrggbb. |
-| `siatka` | tekst | jak pełne | Kolor pasów przezroczystych. |
-| `rama` | tekst | #f4f4f2 | Kolor ramy, np. #8a5a3b (złoty dąb), #3b3f45 (antracyt). |
-| `skrzydla` | liczba | 2 | Liczba skrzydeł: 1 albo 2. |
-| `slupek` | tekst | staly | staly albo ruchomy. |
-| `klamki` | tak/nie | true | Klamki obracają się przy uchyleniu i otwarciu. |
-| `wysokosc` | liczba | 260 | Wysokość okna w px. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>kolor</code></td><td align="left">tekst</td><td align="left">czarny</td><td align="left">Kolor pełnych pasów: nazwa z palety (np. bezowy, grafit, turkus) albo #rrggbb.</td></tr>
+<tr><td align="left"><code>siatka</code></td><td align="left">tekst</td><td align="left">jak pełne</td><td align="left">Kolor pasów przezroczystych.</td></tr>
+<tr><td align="left"><code>rama</code></td><td align="left">tekst</td><td align="left">#f4f4f2</td><td align="left">Kolor ramy, np. #8a5a3b (złoty dąb), #3b3f45 (antracyt).</td></tr>
+<tr><td align="left"><code>skrzydla</code></td><td align="left">liczba</td><td align="left">2</td><td align="left">Liczba skrzydeł: 1 albo 2.</td></tr>
+<tr><td align="left"><code>slupek</code></td><td align="left">tekst</td><td align="left">staly</td><td align="left">staly albo ruchomy.</td></tr>
+<tr><td align="left"><code>klamki</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Klamki obracają się przy uchyleniu i otwarciu.</td></tr>
+<tr><td align="left"><code>wysokosc</code></td><td align="left">liczba</td><td align="left">260</td><td align="left">Wysokość okna w px.</td></tr>
+</table>
 
 <a name="okno-i-kontaktrony-1"></a>
-### Okno i kontaktrony
+### Okno i czujniki okna
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `czujnik_lewe` | encja | auto | Kontaktron lewego (lub jedynego) skrzydła, binary_sensor.*. |
-| `czujnik_prawe` | encja | auto | Kontaktron prawego skrzydła. |
-| `tryb_lewe` / `tryb_prawe` | tekst | uchyl | Po otwarciu skrzydło jest uchyl (uchylone) albo otworz (otwarte). |
-| `kat_uchyl` | liczba | 14 | Jak mocno uchylone (stopnie). |
-| `otwarcie` | liczba | 40 | Jak szeroko otwarte (% szerokości). |
-| `auto_czujniki` | tak/nie | true | Sama szukaj kontaktronów w pomieszczeniu rolety. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>czujnik_lewe</code></td><td align="left">encja</td><td align="left">auto</td><td align="left">Czujnik okna lewego (lub jedynego) skrzydła, binary_sensor.*.</td></tr>
+<tr><td align="left"><code>czujnik_prawe</code></td><td align="left">encja</td><td align="left">auto</td><td align="left">Czujnik okna prawego skrzydła.</td></tr>
+<tr><td align="left"><code>tryb_lewe</code> / <code>tryb_prawe</code></td><td align="left">tekst</td><td align="left">uchyl</td><td align="left">Po otwarciu skrzydło jest uchyl (uchylone) albo otworz (otwarte).</td></tr>
+<tr><td align="left"><code>kat_uchyl</code></td><td align="left">liczba</td><td align="left">14</td><td align="left">Jak mocno uchylone (stopnie).</td></tr>
+<tr><td align="left"><code>otwarcie</code></td><td align="left">liczba</td><td align="left">40</td><td align="left">Jak szeroko otwarte (% szerokości).</td></tr>
+<tr><td align="left"><code>auto_czujniki</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Sama szukaj czujników okna w pomieszczeniu rolety.</td></tr>
+</table>
 
 <a name="ruch"></a>
 ### Ruch
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `roleta_lewa` / `roleta_prawa` | encja | – | Osobne rolety skrzydeł (zamiast grupy). |
-| `czas` | liczba / auto | auto | Czas pełnego przejazdu w sekundach. |
-| `predkosc_lewa` / `predkosc_prawa` | encja | auto | Prędkość silników (number.*, obr/min). |
-| `odwroc` | tak/nie | false | Odwrócona pozycja (gdy silnik liczy odwrotnie). |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>roleta_lewa</code> / <code>roleta_prawa</code></td><td align="left">encja</td><td align="left">–</td><td align="left">Osobna roleta dla każdego skrzydła (zamiast grupy).</td></tr>
+<tr><td align="left"><code>czas</code></td><td align="left">liczba / auto</td><td align="left">auto</td><td align="left">Czas pełnego przejazdu w sekundach.</td></tr>
+<tr><td align="left"><code>predkosc_lewa</code> / <code>predkosc_prawa</code></td><td align="left">encja</td><td align="left">auto</td><td align="left">Prędkość silników (number.*, obr/min).</td></tr>
+<tr><td align="left"><code>odwroc</code></td><td align="left">tak/nie</td><td align="left">false</td><td align="left">Odwrócona pozycja (gdy silnik liczy odwrotnie).</td></tr>
+</table>
 
 <a name="pogoda-i-widok"></a>
 ### Pogoda i widok
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `zrodlo` | tekst | auto | auto (encja HA, a gdy brak – internet), internet, brak. |
-| `pogoda` | encja | auto | Encja weather.*. |
-| `niebo` | tak/nie | true | Niebo i pogoda za oknem. |
-| `widok` | tak/nie | true | Rysowany widok: domy, drzewa, ulica. |
-| `tlo` | tekst | – | Własne zdjęcie zza okna, np. /local/okno.jpg. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>zrodlo</code></td><td align="left">tekst</td><td align="left">auto</td><td align="left">auto (encja HA, a gdy brak – internet), internet, brak.</td></tr>
+<tr><td align="left"><code>pogoda</code></td><td align="left">encja</td><td align="left">auto</td><td align="left">Encja weather.*.</td></tr>
+<tr><td align="left"><code>niebo</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Niebo i pogoda za oknem.</td></tr>
+<tr><td align="left"><code>widok</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Rysowany widok: domy, drzewa, ulica.</td></tr>
+<tr><td align="left"><code>tlo</code></td><td align="left">tekst</td><td align="left">–</td><td align="left">Własne zdjęcie zza okna, np. /local/okno.jpg.</td></tr>
+</table>
 
 <a name="przyciski-i-sterowanie"></a>
 ### Przyciski i sterowanie
 
-| Nazwa | Typ | Domyślnie | Opis |
-|---|---|---|---|
-| `przyciski` | tak/nie | true | Przyciski i szybkie pozycje. |
-| `pozycje` | tekst | 100,75,50,25,0 | Szybkie pozycje (100 = zwinięta). |
-| `krok` | liczba | 5 | Krok przycisków ▲/▼ w %, 0 = wyłączony. |
-| `uchwyty` | tak/nie | true | Uchwyty na listwach. |
-| `uchwyt_srodek` | tak/nie | true | Środkowy uchwyt ⇕. |
-| `osobno` | tak/nie | false | Przeciąganie po szybie rusza tylko jedno skrzydło. |
-| `wibracja` | tak/nie | true | Lekka wibracja telefonu przy kliknięciu. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Nazwa</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Typ</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Domyślnie</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Opis</th></tr>
+<tr><td align="left"><code>przyciski</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Przyciski i szybkie pozycje.</td></tr>
+<tr><td align="left"><code>pozycje</code></td><td align="left">tekst</td><td align="left">100,75,50,25,0</td><td align="left">Szybkie pozycje (100 = zwinięta).</td></tr>
+<tr><td align="left"><code>krok</code></td><td align="left">liczba</td><td align="left">5</td><td align="left">Krok przycisków ▲/▼ w %, 0 = wyłączony.</td></tr>
+<tr><td align="left"><code>uchwyty</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Uchwyty na listwach.</td></tr>
+<tr><td align="left"><code>uchwyt_srodek</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Środkowy uchwyt ⇕.</td></tr>
+<tr><td align="left"><code>osobno</code></td><td align="left">tak/nie</td><td align="left">false</td><td align="left">Przeciąganie po szybie rusza tylko jedno skrzydło.</td></tr>
+<tr><td align="left"><code>wibracja</code></td><td align="left">tak/nie</td><td align="left">true</td><td align="left">Lekka wibracja telefonu przy kliknięciu.</td></tr>
+</table>
 
 ---
 
@@ -538,7 +547,7 @@ entity: cover.zaluzje_salon
 
 <p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1.png" width="400" alt="Wygląd"></picture></a></p>
 
-**Okno 2-skrzydłowe z osobnymi roletami i kontaktronami:**
+**Okno 2-skrzydłowe z osobnymi roletami i czujnikami okna:**
 
 ```yaml
 type: custom:roleta-realistyczna
@@ -596,13 +605,14 @@ jezyk: en
 
 Karta sama szuka w Twoim Home Assistancie:
 
-| Co | Jak szuka |
-|---|---|
-| **Grupa rolet** | Przy nowej karcie najpierw proponuje grupę (okno 2-skrzydłowe). |
-| **Prędkość silnika** | Encja `number.*_motor_speed` z tego samego urządzenia co roleta. |
-| **Kontaktrony** | `binary_sensor.*` typu okno/drzwi z tego samego pomieszczenia; lewe i prawe po nazwie. |
-| **Pogoda** | `weather.dom` albo pierwsza encja `weather.*`; gdy nie ma żadnej, Open-Meteo dla lokalizacji domu. |
-| **Język** | Z profilu użytkownika HA. |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Co</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Jak szuka</th></tr>
+<tr><td align="left"><b>Grupa rolet</b></td><td align="left">Przy nowej karcie najpierw proponuje grupę (okno 2-skrzydłowe).</td></tr>
+<tr><td align="left"><b>Prędkość silnika</b></td><td align="left">Encja <code>number.*_motor_speed</code> z tego samego urządzenia co roleta.</td></tr>
+<tr><td align="left"><b>Czujniki okna</b></td><td align="left"><code>binary_sensor.*</code> typu okno/drzwi z tego samego pomieszczenia; lewe i prawe po nazwie.</td></tr>
+<tr><td align="left"><b>Pogoda</b></td><td align="left"><code>weather.dom</code> albo pierwsza encja <code>weather.*</code>; gdy nie ma żadnej, Open-Meteo dla lokalizacji domu.</td></tr>
+<tr><td align="left"><b>Język</b></td><td align="left">Z profilu użytkownika HA.</td></tr>
+</table>
 
 Ręczny wybór w edytorze zawsze ma pierwszeństwo.
 
@@ -623,19 +633,20 @@ Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
 <a name="elementy-karty"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/puzzle.png" height="30" align="absmiddle"> Elementy karty
 
-| Element | Znaczenie |
-|:---:|---|
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/roleta.png" height="24" align="absmiddle"> | Ikona rolety. Kliknięcie otwiera szczegóły encji w HA. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Uchwyt środkowy: przeciągnij, żeby ruszyć oba skrzydła. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Uchwyt na listwie: przeciągnij, żeby ruszyć jedno skrzydło. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/klamki.png" height="24" align="absmiddle"> | Klamki: w dół = zamknięte, poziomo = otwarte, w górę = uchylone. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Zwiń roletę do końca. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Zatrzymaj. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Opuść roletę do końca. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/slonce.png" height="24" align="absmiddle"> | Słońce: dzień według `sun.sun`. |
-| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/ksiezyc.png" height="24" align="absmiddle"> | Księżyc i gwiazdy: noc. |
-| `v22` | Numer wersji karty obok nazwy. |
-| `30% → 50%` | Roleta jedzie z 30% do 50%. |
+<table>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Element</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Znaczenie</th></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/roleta.png" height="24" align="absmiddle"></td><td align="left">Ikona rolety. Kliknięcie otwiera szczegóły encji w HA.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"></td><td align="left">Uchwyt środkowy: przeciągnij, żeby ruszyć oba skrzydła.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"></td><td align="left">Uchwyt na listwie: przeciągnij, żeby ruszyć jedno skrzydło.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/klamki.png" height="24" align="absmiddle"></td><td align="left">Klamki: w dół = zamknięte, poziomo = otwarte, w górę = uchylone.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"></td><td align="left">Zwiń roletę do końca.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"></td><td align="left">Zatrzymaj.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"></td><td align="left">Opuść roletę do końca.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/slonce.png" height="24" align="absmiddle"></td><td align="left">Słońce: dzień według <code>sun.sun</code>.</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/ksiezyc.png" height="24" align="absmiddle"></td><td align="left">Księżyc i gwiazdy: noc.</td></tr>
+<tr><td align="center"><code>v22</code></td><td align="left">Numer wersji karty obok nazwy.</td></tr>
+<tr><td align="center"><code>30% → 50%</code></td><td align="left">Roleta jedzie z 30% do 50%.</td></tr>
+</table>
 
 ---
 
@@ -701,10 +712,11 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 <a name="tlumaczenia"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="30" align="absmiddle"> Tłumaczenia
 
-| Język | Stan |
-|---|---|
-| 🇵🇱 Polski | ✅ 100% |
-| 🇬🇧 English | ✅ 100% |
+<table>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Język</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Stan</th></tr>
+<tr><td align="left">🇵🇱 Polski</td><td align="left">✅ 100%</td></tr>
+<tr><td align="left">🇬🇧 English</td><td align="left">✅ 100%</td></tr>
+</table>
 
 Chcesz dodać swój język? Skopiuj [`translations/en.json`](translations/en.json) jako `translations/<kod>.json`, przetłumacz teksty i wyślij w [zgłoszeniu](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo jako pull request.
 
@@ -723,7 +735,7 @@ src/                    kod źródłowy (moduły)
 ├─ panele.js            dodanie karty na panel, sprawdzenie instalacji
 ├─ edytor-styl.js       wygląd edytora (CSS)
 ├─ pogoda.js            niebo, pogoda, rysowany widok, pogoda z internetu
-├─ wykrywanie.js        wykrywanie i ranking rolet, silników, kontaktronów, pogody
+├─ wykrywanie.js        wykrywanie i ranking rolet, silników, czujników okna, pogody
 ├─ silnik.js            czas przejazdu (prędkość, nauka, kalibracja)
 ├─ kolory.js            tkaniny, ramy i okleiny
 ├─ globalne.js          ustawienia globalne (profil użytkownika HA)
