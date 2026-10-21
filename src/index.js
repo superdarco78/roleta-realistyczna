@@ -17,7 +17,7 @@ rej('roleta-realistyczna-editor', class extends RoletaRealistycznaEditor {});
 
 const T = RR_TXT[String(document.documentElement.lang || navigator.language || 'pl').startsWith('pl') ? 'pl' : 'en'];
 window.customCards = window.customCards || [];
-window.customCards.push({ type: 'okno-ha', name: T.nazwaKarty + ' ' + RR_WERSJA, description: T.opisKarty, preview: true, documentationURL: 'https://github.com/superdarco78/roleta-realistyczna#readme',
+window.customCards.push({ type: 'okno-ha', name: T.nazwaKarty, description: T.opisKarty, preview: true, documentationURL: 'https://github.com/superdarco78/roleta-realistyczna#readme',
   /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Okno HA dla okien z integracji i dla rolet */
   getEntitySuggestion: (hass, entityId) => {
     if (!String(entityId).startsWith('cover.')) return null;
