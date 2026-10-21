@@ -102,4 +102,5 @@
    v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
    v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
    v34 – kolory z motywu HA: akcent (uchwyt, linia celu, przyciski animacji), bez numeru karty – w edytorze wersja integracji
-   v35 – zapasowe kolory = domyślne kolory HA: główny #009ac7, akcent #ff9800 */
+   v35 – zapasowe kolory = domyślne kolory HA: główny #009ac7, akcent #ff9800
+   v36 – kreator bez stałych kolorów: ikony mdi i ramki w kolorze głównym motywu, bez numeru karty w komunikatach */

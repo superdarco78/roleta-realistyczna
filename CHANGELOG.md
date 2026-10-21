@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v36 – Kreator w kolorach Twojego motywu
+
+- 🎨 Podsumowanie i podpowiedzi kreatora: zamiast zielonych znaczków ✅ i zielonych ramek są ikony i ramki w kolorze głównym Twojego motywu HA, na żywo
+- 🔢 Komunikaty o wersji bez numeru karty
+
 ## v35 – Domyślne kolory Home Assistanta
 
 - 🎨 Gdy motyw nie podaje kolorów, karta używa domyślnych kolorów HA: główny #009AC7 i akcent #FF9800. Kolory z Twojego profilu dalej mają pierwszeństwo, na żywo
