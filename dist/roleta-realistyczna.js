@@ -107,10 +107,11 @@
         po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
    v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
    v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia
-   v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka */
+   v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
+   v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v32";
+  var RR_WERSJA = "v33";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -802,6 +803,10 @@
       wxNiedost: "„{0}” jest niedostępna – sprawdź integrację pogody. Do czasu naprawy karta weźmie pogodę z internetu.",
       wxNic: "Bez pogody za szybą jest zwykłe niebo dzień / noc.",
       nazwa: "Nazwa na karcie (puste = nazwa rolety)",
+      wlasny: "🎨 Dowolny kolor z palety",
+      wlasnyKol: "Osłona",
+      wlasnyRam: "Rama",
+      wlasnyOpis: "Kliknij kółko z tęczą i wybierz dowolny kolor – podgląd zmieni się od razu.",
       podglad: "Podgląd na żywo jest niżej – każda zmiana od razu się na nim pokazuje.",
       jezyk: "Kreator i karta mówią po {0} – tak jak Twój profil w HA. Zmienisz to w ⚙️ Zaawansowane.",
       jezykNazwa: "polsku",
@@ -1225,6 +1230,10 @@
       wxNiedost: "“{0}” is unavailable – check the weather integration. Until it is fixed the card uses internet weather.",
       wxNic: "Without weather the glass shows a plain day / night sky.",
       nazwa: "Name on the card (empty = blind name)",
+      wlasny: "🎨 Any colour from a palette",
+      wlasnyKol: "Shade",
+      wlasnyRam: "Frame",
+      wlasnyOpis: "Tap the rainbow circle and pick any colour – the preview changes right away.",
       podglad: "The live preview is below – every change shows up right away.",
       jezyk: "The wizard and card speak {0} – same as your HA profile. Change it in ⚙️ Advanced.",
       jezykNazwa: "English",
@@ -2253,6 +2262,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wzl small{display:block;color:var(--secondary-text-color);font-size:12px;margin-top:1px}
 .wzl em{font-style:normal;font-size:11px;font-weight:500;color:var(--primary-color,#03a9f4);margin-left:6px;white-space:nowrap}.wzl em.au{color:var(--success-color,#43a047)}
 .wzw{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}.wzw b{font-weight:400;font-size:11px;padding:1px 8px;border-radius:10px;background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color)}
+.wor{display:flex;flex-wrap:wrap;gap:10px}.wo{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:12px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4));font-size:14px;font-weight:500;color:var(--primary-text-color)}.wo .sw2{width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}.wown{display:grid;gap:8px;margin-top:4px}
 .wzl .sw2{flex:none;display:inline-block;width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.4)}
 .wzn{display:flex;gap:8px;align-items:center;border-top:1px solid var(--divider-color,rgba(127,127,127,.3));padding-top:12px}.wzn span{flex:1}
 .wb{border:none;border-radius:20px;padding:9px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
@@ -2267,10 +2277,10 @@ ha-alert[alert-type=success]:not(:defined){background:rgba(67,160,71,.12);border
 ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .wzi{margin:0;padding-left:4px;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--primary-text-color)}
 .lb .kn{text-transform:none;letter-spacing:0;color:var(--primary-text-color);margin-left:6px}
-.dot{display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;padding:0;color:var(--secondary-text-color);font:inherit;font-size:11px;width:52px}
+.dot{display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;padding:0;color:var(--primary-text-color);font:inherit;font-size:12px;font-weight:500;line-height:1.25;text-align:center;width:74px}
 .dot i{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5);transition:transform .15s}
 .dot[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--card-background-color,#1c1c1c),0 0 0 6px var(--primary-color,#03a9f4),0 0 16px 6px var(--primary-color,#03a9f4);transform:scale(1.35)}
-.dots .dot[aria-pressed="true"]{width:70px;font-weight:600}
+.dots .dot[aria-pressed="true"]{width:74px;font-weight:600}
 .dots .dot[aria-pressed="true"] i,.dots .dot[aria-pressed="true"] .own{margin:4px 0 9px}
 .dots{padding:14px 10px 8px}
 .psl{display:none}
@@ -2604,6 +2614,18 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
         this._ustaw({ rama: p.rama, kolor: p.kolor, siatka: p.siatka ?? "" });
       });
       B.appendChild(d);
+      const hx = (v) => /^#[0-9a-f]{6}$/i.test(v || "") ? v : rrHex(v) || "#000000";
+      const w = document.createElement("div");
+      w.className = "wown";
+      w.innerHTML = `<div class="lb">${esc(W.wlasny)}</div><div class="wor">${[["kolor", W.wlasnyKol], ["rama", W.wlasnyRam]].map(([k, n]) => `<label class="wo"><span class="own"><input type="color" data-wo="${k}" value="${hx(this.ed._val(k))}"></span><span class="sw2" style="background:${hx(this.ed._val(k))}"></span><span class="won">${esc(n)}</span></label>`).join("")}</div><p class="hint">${esc(W.wlasnyOpis)}</p>`;
+      w.querySelectorAll("[data-wo]").forEach((i) => {
+        i.oninput = () => {
+          this.ed._set(i.dataset.wo, i.value);
+          i.closest(".wo").querySelector(".sw2").style.background = i.value;
+        };
+        i.onchange = () => this._ustaw({ [i.dataset.wo]: i.value });
+      });
+      B.appendChild(w);
       const s = document.createElement("ha-selector");
       s.hass = this.h;
       s.selector = { text: {} };
@@ -3256,8 +3278,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Okno HA dla okien z integracji i dla rolet */
     getEntitySuggestion: (hass, entityId) => {
       if (!String(entityId).startsWith("cover.")) return null;
-      const okno = !!hass?.states?.[entityId]?.attributes?.okno_ha;
-      return { label: T.nazwaKarty + (okno ? " 🪟" : ""), config: { type: "custom:okno-ha", entity: entityId } };
+      return { label: T.nazwaKarty, config: { type: "custom:okno-ha", entity: entityId } };
     }
   });
 })();

@@ -21,6 +21,5 @@ window.customCards.push({ type: 'okno-ha', name: T.nazwaKarty + ' ' + RR_WERSJA,
   /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Okno HA dla okien z integracji i dla rolet */
   getEntitySuggestion: (hass, entityId) => {
     if (!String(entityId).startsWith('cover.')) return null;
-    const okno = !!hass?.states?.[entityId]?.attributes?.okno_ha;
-    return { label: T.nazwaKarty + (okno ? ' 🪟' : ''), config: { type: 'custom:okno-ha', entity: entityId } };
+    return { label: T.nazwaKarty, config: { type: 'custom:okno-ha', entity: entityId } };
   } });
