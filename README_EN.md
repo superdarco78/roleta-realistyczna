@@ -37,8 +37,8 @@
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="49%" alt="Animation"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp" width="49%" alt="Animation"></a></p>
 
 <table>
-<tr><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/weather-partly-cloudy.png" height="48"><br><b>Real weather</b><br><sub>Rain, snow, sun and night outside</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-swipe-vertical.png" height="48"><br><b>Finger control</b><br><sub>Drag up and down</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/auto-fix.png" height="48"><br><b>Wizard</b><br><sub>Finds everything by itself</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="48"><br><b>Real window</b><br><sub>Shows if the window is open</sub></td></tr>
-<tr><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/timer-outline.png" height="48"><br><b>Learns the time</b><br><sub>Animation moves with the motor</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/palette.png" height="48"><br><b>Colours and wood</b><br><sub>Golden oak, walnut, anthracite</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/theme-light-dark.png" height="48"><br><b>HA theme</b><br><sub>Light and dark, like HA</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="1"><br><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="48"><br><b>5 languages</b><br><sub>Language sets itself</sub></td></tr>
+<tr><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/pogoda.png" width="215" alt=""><br><b>Real weather</b><br><sub>Rain, snow, sun and night outside</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/palec.png" width="215" alt=""><br><b>Finger control</b><br><sub>Drag up and down</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/kreator-en.png" width="215" alt=""><br><b>Wizard</b><br><sub>Finds everything by itself</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/okno.png" width="215" alt=""><br><b>Real window</b><br><sub>Shows if the window is open</sub></td></tr>
+<tr><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/czas.png" width="215" alt=""><br><b>Learns the time</b><br><sub>Animation moves with the motor</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/kolory.png" width="215" alt=""><br><b>Colours and wood</b><br><sub>Golden oak, walnut, anthracite</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/motyw.png" width="215" alt=""><br><b>HA theme</b><br><sub>Light and dark, like HA</sub></td><td align="center" valign="top" width="25%"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/funkcje/jezyki.png" width="215" alt=""><br><b>5 languages</b><br><sub>Language sets itself</sub></td></tr>
 </table>
 
 <a name="table-of-contents"></a>
@@ -110,25 +110,53 @@ Then refresh the page: **Ctrl + Shift + R**. On a phone, close and reopen the HA
 The wizard opens by itself. It has 7 short steps. The card finds your blind, motor, window sensors and weather by itself.
 
 <table>
-<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br>Step</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>What you pick</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>Why</th></tr>
-<tr><td align="center">1</td><td align="left">🪟 <b>Blind</b></td><td align="left">Which blind (or blind group) the card controls</td></tr>
-<tr><td align="center">2</td><td align="left">🔲 <b>Window</b></td><td align="left">How many sashes and which blind is on which</td></tr>
-<tr><td align="center">3</td><td align="left">⏱ <b>Motor</b></td><td align="left">So the animation moves as fast as the real blind</td></tr>
-<tr><td align="center">4</td><td align="left">🚪 <b>Window sensors</b></td><td align="left">So the card shows a tilted or open window</td></tr>
-<tr><td align="center">5</td><td align="left">🌦 <b>Weather</b></td><td align="left">Real weather behind the glass</td></tr>
-<tr><td align="center">6</td><td align="left">🎨 <b>Look and name</b></td><td align="left">A ready colour set and the card title</td></tr>
-<tr><td align="center">7</td><td align="left">✅ <b>Summary</b></td><td align="left">Check everything and choose where the card goes</td></tr>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="0"><br>Step</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="0"><br>What you pick</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="0"><br>Why</th></tr>
+<tr><td align="center">1</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-shutter.png" height="28" align="absmiddle" alt=""> <b>Blind</b></td><td align="left">Which blind (or blind group) the card controls</td></tr>
+<tr><td align="center">2</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-closed-variant.png" height="28" align="absmiddle" alt=""> <b>Window</b></td><td align="left">How many sashes and which blind is on which</td></tr>
+<tr><td align="center">3</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/speedometer.png" height="28" align="absmiddle" alt=""> <b>Motor</b></td><td align="left">So the animation moves as fast as the real blind</td></tr>
+<tr><td align="center">4</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-open-variant.png" height="28" align="absmiddle" alt=""> <b>Window sensors</b></td><td align="left">So the card shows a tilted or open window</td></tr>
+<tr><td align="center">5</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/weather-partly-cloudy.png" height="28" align="absmiddle" alt=""> <b>Weather</b></td><td align="left">Real weather behind the glass</td></tr>
+<tr><td align="center">6</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/palette.png" height="28" align="absmiddle" alt=""> <b>Look and name</b></td><td align="left">A ready colour set and the card title</td></tr>
+<tr><td align="center">7</td><td align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""> <b>Summary</b></td><td align="left">Check everything and choose where the card goes</td></tr>
 </table>
 
 > [!TIP]
 > Not sure? Keep what is selected at the top of the list. The card picked the best match.
 
-<table>
-<tr><td valign="top" width="50%"><b>Step 1. Blind</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-1-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-1-en.png" width="100%" alt="Step 1. Blind"></picture></td><td valign="top" width="50%"><b>Step 2. Window and sashes</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-2-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-2-en.png" width="100%" alt="Step 2. Window and sashes"></picture></td></tr>
-<tr><td valign="top" width="50%"><b>Step 3. Motor speed</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-3-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-3-en.png" width="100%" alt="Step 3. Motor speed"></picture></td><td valign="top" width="50%"><b>Step 4. Window sensors</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-4-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-4-en.png" width="100%" alt="Step 4. Window sensors"></picture></td></tr>
-<tr><td valign="top" width="50%"><b>Step 5. Weather</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-5-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-5-en.png" width="100%" alt="Step 5. Weather"></picture></td><td valign="top" width="50%"><b>Step 6. Look and name</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-6-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-6-en.png" width="100%" alt="Step 6. Look and name"></picture></td></tr>
-<tr><td valign="top" width="50%"><b>Step 7. Check and save</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-7-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator/krok-7-en.png" width="100%" alt="Step 7. Check and save"></picture></td><td valign="top" width="50%"><b>✅ Your card</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zwinieta.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zwinieta.png" width="100%" alt="Your card"></picture></td></tr>
-</table>
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-shutter.png" height="32" align="absmiddle"> Step 1 of 7: Pick your blind
+
+<a name="obr-k1"></a>
+<p align="center"><a href="#obr-k1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-1-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-1-en.png" width="100%" alt="Step 1"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-closed-variant.png" height="32" align="absmiddle"> Step 2 of 7: Window and sashes
+
+<a name="obr-k2"></a>
+<p align="center"><a href="#obr-k2"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-2-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-2-en.png" width="100%" alt="Step 2"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/speedometer.png" height="32" align="absmiddle"> Step 3 of 7: Motor speed
+
+<a name="obr-k3"></a>
+<p align="center"><a href="#obr-k3"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-3-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-3-en.png" width="100%" alt="Step 3"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-open-variant.png" height="32" align="absmiddle"> Step 4 of 7: Window sensors
+
+<a name="obr-k4"></a>
+<p align="center"><a href="#obr-k4"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-4-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-4-en.png" width="100%" alt="Step 4"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/weather-partly-cloudy.png" height="32" align="absmiddle"> Step 5 of 7: Weather outside
+
+<a name="obr-k5"></a>
+<p align="center"><a href="#obr-k5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-5-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-5-en.png" width="100%" alt="Step 5"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/palette.png" height="32" align="absmiddle"> Step 6 of 7: Look and name
+
+<a name="obr-k6"></a>
+<p align="center"><a href="#obr-k6"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-6-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-6-en.png" width="100%" alt="Step 6"></picture></a></p>
+
+#### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/check-circle-outline.png" height="32" align="absmiddle"> Step 7 of 7: Check and save
+
+<a name="obr-k7"></a>
+<p align="center"><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-7-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-7-en.png" width="100%" alt="Step 7"></picture></a></p>
 
 > [!IMPORTANT]
 > ✅ **Done.** Click **Save**. The card works.
@@ -139,15 +167,15 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-tap.png" height="26" align="absmiddle"> How to control it
 
 <table>
-<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="1"><br></th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="1"><br>What you do</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="1"><br>What happens</th></tr>
-<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="48"></td><td align="left">Drag the handle on the bottom of a sash</td><td align="left">Only that sash moves</td></tr>
-<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="48"></td><td align="left">Drag the round handle in the middle</td><td align="left">Both sashes move</td></tr>
-<tr><td align="center">👆</td><td align="left">Drag on the glass</td><td align="left">Both sashes move</td></tr>
-<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="48"></td><td align="left">Tap STOP, or tap the blind while it moves</td><td align="left">The blind stops</td></tr>
-<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="48"></td><td align="left">Tap the up arrow</td><td align="left">The blind goes fully up</td></tr>
-<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="48"></td><td align="left">Tap the down arrow</td><td align="left">The blind goes fully down</td></tr>
-<tr><td align="center"><b>▲&nbsp;5%</b></td><td align="left">Tap a small step</td><td align="left">The blind moves 5% up</td></tr>
-<tr><td align="center"><b>75%</b></td><td align="left">Tap a ready position</td><td align="left">The blind goes there</td></tr>
+<tr><th align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="0"><br>Icon</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="0"><br>What you do</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="0"><br>What happens</th></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/drag-horizontal-variant.png" height="48" alt=""></td><td align="left">Drag the handle at the bottom of one sash</td><td align="left">Only that sash moves</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/swap-vertical-circle-outline.png" height="48" alt=""></td><td align="left">Drag the round handle in the middle</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/gesture-swipe-vertical.png" height="48" alt=""></td><td align="left">Drag your finger on the glass</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/stop.png" height="48" alt=""></td><td align="left">Tap STOP, or tap the window while it moves</td><td align="left">Everything stops</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/arrow-up.png" height="48" alt=""></td><td align="left">Tap the up arrow</td><td align="left">Goes fully up: window uncovered</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/arrow-down.png" height="48" alt=""></td><td align="left">Tap the down arrow</td><td align="left">Goes fully down: window covered</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/unfold-more-horizontal.png" height="48" alt=""></td><td align="left">Tap ▲ 5% or ▼ 5%</td><td align="left">Moves a little up or down</td></tr>
+<tr><td align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/percent-outline.png" height="48" alt=""></td><td align="left">Tap a ready position, e.g. 75%</td><td align="left">Goes to that position</td></tr>
 </table>
 
 <a name="obr-5"></a>
@@ -179,7 +207,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 
 
 <table>
-<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Word</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>In plain words</th></tr>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0"><br>Word</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0"><br>In plain words</th></tr>
 <tr><td align="left"><b>Home Assistant (HA)</b></td><td align="left">The app that runs your smart home.</td></tr>
 <tr><td align="left"><b>HACS</b></td><td align="left">An “app store” for HA add-ons. You install the card and its updates from here.</td></tr>
 <tr><td align="left"><b>Card</b></td><td align="left">A tile on your HA screen, like this blind.</td></tr>
@@ -340,7 +368,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 Settings are grouped in collapsible sections, each with **↺ Restore defaults**. The live preview at the top **never moves the real blind**; pin it 📌 to see every change.
 
 <table>
-<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Section</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>What you set</th></tr>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0"><br>Section</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0"><br>What you set</th></tr>
 <tr><td align="left">🎨 Look</td><td align="left">Stripe colours, frame colour (wood finishes and plain), sashes, mullion, height.</td></tr>
 <tr><td align="left">🪟 Window</td><td align="left">Contact sensors per sash, tilted or opened, how much.</td></tr>
 <tr><td align="left">⏱ Motion & calibration</td><td align="left">Travel time from motor speed, learned, or <b>🤖 Auto-calibrate</b>.</td></tr>
@@ -371,7 +399,7 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 Everything can be set in the editor; the tables are for YAML fans. Option names are Polish.
 
 <table>
-<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="1"><br>Name</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="1"><br>Type</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="1"><br>Default</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="1"><br>Description</th></tr>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="0"><br>Name</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="0"><br>Type</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="0"><br>Default</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="0"><br>Description</th></tr>
 <tr><td align="left"><code>type</code></td><td align="left">text</td><td align="left"><b>required</b></td><td align="left">custom:roleta-realistyczna</td></tr>
 <tr><td align="left"><code>entity</code></td><td align="left">entity</td><td align="left"><b>required</b></td><td align="left">cover.* or a blind group (left + right).</td></tr>
 <tr><td align="left"><code>name</code></td><td align="left">text</td><td align="left">entity name</td><td align="left">Card title.</td></tr>
@@ -451,7 +479,7 @@ jezyk: en
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/magnify.png" height="30" align="absmiddle"> Auto-detection
 
 <table>
-<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>What</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>How</th></tr>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0"><br>What</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0"><br>How</th></tr>
 <tr><td align="left"><b>Blind group</b></td><td align="left">Suggested first for a new card.</td></tr>
 <tr><td align="left"><b>Motor speed</b></td><td align="left"><code>number.*_motor_speed</code> on the same device.</td></tr>
 <tr><td align="left"><b>Contact sensors</b></td><td align="left">Window/door <code>binary_sensor.*</code> in the same area; left/right by name.</td></tr>
@@ -537,7 +565,7 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="30" align="absmiddle"> Translations
 
 <table>
-<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="1"><br>Language</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="1"><br>Status</th></tr>
+<tr><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0"><br>Language</th><th align="left"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0"><br>Status</th></tr>
 <tr><td align="left">🇵🇱 Polski</td><td align="left">✅ 100%</td></tr>
 <tr><td align="left">🇬🇧 English</td><td align="left">✅ 100%</td></tr>
 </table>
