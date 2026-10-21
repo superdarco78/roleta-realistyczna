@@ -1,5 +1,7 @@
 {
   "karta": {
+    "nazwaKarty": "HA Window",
+    "opisKarty": "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
     "open": "Open",
     "closed": "Closed",
     "opening": "Opening…",
@@ -368,7 +370,7 @@
     "widokPanel": " (panel – 1 card only)",
     "wczytuje": "Loading dashboards…",
     "verOk": "Card installed correctly – you have the latest version {0} ✔",
-    "verNowa": "A newer version {0} is available (you have {1}). Update: HACS → Roleta dzień-noc → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
+    "verNowa": "A newer version {0} is available (you have {1}). Update: HACS → Okno HA → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
     "btnHacs": "Open HACS",
     "btnPrzeladuj": "🔄 Reload page",
     "zasobyDup": "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",

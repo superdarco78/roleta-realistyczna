@@ -42,7 +42,7 @@ export function rrSprawdzInstalacje(hass) {
   const gh = fetch('https://api.github.com/repos/superdarco78/roleta-realistyczna/releases/latest')
     .then(r => r.ok ? r.json() : null).then(j => { if (j?.tag_name) wynik.najnowsza = j.tag_name; }).catch(() => {});
   const zas = hass?.user?.is_admin && hass.callWS ? hass.callWS({ type: 'lovelace/resources' })
-    .then(l => { wynik.zasoby = (l || []).filter(x => /roleta-realistyczna/.test(x.url)).length; }).catch(() => {}) : null;
+    .then(l => { wynik.zasoby = (l || []).filter(x => /roleta-realistyczna|okno-ha/.test(x.url)).length; }).catch(() => {}) : null;
   return (RR_INST.p = Promise.all([gh, zas]).then(() => wynik));
 }
 export const rrNumerWersji = v => parseInt(String(v || '').replace(/\D+/g, ''), 10) || 0;

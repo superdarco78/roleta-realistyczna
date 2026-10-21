@@ -2,7 +2,7 @@ import { RR_WERSJA, RR_DEF } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
-import { RR_ED, RR_KOL_NAZWY, rrJezyk } from './jezyk.js';
+import { RR_ED, RR_TXT, RR_KOL_NAZWY, rrJezyk } from './jezyk.js';
 import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, RR_GKLUCZE, rrGlobLoad, rrGlobSave } from './globalne.js';
 import { RR_EDYTOR_STYL } from './edytor-styl.js';
@@ -102,7 +102,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
  <div class="grp"><div class="lb">${L.glob}</div><p class="hint">${L.globh}</p>
   <div class="kal"><button class="play" id="gSave">${L.gSave}</button><button class="play" id="gClr" style="background:var(--secondary-text-color)">${L.gClr}</button></div><p class="hint" id="gInfo"></p></div>
  <button class="rst" data-rst="zaaw">${L.rst}</button></details>
- <div class="ver">roleta-realistyczna ${RR_WERSJA}</div>
+ <div class="ver">${RR_TXT[this._lang].nazwaKarty} ${RR_WERSJA}</div>
 </div>`;
     const $ = s => root.querySelector(s);
     this._r = root;
@@ -163,7 +163,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     RR_PRZEL.forEach(k => $('#' + k).addEventListener('change', e => this._set(k, e.target.checked)));
     $('.play').onclick = () => this._demo();
     /* podgląd: prawdziwa karta z udawanym silnikiem */
-    this._card = document.createElement('roleta-realistyczna');
+    this._card = document.createElement('okno-ha');
     $('.slot').appendChild(this._card);
     this._m = { 'cover.podglad_l': { pos: 60, target: 60 }, 'cover.podglad_p': { pos: 60, target: 60 } };
     this._built = true;
