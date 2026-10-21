@@ -115,7 +115,7 @@
    v37 – napis na kolorze motywu biały albo czarny (kontrast z kolorem z profilu); naprawa kreatora (komunikat o wersji) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v38";
+  var RR_WERSJA = "v39";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
