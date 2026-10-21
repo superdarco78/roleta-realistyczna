@@ -47,3 +47,18 @@ export function rrSprawdzInstalacje(hass) {
 }
 /* v28: liczy się tylko główny numer (v27.1 = 27) – wydania „.1” zmieniają sam opis, nie kartę */
 export const rrNumerWersji = v => parseInt(String(v || '').replace(/^\D+/, ''), 10) || 0;
+
+/* v29: po aktualizacji w HACS przeglądarka potrafi trzymać stary plik karty. HACS zmienia adres zasobu (hacstag),
+   więc wystarczy raz przeładować stronę – karta robi to sama, gdy HACS ma nowszą wersję niż ta, która działa */
+const RR_ODSW = { z: 0 };
+export function rrSamoOdswiez(hass) {
+  if (RR_ODSW.z) return; RR_ODSW.z = 1;
+  const upd = Object.values(hass?.states || {}).find(s => s.entity_id?.startsWith('update.') &&
+    /roleta-realistyczna|okno-ha/.test(String(s.attributes?.release_url || '') + String(s.attributes?.title || '') + s.entity_id));
+  const inst = upd?.attributes?.installed_version;
+  if (!inst || rrNumerWersji(inst) <= rrNumerWersji(RR_WERSJA)) return;
+  const klucz = 'okno-ha-odswiezone-' + inst;
+  try { if (sessionStorage.getItem(klucz)) return; sessionStorage.setItem(klucz, '1'); } catch (e) { return; }   // najwyżej raz
+  console.info('Okno HA: zainstalowana ' + inst + ', działa ' + RR_WERSJA + ' – przeładowuję stronę');
+  setTimeout(() => location.reload(), 300);
+}

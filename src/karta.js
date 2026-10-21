@@ -6,6 +6,7 @@ import { RR_TXT, rrJezyk } from './jezyk.js';
 import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, rrGlobLoad } from './globalne.js';
 import { rrKartaStyl } from './karta-styl.js';
+import { rrSamoOdswiez } from './panele.js';
 
 /* Karta: okno z roletą dzień-noc, animacja w tempie silnika, pogoda za oknem, kontaktrony */
 export class RoletaRealistyczna extends HTMLElement {
@@ -26,6 +27,7 @@ export class RoletaRealistyczna extends HTMLElement {
   }
   set hass(h) {
     this._hass = h;
+    rrSamoOdswiez(h);
     const urz = h?.states?.[this._raw?.entity]?.attributes?.okno_ha, uk = JSON.stringify(urz || null);
     if (uk !== this._uk) { this._uk = uk; this._urz = urz && typeof urz === 'object' ? urz : null; if (this._raw) { this.setConfig(this._raw); return; } }
     if (!this._gok) { this._gok = 1; rrGlobLoad(h).then(() => { if (this._raw) this.setConfig(this._raw); }); }
