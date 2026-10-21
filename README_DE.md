@@ -76,7 +76,7 @@
 Der Knopf öffnet HACS in deinem Home Assistant. Das Bild zeigt, was du klicken musst.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/de/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/de/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -86,7 +86,7 @@ Der Knopf öffnet HACS in deinem Home Assistant. Das Bild zeigt, was du klicken 
 Lade die Karte in deinen Home Assistant herunter.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/de/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/de/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -96,7 +96,7 @@ Lade die Karte in deinen Home Assistant herunter.
 Füge die Karte zu deinem Dashboard hinzu.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/de/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instrukcja/de/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
