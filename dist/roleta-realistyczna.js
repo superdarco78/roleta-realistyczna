@@ -115,7 +115,7 @@
    v37 – napis na kolorze motywu biały albo czarny (kontrast z kolorem z profilu); naprawa kreatora (komunikat o wersji) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v37";
+  var RR_WERSJA = "v38";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -8437,6 +8437,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   });
   var T = RR_TXT[rrKod(document.documentElement.lang || navigator.language || "pl")];
   window.customCards = window.customCards || [];
+  for (let i = window.customCards.length - 1; i >= 0; i--) if (["okno-ha", "roleta-realistyczna"].includes(window.customCards[i]?.type)) window.customCards.splice(i, 1);
   window.customCards.push({
     type: "okno-ha",
     name: T.nazwaKarty,

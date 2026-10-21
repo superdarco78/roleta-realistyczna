@@ -17,6 +17,8 @@ rej('roleta-realistyczna-editor', class extends RoletaRealistycznaEditor {});
 
 const T = RR_TXT[rrKod(document.documentElement.lang || navigator.language || 'pl')];
 window.customCards = window.customCards || [];
+/* v38: plik karty może się wczytać dwa razy (ładowacz + strona Motor HA) – na liście „Dodaj do panelu” zawsze jedna pozycja */
+for (let i = window.customCards.length - 1; i >= 0; i--) if (['okno-ha', 'roleta-realistyczna'].includes(window.customCards[i]?.type)) window.customCards.splice(i, 1);
 window.customCards.push({ type: 'okno-ha', name: T.nazwaKarty, description: T.opisKarty, preview: true, documentationURL: 'https://github.com/superdarco78/roleta-realistyczna#readme',
   /* v31: „Dodaj do panelu” na stronie urządzenia (HA 2026.6+) proponuje kartę Motor HA dla okien z integracji i dla rolet */
   getEntitySuggestion: (hass, entityId) => {

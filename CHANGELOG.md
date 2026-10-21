@@ -1,5 +1,9 @@
 # 📝 Historia zmian
 
+## v38 – Jedna karta Motor HA na liście
+
+- Na liście „Dodaj do panelu” zawsze jedna pozycja „Motor HA” (wcześniej mogła być podwójna)
+
 ## v37 – Czytelne napisy przy każdym kolorze
 
 - 🔤 Napisy na przyciskach w kolorze motywu są białe albo czarne, zależnie od jasności Twojego koloru (np. czarne na żółtym akcencie)
