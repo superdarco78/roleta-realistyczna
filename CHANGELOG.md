@@ -1,5 +1,13 @@
 # 📝 Historia zmian
 
+## v25 – Nowa nazwa: Okno HA
+
+- 🪟 Karta nazywa się teraz **Okno HA** (po angielsku **HA Window**), bo wkrótce pokaże też zasłony, markizy, żaluzje, okiennice i plisy
+- ➕ Nowe karty mają typ `custom:okno-ha`
+- ✅ Twoje karty z typem `custom:roleta-realistyczna` działają dalej bez żadnych zmian
+- 🔧 Klamki okna są większe, srebrne z ciemnym obrysem i zawsze nad roletą – dobrze widać, jak się obracają
+- 🌍 Nowa nazwa w oknie wyboru kart, w edytorze i w kreatorze (po polsku i po angielsku)
+
 ## v24 – Większe okno jednoskrzydłowe
 
 - 🪟 Okno z jednym skrzydłem jest teraz większe: wyższe i szersze, wypełnia kartę tak jak okno z dwoma skrzydłami

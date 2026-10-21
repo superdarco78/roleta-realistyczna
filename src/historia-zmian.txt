@@ -87,4 +87,6 @@
         sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
         kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
    v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
-        edytora i kreatora; link do instrukcji w oknie wyboru kart */
+        edytora i kreatora; link do instrukcji w oknie wyboru kart
+   v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
+        stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą */

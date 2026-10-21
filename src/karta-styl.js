@@ -20,12 +20,13 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .slot{position:relative;flex:1;margin:0 1.5px;perspective:700px;border-radius:2px;background:#2b3138;box-shadow:inset 0 0 8px rgba(0,0,0,.6)}
 .sash{position:relative;height:100%;box-sizing:border-box;transition:transform 1.4s cubic-bezier(.4,.1,.2,1);padding:7px;border-radius:2px;background:${sloje ? sloje + ',' : ''}${rrShade(rama, -.03)};
  box-shadow:inset 0 0 0 1px rgba(0,0,0,.16),0 1px 2px rgba(0,0,0,.22);touch-action:none;cursor:ns-resize}
-.handle{position:absolute;top:56%;width:6px;height:14px;margin-top:-7px;border-radius:3px;z-index:4;
- background:linear-gradient(90deg,${rrShade(rama, -.1)},${rrShade(rama, .25)},${rrShade(rama, -.16)});box-shadow:0 1px 2px rgba(0,0,0,.35)}
+.handle{position:absolute;top:56%;width:8px;height:18px;margin-top:-9px;border-radius:4px;z-index:9;
+ background:linear-gradient(90deg,#8d9297,#f4f5f6 45%,#6f7479);box-shadow:0 0 0 1px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.5)}
+/* v25: klamka zawsze nad roletą, większa i w kolorze srebrnym z ciemnym obrysem – widać ją na każdej ramie i w każdym motywie */
 /* v19: klamka obraca się jak w prawdziwym oknie: w dół = zamknięte, poziomo = otwarte, w górę = uchylone;
    przy otwieraniu najpierw klamka, potem skrzydło – przy zamykaniu odwrotnie */
-.handle:after{content:"";position:absolute;left:.5px;top:3px;width:5px;height:24px;border-radius:2.5px;transform-origin:2.5px 4px;
- background:linear-gradient(90deg,${rrShade(rama, -.14)},#fff,${rrShade(rama, -.2)});box-shadow:0 2px 3px rgba(0,0,0,.4);transition:transform .5s 1.3s}
+.handle:after{content:"";position:absolute;left:.5px;top:4px;width:7px;height:32px;border-radius:3.5px;transform-origin:3.5px 5px;
+ background:linear-gradient(90deg,#7d8287,#fff 45%,#5f6469);box-shadow:0 0 0 1px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.5);transition:transform .5s 1.3s}
 .sash.otw[data-i="0"] .handle:after{transform:rotate(90deg);transition-delay:0s}
 .sash.otw[data-i="1"] .handle:after{transform:rotate(-90deg);transition-delay:0s}
 .sash.uchyl .handle:after{transform:rotate(180deg);transition-delay:0s}

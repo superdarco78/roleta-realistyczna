@@ -1,5 +1,7 @@
 {
   "karta": {
+    "nazwaKarty": "Okno HA",
+    "opisKarty": "Realistyczne okno z roletą dzień-noc: animacja w tempie silnika, przeciąganie, prawdziwa pogoda za oknem i kreator dla początkujących",
     "open": "Zwinięta",
     "closed": "Opuszczona",
     "opening": "Zwija się…",
@@ -342,7 +344,7 @@
     "widokPanel": " (pełny ekran – tylko 1 karta)",
     "wczytuje": "Wczytuję panele…",
     "verOk": "Karta zainstalowana poprawnie – masz najnowszą wersję {0} ✔",
-    "verNowa": "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Roleta dzień-noc → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
+    "verNowa": "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Okno HA → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
     "btnHacs": "Otwórz HACS",
     "btnPrzeladuj": "🔄 Przeładuj stronę",
     "zasobyDup": "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",

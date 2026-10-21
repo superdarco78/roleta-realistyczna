@@ -299,7 +299,7 @@ export class RrKreator {
     box.append(vBox, btn, out);
     btn.onclick = async () => {
       const d = lista[+wyb.d]; btn.disabled = true;
-      const karta = Object.assign({ type: 'custom:roleta-realistyczna' }, this.c);
+      const karta = Object.assign({ type: 'custom:okno-ha' }, this.c);
       try {
         const v = await rrDodajDoPanelu(h, d.url_path, wyb.v === 'nowy' ? 'nowy' : +wyb.v, karta, W.nowyTytul);
         out.textContent = W.dodano(nazwa(d), v.title || v.path);

@@ -1,5 +1,5 @@
 /*!
- * Roleta dzień-noc (roleta-realistyczna)
+ * Okno HA (dawniej Roleta dzień-noc, roleta-realistyczna)
  * © 2026 superdarco78 – https://github.com/superdarco78/roleta-realistyczna
  * Licencja / License: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/
  * Użytek niekomercyjny z podaniem autora. Sprzedaż, odsprzedaż i użycie komercyjne
@@ -95,10 +95,12 @@
         sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
         kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
    v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
-        edytora i kreatora; link do instrukcji w oknie wyboru kart */
+        edytora i kreatora; link do instrukcji w oknie wyboru kart
+   v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
+        stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v24";
+  var RR_WERSJA = "v25";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -396,6 +398,8 @@
   // translations/pl.json
   var pl_default = {
     karta: {
+      nazwaKarty: "Okno HA",
+      opisKarty: "Realistyczne okno z roletą dzień-noc: animacja w tempie silnika, przeciąganie, prawdziwa pogoda za oknem i kreator dla początkujących",
       open: "Zwinięta",
       closed: "Opuszczona",
       opening: "Zwija się…",
@@ -738,7 +742,7 @@
       widokPanel: " (pełny ekran – tylko 1 karta)",
       wczytuje: "Wczytuję panele…",
       verOk: "Karta zainstalowana poprawnie – masz najnowszą wersję {0} ✔",
-      verNowa: "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Roleta dzień-noc → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
+      verNowa: "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Okno HA → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
       btnHacs: "Otwórz HACS",
       btnPrzeladuj: "🔄 Przeładuj stronę",
       zasobyDup: "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",
@@ -750,6 +754,8 @@
   // translations/en.json
   var en_default = {
     karta: {
+      nazwaKarty: "HA Window",
+      opisKarty: "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
       open: "Open",
       closed: "Closed",
       opening: "Opening…",
@@ -1118,7 +1124,7 @@
       widokPanel: " (panel – 1 card only)",
       wczytuje: "Loading dashboards…",
       verOk: "Card installed correctly – you have the latest version {0} ✔",
-      verNowa: "A newer version {0} is available (you have {1}). Update: HACS → Roleta dzień-noc → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
+      verNowa: "A newer version {0} is available (you have {1}). Update: HACS → Okno HA → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
       btnHacs: "Open HACS",
       btnPrzeladuj: "🔄 Reload page",
       zasobyDup: "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",
@@ -1319,12 +1325,13 @@
 .slot{position:relative;flex:1;margin:0 1.5px;perspective:700px;border-radius:2px;background:#2b3138;box-shadow:inset 0 0 8px rgba(0,0,0,.6)}
 .sash{position:relative;height:100%;box-sizing:border-box;transition:transform 1.4s cubic-bezier(.4,.1,.2,1);padding:7px;border-radius:2px;background:${sloje ? sloje + "," : ""}${rrShade(rama, -0.03)};
  box-shadow:inset 0 0 0 1px rgba(0,0,0,.16),0 1px 2px rgba(0,0,0,.22);touch-action:none;cursor:ns-resize}
-.handle{position:absolute;top:56%;width:6px;height:14px;margin-top:-7px;border-radius:3px;z-index:4;
- background:linear-gradient(90deg,${rrShade(rama, -0.1)},${rrShade(rama, 0.25)},${rrShade(rama, -0.16)});box-shadow:0 1px 2px rgba(0,0,0,.35)}
+.handle{position:absolute;top:56%;width:8px;height:18px;margin-top:-9px;border-radius:4px;z-index:9;
+ background:linear-gradient(90deg,#8d9297,#f4f5f6 45%,#6f7479);box-shadow:0 0 0 1px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.5)}
+/* v25: klamka zawsze nad roletą, większa i w kolorze srebrnym z ciemnym obrysem – widać ją na każdej ramie i w każdym motywie */
 /* v19: klamka obraca się jak w prawdziwym oknie: w dół = zamknięte, poziomo = otwarte, w górę = uchylone;
    przy otwieraniu najpierw klamka, potem skrzydło – przy zamykaniu odwrotnie */
-.handle:after{content:"";position:absolute;left:.5px;top:3px;width:5px;height:24px;border-radius:2.5px;transform-origin:2.5px 4px;
- background:linear-gradient(90deg,${rrShade(rama, -0.14)},#fff,${rrShade(rama, -0.2)});box-shadow:0 2px 3px rgba(0,0,0,.4);transition:transform .5s 1.3s}
+.handle:after{content:"";position:absolute;left:.5px;top:4px;width:7px;height:32px;border-radius:3.5px;transform-origin:3.5px 5px;
+ background:linear-gradient(90deg,#7d8287,#fff 45%,#5f6469);box-shadow:0 0 0 1px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.5);transition:transform .5s 1.3s}
 .sash.otw[data-i="0"] .handle:after{transform:rotate(90deg);transition-delay:0s}
 .sash.otw[data-i="1"] .handle:after{transform:rotate(-90deg);transition-delay:0s}
 .sash.uchyl .handle:after{transform:rotate(180deg);transition-delay:0s}
@@ -1418,7 +1425,7 @@
       return { entity: e || "cover.roleta" };
     }
     static getConfigElement() {
-      return document.createElement("roleta-realistyczna-editor");
+      return document.createElement("okno-ha-editor");
     }
     setConfig(cfg) {
       if (!cfg || !cfg.entity) throw new Error("Wybierz encję rolety (cover.*)");
@@ -1506,7 +1513,7 @@
       return out.map((e, i) => wyb[i] && this._hass.states[wyb[i]] ? wyb[i] : e);
     }
     _build(n) {
-      const c = this._cfg, col = rrHex(c.kolor), H = rrWysOkna(c, n), rama = c.rama, T = this._t;
+      const c = this._cfg, col = rrHex(c.kolor), H = rrWysOkna(c, n), rama = c.rama, T2 = this._t;
       const sloje = RR_RAMY[rama]?.[2] ? "repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 4px,rgba(255,255,255,.05) 4px 5px,transparent 5px 9px),repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 5px,rgba(255,255,255,.04) 5px 6px,transparent 6px 11px)" : "";
       const ruch = n > 1 && c.slupek === "ruchomy";
       const root = this.shadowRoot || this.attachShadow({ mode: "open" });
@@ -1528,14 +1535,14 @@
 <div class="rr">
  <div class="hd"><ha-icon icon="mdi:roller-shade"></ha-icon>
   <div><div><span class="nm"></span><span class="ver">${RR_WERSJA}</span></div><div class="sb"></div></div><div class="pc"></div></div>
- <div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div>
+ <div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T2.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div>
  <div class="bt">
-  <button class="up" title="${T.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
-  <button class="stop" title="${T.stop}"><ha-icon icon="mdi:stop"></ha-icon></button>
-  <button class="down" title="${T.down}"><ha-icon icon="mdi:arrow-down"></ha-icon></button>
+  <button class="up" title="${T2.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
+  <button class="stop" title="${T2.stop}"><ha-icon icon="mdi:stop"></ha-icon></button>
+  <button class="down" title="${T2.down}"><ha-icon icon="mdi:arrow-down"></ha-icon></button>
  </div>
  ${+c.krok > 0 ? `<div class="qk kr"><button data-k="1">▲ ${+c.krok}%</button><button data-k="-1">▼ ${+c.krok}%</button></div>` : ""}
- <div class="qk">${String(c.pozycje ?? "100,75,50,25,0").split(/[,; ]+/).map(Number).filter((x) => x >= 0 && x <= 100 && String(x) !== "").slice(0, 7).map((x) => `<button data-p="${x}">${x === 100 ? T.open : x === 0 ? T.closed : x + "%"}</button>`).join("")}</div>
+ <div class="qk">${String(c.pozycje ?? "100,75,50,25,0").split(/[,; ]+/).map(Number).filter((x) => x >= 0 && x <= 100 && String(x) !== "").slice(0, 7).map((x) => `<button data-p="${x}">${x === 100 ? T2.open : x === 0 ? T2.closed : x + "%"}</button>`).join("")}</div>
 </div>`;
       root.appendChild(card);
       const q = (s) => card.querySelector(s);
@@ -1654,25 +1661,25 @@
         this._t = RR_TXT[lang];
         this._built = false;
       }
-      const T = this._t;
+      const T2 = this._t;
       if (!this._built || this._n !== mem.length) this._build(mem.length);
       this._mem = mem;
       const E = this._el;
       if (!st) {
         E.nm.textContent = c.name || c.entity;
-        E.sb.textContent = T.brak;
+        E.sb.textContent = T2.brak;
         return;
       }
       let pos = this._pos(st);
       const s = st.state;
       if (pos === null) pos = this._gpos ?? (s === "open" ? 100 : 0);
       this._gpos = pos;
-      let sb = T[s] || s;
-      if (s === "open" && pos > 0 && pos < 100) sb = T.czesc;
+      let sb = T2[s] || s;
+      if (s === "open" && pos > 0 && pos < 100) sb = T2.czesc;
       E.nm.textContent = c.name || st.attributes.friendly_name || c.entity;
       const wid = c.zrodlo === "auto" || !c.zrodlo ? rrPogodaId(c, this._hass) : null;
       const ws = !c.niebo || c.zrodlo === "brak" ? null : wid && this._hass.states[wid] ? this._hass.states[wid] : rrInternet(this._hass, () => this._render());
-      const WX = T.wx || {};
+      const WX = T2.wx || {};
       if (ws && WX[ws.state]) {
         const t = ws.attributes?.temperature;
         sb += " · " + WX[ws.state] + (typeof t === "number" ? " " + Math.round(t) + (ws.attributes.temperature_unit || "°C") : "");
@@ -1686,7 +1693,7 @@
         return st2 && st2.state === "on" ? c[k ? "tryb_prawe" : "tryb_lewe"] === "otworz" ? "otw" : "uchyl" : "";
       });
       okno.forEach((t, k) => {
-        if (t && k < mem.length) sb += ` · ${T.okno} ${mem.length > 1 ? k ? T.prawe : T.lewe : ""}${t === "otw" ? T.otw : T.uchyl}`;
+        if (t && k < mem.length) sb += ` · ${T2.okno} ${mem.length > 1 ? k ? T2.prawe : T2.lewe : ""}${t === "otw" ? T2.otw : T2.uchyl}`;
       });
       E.sb.textContent = sb;
       E.pc.textContent = pos + "%";
@@ -1976,7 +1983,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     }).catch(() => {
     });
     const zas = hass?.user?.is_admin && hass.callWS ? hass.callWS({ type: "lovelace/resources" }).then((l) => {
-      wynik.zasoby = (l || []).filter((x) => /roleta-realistyczna/.test(x.url)).length;
+      wynik.zasoby = (l || []).filter((x) => /roleta-realistyczna|okno-ha/.test(x.url)).length;
     }).catch(() => {
     }) : null;
     return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
@@ -2056,12 +2063,12 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     pokaz(n) {
       const W = this.W, K = RR_KROKI;
       this.n = n = Math.max(0, Math.min(K.length - 1, n));
-      const s = K[n], T = W.kroki[s.k], ost = n === K.length - 1;
+      const s = K[n], T2 = W.kroki[s.k], ost = n === K.length - 1;
       this.el.innerHTML = `
 <div class="wzh"><ha-icon icon="mdi:auto-fix"></ha-icon><b>${W.tytul}</b><span>${W.krok(n + 1, K.length)}</span><button class="wzx" title="${W.zamknij}">✕</button></div>
 <div class="wzs">${K.map((x, i) => `<button class="wzd${i === n ? " on" : i < n ? " ok" : ""}" data-wn="${i}" title="${esc(W.kroki[x.k].t)}"><ha-icon icon="${x.ic}"></ha-icon></button>`).join("<i></i>")}</div>
-<div class="wzt"><ha-icon icon="${s.ic}"></ha-icon><h3>${T.t}</h3></div>
-<div class="wzc"><p><b>${W.co}</b> ${T.co}</p><p><b>${W.poco}</b> ${T.poco}</p></div>
+<div class="wzt"><ha-icon icon="${s.ic}"></ha-icon><h3>${T2.t}</h3></div>
+<div class="wzc"><p><b>${W.co}</b> ${T2.co}</p><p><b>${W.poco}</b> ${T2.poco}</p></div>
 <div class="wzb"></div>
 <div class="wzn"><button class="wb sec" data-wa="-1"${n ? "" : " hidden"}>${W.wstecz}</button><span></span><button class="wb" data-wa="${ost ? "x" : "1"}">${ost ? W.gotowe : W.dalej}</button></div>`;
       const q = (x) => this.el.querySelector(x);
@@ -2092,14 +2099,14 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       box.appendChild(d);
     }
     _stan(id) {
-      const st = this.h.states[id], W = this.W, T = this.T;
+      const st = this.h.states[id], W = this.W, T2 = this.T;
       if (!st) return "";
       if (st.state === "unavailable" || st.state === "unknown") return W.niedost;
       const d = id.split(".")[0], a = st.attributes || {};
       if (d === "binary_sensor") return st.state === "on" ? W.otwarte : W.zamkniete;
       if (d === "number") return st.state + (a.unit_of_measurement ? " " + a.unit_of_measurement : "");
-      if (d === "weather") return (T.wx?.[st.state] || st.state) + (typeof a.temperature === "number" ? " " + Math.round(a.temperature) + (a.temperature_unit || "°C") : "");
-      if (d === "cover") return (T[st.state] || st.state) + (typeof a.current_position === "number" ? " " + a.current_position + "%" : "");
+      if (d === "weather") return (T2.wx?.[st.state] || st.state) + (typeof a.temperature === "number" ? " " + Math.round(a.temperature) + (a.temperature_unit || "°C") : "");
+      if (d === "cover") return (T2[st.state] || st.state) + (typeof a.current_position === "number" ? " " + a.current_position + "%" : "");
       return st.state;
     }
     /* lista podpowiedzi: najlepsze dopasowania na górze (z powodami), reszta pasujących w ha-selector „Inna” */
@@ -2378,7 +2385,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       btn.onclick = async () => {
         const d = lista[+wyb.d];
         btn.disabled = true;
-        const karta = Object.assign({ type: "custom:roleta-realistyczna" }, this.c);
+        const karta = Object.assign({ type: "custom:okno-ha" }, this.c);
         try {
           const v = await rrDodajDoPanelu(h, d.url_path, wyb.v === "nowy" ? "nowy" : +wyb.v, karta, W.nowyTytul);
           out.textContent = W.dodano(nazwa(d), v.title || v.path);
@@ -2523,7 +2530,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
  <div class="grp"><div class="lb">${L.glob}</div><p class="hint">${L.globh}</p>
   <div class="kal"><button class="play" id="gSave">${L.gSave}</button><button class="play" id="gClr" style="background:var(--secondary-text-color)">${L.gClr}</button></div><p class="hint" id="gInfo"></p></div>
  <button class="rst" data-rst="zaaw">${L.rst}</button></details>
- <div class="ver">roleta-realistyczna ${RR_WERSJA}</div>
+ <div class="ver">${RR_TXT[this._lang].nazwaKarty} ${RR_WERSJA}</div>
 </div>`;
       const $ = (s) => root.querySelector(s);
       this._r = root;
@@ -2630,7 +2637,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       $("#auto").addEventListener("change", (e) => this._set("czas", e.target.checked ? "auto" : Math.round(rrCzas("auto", this._rpm()[0]))));
       RR_PRZEL.forEach((k) => $("#" + k).addEventListener("change", (e) => this._set(k, e.target.checked)));
       $(".play").onclick = () => this._demo();
-      this._card = document.createElement("roleta-realistyczna");
+      this._card = document.createElement("okno-ha");
       $(".slot").appendChild(this._card);
       this._m = { "cover.podglad_l": { pos: 60, target: 60 }, "cover.podglad_p": { pos: 60, target: 60 } };
       this._built = true;
@@ -2898,9 +2905,17 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   };
 
   // src/index.js
-  console.info("%c roleta-realistyczna " + RR_WERSJA + " %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ", "background:#232427;color:#fff;border-radius:3px 0 0 3px", "background:#ff8f00;color:#fff;border-radius:0 3px 3px 0");
-  if (!customElements.get("roleta-realistyczna")) customElements.define("roleta-realistyczna", RoletaRealistyczna);
-  if (!customElements.get("roleta-realistyczna-editor")) customElements.define("roleta-realistyczna-editor", RoletaRealistycznaEditor);
+  console.info("%c Okno HA " + RR_WERSJA + " %c © superdarco78 · CC BY-NC-SA 4.0 · github.com/superdarco78/roleta-realistyczna ", "background:#232427;color:#fff;border-radius:3px 0 0 3px", "background:#ff8f00;color:#fff;border-radius:0 3px 3px 0");
+  var rej = (nazwa, klasa) => {
+    if (!customElements.get(nazwa)) customElements.define(nazwa, klasa);
+  };
+  rej("okno-ha", RoletaRealistyczna);
+  rej("okno-ha-editor", RoletaRealistycznaEditor);
+  rej("roleta-realistyczna", class extends RoletaRealistyczna {
+  });
+  rej("roleta-realistyczna-editor", class extends RoletaRealistycznaEditor {
+  });
+  var T = RR_TXT[String(document.documentElement.lang || navigator.language || "pl").startsWith("pl") ? "pl" : "en"];
   window.customCards = window.customCards || [];
-  window.customCards.push({ type: "roleta-realistyczna", name: "Roleta dzień-noc " + RR_WERSJA, description: "Realistyczna roleta dzień-noc na oknie 2-skrzydłowym z animacją, przeciąganiem i prawdziwą pogodą za oknem", preview: true, documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme" });
+  window.customCards.push({ type: "okno-ha", name: T.nazwaKarty + " " + RR_WERSJA, description: T.opisKarty, preview: true, documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme" });
 })();

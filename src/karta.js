@@ -13,7 +13,7 @@ export class RoletaRealistyczna extends HTMLElement {
     const e = rrKandydaci(hass, 'cover')[0]?.id;   // v23: najlepiej dopasowana roleta (najpierw grupa = okno 2-skrzydłowe)
     return { entity: e || 'cover.roleta' };
   }
-  static getConfigElement() { return document.createElement('roleta-realistyczna-editor'); }
+  static getConfigElement() { return document.createElement('okno-ha-editor'); }
 
   setConfig(cfg) {
     if (!cfg || !cfg.entity) throw new Error('Wybierz encję rolety (cover.*)');
