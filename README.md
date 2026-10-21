@@ -1,4 +1,4 @@
-<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/hero-ha-pl.png" alt="Roleta dzień-noc" width="100%"></a></p>
+<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/hero-okno-pl.png" alt="Okno HA" width="100%"></a></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=wersja&color=0288d1" alt="wersja"></a>
@@ -287,7 +287,7 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 > [!NOTE]
 > **Nie musisz tego czytać.** Kreator ustawił już wszystko. Tu są szczegóły: wszystkie ekrany kreatora, edytor, opcje, YAML i instalacja bez HACS.
 
-- [Karta Roleta dzień-noc](#karta-roleta-dzien-noc)
+- [Karta Okno HA](#karta-okno-ha)
   - [Cele](#cele)
   - [Wygląd w różnych sytuacjach](#wyglad-w-roznych-sytuacjach)
   - [Kolory i okleiny](#kolory-i-okleiny)
@@ -313,8 +313,8 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 
 ---
 
-<a name="karta-roleta-dzien-noc"></a>
-## <a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> Karta Roleta dzień-noc
+<a name="karta-okno-ha"></a>
+## <a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> Karta Okno HA
 
 Karta pokazuje okno z roletą dzień-noc. Przesuwasz ją palcem. Obraz rusza się razem z silnikiem. Za szybą widać pogodę i porę dnia.
 
@@ -463,7 +463,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 
 <table>
 <tr><th align="left"><a name="i68" href="#i68"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="190" height="0"></a><br>Nazwa</th><th align="left"><a name="i69" href="#i69"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="110" height="0"></a><br>Typ</th><th align="left"><a name="i70" href="#i70"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="140" height="0"></a><br>Domyślnie</th><th align="left"><a name="i71" href="#i71"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="460" height="0"></a><br>Opis</th></tr>
-<tr><td align="left"><code>type</code></td><td align="left">tekst</td><td align="left"><b>wymagane</b></td><td align="left">custom:roleta-realistyczna</td></tr>
+<tr><td align="left"><code>type</code></td><td align="left">tekst</td><td align="left"><b>wymagane</b></td><td align="left">custom:okno-ha</td></tr>
 <tr><td align="left"><code>entity</code></td><td align="left">encja</td><td align="left"><b>wymagane</b></td><td align="left">Roleta cover.* albo grupa rolet (lewa + prawa). Przykład: cover.zaluzje_salon</td></tr>
 <tr><td align="left"><code>name</code></td><td align="left">tekst</td><td align="left">nazwa encji</td><td align="left">Nazwa na karcie.</td></tr>
 <tr><td align="left"><code>jezyk</code></td><td align="left">tekst</td><td align="left">auto</td><td align="left">auto (wg języka HA), pl albo en.</td></tr>
@@ -541,7 +541,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 **Najprościej** (resztę karta wykryje sama):
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.zaluzje_salon
 ```
 
@@ -551,7 +551,7 @@ entity: cover.zaluzje_salon
 **Okno 2-skrzydłowe z osobnymi roletami i czujnikami okna:**
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.salon_lewa
 name: Salon
 roleta_lewa: cover.salon_lewa
@@ -568,7 +568,7 @@ tryb_prawe: otworz
 **Drewniane okno (złoty dąb) z beżową tkaniną:**
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.zaluzje_kuchnia
 name: Kuchnia
 kolor: bezowy
@@ -582,7 +582,7 @@ wysokosc: 300
 **Własne zdjęcie widoku zza okna:**
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.zaluzje_sypialnia
 tlo: /local/widok-sypialnia.jpg
 ```
@@ -593,7 +593,7 @@ tlo: /local/widok-sypialnia.jpg
 **Jedno skrzydło, bez pogody:**
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.roleta_sypialnia
 skrzydla: 1
 zrodlo: brak
@@ -687,7 +687,7 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 
 1. **HACS → ⋮ (prawy górny róg) → Własne repozytoria**.
 2. Repozytorium: `https://github.com/superdarco78/roleta-realistyczna`, typ: **Dashboard**, **Dodaj**.
-3. Wyszukaj „Roleta dzień-noc” → **Pobierz**.
+3. Wyszukaj „Okno HA” → **Pobierz**.
 
 
 

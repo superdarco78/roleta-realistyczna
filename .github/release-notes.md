@@ -1,4 +1,4 @@
-<p align="center"><a name="r1" href="#r1"><img src="{{RAW}}/img/zdjecia/hero-ha-pl.png" width="100%" alt="Roleta dzień-noc"></a></p>
+<p align="center"><a name="r1" href="#r1"><img src="{{RAW}}/img/hero/hero-okno-pl.png" width="100%" alt="Okno HA"></a></p>
 
 <h1 align="center">{{TYTUL}}</h1>
 
@@ -49,7 +49,7 @@ Na komputerze naciśnij **Ctrl + F5**. W telefonie zamknij aplikację i otwórz 
 
 ## <a name="r9" href="#r9"><img src="{{RAW}}/img/zdjecia/ikony-ha3/translate.png" height="36" align="absmiddle"></a> English
 
-Update in **HACS → Roleta dzień-noc → Download**, then refresh the page (**Ctrl + F5**). Your settings stay the same. The card, the editor and the wizard use the language of your Home Assistant profile. Full guide: [README_EN]({{REPO_URL}}/blob/main/README_EN.md).
+Update in **HACS → Okno HA → Download**, then refresh the page (**Ctrl + F5**). Your settings stay the same. The card, the editor and the wizard use the language of your Home Assistant profile. Full guide: [README_EN]({{REPO_URL}}/blob/main/README_EN.md).
 
 ---
 

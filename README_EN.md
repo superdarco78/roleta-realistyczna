@@ -1,4 +1,4 @@
-<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/hero-ha-en.png" alt="Roleta dzień-noc" width="100%"></a></p>
+<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/hero-okno-en.png" alt="HA Window" width="100%"></a></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=release&color=0288d1" alt="release"></a>
@@ -272,7 +272,7 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 > [!NOTE]
 > **You do not need to read this.** The wizard has already set everything up. Here are the details: all wizard screens, the editor, options, YAML and installing without HACS.
 
-- [The Roleta dzień-noc card](#the-roleta-dzien-noc-card)
+- [The HA Window card](#the-ha-window-card)
   - [Goals](#goals)
   - [How it looks](#how-it-looks)
   - [Colours and wood finishes](#colours-and-wood-finishes)
@@ -286,8 +286,8 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 
 ---
 
-<a name="the-roleta-dzien-noc-card"></a>
-## <a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> The Roleta dzień-noc card
+<a name="the-ha-window-card"></a>
+## <a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> The HA Window card
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
@@ -403,7 +403,7 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 
 <table>
 <tr><th align="left"><a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="190" height="0"></a><br>Name</th><th align="left"><a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="110" height="0"></a><br>Type</th><th align="left"><a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="140" height="0"></a><br>Default</th><th align="left"><a name="i66" href="#i66"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="460" height="0"></a><br>Description</th></tr>
-<tr><td align="left"><code>type</code></td><td align="left">text</td><td align="left"><b>required</b></td><td align="left">custom:roleta-realistyczna</td></tr>
+<tr><td align="left"><code>type</code></td><td align="left">text</td><td align="left"><b>required</b></td><td align="left">custom:okno-ha</td></tr>
 <tr><td align="left"><code>entity</code></td><td align="left">entity</td><td align="left"><b>required</b></td><td align="left">cover.* or a blind group (left + right).</td></tr>
 <tr><td align="left"><code>name</code></td><td align="left">text</td><td align="left">entity name</td><td align="left">Card title.</td></tr>
 <tr><td align="left"><code>jezyk</code></td><td align="left">text</td><td align="left">auto</td><td align="left">auto (HA language), pl, en.</td></tr>
@@ -441,7 +441,7 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 ## <a name="i67" href="#i67"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/flask-outline.png" height="36" align="absmiddle"></a> Examples
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.living_room
 ```
 
@@ -449,7 +449,7 @@ entity: cover.living_room
 <p align="center"><a href="#obr-11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/przyklady/ex1en.png" width="49%" alt="Preview"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/przyklady/ex1en-ciemny.png" width="49%" alt="Preview"></a></p>
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.living_left
 name: Living room
 roleta_lewa: cover.living_left
@@ -464,7 +464,7 @@ tryb_prawe: otworz
 <p align="center"><a href="#obr-12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/przyklady/ex2en.png" width="49%" alt="Preview"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/przyklady/ex2en-ciemny.png" width="49%" alt="Preview"></a></p>
 
 ```yaml
-type: custom:roleta-realistyczna
+type: custom:okno-ha
 entity: cover.bedroom
 skrzydla: 1
 kolor: bezowy
@@ -552,7 +552,7 @@ Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScrip
 
 1. **HACS → ⋮ → Custom repositories**.
 2. Repository `https://github.com/superdarco78/roleta-realistyczna`, type **Dashboard**, **Add**.
-3. Search for “Roleta dzień-noc” → **Download**.
+3. Search for “Okno HA” → **Download**.
 
 
 
