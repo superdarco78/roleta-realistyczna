@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v34 – Kolory z motywu Home Assistanta
+
+- 🎨 Karta, kreator i edytor biorą kolory z Twojego profilu HA na żywo: kolor główny i kolor akcentu (uchwyt, linia celu, przycisk animacji). Zmiana koloru w profilu od razu zmienia kartę
+- 🔢 Jeden numer: bez plakietki wersji karty; w edytorze wersja integracji Okno HA
+
 ## v33 – Dowolny kolor z palety w kreatorze
 
 - 🎨 W kreatorze z kółkami (krok „Wygląd”) można wybrać dowolny kolor osłony i ramy z palety. Podgląd zmienia się na żywo, kolor zapisuje się sam

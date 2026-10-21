@@ -22,7 +22,7 @@ export const RR_EDYTOR_STYL = `
 .wxp button{border:none;border-radius:14px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;color:var(--primary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .wxp button[aria-pressed="true"]{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff);box-shadow:none}
 .pvh{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--secondary-text-color)}
-.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
+.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--accent-color,var(--primary-color,#03a9f4));color:var(--text-accent-color,#fff)}
 .grp{display:grid;gap:8px}
 .lb{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--secondary-text-color)}
 .dots{display:flex;flex-wrap:wrap;gap:6px;padding:6px 2px 6px}

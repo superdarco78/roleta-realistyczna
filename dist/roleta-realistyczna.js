@@ -108,10 +108,11 @@
    v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
    v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia
    v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
-   v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów */
+   v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
+   v34 – kolory z motywu HA: akcent (uchwyt, linia celu, przyciski animacji), bez numeru karty – w edytorze wersja integracji */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v33";
+  var RR_WERSJA = "v34";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -1547,7 +1548,6 @@
 .hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .hd ha-icon{--mdc-icon-size:22px;color:var(--primary-text-color);background:rgba(127,127,127,.18);border-radius:50%;padding:8px}
 .nm{font-size:16px;font-weight:500;color:var(--primary-text-color)}
-.ver{font-size:10px;font-weight:500;color:var(--secondary-text-color);border:1px solid var(--divider-color,rgba(127,127,127,.4));border-radius:8px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .sb{font-size:13px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
 .win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? 0.72 : 0.9))}px;margin:0 auto;padding:6px;border-radius:3px;
@@ -1623,7 +1623,7 @@
 .sash:active .bar:after{cursor:grabbing;filter:brightness(1.08)}
 /* środkowy uchwyt (v11): na słupku między skrzydłami, na wysokości listew – rusza oba skrzydła */
 .mid{position:absolute;left:50%;top:0;z-index:7;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:grab;touch-action:none;
- background:radial-gradient(circle at 35% 30%,#fff,#dcdcdc 70%,#bdbdbd);box-shadow:0 2px 5px rgba(0,0,0,.5),0 0 0 2px var(--primary-color,#03a9f4);
+ background:radial-gradient(circle at 35% 30%,#fff,#dcdcdc 70%,#bdbdbd);box-shadow:0 2px 5px rgba(0,0,0,.5),0 0 0 2px var(--accent-color,var(--primary-color,#03a9f4));
  display:flex;align-items:center;justify-content:center;color:#444}
 .mid:active{cursor:grabbing;transform:scale(1.1)}
 .mid svg{width:20px;height:20px;fill:currentColor}
@@ -1636,8 +1636,8 @@
 .sash.otw[data-i="0"]{transform-origin:0 50%;transform:rotateY(calc(-1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw[data-i="1"]{transform-origin:100% 50%;transform:rotateY(calc(1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw{box-shadow:0 0 14px rgba(0,0,0,.55)}
-.ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--primary-color,#03a9f4);z-index:6;display:none}
-.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--primary-color,#03a9f4);color:#fff;font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
+.ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--accent-color,var(--primary-color,#03a9f4));z-index:6;display:none}
+.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,var(--primary-color,#03a9f4));color:var(--text-accent-color,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .mv{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:5;color:#fff;background:rgba(0,0,0,.5);
  width:26px;height:26px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .mv ha-icon{--mdc-icon-size:18px;animation:rrb 1s ease-in-out infinite}
@@ -1882,7 +1882,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 <style>${rrKartaStyl({ H, n, sloje, rama, col, c })}</style>
 <div class="rr">
  <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
-  <div><div><span class="nm"></span><span class="ver">${RR_WERSJA}</span></div><div class="sb"></div></div><div class="pc"></div></div>
+  <div><div><span class="nm"></span></div><div class="sb"></div></div><div class="pc"></div></div>
  <div class="win ${ruch ? "ruch" : "stal"}">${Array.from({ length: n }, (_, i) => sash(i)).join("")}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T2.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ""}</div>
  <div class="bt">
   <button class="up" title="${T2.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
@@ -2227,7 +2227,7 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wxp button{border:none;border-radius:14px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;color:var(--primary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .wxp button[aria-pressed="true"]{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff);box-shadow:none}
 .pvh{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--secondary-text-color)}
-.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
+.play{border:none;border-radius:16px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;background:var(--accent-color,var(--primary-color,#03a9f4));color:var(--text-accent-color,#fff)}
 .grp{display:grid;gap:8px}
 .lb{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--secondary-text-color)}
 .dots{display:flex;flex-wrap:wrap;gap:6px;padding:6px 2px 6px}
@@ -2746,6 +2746,14 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     set hass(h) {
       this._hass = h;
       this._go();
+      this._wersja();
+    }
+    /* v34: jeden numer – wersja integracji Okno HA (karta jest w jej środku); bez integracji nic */
+    _wersja() {
+      const w = this.shadowRoot?.querySelector("#wer");
+      if (!w || !this._hass) return;
+      const u = Object.values(this._hass.states).find((s) => s.entity_id.startsWith("update.") && String(s.attributes?.release_url || "").includes("okno-ha-integracja") && s.attributes?.installed_version);
+      w.textContent = u ? RR_TXT[this._lang].nazwaKarty + " " + String(u.attributes.installed_version).replace(/^v/, "") : "";
     }
     disconnectedCallback() {
       clearInterval(this._loop);
@@ -2879,7 +2887,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
  <div class="grp"><div class="lb">${L.glob}</div><p class="hint">${L.globh}</p>
   <div class="kal"><button class="play" id="gSave">${L.gSave}</button><button class="play" id="gClr" style="background:var(--secondary-text-color)">${L.gClr}</button></div><p class="hint" id="gInfo"></p></div>
  <button class="rst" data-rst="zaaw">${L.rst}</button></details>
- <div class="ver">${RR_TXT[this._lang].nazwaKarty} ${RR_WERSJA}</div>
+ <div class="ver" id="wer"></div>
 </div>`;
       const $ = (s) => root.querySelector(s);
       this._r = root;
@@ -3271,7 +3279,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   window.customCards = window.customCards || [];
   window.customCards.push({
     type: "okno-ha",
-    name: T.nazwaKarty + " " + RR_WERSJA,
+    name: T.nazwaKarty,
     description: T.opisKarty,
     preview: true,
     documentationURL: "https://github.com/superdarco78/roleta-realistyczna#readme",

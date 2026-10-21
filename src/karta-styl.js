@@ -85,7 +85,6 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .hd ha-icon{--mdc-icon-size:22px;color:var(--primary-text-color);background:rgba(127,127,127,.18);border-radius:50%;padding:8px}
 .nm{font-size:16px;font-weight:500;color:var(--primary-text-color)}
-.ver{font-size:10px;font-weight:500;color:var(--secondary-text-color);border:1px solid var(--divider-color,rgba(127,127,127,.4));border-radius:8px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .sb{font-size:13px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
 .win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? .72 : .9))}px;margin:0 auto;padding:6px;border-radius:3px;
@@ -161,7 +160,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .sash:active .bar:after{cursor:grabbing;filter:brightness(1.08)}
 /* środkowy uchwyt (v11): na słupku między skrzydłami, na wysokości listew – rusza oba skrzydła */
 .mid{position:absolute;left:50%;top:0;z-index:7;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;cursor:grab;touch-action:none;
- background:radial-gradient(circle at 35% 30%,#fff,#dcdcdc 70%,#bdbdbd);box-shadow:0 2px 5px rgba(0,0,0,.5),0 0 0 2px var(--primary-color,#03a9f4);
+ background:radial-gradient(circle at 35% 30%,#fff,#dcdcdc 70%,#bdbdbd);box-shadow:0 2px 5px rgba(0,0,0,.5),0 0 0 2px var(--accent-color,var(--primary-color,#03a9f4));
  display:flex;align-items:center;justify-content:center;color:#444}
 .mid:active{cursor:grabbing;transform:scale(1.1)}
 .mid svg{width:20px;height:20px;fill:currentColor}
@@ -174,8 +173,8 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .sash.otw[data-i="0"]{transform-origin:0 50%;transform:rotateY(calc(-1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw[data-i="1"]{transform-origin:100% 50%;transform:rotateY(calc(1deg * var(--rr-otw,41)));z-index:8}
 .sash.otw{box-shadow:0 0 14px rgba(0,0,0,.55)}
-.ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--primary-color,#03a9f4);z-index:6;display:none}
-.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--primary-color,#03a9f4);color:#fff;font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
+.ghost{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--accent-color,var(--primary-color,#03a9f4));z-index:6;display:none}
+.ghost span{position:absolute;left:50%;transform:translateX(-50%);top:-22px;background:var(--accent-color,var(--primary-color,#03a9f4));color:var(--text-accent-color,#fff);font-size:12px;font-weight:600;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .mv{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:5;color:#fff;background:rgba(0,0,0,.5);
  width:26px;height:26px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .mv ha-icon{--mdc-icon-size:18px;animation:rrb 1s ease-in-out infinite}

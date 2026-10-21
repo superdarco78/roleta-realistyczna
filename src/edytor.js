@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
+import { RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
@@ -18,7 +18,13 @@ export const rrTylkoKarta = c => Object.fromEntries(Object.entries(c).filter(([k
 
 export class RoletaRealistycznaEditor extends HTMLElement {
   setConfig(c) { this._cfg = Object.assign({}, c); this._go(); }
-  set hass(h) { this._hass = h; this._go(); }
+  set hass(h) { this._hass = h; this._go(); this._wersja(); }
+  /* v34: jeden numer – wersja integracji Okno HA (karta jest w jej środku); bez integracji nic */
+  _wersja() {
+    const w = this.shadowRoot?.querySelector('#wer'); if (!w || !this._hass) return;
+    const u = Object.values(this._hass.states).find(s => s.entity_id.startsWith('update.') && String(s.attributes?.release_url || '').includes('okno-ha-integracja') && s.attributes?.installed_version);
+    w.textContent = u ? RR_TXT[this._lang].nazwaKarty + ' ' + String(u.attributes.installed_version).replace(/^v/, '') : '';
+  }
   disconnectedCallback() { clearInterval(this._loop); this._loop = null; clearInterval(this._kalI); clearInterval(this._ak); this._ak = null; cancelAnimationFrame(this._raf); this._raf = null; }
   connectedCallback() { if (this._built) this._startMotor(); }
   get _L() { return RR_ED[this._lang]; }
@@ -122,7 +128,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
  <div class="grp"><div class="lb">${L.glob}</div><p class="hint">${L.globh}</p>
   <div class="kal"><button class="play" id="gSave">${L.gSave}</button><button class="play" id="gClr" style="background:var(--secondary-text-color)">${L.gClr}</button></div><p class="hint" id="gInfo"></p></div>
  <button class="rst" data-rst="zaaw">${L.rst}</button></details>
- <div class="ver">${RR_TXT[this._lang].nazwaKarty} ${RR_WERSJA}</div>
+ <div class="ver" id="wer"></div>
 </div>`;
     const $ = s => root.querySelector(s);
     this._r = root;

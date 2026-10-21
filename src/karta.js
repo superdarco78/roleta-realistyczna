@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY } from './stale.js';
+import { RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY } from './stale.js';
 import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
@@ -125,7 +125,7 @@ export class RoletaRealistyczna extends HTMLElement {
 <style>${rrKartaStyl({ H, n, sloje, rama, col, c })}</style>
 <div class="rr">
  <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
-  <div><div><span class="nm"></span><span class="ver">${RR_WERSJA}</span></div><div class="sb"></div></div><div class="pc"></div></div>
+  <div><div><span class="nm"></span></div><div class="sb"></div></div><div class="pc"></div></div>
  <div class="win ${ruch ? 'ruch' : 'stal'}">${Array.from({ length: n }, (_, i) => sash(i)).join('')}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ''}</div>
  <div class="bt">
   <button class="up" title="${T.up}"><ha-icon icon="mdi:arrow-up"></ha-icon></button>
