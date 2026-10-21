@@ -54,7 +54,7 @@ Update in **HACS → Okno HA → Download**, then refresh the page (**Ctrl + F5*
 
 <p align="center">
   <a href="{{REPO_URL}}#readme"><img src="https://img.shields.io/badge/Pe%C5%82na%20instrukcja-krok%20po%20kroku-0288d1?style=for-the-badge&logo=bookstack&logoColor=white" alt="Pełna instrukcja" height="40"></a>
-  <a href="{{POBIERZ}}"><img src="https://img.shields.io/badge/Pobierz-roleta--realistyczna.js-2e7d32?style=for-the-badge&logo=github&logoColor=white" alt="Pobierz plik" height="40"></a>
+  <a href="{{POBIERZ}}"><img src="https://img.shields.io/badge/Pobierz-Okno%20HA-2e7d32?style=for-the-badge&logo=github&logoColor=white" alt="Pobierz Okno HA" height="40"></a>
 </p>
 
 <p align="center">
