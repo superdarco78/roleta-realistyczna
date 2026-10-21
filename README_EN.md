@@ -352,7 +352,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 <tr>
 <td align="center" width="33%"><b>Golden oak + beige</b><br><a name="obr-g16"></a><a href="#obr-g16"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/zloty.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/zloty.png" width="100%"></picture></a></td>
 <td align="center" width="33%"><b>Anthracite + turquoise</b><br><a name="obr-g17"></a><a href="#obr-g17"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/turkus.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/turkus.png" width="100%"></picture></a></td>
-<td align="center" width="33%"><b>1 sash</b><br><a name="obr-g18"></a><a href="#obr-g18"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/jedno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/jedno.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>1 sash</b><br><a name="obr-g18"></a><a href="#obr-g18"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/jedno-v24.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/jedno-v24.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
@@ -467,7 +467,7 @@ jezyk: en
 ```
 
 <a name="obr-13"></a>
-<p align="center"><a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en.png" width="49%" alt="Preview"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en-ciemny.png" width="49%" alt="Preview"></a></p>
+<p align="center"><a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en-v24.png" width="49%" alt="Preview"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en-v24-ciemny.png" width="49%" alt="Preview"></a></p>
 
 ---
 

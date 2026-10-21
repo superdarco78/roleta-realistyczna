@@ -387,7 +387,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 <tr>
 <td align="center" width="33%"><b>Złoty dąb + beż</b><br><a name="obr-g16"></a><a href="#obr-g16"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zloty.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zloty.png" width="100%"></picture></a></td>
 <td align="center" width="33%"><b>Antracyt + turkus</b><br><a name="obr-g17"></a><a href="#obr-g17"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/turkus.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/turkus.png" width="100%"></picture></a></td>
-<td align="center" width="33%"><b>1 skrzydło</b><br><a name="obr-g18"></a><a href="#obr-g18"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/jedno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/jedno.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>1 skrzydło</b><br><a name="obr-g18"></a><a href="#obr-g18"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/jedno-v24.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/jedno-v24.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
@@ -598,7 +598,7 @@ zrodlo: brak
 ```
 
 <a name="obr-16"></a>
-<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl-v24.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5-pl-v24-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 ---
 
