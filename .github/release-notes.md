@@ -32,8 +32,7 @@
 
 ## <a name="r3" href="#r3"><img src="{{RAW}}/img/z3/ikony-ha3/update.png" height="36" align="absmiddle"></a> Jak zaktualizować
 
-> [!NOTE]
-> Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
+> ℹ️ Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
 
 ### <a name="r4" href="#r4"><img src="{{RAW}}/img/z3/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Kliknij niebieski przycisk „Otwórz w HACS” na górze tej strony
 

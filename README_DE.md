@@ -33,8 +33,7 @@
 </p>
 
 
-> [!NOTE]
-> Die Karte funktioniert mit **jedem Rollo** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy und mehr. Am schönsten sieht sie mit einem Doppelrollo (Zebra) an einem zweiflügeligen Fenster aus, ein Flügel geht auch. Nach dem Hinzufügen **richtet der Assistent alles für dich ein**.
+> ℹ️ Die Karte funktioniert mit **jedem Rollo** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy und mehr. Am schönsten sieht sie mit einem Doppelrollo (Zebra) an einem zweiflügeligen Fenster aus, ein Flügel geht auch. Nach dem Hinzufügen **richtet der Assistent alles für dich ein**.
 
 <a name="obr-1"></a>
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja-en.webp" width="49%" alt="Animation"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja-ciemna-en.webp" width="49%" alt="Animation"></a></p>
@@ -66,8 +65,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Teil 1. Für Einsteiger
 
 <a name="start-in-4-steps"></a>
-> [!NOTE]
-> **Mehr brauchst du nicht.** 4 Schritte, etwa eine Minute. Den Rest macht der Assistent. Teil 2 kannst du überspringen.
+> ℹ️ **Mehr brauchst du nicht.** 4 Schritte, etwa eine Minute. Den Rest macht der Assistent. Teil 2 kannst du überspringen.
 
 <a name="krok-1"></a>
 ### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Klicke auf den blauen Knopf
@@ -117,8 +115,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Zusammenfassung</b></td><td align="left">Alles prüfen und wählen, wo die Karte hinkommt</td></tr>
 </table>
 
-> [!NOTE]
-> Unsicher? Lass die Auswahl oben in der Liste. Die Karte hat das Beste gewählt.
+> ℹ️ Unsicher? Lass die Auswahl oben in der Liste. Die Karte hat das Beste gewählt.
 
 <a name="kreator-krok-1"></a>
 #### <a name="i28" href="#i28"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-shutter.png" height="32" align="absmiddle"></a> Schritt 1 von 7: Rollo wählen
@@ -162,8 +159,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-dol.png" width="100%" alt=""></a></p>
 
-> [!NOTE]
-> ✅ **Fertig.** Klicke **Speichern**. Die Karte funktioniert.
+> ℹ️ ✅ **Fertig.** Klicke **Speichern**. Die Karte funktioniert.
 
 ---
 
@@ -190,8 +186,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 <a name="updating"></a>
 ### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualisieren
 
-> [!NOTE]
-> Ein Update **ändert deine Einstellungen nicht**. Deine Karten funktionieren weiter.
+> ℹ️ Ein Update **ändert deine Einstellungen nicht**. Deine Karten funktionieren weiter.
 
 #### ⭐ Empfohlen: automatisch mit HACS
 
@@ -287,7 +282,6 @@ Alle Optionen, YAML-Beispiele, der Editor und die Installation ohne HACS stehen 
 
 ---
 
-> [!NOTE]
-> Diese Übersetzung wurde automatisch erstellt. Verbesserungen sind willkommen.
+> ℹ️ Diese Übersetzung wurde automatisch erstellt. Verbesserungen sind willkommen.
 
 [CC BY-NC-SA 4.0](LICENSE) © [superdarco78](https://github.com/superdarco78). Privat und nicht kommerziell mit Namensnennung. Verkauf oder kommerzielle Nutzung nur mit Erlaubnis des Autors.

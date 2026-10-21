@@ -33,8 +33,7 @@
 </p>
 
 
-> [!NOTE]
-> Karta funguje s **každou roletou** v Home Assistantu (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy a dalšími. Nejlépe vypadá s roletou den-noc (zebra) na dvoukřídlém okně, ale jde i jedno křídlo. Po přidání karty **průvodce vše nastaví za tebe**.
+> ℹ️ Karta funguje s **každou roletou** v Home Assistantu (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy a dalšími. Nejlépe vypadá s roletou den-noc (zebra) na dvoukřídlém okně, ale jde i jedno křídlo. Po přidání karty **průvodce vše nastaví za tebe**.
 
 <a name="obr-1"></a>
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja-en.webp" width="49%" alt="Animation"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja-ciemna-en.webp" width="49%" alt="Animation"></a></p>
@@ -66,8 +65,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Část 1. Pro začátečníky
 
 <a name="start-in-4-steps"></a>
-> [!NOTE]
-> **To je vše, co potřebuješ.** 4 kroky, asi minuta. Zbytek udělá průvodce. Část 2 můžeš přeskočit.
+> ℹ️ **To je vše, co potřebuješ.** 4 kroky, asi minuta. Zbytek udělá průvodce. Část 2 můžeš přeskočit.
 
 <a name="krok-1"></a>
 ### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Klikni na modré tlačítko
@@ -117,8 +115,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Shrnutí</b></td><td align="left">Vše zkontroluj a vyber, kam karta patří</td></tr>
 </table>
 
-> [!NOTE]
-> Nevíš? Nech, co je vybrané nahoře v seznamu. Karta vybrala to nejlepší.
+> ℹ️ Nevíš? Nech, co je vybrané nahoře v seznamu. Karta vybrala to nejlepší.
 
 <a name="kreator-krok-1"></a>
 #### <a name="i28" href="#i28"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-shutter.png" height="32" align="absmiddle"></a> Krok 1 z 7: Vyber roletu
@@ -162,8 +159,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-en-dol.png" width="100%" alt=""></a></p>
 
-> [!NOTE]
-> ✅ **Hotovo.** Klikni **Uložit**. Karta funguje.
+> ℹ️ ✅ **Hotovo.** Klikni **Uložit**. Karta funguje.
 
 ---
 
@@ -190,8 +186,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 <a name="updating"></a>
 ### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualizace
 
-> [!NOTE]
-> Aktualizace **nemění** tvoje nastavení. Tvoje karty fungují dál.
+> ℹ️ Aktualizace **nemění** tvoje nastavení. Tvoje karty fungují dál.
 
 #### ⭐ Doporučeno: automaticky přes HACS
 
@@ -287,7 +282,6 @@ Všechny volby, příklady YAML, editor a instalace bez HACS jsou podrobně a s 
 
 ---
 
-> [!NOTE]
-> Tento překlad vznikl automaticky. Opravy jsou vítány.
+> ℹ️ Tento překlad vznikl automaticky. Opravy jsou vítány.
 
 [CC BY-NC-SA 4.0](LICENSE) © [superdarco78](https://github.com/superdarco78). Pro osobní nekomerční použití s uvedením autora. Prodej nebo komerční použití jen se souhlasem autora.

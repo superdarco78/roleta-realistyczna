@@ -33,8 +33,7 @@
 </p>
 
 
-> [!NOTE]
-> Karta działa z każdym silnikiem rolet w Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i inne.
+> ℹ️ Karta działa z każdym silnikiem rolet w Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i inne.
 > Najładniej wygląda przy oknie z dwoma skrzydłami. Jedno skrzydło też działa.
 > Po dodaniu karty kreator sam wszystko ustawi.
 
@@ -68,8 +67,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Część 1. Dla początkujących
 
 <a name="start-w-4-krokach"></a>
-> [!NOTE]
-> **To wszystko, czego potrzebujesz.** 4 kroki, około minuty. Resztę ustawi kreator. Część 2 możesz pominąć.
+> ℹ️ **To wszystko, czego potrzebujesz.** 4 kroki, około minuty. Resztę ustawi kreator. Część 2 możesz pominąć.
 
 <a name="krok-1"></a>
 ### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Kliknij niebieski przycisk
@@ -119,8 +117,7 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Podsumowanie</b></td><td align="left">Sprawdzasz wszystko i wybierasz, gdzie ma być karta</td></tr>
 </table>
 
-> [!NOTE]
-> Nie wiesz, co wybrać? Zostaw to, co jest zaznaczone na górze listy. Karta wybrała najlepiej pasujące.
+> ℹ️ Nie wiesz, co wybrać? Zostaw to, co jest zaznaczone na górze listy. Karta wybrała najlepiej pasujące.
 
 <a name="kreator-krok-1"></a>
 #### <a name="i28" href="#i28"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-shutter.png" height="32" align="absmiddle"></a> Krok 1: Roleta
@@ -164,8 +161,7 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-dol.png" width="100%" alt=""></a></p>
 
-> [!NOTE]
-> ✅ **Gotowe.** Kliknij **Zapisz**. Karta działa.
+> ℹ️ ✅ **Gotowe.** Kliknij **Zapisz**. Karta działa.
 
 ---
 
@@ -192,8 +188,7 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 <a name="aktualizacja"></a>
 ### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualizacja
 
-> [!NOTE]
-> Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
+> ℹ️ Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
 
 #### ⭐ Polecane: automatycznie przez HACS
 
@@ -300,8 +295,7 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 <a name="dla-zaawansowanych"></a>
 # <a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/wrench.png" height="46" align="absmiddle"></a> Część 2. Dla zaawansowanych
 
-> [!NOTE]
-> **Nie musisz tego czytać.** Kreator ustawił już wszystko. Tu są szczegóły: wszystkie ekrany kreatora, edytor, opcje, YAML i instalacja bez HACS.
+> ℹ️ **Nie musisz tego czytać.** Kreator ustawił już wszystko. Tu są szczegóły: wszystkie ekrany kreatora, edytor, opcje, YAML i instalacja bez HACS.
 
 - [Karta Okno HA](#karta-okno-ha)
   - [Cele](#cele)
@@ -801,5 +795,4 @@ Jeśli karta Ci się podoba, zostaw ⭐ na górze strony. Dziękuję!
 
 [CC BY-NC-SA 4.0](LICENSE) © [superdarco78](https://github.com/superdarco78). Do własnego, niekomercyjnego użytku z podaniem autora.
 
-> [!NOTE]
-> **© 2026 superdarco78.** Karta, grafiki i opisy są chronione licencją [CC BY-NC-SA 4.0](LICENSE). Możesz używać za darmo w swoim domu. Sprzedaż, odsprzedaż, wgrywanie jako własne i użycie komercyjne tylko za zgodą autora. Oficjalne źródło: [github.com/superdarco78/roleta-realistyczna](https://github.com/superdarco78/roleta-realistyczna).
+> ℹ️ **© 2026 superdarco78.** Karta, grafiki i opisy są chronione licencją [CC BY-NC-SA 4.0](LICENSE). Możesz używać za darmo w swoim domu. Sprzedaż, odsprzedaż, wgrywanie jako własne i użycie komercyjne tylko za zgodą autora. Oficjalne źródło: [github.com/superdarco78/roleta-realistyczna](https://github.com/superdarco78/roleta-realistyczna).

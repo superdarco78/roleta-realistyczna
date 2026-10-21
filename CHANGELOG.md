@@ -6,8 +6,13 @@
 - 🧱 **Na zewnątrz**: roleta nadstawna (kaseta w kolorze ramy), natynkowa (skrzynka ze ściętym frontem), podtynkowa (skrzynka w ścianie), z perforacją (świetliki), żaluzja fasadowa C80 i Z90, screen ZIP
 - 📐 Każdy rodzaj ma swoją kasetę, prowadnice boczne i listwę dolną
 - 🗂️ W edytorze i kreatorze typy są w dwóch grupach (**W pokoju** i **Na zewnątrz**) z krótkim opisem każdego
-- 📖 Opis w HACS wyświetla obrazki zamiast kodu
 - ✅ Twoje karty wyglądają tak samo jak wcześniej
+
+## v26.1 – Poprawiony opis w HACS
+
+- 📄 Opis karty w HACS wygląda teraz tak samo jak na GitHubie: obrazki zamiast kodu, nic nie wychodzi poza ekran
+- 🌅 Nowy baner na górze opisu
+- ✅ Sama karta bez zmian
 
 ## v26 – Typy osłon, promienie słońca i dźwięk silnika
 
