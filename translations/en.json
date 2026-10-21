@@ -185,7 +185,19 @@
         "otworz",
         "open (on hinges, inward)"
       ]
-    ]
+    ],
+    "osl": "Shade type",
+    "osln": [
+      "Day-night",
+      "Blackout",
+      "Pleated",
+      "Roman",
+      "Venetian",
+      "Shutter"
+    ],
+    "d_osl": "How the material looks. Day-night has solid and sheer stripes. Venetian has slats. Shutter is an outside roller shutter made of aluminium profiles.",
+    "promienie": "Sun rays coming through the window (daytime, when sunny)",
+    "dzwiek": "Quiet motor sound while moving (after a tap)"
   },
   "kolory": {
     "czarny": "black",

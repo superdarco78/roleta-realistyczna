@@ -1,5 +1,13 @@
 # 📝 Historia zmian
 
+## v26 – Typy osłon, promienie słońca i dźwięk silnika
+
+- 🪟 **Typ osłony** do wyboru: dzień-noc, pełna, plisa, rzymska, żaluzja i roleta zewnętrzna. Wybierasz w edytorze (🎨 Wygląd) albo w kreatorze
+- ☀️ **Promienie słońca**: w słoneczny dzień przez okno wpada ciepłe światło (można wyłączyć)
+- 🔊 **Dźwięk silnika**: cichy szum, gdy roleta jedzie po kliknięciu (domyślnie wyłączony)
+- 🎨 Ikona karty zmienia się według typu osłony
+- ✅ Twoje karty wyglądają tak samo jak wcześniej – nowe opcje są dodatkowe
+
 ## v25 – Nowa nazwa: Okno HA
 
 - 🪟 Karta nazywa się teraz **Okno HA** (po angielsku **HA Window**), bo wkrótce pokaże też zasłony, markizy, żaluzje, okiennice i plisy

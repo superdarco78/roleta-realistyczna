@@ -1,6 +1,30 @@
 import { RR_KASETA, RR_LISTWA, RR_PAS, RR_OKRES } from './stale.js';
 import { rrHex, rrShade, rrRgba } from './kolory.js';
 
+/* v26: materiał osłony – 3 warstwy: cień brzegów, splot, wzór powtarzany co RR_OKRES px (jedzie razem z listwą) */
+export function rrTkanina(typ, col, c) {
+  const S = (k) => rrShade(col, k), A = (x, a) => rrRgba(x, a);
+  const brzegi = 'linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2))';
+  const splot = 'repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px)', bez = 'linear-gradient(transparent,transparent)';
+  const h = RR_OKRES / 2;
+  switch (typ) {
+    case 'pelna': return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-.06)} ${h}px,${col} ${RR_OKRES}px)`;
+    case 'plisa': return `${brzegi},${bez},linear-gradient(180deg,${A(S(.2), .94)} 0,${A(col, .94)} 5px,${A(S(-.24), .96)} ${h - .5}px,${A(S(.2), .94)} ${h}px,${A(col, .94)} ${h + 5}px,${A(S(-.24), .96)} ${RR_OKRES - .5}px,${A(S(.2), .94)} ${RR_OKRES}px)`;
+    case 'rzymska': return `${brzegi},${splot},linear-gradient(180deg,${A(col, .93)} 0,${A(S(.12), .93)} 17px,${A(S(-.28), .96)} ${RR_OKRES - 1}px,${A(S(.1), .93)} ${RR_OKRES}px)`;
+    case 'zaluzja': {
+      const lam = o => `${S(.32)} ${o}px,${col} ${o + 4}px,${S(-.3)} ${o + 10}px,rgba(0,0,0,.35) ${o + 10}px,transparent ${o + 11}px,transparent ${o + h}px`;
+      return `${bez},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
+    }
+    case 'zewnetrzna': {
+      const pro = o => `${S(.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
+      return `${brzegi},${bez},linear-gradient(180deg,${pro(0)},${pro(h)})`;
+    }
+    default: return `${brzegi},${splot},linear-gradient(180deg,
+   ${S(.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-.25)} ${RR_PAS}px,
+   ${A(c.siatka ? rrHex(c.siatka) : S(.3), .62)} ${RR_PAS}px,${A(c.siatka ? rrShade(rrHex(c.siatka), .1) : S(.4), .55)} ${RR_OKRES}px)`;
+  }
+}
+
 /* Wygląd karty (CSS) – zależy od koloru pasów, ramy, wysokości i liczby skrzydeł */
 export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 :host{display:block}
@@ -68,13 +92,14 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .cas:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 0 6px;box-shadow:1px 0 0 rgba(0,0,0,.08)}
 .cas:after{content:"";position:absolute;right:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 6px 0;box-shadow:-1px 0 0 rgba(0,0,0,.08)}
 .fabric{position:absolute;left:1px;right:1px;top:${RR_KASETA - 2}px;height:0;z-index:2;
- background:
-  linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2)),
-  repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px),
-  linear-gradient(180deg,
-   ${rrShade(col, .12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${rrShade(col, -.25)} ${RR_PAS}px,
-   ${rrRgba(c.siatka ? rrHex(c.siatka) : rrShade(col, .3), .62)} ${RR_PAS}px,${rrRgba(c.siatka ? rrShade(rrHex(c.siatka), .1) : rrShade(col, .4), .55)} ${RR_OKRES}px);
+ background:${rrTkanina(c.oslona, col, c)};
  background-size:100% 100%,100% 100%,100% ${RR_OKRES}px}
+/* v26: promienie słońca wpadające przez okno (tylko w dzień, przy słońcu) */
+.ray{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.5s;mix-blend-mode:screen;
+ background:linear-gradient(115deg,rgba(255,214,120,0) 15%,rgba(255,214,120,.26) 40%,rgba(255,214,120,0) 62%),
+  linear-gradient(115deg,rgba(255,236,190,0) 55%,rgba(255,236,190,.16) 70%,rgba(255,236,190,0) 82%);filter:blur(2px)}
+.sash.slonce .ray{opacity:1;animation:rrray 7s ease-in-out infinite alternate}
+@keyframes rrray{from{opacity:.75}to{opacity:1}}
 .bar{position:absolute;left:0;right:0;height:${RR_LISTWA}px;top:${RR_KASETA}px;z-index:3;border-radius:1px;
  background:linear-gradient(180deg,#fafafa,#bdbdbd);box-shadow:0 2px 3px rgba(0,0,0,.4)}
 /* uchwyt do podnoszenia na środku dolnej listwy – złap i przeciągnij */

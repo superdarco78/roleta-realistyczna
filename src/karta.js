@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna } from './stale.js';
+import { RR_WERSJA, RR_DEF, RR_KASETA, RR_LISTWA, RR_OKRES, rrWysOkna, RR_OSL_IKONY } from './stale.js';
 import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
@@ -29,7 +29,7 @@ export class RoletaRealistyczna extends HTMLElement {
   }
   getCardSize() { return Math.ceil(rrWysOkna(this._cfg || {}, +this._cfg?.skrzydla === 1 ? 1 : 2) / 50) + 2; }
   getGridOptions() { return { columns: 12, min_columns: 6, rows: 'auto' }; }
-  disconnectedCallback() { cancelAnimationFrame(this._raf); this._raf = null; if (this._gl) window.removeEventListener('rr-glob', this._gl); }
+  disconnectedCallback() { cancelAnimationFrame(this._raf); this._raf = null; this._szum(false); if (this._gl) window.removeEventListener('rr-glob', this._gl); }
   connectedCallback() {
     if (this._built) this._tick();
     this._gl = this._gl || (() => { if (this._raw) this.setConfig(this._raw); });
@@ -47,6 +47,18 @@ export class RoletaRealistyczna extends HTMLElement {
     /* v10: w trakcie jazdy do celu silnik potrafi meldować skrajne 0/100 – to nie jest prawda */
     if (goal !== undefined && (p === 0 || p === 100) && p !== goal) return null;
     return p;
+  }
+  /* v26: cichy szum silnika z WebAudio – włącza się przy ruchu po kliknięciu, gaśnie, gdy roleta stanie */
+  _szum(on) {
+    try {
+      if (!on) { if (this._au) { const { ctx, g } = this._au; g.gain.setTargetAtTime(0, ctx.currentTime, .08); setTimeout(() => ctx.close(), 400); this._au = null; } return; }
+      if (this._au) return;
+      const ctx = new (window.AudioContext || window.webkitAudioContext)(), o = ctx.createOscillator(), o2 = ctx.createOscillator(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      o.type = 'sawtooth'; o.frequency.value = 92; o2.type = 'sine'; o2.frequency.value = 184; f.type = 'lowpass'; f.frequency.value = 420;
+      g.gain.value = 0; o.connect(f); o2.connect(f); f.connect(g); g.connect(ctx.destination); o.start(); o2.start();
+      g.gain.setTargetAtTime(.035, ctx.currentTime, .1);
+      this._au = { ctx, g };
+    } catch (x) { this._au = null; }   // przeglądarka bez dźwięku
   }
   _call(svc, ent, data) {
     ent = ent || this._cfg.entity;
@@ -66,6 +78,7 @@ export class RoletaRealistyczna extends HTMLElement {
       }
     });
     this._tick();
+    if (this._cfg.dzwiek) this._szum(true);   // v26: dźwięk silnika (tylko po kliknięciu – przeglądarka pozwala grać po geście)
     if (this._cfg.wibracja !== false) try { navigator.vibrate?.(12); } catch (x) { /* telefon bez wibracji */ }   // v18: lekkie „pyk” pod palcem
     let d = data || {};
     if (svc === 'set_cover_position' && this._cfg.odwroc) d = { position: 100 - d.position };
@@ -95,7 +108,7 @@ export class RoletaRealistyczna extends HTMLElement {
   <div class="slot"><div class="out"><div class="osky"></div><div class="wx owx"></div></div><div class="sash" data-i="${i}">
    <div class="glass"><div class="sky"></div><div class="wx"></div>
     <div class="refl"></div>
-    <div class="fabric"></div><div class="bar"></div>
+    <div class="fabric"></div><i class="ray"></i><div class="bar"></div>
     <div class="cas"></div>
     <div class="ghost"><span></span></div>
     <div class="mv"><ha-icon></ha-icon></div>
@@ -105,7 +118,7 @@ export class RoletaRealistyczna extends HTMLElement {
     card.innerHTML = `
 <style>${rrKartaStyl({ H, n, sloje, rama, col, c })}</style>
 <div class="rr">
- <div class="hd"><ha-icon icon="mdi:roller-shade"></ha-icon>
+ <div class="hd"><ha-icon icon="${RR_OSL_IKONY[c.oslona] || RR_OSL_IKONY.zebra}"></ha-icon>
   <div><div><span class="nm"></span><span class="ver">${RR_WERSJA}</span></div><div class="sb"></div></div><div class="pc"></div></div>
  <div class="win ${ruch ? 'ruch' : 'stal'}">${Array.from({ length: n }, (_, i) => sash(i)).join('')}${n > 1 && c.uchwyt_srodek !== false ? `<div class="mid" title="${T.oba}"><svg viewBox="0 0 24 24"><path d="M12,2L7,7H11V17H7L12,22L17,17H13V7H17L12,2Z"/></svg></div>` : ''}</div>
  <div class="bt">
@@ -236,6 +249,8 @@ export class RoletaRealistyczna extends HTMLElement {
     const night = sun?.state === 'below_horizon' || (!sun && ws?.state === 'clear-night');
     const pora = night ? (typeof el === 'number' && el > -7 ? 'zmierzch' : 'noc') : typeof el === 'number' && el < 8 ? 'zloto' : 'dzien';
     const typ = !c.niebo ? 'plain' : ws ? (RR_WX[ws.state] || 'cloudy') : 'sun', wkey = typ + pora + (c.tlo || '') + (c.widok !== false);
+    /* v26: promienie słońca – dzień, słońce albo małe chmurki, rysowane niebo */
+    const slonce = c.promienie !== false && !night && pora !== 'zmierzch' && (typ === 'sun' || typ === 'partly');
     mem.forEach((e, i) => {
       const S = E.sash[i], ms = this._hass.states[e] || st, mst = ms.state;
       const o0 = this._sh[i];
@@ -247,6 +262,7 @@ export class RoletaRealistyczna extends HTMLElement {
       const spoko = o0 && o0.rest && now < o0.rest.t ? o0.rest.p : undefined;   // po dojechaniu silnik jeszcze chwilę „śmieci” 0/100
       if (o0 && stamp !== o0.stamp) mp = this._pos(ms, o0.cmd ? o0.cmd.p : o0.auto ? o0.auto.p : spoko);
       if (!o0) mp = typeof raw === 'number' ? (c.odwroc ? 100 - raw : raw) : (mst === 'open' ? 100 : 0);
+      S.root.classList.toggle('slonce', slonce);
       S.root.classList.toggle('uchyl', okno[i] === 'uchyl'); S.root.classList.toggle('otw', okno[i] === 'otw');
       /* za otwartym/uchylonym skrzydłem widać to, co za oknem – ta sama pogoda i widok */
       const okey = okno[i] ? wkey : '';
@@ -319,6 +335,7 @@ export class RoletaRealistyczna extends HTMLElement {
       });
       this._paint();
       this._raf = busy ? requestAnimationFrame(step) : null;
+      if (!busy) this._szum(false);
     };
     this._raf = requestAnimationFrame(step);
   }

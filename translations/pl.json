@@ -185,7 +185,19 @@
         "otworz",
         "otwarte (na zawiasach do środka)"
       ]
-    ]
+    ],
+    "osl": "Typ osłony",
+    "osln": [
+      "Dzień-noc",
+      "Pełna",
+      "Plisa",
+      "Rzymska",
+      "Żaluzja",
+      "Zewnętrzna"
+    ],
+    "d_osl": "Jak wygląda materiał. Dzień-noc ma pasy pełne i przezroczyste. Żaluzja ma listewki. Zewnętrzna to roleta za oknem z aluminiowych profili.",
+    "promienie": "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
+    "dzwiek": "Cichy dźwięk silnika przy ruchu (po kliknięciu)"
   },
   "kolory": {
     "bezowy": "beżowy",
