@@ -1,6 +1,6 @@
 {
   "karta": {
-    "nazwaKarty": "HA Motor",
+    "nazwaKarty": "Motor HA",
     "opisKarty": "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
     "open": "Open",
     "closed": "Closed",
@@ -226,7 +226,7 @@
     ],
     "osw": "Inside",
     "osz": "Outside",
-    "urz": "🔗 This window comes from the HA Motor integration – every change is saved to the device automatically (same as “Configure”)."
+    "urz": "🔗 This window comes from the Motor HA integration – every change is saved to the device automatically (same as “Configure”)."
   },
   "kolory": {
     "czarny": "black",

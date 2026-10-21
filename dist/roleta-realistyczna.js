@@ -96,16 +96,16 @@
         kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie
    v24 – okno jednoskrzydłowe większe (wyższe o 25% i szersze) – wypełnia kartę jak okno 2-skrzydłowe, także w podglądzie
         edytora i kreatora; link do instrukcji w oknie wyboru kart
-   v25 – nowa nazwa karty: Motor HA (HA Motor) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
+   v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
         stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą
    v26 – typ osłony (dzień-noc, pełna, plisa, rzymska, żaluzja, zewnętrzna) w edytorze i kreatorze; promienie słońca wpadające
         przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
    v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
         boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
    v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
-   v29 – ustawienia z integracji Motor HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
+   v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
         po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
-   v30 – samo przeładowanie strony także z encją aktualizacji integracji Motor HA i przy otwartej stronie
+   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie
    v31 – edytor okna z integracji zapisuje zmiany w urządzeniu (okno_ha/zapisz); karta w „Dodaj do panelu” urządzenia
    v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
    v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
@@ -874,7 +874,7 @@
   // translations/en.json
   var en_default = {
     karta: {
-      nazwaKarty: "HA Motor",
+      nazwaKarty: "Motor HA",
       opisKarty: "Realistic window with a day-night blind: animation at motor speed, drag to move, real weather outside and a beginner wizard",
       open: "Open",
       closed: "Closed",
@@ -1100,7 +1100,7 @@
       ],
       osw: "Inside",
       osz: "Outside",
-      urz: "🔗 This window comes from the HA Motor integration – every change is saved to the device automatically (same as “Configure”)."
+      urz: "🔗 This window comes from the Motor HA integration – every change is saved to the device automatically (same as “Configure”)."
     },
     kolory: {
       czarny: "black",
