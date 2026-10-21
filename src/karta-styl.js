@@ -81,9 +81,9 @@ export function rrOslonaStyl(typ, col, rama) {
 /* Wygląd karty (CSS) – zależy od koloru pasów, ramy, wysokości i liczby skrzydeł */
 export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 :host{display:block}
-.rr{padding:14px 14px 12px;user-select:none;-webkit-user-select:none}
+.rr{padding:12px;user-select:none;-webkit-user-select:none}
 .hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.hd ha-icon{--mdc-icon-size:22px;color:var(--primary-text-color);background:rgba(127,127,127,.18);border-radius:50%;padding:8px}
+.hd ha-icon{--mdc-icon-size:24px;color:var(--primary-color,#009ac7);background:color-mix(in srgb,var(--primary-color,#009ac7) 20%,transparent);border-radius:50%;padding:8px}
 .nm{font-size:16px;font-weight:500;color:var(--primary-text-color)}
 .sb{font-size:14px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
@@ -184,9 +184,9 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
  background:var(--secondary-background-color,rgba(127,127,127,.15));display:flex;align-items:center;justify-content:center;transition:background .15s}
 .bt button:active{background:rgba(127,127,127,.35)}
 .bt button[disabled]{opacity:.35;cursor:default}
-.bt ha-icon{--mdc-icon-size:22px}
+.bt ha-icon{--mdc-icon-size:24px}
 .qk{display:flex;gap:6px;margin-top:8px}
-.qk button{flex:1;height:32px;border:none;border-radius:10px;font-size:13px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
+.qk button{flex:1;height:32px;border:none;border-radius:var(--ha-card-border-radius,12px);font-size:13px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
 `;

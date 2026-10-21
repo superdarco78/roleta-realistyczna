@@ -4,6 +4,7 @@
 
 - „Co:” i „Po co:” w kreatorze w kolorze akcentu, opis jaśniejszy
 - Większe małe napisy i ikony w karcie, edytorze i kreatorze
+- Wygląd 1:1 jak HA: tło, ramka, zaokrąglenie i cień ze zmiennych motywu HA; przyciski i chipy w rozmiarach HA
 
 ## v38 – Jedna karta Motor HA na liście
 
