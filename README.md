@@ -1,4 +1,4 @@
-<p align="center"><img src="img/hero-pl.png" alt="Roleta dzień-noc" width="620"></p>
+<p align="center"><img src="img/hero-pl.png" alt="Roleta dzień-noc" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=wersja&color=0288d1" alt="wersja"></a>
@@ -27,7 +27,7 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 > [!TIP]
 > Karta działa z **każdą roletą** w Home Assistancie (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i innymi. Najlepiej wygląda z roletą dzień-noc (zebra) i oknem 2-skrzydłowym, ale ustawisz też 1 skrzydło. Po dodaniu karty **kreator ustawi wszystko sam**.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animacja rolety"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="100%" alt="Animacja rolety"></picture></p>
 
 <a name="start-w-4-krokach"></a>
 ## 🚀 Start w 4 krokach
@@ -36,7 +36,9 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otwórz w HACS" height="48"></a><br><sub>⬆️ To jest przycisk z kroku 1</sub></p>
 
-<details><summary><b>📖 Słowniczek: co znaczą te słowa?</b></summary>
+
+#### 📖 Słowniczek: co znaczą te słowa?
+
 
 | Słowo | Po ludzku |
 |---|---|
@@ -49,13 +51,15 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 | **Zwinięta / 100%** | Roleta na samej górze, okno odsłonięte. |
 | **Opuszczona / 0%** | Roleta na samym dole, okno zasłonięte. |
 | **YAML** | Ręczne pisanie ustawień. **Tu niepotrzebne.** |
-</details>
+
+
+---
 
 <a name="spis-tresci"></a>
 ## 📑 Spis treści
 
 - [🚀 Start w 4 krokach](#start-w-4-krokach)
-- [⬆️ Aktualizacja do v22 z wcześniejszych wersji](#aktualizacja-do-v22-z-wczesniejszych-wersji)
+- [⬆️ Aktualizacja do v23](#aktualizacja-do-v23)
 - [🪟 Karta Roleta dzień-noc](#karta-roleta-dzien-noc)
   - [Cele](#cele)
   - [Wygląd w różnych sytuacjach](#wyglad-w-roznych-sytuacjach)
@@ -91,26 +95,30 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 
 ---
 
-<a name="aktualizacja-do-v22-z-wczesniejszych-wersji"></a>
-## ⬆️ Aktualizacja do v22 z wcześniejszych wersji
+<a name="aktualizacja-do-v23"></a>
+## ⬆️ Aktualizacja do v23
 
 > [!IMPORTANT]
-> Wersja 22 **nie zmienia** istniejących ustawień. Twoje karty działają dalej bez zmian.
+> Wersja 23 **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
 
-**Co nowego:**
+**Co nowego**
 
-- 🪄 **Kreator w 3 krokach** otwiera się sam przy dodaniu nowej karty.
-- Edytor jest podzielony na rozwijane działy: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane. W każdym jest **↺ Przywróć domyślne**.
+- 🪄 **Kreator w 7 krokach** dla początkujących. W każdym kroku krótko: **co** wybierasz i **po co**.
+- 🔍 Karta sama znajduje rolety, silniki, czujniki okna i pogodę. Najlepiej pasujące są na górze.
+- 🧹 Na listach są tylko pasujące urządzenia: bez bram, garaży i czujników ruchu.
+- 🧭 Gdy czegoś brakuje, kreator mówi, co zrobić, i jednym przyciskiem otwiera właściwe miejsce w HA.
+- 📋 Kopię karty dodasz na inny panel albo do nowego widoku „Rolety” jednym kliknięciem.
+- 🌍 Język kreatora, karty i menu ustawia się sam według profilu HA.
 
-**Co warto zrobić:**
+**Co zrobić**
 
-1. Zaktualizuj kartę w HACS i odśwież stronę (**Ctrl + Shift + R**).
-2. Otwórz edytor karty i sprawdź, czy wszystko wygląda jak trzeba.
-3. Jeśli masz kilka kart rolet, ustaw wygląd w jednej i kliknij **🌍 Zapisz jako domyślne dla wszystkich kart**.
+1. W HACS kliknij **Aktualizuj**.
+2. Odśwież stronę: **Ctrl + Shift + R**.
 
 Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 
 ---
+
 
 <a name="karta-roleta-dzien-noc"></a>
 ## 🪟 Karta Roleta dzień-noc
@@ -157,7 +165,11 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
-<details><summary>🌅 Wszystkie pory dnia na jednym obrazku</summary><img src="img/pora-dnia.png" width="100%"></details>
+
+#### 🌅 Wszystkie pory dnia na jednym obrazku
+
+<img src="img/pora-dnia.png" width="100%">
+
 
 **Pozycja rolety:**
 
@@ -190,7 +202,11 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
-<details><summary>🎨 Więcej: okleiny ze słojami i klamki</summary><img src="img/okleiny.png" width="420"></details>
+
+#### 🎨 Więcej: okleiny ze słojami i klamki
+
+<img src="img/okleiny.png" width="100%">
+
 
 ---
 
@@ -218,13 +234,14 @@ Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualiz
 
 **Krok 4.** Odśwież stronę: **Ctrl + Shift + R** (w telefonie zamknij i otwórz aplikację HA).
 
-<details>
-<summary>Przycisk nie działa? Dodaj repozytorium ręcznie w HACS</summary>
+
+#### Przycisk nie działa? Dodaj repozytorium ręcznie w HACS
+
 
 1. **HACS → ⋮ (prawy górny róg) → Własne repozytoria**.
 2. Repozytorium: `https://github.com/superdarco78/roleta-realistyczna`, typ: **Dashboard**, **Dodaj**.
 3. Wyszukaj „Roleta dzień-noc” → **Pobierz**.
-</details>
+
 
 <a name="recznie"></a>
 ### Ręcznie
@@ -272,29 +289,73 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 <a name="pierwsze-uruchomienie-kreator"></a>
 ## 🪄 Pierwsze uruchomienie: kreator
 
-**Krok 1.** Na pulpicie kliknij ołówek (Edytuj) → **＋ Dodaj kartę** → wpisz **Roleta** → kliknij kartę.
+**Krok 1. Dodaj kartę**
+
+Na pulpicie kliknij ołówek, potem **＋ Dodaj kartę**, wpisz **Roleta** i kliknij kartę.
 
 <img src="img/instalacja/krok-6.png" width="100%" alt="Dodaj kartę">
 
-**Krok 2.** Kreator otworzy się sam i przeprowadzi Cię przez 3 kroki:
+**Krok 2. Kreator poprowadzi Cię sam**
 
-**1️⃣ Wybierz roletę**
+Kreator otwiera się sam. Ma 7 krótkich kroków. Na górze widzisz, w którym jesteś.
 
-Grupy rolet (okno 2-skrzydłowe) są na górze listy.
+| Krok | Co wybierasz | Po co |
+|:---:|---|---|
+| 1 | 🪟 **Roleta** | Którą roletą (albo grupą rolet) karta ma sterować |
+| 2 | 🔲 **Okno** | Ile skrzydeł i która roleta jest na którym |
+| 3 | ⏱ **Silnik** | Żeby animacja jechała tak szybko jak prawdziwa roleta |
+| 4 | 🚪 **Czujniki okna** | Żeby karta pokazała uchylone albo otwarte okno |
+| 5 | 🌦 **Pogoda** | Żeby za szybą było widać prawdziwą pogodę |
+| 6 | 🎨 **Wygląd i nazwa** | Gotowy zestaw kolorów i nazwa na karcie |
+| 7 | ✅ **Podsumowanie** | Sprawdzasz wszystko i wybierasz, gdzie ma być karta |
 
-**2️⃣ Zobacz, co karta wykryła**
+> [!TIP]
+> Nie wiesz, co wybrać? Zostaw to, co jest zaznaczone na górze listy. Karta wybrała najlepiej pasujące.
 
-Silnik, kontaktrony i pogoda. Niczego nie musisz dodawać.
+<br>
 
-**3️⃣ Wybierz wygląd**
+**Krok 1 z 7: wybierz roletę**
 
-6 gotowych stylów: nowoczesny, drewno, skandynawski, ciemny, orzech, kolorowy.
+Najlepiej pasująca roleta jest na górze, z dopiskiem „najlepsze dopasowanie”.
 
-<img src="img/kreator-razem.png" width="100%" alt="Kreator: 3 kroki">
+<img src="img/kreator/kreator-1-roleta-jasny-pl.png" width="100%" alt="Kreator: wybierz roletę">
 
-✅ **Gotowe.** Wszystko inne zmienisz w [edytorze](#edytor).
+<br>
+
+**Krok 3 z 7: prędkość silnika**
+
+Karta znajduje silnik rolety sama. Możesz też zmierzyć czas przejazdu prosto z kreatora.
+
+<img src="img/kreator/kreator-3-silnik-ciemny-pl.png" width="100%" alt="Kreator: prędkość silnika">
+
+<br>
+
+**Krok 4 z 7: czujniki okna**
+
+Na liście są tylko czujniki okien i drzwi z tego samego pomieszczenia.
+
+<img src="img/kreator/kreator-4-czujniki-jasny-pl.png" width="100%" alt="Kreator: czujniki okna">
+
+<br>
+
+**Krok 6 z 7: wygląd i nazwa**
+
+Wybierz gotowy zestaw kolorów. Każdy kolor zmienisz później w menu karty.
+
+<img src="img/kreator/kreator-6-wyglad-ciemny-pl.png" width="100%" alt="Kreator: wygląd">
+
+<br>
+
+**Krok 7 z 7: sprawdź i zapisz**
+
+Widzisz wszystko, co karta znalazła. Kopię karty dodasz tu na inny panel albo do nowego widoku „Rolety”.
+
+<img src="img/kreator/kreator-7-gdzie-jasny-pl.png" width="100%" alt="Kreator: podsumowanie i miejsce karty">
+
+✅ **Gotowe.** Kliknij **Zapisz**. Wszystko inne zmienisz później w [edytorze](#edytor).
 
 ---
+
 
 <a name="akcje-jak-sterowac"></a>
 ## 👆 Akcje: jak sterować
@@ -506,6 +567,9 @@ Karta sama szuka w Twoim Home Assistancie:
 
 Ręczny wybór w edytorze zawsze ma pierwszeństwo.
 
+
+---
+
 <a name="silniki-moes-tuya"></a>
 ## 🔌 Silniki Moes / Tuya
 
@@ -515,6 +579,9 @@ Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
 - Silnik nie melduje „otwiera się / zamyka się”. Karta rozpoznaje start ruchu po zmianie stanu.
 - Fałszywe meldunki 0% / 100% w trakcie jazdy (nawet do 60 s po zatrzymaniu) są pomijane.
 - Gdy silnik pokazuje złą pozycję końcową, ustaw ponownie krańcówki w zigbee2mqtt.
+
+
+---
 
 <a name="elementy-karty"></a>
 ## 🧩 Elementy karty
@@ -538,43 +605,56 @@ Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
 <a name="pytania-i-problemy"></a>
 ## ❓ Pytania i problemy
 
-<details><summary><b>Nie ma karty na liście „Dodaj kartę”</b></summary>
+
+#### Nie ma karty na liście „Dodaj kartę”
+
 
 Odśwież stronę **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA. Przy instalacji ręcznej sprawdź, czy zasób to `/local/roleta-realistyczna.js` i typ **Moduł JavaScript**.
-</details>
 
-<details><summary><b>Animacja jest szybsza albo wolniejsza niż roleta</b></summary>
+
+#### Animacja jest szybsza albo wolniejsza niż roleta
+
 
 Edytor → ⏱ Ruch i kalibracja → **🤖 Kalibruj automatycznie**. Albo poczekaj: karta uczy się czasu z każdego ruchu.
-</details>
 
-<details><summary><b>Roleta skacze do 0% albo 100% w trakcie jazdy</b></summary>
+
+#### Roleta skacze do 0% albo 100% w trakcie jazdy
+
 
 To fałszywe meldunki silnika. Karta je pomija od v10. Jeśli dalej skacze, zgłoś błąd z nazwą silnika.
-</details>
 
-<details><summary><b>Nie widać pogody</b></summary>
+
+#### Nie widać pogody
+
 
 Edytor → ⚙️ Zaawansowane → **Skąd brać pogodę**: `auto` albo `internet`. Karta pobiera pogodę z Open-Meteo dla lokalizacji domu z HA.
-</details>
 
-<details><summary><b>Roleta jedzie odwrotnie (góra = dół)</b></summary>
+
+#### Roleta jedzie odwrotnie (góra = dół)
+
 
 Włącz **Odwróć pozycję** w ⚙️ Zaawansowanych.
-</details>
 
-<details><summary><b>Karta jest po angielsku, a chcę po polsku</b></summary>
+
+#### Karta jest po angielsku, a chcę po polsku
+
 
 Karta bierze język z profilu HA. Możesz też ustawić **Język karty** w ⚙️ Zaawansowanych.
-</details>
+
 
 Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo napisz na [forum HA](https://community.home-assistant.io/) / [forum arturhome.pl](https://forum.arturhome.pl/).
+
+
+---
 
 <a name="pomoc-mile-widziana"></a>
 ## 🙋 Pomoc mile widziana
 
 - Masz inną roletę lub silnik? Napisz, jak działa z kartą, i dołącz zrzut.
 - Masz pomysł? [Zaproponuj funkcję](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
+
+
+---
 
 <a name="tlumaczenia"></a>
 ## 🌍 Tłumaczenia
@@ -585,6 +665,9 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 | 🇬🇧 English | ✅ 100% |
 
 Chcesz dodać swój język? Skopiuj [`translations/en.json`](translations/en.json) jako `translations/<kod>.json`, przetłumacz teksty i wyślij w [zgłoszeniu](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo jako pull request.
+
+
+---
 
 <a name="budowa-projektu"></a>
 ## 🧱 Budowa projektu
@@ -612,6 +695,9 @@ dist/roleta-realistyczna.js   gotowy plik dla HACS
 ```
 
 `npm install` → `npm run check` (sprawdzenie kodu, testy, budowanie). GitHub sprawdza to samo przy każdej zmianie.
+
+
+---
 
 <a name="wsparcie"></a>
 ## ☕ Wsparcie

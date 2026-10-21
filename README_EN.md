@@ -1,4 +1,4 @@
-<p align="center"><img src="img/hero-en.png" alt="Roleta dzień-noc" width="620"></p>
+<p align="center"><img src="img/hero-en.png" alt="Roleta dzień-noc" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=release&color=0288d1" alt="release"></a>
@@ -27,7 +27,7 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 > [!TIP]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animation"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="100%" alt="Animation"></picture></p>
 
 <a name="start-in-4-steps"></a>
 ## 🚀 Start in 4 steps
@@ -36,7 +36,9 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="48"></a><br><sub>⬆️ This is the button from step 1</sub></p>
 
-<details><summary><b>📖 Glossary: what do these words mean?</b></summary>
+
+#### 📖 Glossary: what do these words mean?
+
 
 | Word | In plain words |
 |---|---|
@@ -49,13 +51,15 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 | **Open / 100%** | Blind fully up, window uncovered. |
 | **Closed / 0%** | Blind fully down, window covered. |
 | **YAML** | Typing settings by hand. **Not needed here.** |
-</details>
+
+
+---
 
 <a name="table-of-contents"></a>
 ## 📑 Table of contents
 
 - [🚀 Start in 4 steps](#start-in-4-steps)
-- [⬆️ Upgrading to v22](#upgrading-to-v22)
+- [⬆️ Upgrading to v23](#upgrading-to-v23)
 - [🪟 The Roleta dzień-noc card](#the-roleta-dzien-noc-card)
   - [Goals](#goals)
   - [How it looks](#how-it-looks)
@@ -79,20 +83,25 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 ---
 
-<a name="upgrading-to-v22"></a>
-## ⬆️ Upgrading to v22
+<a name="upgrading-to-v23"></a>
+## ⬆️ Upgrading to v23
 
 > [!IMPORTANT]
-> Version 22 **does not change** existing settings. Your cards keep working.
+> Version 23 **does not change** your settings. Existing cards keep working.
 
-**What's new:**
+**What's new**
 
-- 🪄 A **3-step wizard** opens automatically when you add a new card.
-- The editor is split into collapsible sections: 🎨 Look, 🪟 Window, ⏱ Motion & calibration, ⚙️ Advanced. Each has **↺ Restore defaults**.
+- 🪄 A **7-step wizard** for beginners. Every step says **what** you pick and **why**.
+- 🔍 The card finds blinds, motors, window sensors and weather by itself, best matches first.
+- 🧹 Lists show only matching devices: no gates, garages or motion sensors.
+- 🧭 When something is missing, the wizard says what to do and opens the right HA page in one click.
+- 📋 Add a copy of the card to another dashboard or a new “Blinds” view in one click.
+- 🌍 The wizard, card and menu follow your HA profile language.
 
-**What to do:** update in HACS, refresh the page (**Ctrl + Shift + R**) and open the card editor to check everything. Full list: [📝 Changelog](CHANGELOG.md).
+**What to do:** click **Update** in HACS, then refresh with **Ctrl + Shift + R**. Full list: [📝 Changelog](CHANGELOG.md).
 
 ---
+
 
 <a name="the-roleta-dzien-noc-card"></a>
 ## 🪟 The Roleta dzień-noc card
@@ -192,13 +201,14 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 **Step 4.** Refresh the page: **Ctrl + Shift + R** (on a phone, close and reopen the HA app).
 
-<details>
-<summary>Button not working? Add the repository in HACS manually</summary>
+
+#### Button not working? Add the repository in HACS manually
+
 
 1. **HACS → ⋮ → Custom repositories**.
 2. Repository `https://github.com/superdarco78/roleta-realistyczna`, type **Dashboard**, **Add**.
 3. Search for “Roleta dzień-noc” → **Download**.
-</details>
+
 
 <a name="manual"></a>
 ### Manual
@@ -246,23 +256,45 @@ Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScrip
 <a name="first-run-the-wizard"></a>
 ## 🪄 First run: the wizard
 
-Dashboard → pencil (Edit) → **＋ Add card** → type **Roleta** → click the card. The wizard opens by itself:
+**Step 1. Add the card**
 
-**1️⃣ Pick the blind**
+On your dashboard click the pencil, then **＋ Add card**, type **Roleta** and click the card.
 
-Blind groups (2-sash windows) are listed first.
+<img src="img/instalacja/krok-6.png" width="100%" alt="Add card">
 
-**2️⃣ See what was detected**
+**Step 2. The wizard guides you**
 
-Motor, contact sensors and weather. Nothing to add.
+The wizard opens by itself. It has 7 short steps:
 
-**3️⃣ Pick a look**
+| Step | What you pick | Why |
+|:---:|---|---|
+| 1 | 🪟 **Blind** | Which blind (or blind group) the card controls |
+| 2 | 🔲 **Window** | How many sashes and which blind is on which |
+| 3 | ⏱ **Motor** | So the animation moves as fast as the real blind |
+| 4 | 🚪 **Window sensors** | So the card shows a tilted or open window |
+| 5 | 🌦 **Weather** | Real weather behind the glass |
+| 6 | 🎨 **Look and name** | A ready colour set and the card title |
+| 7 | ✅ **Summary** | Check everything and choose where the card goes |
 
-6 styles: modern, wood, Scandinavian, dark, walnut, colourful.
+> [!TIP]
+> Not sure? Keep what is selected at the top of the list. The card picked the best match.
 
-<img src="img/kreator-razem.png" width="100%" alt="Wizard: 3 steps">
+<br>
+
+**Step 1 of 7: pick the blind**
+
+<img src="img/kreator/wizard-1-blind-light-en.png" width="100%" alt="Wizard: pick the blind">
+
+<br>
+
+**Step 7 of 7: check and save**
+
+<img src="img/kreator/wizard-7-where-dark-en.png" width="100%" alt="Wizard: summary">
+
+✅ **Done.** Click **Save**. Change anything later in the [editor](#editor).
 
 ---
+
 
 <a name="actions-how-to-control-it"></a>
 ## 👆 Actions: how to control it
@@ -340,6 +372,9 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 | `osobno` | bool | `false` | Dragging the glass moves one sash only. |
 | `wibracja` | bool | `true` | Haptic feedback. |
 
+
+---
+
 <a name="examples"></a>
 ## 🧪 Examples
 
@@ -370,6 +405,9 @@ zrodlo: brak
 jezyk: en
 ```
 
+
+---
+
 <a name="auto-detection"></a>
 ## 🔎 Auto-detection
 
@@ -381,10 +419,16 @@ jezyk: en
 | **Weather** | `weather.*`; if none, Open-Meteo for your home location (no API key). |
 | **Language** | From your HA profile. |
 
+
+---
+
 <a name="moes-tuya-motors"></a>
 ## 🔌 Moes / Tuya motors
 
 Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2 + 394 / rpm. False 0% / 100% reports while moving are ignored.
+
+
+---
 
 <a name="card-elements"></a>
 ## 🧩 Card elements
@@ -401,20 +445,45 @@ Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2
 | <img src="img/ikony/slonce.png" height="32"> | Sun: daytime from `sun.sun`. |
 | <img src="img/ikony/ksiezyc.png" height="32"> | Moon and stars: night. |
 
+
+---
+
 <a name="faq"></a>
 ## ❓ FAQ
 
-<details><summary><b>The card is not in “Add card”</b></summary>Refresh with <b>Ctrl + Shift + R</b>, or restart the HA app on your phone.</details>
-<details><summary><b>Animation faster/slower than the blind</b></summary>Editor → ⏱ Motion → <b>🤖 Auto-calibrate</b>.</details>
-<details><summary><b>Blind moves the wrong way</b></summary>Enable <b>Invert position</b> in ⚙️ Advanced.</details>
-<details><summary><b>No weather</b></summary>⚙️ Advanced → weather source <code>auto</code> or <code>internet</code>.</details>
+
+#### The card is not in “Add card”
+
+Refresh with <b>Ctrl + Shift + R</b>, or restart the HA app on your phone.
+
+
+#### Animation faster/slower than the blind
+
+Editor → ⏱ Motion → <b>🤖 Auto-calibrate</b>.
+
+
+#### Blind moves the wrong way
+
+Enable <b>Invert position</b> in ⚙️ Advanced.
+
+
+#### No weather
+
+⚙️ Advanced → weather source <code>auto</code> or <code>internet</code>.
+
 
 Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or ask on the [HA forum](https://community.home-assistant.io/).
+
+
+---
 
 <a name="help-wanted"></a>
 ## 🙋 Help wanted
 
 Different blind or motor? Tell us how it works with the card, with a screenshot. Ideas: [request a feature](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
+
+
+---
 
 <a name="translations"></a>
 ## 🌍 Translations
@@ -426,10 +495,16 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 
 Want your language? Copy [`translations/en.json`](translations/en.json) to `translations/<code>.json`, translate it and send it in an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or a pull request.
 
+
+---
+
 <a name="project-structure"></a>
 ## 🧱 Project structure
 
 Source code is split into modules in [`src/`](src) (card, editor, 7-step wizard, dashboards, weather, detection and ranking, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
+
+
+---
 
 <a name="support"></a>
 ## ☕ Support
