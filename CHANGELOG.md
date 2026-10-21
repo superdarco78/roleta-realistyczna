@@ -1,5 +1,12 @@
 # 📝 Historia zmian
 
+## v27.1 – Opis jasny i ciemny
+
+- 🌗 Obrazki w opisie same zmieniają się na ciemne, gdy masz ciemny motyw (w HACS i na GitHubie)
+- 🧩 Kafelki bez linii tabeli, ładne w każdym motywie
+- 🪟 Nowy dział „Rodzaje osłon” w opisie (5 języków)
+- ✅ Sama karta bez zmian
+
 ## v27 – 15 rodzajów osłon, każda wygląda jak prawdziwa
 
 - 🏠 **W pokoju**: dzień-noc, materiałowa, zaciemniająca (w białych prowadnicach), plisa, plaster miodu, rzymska, żaluzja aluminiowa 25 mm i drewniana 50 mm (z taśmami)
