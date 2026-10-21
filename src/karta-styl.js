@@ -85,7 +85,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .hd ha-icon{--mdc-icon-size:22px;color:var(--primary-text-color);background:rgba(127,127,127,.18);border-radius:50%;padding:8px}
 .nm{font-size:16px;font-weight:500;color:var(--primary-text-color)}
-.sb{font-size:13px;color:var(--secondary-text-color)}
+.sb{font-size:14px;color:var(--secondary-text-color)}
 .pc{margin-left:auto;white-space:nowrap;font-size:22px;font-weight:600;color:var(--primary-text-color);font-variant-numeric:tabular-nums}
 .win{position:relative;display:flex;height:${H}px;max-width:${Math.round(H * (n === 1 ? .72 : .9))}px;margin:0 auto;padding:6px;border-radius:3px;
  background:${sloje ? sloje + ',' : ''}${rama};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 3px 10px rgba(0,0,0,.45)}
@@ -186,7 +186,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .bt button[disabled]{opacity:.35;cursor:default}
 .bt ha-icon{--mdc-icon-size:22px}
 .qk{display:flex;gap:6px;margin-top:8px}
-.qk button{flex:1;height:28px;border:none;border-radius:9px;font-size:12px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
+.qk button{flex:1;height:32px;border:none;border-radius:10px;font-size:13px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--rr-na-glownym,var(--text-primary-color,#fff));background:var(--primary-color,#009ac7);box-shadow:none}
 ${rrOslonaStyl(c.oslona, col, rama)}
 `;

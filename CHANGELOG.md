@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v39 – Czytelniej
+
+- „Co:” i „Po co:” w kreatorze w kolorze akcentu, opis jaśniejszy
+- Większe małe napisy i ikony w karcie, edytorze i kreatorze
+
 ## v38 – Jedna karta Motor HA na liście
 
 - Na liście „Dodaj do panelu” zawsze jedna pozycja „Motor HA” (wcześniej mogła być podwójna)
