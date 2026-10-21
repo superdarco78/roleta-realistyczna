@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v30 – Aktualizacja jednym kliknięciem
+
+- 🔔 Z integracją **Okno HA** nowa wersja karty pokazuje się sama w **Ustawienia → Aktualizacje** (sprawdza co 2 minuty), bez wchodzenia w HACS
+- 🔄 Po kliknięciu „Zainstaluj” otwarta strona sama przeładowuje się na nową wersję karty
+
 ## v29 – Współpraca z integracją Okno HA
 
 - 🔌 Karta sama bierze ustawienia z integracji **Okno HA** (Ustawienia → Integracje). Wystarczy wybrać okno z listy

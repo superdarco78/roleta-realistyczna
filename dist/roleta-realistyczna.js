@@ -104,10 +104,11 @@
         boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…)
    v28 – kreator porównuje tylko główny numer wersji (wydania „.1” zmieniają sam opis, więc nie ma fałszywej żółtej ramki)
    v29 – ustawienia z integracji Okno HA (atrybut okno_ha encji okna); nowa karta wybiera najpierw okno z integracji;
-        po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana */
+        po aktualizacji w HACS karta raz sama przeładowuje stronę, gdy działa starsza wersja niż zainstalowana
+   v30 – samo przeładowanie strony także z encją aktualizacji integracji Okno HA i przy otwartej stronie */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v29";
+  var RR_WERSJA = "v30";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -1687,12 +1688,14 @@ ${rrOslonaStyl(c.oslona, col, rama)}
     return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
   }
   var rrNumerWersji = (v) => parseInt(String(v || "").replace(/^\D+/, ""), 10) || 0;
-  var RR_ODSW = { z: 0 };
+  var RR_ODSW = { id: null, szukane: 0 };
   function rrSamoOdswiez(hass) {
-    if (RR_ODSW.z) return;
-    RR_ODSW.z = 1;
-    const upd = Object.values(hass?.states || {}).find((s) => s.entity_id?.startsWith("update.") && /roleta-realistyczna|okno-ha/.test(String(s.attributes?.release_url || "") + String(s.attributes?.title || "") + s.entity_id));
-    const inst = upd?.attributes?.installed_version;
+    const st = hass?.states || {};
+    if (!RR_ODSW.id && !RR_ODSW.szukane) {
+      RR_ODSW.szukane = 1;
+      RR_ODSW.id = Object.keys(st).find((k) => k.startsWith("update.") && /roleta-realistyczna/.test(String(st[k].attributes?.release_url || ""))) || null;
+    }
+    const inst = RR_ODSW.id && st[RR_ODSW.id]?.attributes?.installed_version;
     if (!inst || rrNumerWersji(inst) <= rrNumerWersji(RR_WERSJA)) return;
     const klucz = "okno-ha-odswiezone-" + inst;
     try {
