@@ -1,4 +1,4 @@
-<p align="center"><img src="img/hero-en.png" alt="Roleta dzień-noc" width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/hero-en.png" alt="Roleta dzień-noc" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=release&color=0288d1" alt="release"></a>
@@ -21,70 +21,114 @@
   <!-- Support (uncomment when the link is ready): <a href="https://www.buymeacoffee.com/LINK"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-%E2%98%95-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a> -->
 </p>
 
-<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="44"></a></p>
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="56"></a></p>
 README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 > [!TIP]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="100%" alt="Animation"></picture></p>
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="420" alt="Animation"></picture></a></p>
 
-<a name="start-in-4-steps"></a>
-## 🚀 Start in 4 steps
+<a name="table-of-contents"></a>
+## 📑 Contents
 
-<p align="center"><a href="#installation"><img src="img/start-en.png" width="100%" alt="Start in 4 steps"></a></p>
+**🟢 [Part 1. For beginners](#for-beginners)** · this is enough
+- [1️⃣ Click the blue button](#krok-1)
+- [2️⃣ Click “Download”](#krok-2)
+- [3️⃣ Add the card](#krok-3)
+- [4️⃣ The wizard does the rest](#krok-4)
+- [👆 How to control it](#actions-how-to-control-it)
+- [⬆️ Upgrading to v23](#upgrading-to-v23)
+- [📖 Glossary: what do these words mean?](#glossary)
+- [❓ FAQ](#faq)
 
-<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="48"></a><br><sub>⬆️ This is the button from step 1</sub></p>
-
-
-#### 📖 Glossary: what do these words mean?
-
-
-| Word | In plain words |
-|---|---|
-| **Home Assistant (HA)** | The app that runs your smart home. |
-| **HACS** | An “app store” for HA add-ons. You install the card and its updates from here. |
-| **Card** | A tile on your HA screen, like this blind. |
-| **Dashboard** | An HA screen that holds cards. |
-| **`cover.…` entity** | Your blind, as HA sees it. |
-| **Contact sensor** | A window sensor: knows if it is closed, tilted or open. |
-| **Open / 100%** | Blind fully up, window uncovered. |
-| **Closed / 0%** | Blind fully down, window covered. |
-| **YAML** | Typing settings by hand. **Not needed here.** |
-
+**🔧 [Part 2. Advanced](#advanced)** · optional
 
 ---
 
-<a name="table-of-contents"></a>
-## 📑 Table of contents
+<a name="for-beginners"></a>
+# 🟢 Part 1. For beginners
 
-- [🚀 Start in 4 steps](#start-in-4-steps)
-- [⬆️ Upgrading to v23](#upgrading-to-v23)
-- [🪟 The Roleta dzień-noc card](#the-roleta-dzien-noc-card)
-  - [Goals](#goals)
-  - [How it looks](#how-it-looks)
-  - [Colours and wood finishes](#colours-and-wood-finishes)
-- [⬇️ Installation](#installation)
-  - [With HACS (recommended)](#with-hacs-recommended)
-  - [Manual](#manual)
-- [🪄 First run: the wizard](#first-run-the-wizard)
-- [👆 Actions: how to control it](#actions-how-to-control-it)
-- [🎛 Editor](#editor)
-- [📄 Options](#options)
-- [🧪 Examples](#examples)
-- [🔎 Auto-detection](#auto-detection)
-- [🔌 Moes / Tuya motors](#moes-tuya-motors)
-- [🧩 Card elements](#card-elements)
-- [❓ FAQ](#faq)
-- [🙋 Help wanted](#help-wanted)
-- [🌍 Translations](#translations)
-- [🧱 Project structure](#project-structure)
-- [☕ Support](#support)
+<a name="start-in-4-steps"></a>
+> [!TIP]
+> **This is all you need.** 4 steps, about a minute. The wizard does the rest. You can skip Part 2.
+
+<a name="krok-1"></a>
+### 1️⃣ Click the blue button
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="56"></a></p>
+
+Click **Open link**. The first time, the page asks for your HA address. When HACS asks “Add repository?”, click **Add**.
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-1.png" width="100%" alt="Step 1"></a></p>
+
+<br>
+
+<a name="krok-2"></a>
+### 2️⃣ Click “Download”
+
+Click **Download** at the bottom right, then **Download** again in the dialog. Then refresh the page: **Ctrl + Shift + R**. On a phone, close and reopen the HA app.
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/hacs-2.png" width="100%" alt="Step 2"></a></p>
+
+<br>
+
+<a name="krok-3"></a>
+### 3️⃣ Add the card
+
+On your dashboard click the pencil, then **＋ Add card**. Type **Roleta** and click the card.
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-6.png" width="100%" alt="Step 3"></a></p>
+
+<br>
+
+<a name="krok-4"></a>
+### 4️⃣ The wizard does the rest
+
+The wizard opens by itself. It has 7 short steps. The card finds your blind, motor, window sensors and weather by itself.
+
+| Step | What you pick | Why |
+|:---:|---|---|
+| 1 | 🪟 **Blind** | Which blind (or blind group) the card controls |
+| 2 | 🔲 **Window** | How many sashes and which blind is on which |
+| 3 | ⏱ **Motor** | So the animation moves as fast as the real blind |
+| 4 | 🚪 **Window sensors** | So the card shows a tilted or open window |
+| 5 | 🌦 **Weather** | Real weather behind the glass |
+| 6 | 🎨 **Look and name** | A ready colour set and the card title |
+| 7 | ✅ **Summary** | Check everything and choose where the card goes |
+
+> [!TIP]
+> Not sure? Keep what is selected at the top of the list. The card picked the best match.
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-1-blind-light-en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-1-blind-light-en.png" width="560" alt="Wizard: pick the blind"></a></p>
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-7-where-dark-en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-7-where-dark-en.png" width="560" alt="Wizard: summary"></a></p>
+
+> [!IMPORTANT]
+> ✅ **Done.** Click **Save**. The card works.
+
+---
+
+<a name="actions-how-to-control-it"></a>
+### 👆 How to control it
+
+| | What you do | What happens |
+|:---:|---|---|
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Drag the handle on the bottom of a sash | Only that sash moves |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Drag the round handle in the middle | Both sashes move |
+| 👆 | Drag on the glass | Both sashes move |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Tap STOP, or tap the blind while it moves | The blind stops |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Tap the up arrow | The blind goes fully up |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Tap the down arrow | The blind goes fully down |
+| **▲&nbsp;5%** | Tap a small step | The blind moves 5% up |
+| **75%** | Tap a ready position | The blind goes there |
+
+<p align="center"><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/opis-elementow.png" width="100%" alt="Handles and buttons"></picture></a></p>
 
 ---
 
 <a name="upgrading-to-v23"></a>
-## ⬆️ Upgrading to v23
+### ⬆️ Upgrading to v23
 
 > [!IMPORTANT]
 > Version 23 **does not change** your settings. Existing cards keep working.
@@ -102,13 +146,80 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 ---
 
+<a name="glossary"></a>
+### 📖 Glossary: what do these words mean?
+
+
+| Word | In plain words |
+|---|---|
+| **Home Assistant (HA)** | The app that runs your smart home. |
+| **HACS** | An “app store” for HA add-ons. You install the card and its updates from here. |
+| **Card** | A tile on your HA screen, like this blind. |
+| **Dashboard** | An HA screen that holds cards. |
+| **`cover.…` entity** | Your blind, as HA sees it. |
+| **Contact sensor** | A window sensor: knows if it is closed, tilted or open. |
+| **Open / 100%** | Blind fully up, window uncovered. |
+| **Closed / 0%** | Blind fully down, window covered. |
+| **YAML** | Typing settings by hand. **Not needed here.** |
+
+---
+
+<a name="faq"></a>
+### ❓ FAQ
+
+
+#### The card is not in “Add card”
+
+Refresh with <b>Ctrl + Shift + R</b>, or restart the HA app on your phone.
+
+
+#### Animation faster/slower than the blind
+
+Editor → ⏱ Motion → <b>🤖 Auto-calibrate</b>.
+
+
+#### Blind moves the wrong way
+
+Enable <b>Invert position</b> in ⚙️ Advanced.
+
+
+#### No weather
+
+⚙️ Advanced → weather source <code>auto</code> or <code>internet</code>.
+
+
+Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or ask on the [HA forum](https://community.home-assistant.io/).
+
+
+---
+
+<a name="advanced"></a>
+# 🔧 Part 2. Advanced
+
+> [!NOTE]
+> **You do not need to read this.** The wizard has already set everything up. Here are the details: all wizard screens, the editor, options, YAML and installing without HACS.
+
+- [🪟 The Roleta dzień-noc card](#the-roleta-dzien-noc-card)
+  - [Goals](#goals)
+  - [How it looks](#how-it-looks)
+  - [Colours and wood finishes](#colours-and-wood-finishes)
+- [🪄 Wizard: all screens](#wizard-step-by-step)
+- [🎛 Editor](#editor)
+- [📄 Options](#options)
+- [🧪 Examples](#examples)
+- [🔎 Auto-detection](#auto-detection)
+- [🔌 Moes / Tuya motors](#moes-tuya-motors)
+- [🧩 Card elements](#card-elements)
+- [🧰 Install without HACS (manual)](#manual)
+
+---
 
 <a name="the-roleta-dzien-noc-card"></a>
 ## 🪟 The Roleta dzień-noc card
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Card elements"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow.png" width="100%" alt="Card elements"></picture></p>
 
 <a name="goals"></a>
 ### Goals
@@ -118,6 +229,8 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 - ✅ Comfortable **touch control** on phones and tablets.
 - ✅ Work with **any** blind and **any** home (language, weather, sensors).
 
+---
+
 <a name="how-it-looks"></a>
 ### How it looks
 
@@ -125,14 +238,14 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center" width="33%"><b>☀️ Sun</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/dzien.png"><img src="img/stany-jasne/dzien.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>🌧 Rain</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/deszcz.png"><img src="img/stany-jasne/deszcz.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>⛈ Storm</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/burza.png"><img src="img/stany-jasne/burza.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>☀️ Sun</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/dzien.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/dzien.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/dzien.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>🌧 Rain</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/deszcz.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/deszcz.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>⛈ Storm</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/burza.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/burza.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/burza.png" width="100%"></picture></a></td>
 </tr>
 <tr>
-<td align="center" width="33%"><b>❄️ Snow</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/snieg.png"><img src="img/stany-jasne/snieg.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>🌫 Fog</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/mgla.png"><img src="img/stany-jasne/mgla.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>☁️ Cloudy (English UI)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/en.png"><img src="img/stany-jasne/en.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>❄️ Snow</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/snieg.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/snieg.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/snieg.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>🌫 Fog</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/mgla.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/mgla.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/mgla.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>☁️ Cloudy (English UI)</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/en.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
@@ -140,9 +253,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center" width="33%"><b>☀️ Day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>🌅 Sunset</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>🌙 Night</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/noc.png"><img src="img/stany-jasne/noc.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>☀️ Day</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zwinieta.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zwinieta.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zwinieta.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>🌅 Sunset</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zachod.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zachod.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zachod.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>🌙 Night</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/noc.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/noc.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/noc.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
@@ -150,9 +263,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center" width="33%"><b>⬆️ Open (100%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>↕️ Half (50%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>⬇️ Closed (0%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/opuszczona.png"><img src="img/stany-jasne/opuszczona.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>⬆️ Open (100%)</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zwinieta.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zwinieta.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zwinieta.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>↕️ Half (50%)</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zachod.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zachod.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zachod.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>⬇️ Closed (0%)</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/opuszczona.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/opuszczona.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/opuszczona.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
@@ -160,158 +273,43 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center" width="33%"><b>↘ Left tilted</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/uchylone.png"><img src="img/stany-jasne/uchylone.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>↔ Right opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/otwarte.png"><img src="img/stany-jasne/otwarte.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>🪟 Tilted and opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/okno.png"><img src="img/stany-jasne/okno.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>↘ Left tilted</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/uchylone.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/uchylone.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/uchylone.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>↔ Right opened</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/otwarte.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/otwarte.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/otwarte.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>🪟 Tilted and opened</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/okno.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/okno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/okno.png" width="100%"></picture></a></td>
 </tr>
 </table>
+
+---
 
 <a name="colours-and-wood-finishes"></a>
 ### Colours and wood finishes
 
 <table>
 <tr>
-<td align="center" width="33%"><b>Golden oak + beige</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zloty.png"><img src="img/stany-jasne/zloty.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>Anthracite + turquoise</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/turkus.png"><img src="img/stany-jasne/turkus.png" width="100%"></picture></td>
-<td align="center" width="33%"><b>1 sash</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/jedno.png"><img src="img/stany-jasne/jedno.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>Golden oak + beige</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zloty.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/zloty.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/zloty.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>Anthracite + turquoise</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/turkus.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/turkus.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/turkus.png" width="100%"></picture></a></td>
+<td align="center" width="33%"><b>1 sash</b><br><a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/jedno.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany/jedno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne/jedno.png" width="100%"></picture></a></td>
 </tr>
 </table>
 
 ---
 
-<a name="installation"></a>
-## ⬇️ Installation
-
-**Requirements:** Home Assistant **2024.8** or newer and a blind as a `cover.*` entity.
-
-<a name="with-hacs-recommended"></a>
-### With HACS (recommended)
-
-**Step 1.** Click:
-
-[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin)
-
-**Step 2.** Click **Open link**, then **Add** when HACS asks to add the repository.
-
-<img src="img/instalacja/hacs-1.png" width="100%" alt="Step 2">
-
-**Step 3.** Click **Download** (bottom right), then **Download** again.
-
-<img src="img/instalacja/hacs-2.png" width="100%" alt="Step 3">
-
-**Step 4.** Refresh the page: **Ctrl + Shift + R** (on a phone, close and reopen the HA app).
-
-
-#### Button not working? Add the repository in HACS manually
-
-
-1. **HACS → ⋮ → Custom repositories**.
-2. Repository `https://github.com/superdarco78/roleta-realistyczna`, type **Dashboard**, **Add**.
-3. Search for “Roleta dzień-noc” → **Download**.
-
-
-<a name="manual"></a>
-### Manual
-
-Screenshots show the Polish HA interface; the buttons are in the same places in English.
-
-**Step 1. Download the card file**
-
-Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
-
-<img src="img/instalacja/krok-1.png" width="100%" alt="Step 1">
-
-**Step 2. Upload it to Home Assistant**
-
-Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
-
-<img src="img/instalacja/krok-2.png" width="100%" alt="Step 2">
-
-**Step 3. Open Dashboards**
-
-Click **Settings** at the bottom of the left menu, then **Dashboards**.
-
-<img src="img/instalacja/krok-3.png" width="100%" alt="Step 3">
-
-**Step 4. Open Resources**
-
-Click the three dots **⋮** top right, then **Resources**.
-
-<img src="img/instalacja/krok-4.png" width="100%" alt="Step 4">
-
-**Step 4a. No “Resources”? Turn on Advanced mode**
-
-Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
-
-<img src="img/instalacja/krok-7.png" width="100%" alt="Step 4a">
-
-**Step 5. Add the card as a resource**
-
-Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
-
-<img src="img/instalacja/krok-5.png" width="100%" alt="Step 5">
-
----
-
-<a name="first-run-the-wizard"></a>
-## 🪄 First run: the wizard
-
-**Step 1. Add the card**
-
-On your dashboard click the pencil, then **＋ Add card**, type **Roleta** and click the card.
-
-<img src="img/instalacja/krok-6.png" width="100%" alt="Add card">
-
-**Step 2. The wizard guides you**
-
-The wizard opens by itself. It has 7 short steps:
-
-| Step | What you pick | Why |
-|:---:|---|---|
-| 1 | 🪟 **Blind** | Which blind (or blind group) the card controls |
-| 2 | 🔲 **Window** | How many sashes and which blind is on which |
-| 3 | ⏱ **Motor** | So the animation moves as fast as the real blind |
-| 4 | 🚪 **Window sensors** | So the card shows a tilted or open window |
-| 5 | 🌦 **Weather** | Real weather behind the glass |
-| 6 | 🎨 **Look and name** | A ready colour set and the card title |
-| 7 | ✅ **Summary** | Check everything and choose where the card goes |
-
-> [!TIP]
-> Not sure? Keep what is selected at the top of the list. The card picked the best match.
+<a name="wizard-step-by-step"></a>
+## 🪄 Wizard: all screens
 
 <br>
 
 **Step 1 of 7: pick the blind**
 
-<img src="img/kreator/wizard-1-blind-light-en.png" width="100%" alt="Wizard: pick the blind">
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-1-blind-light-en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-1-blind-light-en.png" width="560" alt="Wizard: pick the blind"></a>
 
 <br>
 
 **Step 7 of 7: check and save**
 
-<img src="img/kreator/wizard-7-where-dark-en.png" width="100%" alt="Wizard: summary">
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-7-where-dark-en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/kreator/wizard-7-where-dark-en.png" width="560" alt="Wizard: summary"></a>
 
 ✅ **Done.** Click **Save**. Change anything later in the [editor](#editor).
-
----
-
-
-<a name="actions-how-to-control-it"></a>
-## 👆 Actions: how to control it
-
-| Action | How | Result |
-|---|---|---|
-| **Move one sash** | Drag the handle <img src="img/ikony/uchwyt-listwa.png" height="22"> on its bottom rail | Only that sash moves. |
-| **Move both sashes** | Drag the round centre handle <img src="img/ikony/uchwyt-srodek.png" height="22"> | Both move together. |
-| **Move anywhere** | Drag on the glass | Both sashes (or one with `osobno`). |
-| **Stop** | Tap the blind while it moves, or <img src="img/ikony/stop.png" height="22"> | STOP. Next tap = move the other way. |
-| **Open / close fully** | <img src="img/ikony/zwin.png" height="22"> / <img src="img/ikony/opusc.png" height="22"> | Moves to the end. |
-| **Small step** | ▲ 5% / ▼ 5% | Clicks add up. |
-| **Quick position** | Open / 75% / 50% / 25% / Closed | Set your own with `pozycje`. |
-
-A dashed **“→ 50%”** line shows where the blind is going.
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Handles and buttons"></picture>
 
 ---
 
@@ -328,9 +326,9 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 | ⚙️ Advanced | Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo. |
 | 🌍 Global | **Save as default** for all blind cards. |
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/para-podglad-dzialy-ciemne.png"><img src="img/edytor-jasne/para-podglad-dzialy.png" width="100%" alt="Preview and sections"></picture>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/para-podglad-dzialy.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/para-podglad-dzialy-ciemne.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/para-podglad-dzialy.png" width="100%" alt="Preview and sections"></picture></a>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/kontaktrony-ciemne.png"><img src="img/edytor-jasne/kontaktrony.png" width="100%" alt="Contact sensors"></picture>
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/kontaktrony.png"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/kontaktrony-ciemne.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/edytor-jasne/kontaktrony.png" width="100%" alt="Contact sensors"></picture></a>
 
 ---
 
@@ -341,37 +339,36 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `type` | text | **required** | `custom:roleta-realistyczna` |
-| `entity` | entity | **required** | `cover.*` or a blind group (left + right). |
+| `type` | text | **required** | custom:roleta-realistyczna |
+| `entity` | entity | **required** | cover.* or a blind group (left + right). |
 | `name` | text | entity name | Card title. |
-| `jezyk` | text | `auto` | `auto` (HA language), `pl`, `en`. |
-| `kolor` | text | `czarny` | Solid stripe colour (palette name or `#rrggbb`). |
+| `jezyk` | text | auto | auto (HA language), pl, en. |
+| `kolor` | text | czarny | Solid stripe colour (palette name or #rrggbb). |
 | `siatka` | text | like solid | Sheer stripe colour. |
-| `rama` | text | `#f4f4f2` | Frame colour, e.g. `#8a5a3b` golden oak, `#3b3f45` anthracite. |
-| `skrzydla` | number | `2` | Sashes: `1` or `2`. |
-| `slupek` | text | `staly` | Mullion: `staly` (fixed) or `ruchomy` (moving). |
-| `klamki` | bool | `true` | Handles turn when tilted/opened. |
-| `wysokosc` | number | `260` | Window height in px. |
+| `rama` | text | #f4f4f2 | Frame colour, e.g. #8a5a3b golden oak, #3b3f45 anthracite. |
+| `skrzydla` | number | 2 | Sashes: 1 or 2. |
+| `slupek` | text | staly | Mullion: staly (fixed) or ruchomy (moving). |
+| `klamki` | bool | true | Handles turn when tilted/opened. |
+| `wysokosc` | number | 260 | Window height in px. |
 | `czujnik_lewe` / `czujnik_prawe` | entity | auto | Contact sensor per sash. |
-| `tryb_lewe` / `tryb_prawe` | text | `uchyl` | `uchyl` (tilt) or `otworz` (open). |
-| `kat_uchyl` | number | `14` | Tilt angle. |
-| `otwarcie` | number | `40` | Opening width (%). |
-| `auto_czujniki` | bool | `true` | Find contact sensors in the blind's area. |
+| `tryb_lewe` / `tryb_prawe` | text | uchyl | uchyl (tilt) or otworz (open). |
+| `kat_uchyl` | number | 14 | Tilt angle. |
+| `otwarcie` | number | 40 | Opening width (%). |
+| `auto_czujniki` | bool | true | Find contact sensors in the blind's area. |
 | `roleta_lewa` / `roleta_prawa` | entity | – | Separate blinds per sash. |
-| `czas` | number / `auto` | `auto` | Full travel time (s). |
-| `predkosc_lewa` / `predkosc_prawa` | entity | auto | Motor speed `number.*`. |
-| `odwroc` | bool | `false` | Inverted position. |
-| `zrodlo` | text | `auto` | Weather: `auto`, `internet`, `brak` (none). |
-| `pogoda` | entity | `auto` | `weather.*` entity. |
-| `niebo` / `widok` | bool | `true` | Sky & weather / drawn street view. |
-| `tlo` | text | – | Own background photo, e.g. `/local/view.jpg`. |
-| `przyciski` | bool | `true` | Buttons and quick positions. |
-| `pozycje` | text | `100,75,50,25,0` | Quick positions (100 = open). |
-| `krok` | number | `5` | ▲/▼ step in %, `0` = off. |
-| `uchwyty` / `uchwyt_srodek` | bool | `true` | Rail handles / centre handle. |
-| `osobno` | bool | `false` | Dragging the glass moves one sash only. |
-| `wibracja` | bool | `true` | Haptic feedback. |
-
+| `czas` | number / auto | auto | Full travel time (s). |
+| `predkosc_lewa` / `predkosc_prawa` | entity | auto | Motor speed number.*. |
+| `odwroc` | bool | false | Inverted position. |
+| `zrodlo` | text | auto | Weather: auto, internet, brak (none). |
+| `pogoda` | entity | auto | weather.* entity. |
+| `niebo` / `widok` | bool | true | Sky & weather / drawn street view. |
+| `tlo` | text | – | Own background photo, e.g. /local/view.jpg. |
+| `przyciski` | bool | true | Buttons and quick positions. |
+| `pozycje` | text | 100,75,50,25,0 | Quick positions (100 = open). |
+| `krok` | number | 5 | ▲/▼ step in %, 0 = off. |
+| `uchwyty` / `uchwyt_srodek` | bool | true | Rail handles / centre handle. |
+| `osobno` | bool | false | Dragging the glass moves one sash only. |
+| `wibracja` | bool | true | Haptic feedback. |
 
 ---
 
@@ -405,7 +402,6 @@ zrodlo: brak
 jezyk: en
 ```
 
-
 ---
 
 <a name="auto-detection"></a>
@@ -419,14 +415,12 @@ jezyk: en
 | **Weather** | `weather.*`; if none, Open-Meteo for your home location (no API key). |
 | **Language** | From your HA profile. |
 
-
 ---
 
 <a name="moes-tuya-motors"></a>
 ## 🔌 Moes / Tuya motors
 
 Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2 + 394 / rpm. False 0% / 100% reports while moving are ignored.
-
 
 ---
 
@@ -435,44 +429,65 @@ Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2
 
 | Element | Meaning |
 |:---:|---|
-| <img src="img/ikony/roleta.png" height="32"> | Blind icon: opens the entity details. |
-| <img src="img/ikony/uchwyt-srodek.png" height="32"> | Centre handle: both sashes. |
-| <img src="img/ikony/uchwyt-listwa.png" height="32"> | Rail handle: one sash. |
-| <img src="img/ikony/klamki.png" height="32"> | Handles: down = closed, sideways = open, up = tilted. |
-| <img src="img/ikony/zwin.png" height="32"> | Open fully. |
-| <img src="img/ikony/stop.png" height="32"> | Stop. |
-| <img src="img/ikony/opusc.png" height="32"> | Close fully. |
-| <img src="img/ikony/slonce.png" height="32"> | Sun: daytime from `sun.sun`. |
-| <img src="img/ikony/ksiezyc.png" height="32"> | Moon and stars: night. |
-
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/roleta.png" height="24" align="absmiddle"> | Blind icon: opens the entity details. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-srodek.png" height="24" align="absmiddle"> | Centre handle: both sashes. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/uchwyt-listwa.png" height="24" align="absmiddle"> | Rail handle: one sash. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/klamki.png" height="24" align="absmiddle"> | Handles: down = closed, sideways = open, up = tilted. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/zwin.png" height="24" align="absmiddle"> | Open fully. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/stop.png" height="24" align="absmiddle"> | Stop. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/opusc.png" height="24" align="absmiddle"> | Close fully. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/slonce.png" height="24" align="absmiddle"> | Sun: daytime from `sun.sun`. |
+| <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikony/ksiezyc.png" height="24" align="absmiddle"> | Moon and stars: night. |
 
 ---
 
-<a name="faq"></a>
-## ❓ FAQ
+<a name="manual"></a>
+## 🧰 Install without HACS (manual)
+
+Screenshots show the Polish HA interface; the buttons are in the same places in English.
+
+**Step 1. Download the card file**
+
+Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-1.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-1.png" width="100%" alt="Step 1"></a>
+
+**Step 2. Upload it to Home Assistant**
+
+Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-2.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-2.png" width="100%" alt="Step 2"></a>
+
+**Step 3. Open Dashboards**
+
+Click **Settings** at the bottom of the left menu, then **Dashboards**.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-3.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-3.png" width="100%" alt="Step 3"></a>
+
+**Step 4. Open Resources**
+
+Click the three dots **⋮** top right, then **Resources**.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-4.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-4.png" width="100%" alt="Step 4"></a>
+
+**Step 4a. No “Resources”? Turn on Advanced mode**
+
+Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-7.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-7.png" width="100%" alt="Step 4a"></a>
+
+**Step 5. Add the card as a resource**
+
+Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
+
+<a href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-5.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instalacja/krok-5.png" width="100%" alt="Step 5"></a>
+
+**HACS button not working?**
 
 
-#### The card is not in “Add card”
-
-Refresh with <b>Ctrl + Shift + R</b>, or restart the HA app on your phone.
-
-
-#### Animation faster/slower than the blind
-
-Editor → ⏱ Motion → <b>🤖 Auto-calibrate</b>.
-
-
-#### Blind moves the wrong way
-
-Enable <b>Invert position</b> in ⚙️ Advanced.
-
-
-#### No weather
-
-⚙️ Advanced → weather source <code>auto</code> or <code>internet</code>.
-
-
-Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or ask on the [HA forum](https://community.home-assistant.io/).
+1. **HACS → ⋮ → Custom repositories**.
+2. Repository `https://github.com/superdarco78/roleta-realistyczna`, type **Dashboard**, **Add**.
+3. Search for “Roleta dzień-noc” → **Download**.
 
 
 ---
@@ -481,7 +496,6 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 ## 🙋 Help wanted
 
 Different blind or motor? Tell us how it works with the card, with a screenshot. Ideas: [request a feature](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
-
 
 ---
 
@@ -495,14 +509,12 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 
 Want your language? Copy [`translations/en.json`](translations/en.json) to `translations/<code>.json`, translate it and send it in an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or a pull request.
 
-
 ---
 
 <a name="project-structure"></a>
 ## 🧱 Project structure
 
 Source code is split into modules in [`src/`](src) (card, editor, 7-step wizard, dashboards, weather, detection and ranking, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
-
 
 ---
 
