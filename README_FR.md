@@ -1,6 +1,6 @@
 <p align="center"><a name="i1" href="#i1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/baner-fr-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/baner-fr.png" alt="HA Window" width="100%"></picture></a></p>
 
-<p align="center"><a name="pokaz" href="#pokaz"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/pokaz-en.webp" alt="Animation: three cards, day and night, weather, moving blinds" width="100%"></a></p>
+<p align="center"><a name="pokaz" href="#pokaz"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/pokaz4-en.webp" alt="Animation: four covers, day and night, weather, movement" width="100%"></a></p>
 
 <p align="center">
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=version&color=0288d1" alt="release"></a>
