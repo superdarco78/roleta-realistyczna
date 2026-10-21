@@ -30,6 +30,8 @@
   <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
+<p align="center"><a href="https://superdarco78.github.io/roleta-realistyczna/index.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/lupa-pl.png" alt="Instrukcja z powiększaniem zdjęć" height="50"></a></p>
+
 > [!TIP]
 > Karta działa z każdym silnikiem rolet w Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i inne.
 > Najładniej wygląda przy oknie z dwoma skrzydłami. Jedno skrzydło też działa.

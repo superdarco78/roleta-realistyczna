@@ -30,6 +30,8 @@
   <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
+<p align="center"><a href="https://superdarco78.github.io/roleta-realistyczna/de.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/lupa-de.png" alt="Anleitung mit vergrößerbaren Bildern" height="50"></a></p>
+
 > [!TIP]
 > Die Karte funktioniert mit **jedem Rollo** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy und mehr. Am schönsten sieht sie mit einem Doppelrollo (Zebra) an einem zweiflügeligen Fenster aus, ein Flügel geht auch. Nach dem Hinzufügen **richtet der Assistent alles für dich ein**.
 

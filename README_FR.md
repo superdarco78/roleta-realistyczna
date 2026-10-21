@@ -30,6 +30,8 @@
   <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
+<p align="center"><a href="https://superdarco78.github.io/roleta-realistyczna/fr.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/lupa-fr.png" alt="Guide avec images agrandissables" height="50"></a></p>
+
 > [!TIP]
 > La carte fonctionne avec **tout store** dans Home Assistant (`cover.*`) : Zigbee, Z-Wave, Tuya, Shelly, Somfy et autres. Elle est plus belle avec un store jour-nuit (zébré) sur une fenêtre à 2 battants, mais 1 battant fonctionne aussi. Quand tu ajoutes la carte, **l’assistant règle tout pour toi**.
 

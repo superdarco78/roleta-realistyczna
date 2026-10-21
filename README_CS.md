@@ -30,6 +30,8 @@
   <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs-on.png" alt="Čeština" height="44"></a>
 </p>
 
+<p align="center"><a href="https://superdarco78.github.io/roleta-realistyczna/cs.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/lupa-cs.png" alt="Návod se zvětšitelnými obrázky" height="50"></a></p>
+
 > [!TIP]
 > Karta funguje s **každou roletou** v Home Assistantu (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy a dalšími. Nejlépe vypadá s roletou den-noc (zebra) na dvoukřídlém okně, ale jde i jedno křídlo. Po přidání karty **průvodce vše nastaví za tebe**.
 

@@ -30,6 +30,8 @@
   <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
+<p align="center"><a href="https://superdarco78.github.io/roleta-realistyczna/en.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/lupa-en.png" alt="Guide with zoomable pictures" height="50"></a></p>
+
 > [!TIP]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
 
