@@ -136,14 +136,14 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center"><b>☀️ Słońce</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/dzien.png"><img src="img/stany-jasne/dzien.png" width="250"></picture></td>
-<td align="center"><b>🌧 Deszcz</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/deszcz.png"><img src="img/stany-jasne/deszcz.png" width="250"></picture></td>
-<td align="center"><b>⛈ Burza</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/burza.png"><img src="img/stany-jasne/burza.png" width="250"></picture></td>
+<td align="center" width="33%"><b>☀️ Słońce</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/dzien.png"><img src="img/stany-jasne/dzien.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌧 Deszcz</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/deszcz.png"><img src="img/stany-jasne/deszcz.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>⛈ Burza</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/burza.png"><img src="img/stany-jasne/burza.png" width="100%"></picture></td>
 </tr>
 <tr>
-<td align="center"><b>❄️ Śnieg</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/snieg.png"><img src="img/stany-jasne/snieg.png" width="250"></picture></td>
-<td align="center"><b>🌫 Mgła</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/mgla.png"><img src="img/stany-jasne/mgla.png" width="250"></picture></td>
-<td align="center"><b>☁️ Pochmurno (po angielsku)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/en.png"><img src="img/stany-jasne/en.png" width="250"></picture></td>
+<td align="center" width="33%"><b>❄️ Śnieg</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/snieg.png"><img src="img/stany-jasne/snieg.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌫 Mgła</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/mgla.png"><img src="img/stany-jasne/mgla.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>☁️ Pochmurno (po angielsku)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/en.png"><img src="img/stany-jasne/en.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -151,21 +151,21 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center"><b>☀️ Dzień</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="250"></picture></td>
-<td align="center"><b>🌅 Zachód słońca</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="250"></picture></td>
-<td align="center"><b>🌙 Noc</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/noc.png"><img src="img/stany-jasne/noc.png" width="250"></picture></td>
+<td align="center" width="33%"><b>☀️ Dzień</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌅 Zachód słońca</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌙 Noc</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/noc.png"><img src="img/stany-jasne/noc.png" width="100%"></picture></td>
 </tr>
 </table>
 
-<details><summary>🌅 Wszystkie pory dnia na jednym obrazku</summary><img src="img/pora-dnia.png" width="700"></details>
+<details><summary>🌅 Wszystkie pory dnia na jednym obrazku</summary><img src="img/pora-dnia.png" width="100%"></details>
 
 **Pozycja rolety:**
 
 <table>
 <tr>
-<td align="center"><b>⬆️ Zwinięta (100%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="250"></picture></td>
-<td align="center"><b>↕️ W połowie (50%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="250"></picture></td>
-<td align="center"><b>⬇️ Opuszczona (0%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/opuszczona.png"><img src="img/stany-jasne/opuszczona.png" width="250"></picture></td>
+<td align="center" width="33%"><b>⬆️ Zwinięta (100%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>↕️ W połowie (50%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>⬇️ Opuszczona (0%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/opuszczona.png"><img src="img/stany-jasne/opuszczona.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -173,9 +173,9 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center"><b>↘ Lewe uchylone</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/uchylone.png"><img src="img/stany-jasne/uchylone.png" width="250"></picture></td>
-<td align="center"><b>↔ Prawe otwarte</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/otwarte.png"><img src="img/stany-jasne/otwarte.png" width="250"></picture></td>
-<td align="center"><b>🪟 Uchylone i otwarte</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/okno.png"><img src="img/stany-jasne/okno.png" width="250"></picture></td>
+<td align="center" width="33%"><b>↘ Lewe uchylone</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/uchylone.png"><img src="img/stany-jasne/uchylone.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>↔ Prawe otwarte</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/otwarte.png"><img src="img/stany-jasne/otwarte.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🪟 Uchylone i otwarte</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/okno.png"><img src="img/stany-jasne/okno.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -184,9 +184,9 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center"><b>Złoty dąb + beż</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zloty.png"><img src="img/stany-jasne/zloty.png" width="250"></picture></td>
-<td align="center"><b>Antracyt + turkus</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/turkus.png"><img src="img/stany-jasne/turkus.png" width="250"></picture></td>
-<td align="center"><b>1 skrzydło</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/jedno.png"><img src="img/stany-jasne/jedno.png" width="250"></picture></td>
+<td align="center" width="33%"><b>Złoty dąb + beż</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zloty.png"><img src="img/stany-jasne/zloty.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>Antracyt + turkus</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/turkus.png"><img src="img/stany-jasne/turkus.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>1 skrzydło</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/jedno.png"><img src="img/stany-jasne/jedno.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -210,11 +210,11 @@ Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualiz
 
 **Krok 2.** Kliknij **Otwórz link**. Za pierwszym razem strona zapyta o adres Twojego HA. Gdy HACS zapyta „Dodać repozytorium?”, kliknij **Dodaj**.
 
-<img src="img/instalacja/hacs-1.png" width="820" alt="Krok 2">
+<img src="img/instalacja/hacs-1.png" width="100%" alt="Krok 2">
 
 **Krok 3.** Kliknij **Pobierz** na dole po prawej, potem jeszcze raz **Pobierz** w okienku.
 
-<img src="img/instalacja/hacs-2.png" width="820" alt="Krok 3">
+<img src="img/instalacja/hacs-2.png" width="100%" alt="Krok 3">
 
 **Krok 4.** Odśwież stronę: **Ctrl + Shift + R** (w telefonie zamknij i otwórz aplikację HA).
 
@@ -235,37 +235,37 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 Wejdź w [najnowsze wydanie](https://github.com/superdarco78/roleta-realistyczna/releases/latest) i kliknij `roleta-realistyczna.js`. Plik zapisze się w folderze Pobrane.
 
-<img src="img/instalacja/krok-1.png" width="820" alt="Krok 1">
+<img src="img/instalacja/krok-1.png" width="100%" alt="Krok 1">
 
 **Krok 2. Wgraj plik do Home Assistanta**
 
 Otwórz **File editor**. Kliknij ikonę folderu, wejdź do folderu `www` i wgraj plik strzałką w górę.
 
-<img src="img/instalacja/krok-2.png" width="820" alt="Krok 2">
+<img src="img/instalacja/krok-2.png" width="100%" alt="Krok 2">
 
 **Krok 3. Otwórz Pulpity**
 
 Kliknij **Ustawienia** na dole menu po lewej, potem **Pulpity**.
 
-<img src="img/instalacja/krok-3.png" width="820" alt="Krok 3">
+<img src="img/instalacja/krok-3.png" width="100%" alt="Krok 3">
 
 **Krok 4. Otwórz Zasoby**
 
 Kliknij trzy kropki **⋮** w prawym górnym rogu, potem **Zasoby**.
 
-<img src="img/instalacja/krok-4.png" width="820" alt="Krok 4">
+<img src="img/instalacja/krok-4.png" width="100%" alt="Krok 4">
 
 **Krok 4a. Nie widzisz „Zasoby”? Włącz tryb zaawansowany**
 
 Kliknij swoje imię na dole menu po lewej i włącz **Tryb zaawansowany**. Potem wróć do kroku 4.
 
-<img src="img/instalacja/krok-7.png" width="820" alt="Krok 4a">
+<img src="img/instalacja/krok-7.png" width="100%" alt="Krok 4a">
 
 **Krok 5. Dodaj kartę jako zasób**
 
 Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Moduł JavaScript** i kliknij **Utwórz**. Na koniec odśwież stronę: **Ctrl + Shift + R**.
 
-<img src="img/instalacja/krok-5.png" width="820" alt="Krok 5">
+<img src="img/instalacja/krok-5.png" width="100%" alt="Krok 5">
 
 ---
 
@@ -274,7 +274,7 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 
 **Krok 1.** Na pulpicie kliknij ołówek (Edytuj) → **＋ Dodaj kartę** → wpisz **Roleta** → kliknij kartę.
 
-<img src="img/instalacja/krok-6.png" width="820" alt="Dodaj kartę">
+<img src="img/instalacja/krok-6.png" width="100%" alt="Dodaj kartę">
 
 **Krok 2.** Kreator otworzy się sam i przeprowadzi Cię przez 3 kroki:
 
@@ -282,19 +282,15 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 
 Grupy rolet (okno 2-skrzydłowe) są na górze listy.
 
-<img src="img/kreator-1.png" width="480" alt="1️⃣ Wybierz roletę">
-
 **2️⃣ Zobacz, co karta wykryła**
 
 Silnik, kontaktrony i pogoda. Niczego nie musisz dodawać.
-
-<img src="img/kreator-2.png" width="480" alt="2️⃣ Zobacz, co karta wykryła">
 
 **3️⃣ Wybierz wygląd**
 
 6 gotowych stylów: nowoczesny, drewno, skandynawski, ciemny, orzech, kolorowy.
 
-<img src="img/kreator-3.png" width="480" alt="3️⃣ Wybierz wygląd">
+<img src="img/kreator-razem.png" width="100%" alt="Kreator: 3 kroki">
 
 ✅ **Gotowe.** Wszystko inne zmienisz w [edytorze](#edytor).
 
@@ -324,28 +320,24 @@ Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta j
 
 Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia są w rozwijanych działach. W każdym jest **↺ Przywróć domyślne**.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/dzialy.png"><img src="img/edytor-jasne/dzialy.png" width="520" alt="Działy edytora"></picture>
-
 <a name="podglad-na-zywo"></a>
 ### Podgląd na żywo
 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/podglad.png"><img src="img/edytor-jasne/podglad.png" width="520" alt="Podgląd na żywo"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/para-podglad-dzialy-ciemne.png"><img src="img/edytor-jasne/para-podglad-dzialy.png" width="100%" alt="Podgląd i działy edytora"></picture>
 
 <a name="wyglad"></a>
 ### 🎨 Wygląd
 
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/wyglad.png"><img src="img/edytor-jasne/wyglad.png" width="520" alt="Wygląd"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/para-wyglad-okno-ciemne.png"><img src="img/edytor-jasne/para-wyglad-okno.png" width="100%" alt="Wygląd i okno"></picture>
 
 <a name="okno-i-kontaktrony"></a>
 ### 🪟 Okno i kontaktrony
 
 Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/okno.png"><img src="img/edytor-jasne/okno.png" width="520" alt="Okno i kontaktrony"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/kontaktrony-ciemne.png"><img src="img/edytor-jasne/kontaktrony.png" width="100%" alt="Zamknięte, lewe uchylone, prawe otwarte, oba"></picture>
 
@@ -354,7 +346,7 @@ Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywan
 
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/kalibracja.png"><img src="img/edytor-jasne/kalibracja.png" width="520" alt="Kalibracja"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/para-kalibracja-globalne-ciemne.png"><img src="img/edytor-jasne/para-kalibracja-globalne.png" width="100%" alt="Kalibracja i ustawienia globalne"></picture>
 
 <a name="zaawansowane"></a>
 ### ⚙️ Zaawansowane
@@ -365,8 +357,6 @@ Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwr�
 ### 🌍 Ustawienia globalne
 
 **🌍 Zapisz jako domyślne** przenosi Twój wygląd na wszystkie karty rolet, także nowe. Każda karta może go nadal zmienić u siebie.
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/globalne.png"><img src="img/edytor-jasne/globalne.png" width="520" alt="Zaawansowane i ustawienia globalne"></picture>
 
 ---
 

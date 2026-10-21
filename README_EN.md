@@ -116,14 +116,14 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center"><b>☀️ Sun</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/dzien.png"><img src="img/stany-jasne/dzien.png" width="250"></picture></td>
-<td align="center"><b>🌧 Rain</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/deszcz.png"><img src="img/stany-jasne/deszcz.png" width="250"></picture></td>
-<td align="center"><b>⛈ Storm</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/burza.png"><img src="img/stany-jasne/burza.png" width="250"></picture></td>
+<td align="center" width="33%"><b>☀️ Sun</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/dzien.png"><img src="img/stany-jasne/dzien.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌧 Rain</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/deszcz.png"><img src="img/stany-jasne/deszcz.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>⛈ Storm</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/burza.png"><img src="img/stany-jasne/burza.png" width="100%"></picture></td>
 </tr>
 <tr>
-<td align="center"><b>❄️ Snow</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/snieg.png"><img src="img/stany-jasne/snieg.png" width="250"></picture></td>
-<td align="center"><b>🌫 Fog</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/mgla.png"><img src="img/stany-jasne/mgla.png" width="250"></picture></td>
-<td align="center"><b>☁️ Cloudy (English UI)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/en.png"><img src="img/stany-jasne/en.png" width="250"></picture></td>
+<td align="center" width="33%"><b>❄️ Snow</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/snieg.png"><img src="img/stany-jasne/snieg.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌫 Fog</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/mgla.png"><img src="img/stany-jasne/mgla.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>☁️ Cloudy (English UI)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/en.png"><img src="img/stany-jasne/en.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -131,9 +131,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center"><b>☀️ Day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="250"></picture></td>
-<td align="center"><b>🌅 Sunset</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="250"></picture></td>
-<td align="center"><b>🌙 Night</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/noc.png"><img src="img/stany-jasne/noc.png" width="250"></picture></td>
+<td align="center" width="33%"><b>☀️ Day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌅 Sunset</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🌙 Night</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/noc.png"><img src="img/stany-jasne/noc.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -141,9 +141,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center"><b>⬆️ Open (100%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="250"></picture></td>
-<td align="center"><b>↕️ Half (50%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="250"></picture></td>
-<td align="center"><b>⬇️ Closed (0%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/opuszczona.png"><img src="img/stany-jasne/opuszczona.png" width="250"></picture></td>
+<td align="center" width="33%"><b>⬆️ Open (100%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zwinieta.png"><img src="img/stany-jasne/zwinieta.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>↕️ Half (50%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zachod.png"><img src="img/stany-jasne/zachod.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>⬇️ Closed (0%)</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/opuszczona.png"><img src="img/stany-jasne/opuszczona.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -151,9 +151,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center"><b>↘ Left tilted</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/uchylone.png"><img src="img/stany-jasne/uchylone.png" width="250"></picture></td>
-<td align="center"><b>↔ Right opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/otwarte.png"><img src="img/stany-jasne/otwarte.png" width="250"></picture></td>
-<td align="center"><b>🪟 Tilted and opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/okno.png"><img src="img/stany-jasne/okno.png" width="250"></picture></td>
+<td align="center" width="33%"><b>↘ Left tilted</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/uchylone.png"><img src="img/stany-jasne/uchylone.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>↔ Right opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/otwarte.png"><img src="img/stany-jasne/otwarte.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>🪟 Tilted and opened</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/okno.png"><img src="img/stany-jasne/okno.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -162,9 +162,9 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 <table>
 <tr>
-<td align="center"><b>Golden oak + beige</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zloty.png"><img src="img/stany-jasne/zloty.png" width="250"></picture></td>
-<td align="center"><b>Anthracite + turquoise</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/turkus.png"><img src="img/stany-jasne/turkus.png" width="250"></picture></td>
-<td align="center"><b>1 sash</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/jedno.png"><img src="img/stany-jasne/jedno.png" width="250"></picture></td>
+<td align="center" width="33%"><b>Golden oak + beige</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/zloty.png"><img src="img/stany-jasne/zloty.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>Anthracite + turquoise</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/turkus.png"><img src="img/stany-jasne/turkus.png" width="100%"></picture></td>
+<td align="center" width="33%"><b>1 sash</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="img/stany/jedno.png"><img src="img/stany-jasne/jedno.png" width="100%"></picture></td>
 </tr>
 </table>
 
@@ -184,11 +184,11 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 **Step 2.** Click **Open link**, then **Add** when HACS asks to add the repository.
 
-<img src="img/instalacja/hacs-1.png" width="820" alt="Step 2">
+<img src="img/instalacja/hacs-1.png" width="100%" alt="Step 2">
 
 **Step 3.** Click **Download** (bottom right), then **Download** again.
 
-<img src="img/instalacja/hacs-2.png" width="820" alt="Step 3">
+<img src="img/instalacja/hacs-2.png" width="100%" alt="Step 3">
 
 **Step 4.** Refresh the page: **Ctrl + Shift + R** (on a phone, close and reopen the HA app).
 
@@ -209,37 +209,37 @@ Screenshots show the Polish HA interface; the buttons are in the same places in 
 
 Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
 
-<img src="img/instalacja/krok-1.png" width="820" alt="Step 1">
+<img src="img/instalacja/krok-1.png" width="100%" alt="Step 1">
 
 **Step 2. Upload it to Home Assistant**
 
 Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
 
-<img src="img/instalacja/krok-2.png" width="820" alt="Step 2">
+<img src="img/instalacja/krok-2.png" width="100%" alt="Step 2">
 
 **Step 3. Open Dashboards**
 
 Click **Settings** at the bottom of the left menu, then **Dashboards**.
 
-<img src="img/instalacja/krok-3.png" width="820" alt="Step 3">
+<img src="img/instalacja/krok-3.png" width="100%" alt="Step 3">
 
 **Step 4. Open Resources**
 
 Click the three dots **⋮** top right, then **Resources**.
 
-<img src="img/instalacja/krok-4.png" width="820" alt="Step 4">
+<img src="img/instalacja/krok-4.png" width="100%" alt="Step 4">
 
 **Step 4a. No “Resources”? Turn on Advanced mode**
 
 Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
 
-<img src="img/instalacja/krok-7.png" width="820" alt="Step 4a">
+<img src="img/instalacja/krok-7.png" width="100%" alt="Step 4a">
 
 **Step 5. Add the card as a resource**
 
 Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
 
-<img src="img/instalacja/krok-5.png" width="820" alt="Step 5">
+<img src="img/instalacja/krok-5.png" width="100%" alt="Step 5">
 
 ---
 
@@ -252,19 +252,15 @@ Dashboard → pencil (Edit) → **＋ Add card** → type **Roleta** → click t
 
 Blind groups (2-sash windows) are listed first.
 
-<img src="img/kreator-1.png" width="480" alt="1️⃣ Pick the blind">
-
 **2️⃣ See what was detected**
 
 Motor, contact sensors and weather. Nothing to add.
-
-<img src="img/kreator-2.png" width="480" alt="2️⃣ See what was detected">
 
 **3️⃣ Pick a look**
 
 6 styles: modern, wood, Scandinavian, dark, walnut, colourful.
 
-<img src="img/kreator-3.png" width="480" alt="3️⃣ Pick a look">
+<img src="img/kreator-razem.png" width="100%" alt="Wizard: 3 steps">
 
 ---
 
@@ -300,9 +296,7 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 | ⚙️ Advanced | Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo. |
 | 🌍 Global | **Save as default** for all blind cards. |
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/podglad.png"><img src="img/edytor-jasne/podglad.png" width="520" alt="Preview"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor/dzialy.png"><img src="img/edytor-jasne/dzialy.png" width="520" alt="Editor sections"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/para-podglad-dzialy-ciemne.png"><img src="img/edytor-jasne/para-podglad-dzialy.png" width="100%" alt="Preview and sections"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="img/edytor-jasne/kontaktrony-ciemne.png"><img src="img/edytor-jasne/kontaktrony.png" width="100%" alt="Contact sensors"></picture>
 
