@@ -38,15 +38,15 @@
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/animacja-en.webp" width="49%" alt="Animation"></a>&nbsp;<a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/animacja-ciemna-en.webp" width="49%" alt="Animation"></a></p>
 
 <table>
-<tr><td align="center" valign="top" width="25%"><a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#how-it-looks"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/weather-partly-cloudy.png" height="56" alt=""><br><b>Počasí</b><br><sub>Déšť, sníh, slunce nebo noc venku</sub></a></td><td align="center" valign="top" width="25%"><a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#actions-how-to-control-it"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-swipe-vertical.png" height="56" alt=""><br><b>Tažení prstem</b><br><sub>Nahoru nebo dolů jedním prstem</sub></a></td><td align="center" valign="top" width="25%"><a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="#krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/auto-fix.png" height="56" alt=""><br><b>Průvodce</b><br><sub>Najde tvá zařízení sám</sub></a></td><td align="center" valign="top" width="25%"><a name="i61" href="#i61"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#auto-detection"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/window-open-variant.png" height="56" alt=""><br><b>Otevřené okno</b><br><sub>Ukáže otevřené i vyklopené okno</sub></a></td></tr>
-<tr><td align="center" valign="top" width="25%"><a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#options"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/timer-outline.png" height="56" alt=""><br><b>Rychlost motoru</b><br><sub>Jede stejně rychle jako motor</sub></a></td><td align="center" valign="top" width="25%"><a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#colours-and-wood-finishes"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/palette.png" height="56" alt=""><br><b>Barvy</b><br><sub>Dub, ořech, antracit a další</sub></a></td><td align="center" valign="top" width="25%"><a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#editor"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/theme-light-dark.png" height="56" alt=""><br><b>Světlý a tmavý</b><br><sub>Ladí s motivem Home Assistant</sub></a></td><td align="center" valign="top" width="25%"><a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="215" height="0"></a><br><a href="README_EN.md#translations"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/translate.png" height="56" alt=""><br><b>Polština a angličtina</b><br><sub>Jazyk podle tvého profilu</sub></a></td></tr>
+<tr><td align="center" width="25%"><a href="README_EN.md#how-it-looks"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-1.png" width="215" alt="Počasí"></picture></a></td><td align="center" width="25%"><a href="README_EN.md#actions-how-to-control-it"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-2.png" width="215" alt="Tažení prstem"></picture></a></td><td align="center" width="25%"><a href="#kreator-krok-1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-3.png" width="215" alt="Průvodce"></picture></a></td><td align="center" width="25%"><a href="README_EN.md#auto-detection"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-4.png" width="215" alt="Okenní senzor"></picture></a></td></tr>
+<tr><td align="center" width="25%"><a href="README_EN.md#options"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-5.png" width="215" alt="Rychlost motoru"></picture></a></td><td align="center" width="25%"><a href="README_EN.md#colours-and-wood-finishes"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-6-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-6.png" width="215" alt="Barvy"></picture></a></td><td align="center" width="25%"><a href="README_EN.md#editor"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-7-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-7.png" width="215" alt="Světlý a tmavý"></picture></a></td><td align="center" width="25%"><a href="README_EN.md#translations"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-8-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafelki2/cs-8.png" width="215" alt="Polština a angličtina"></picture></a></td></tr>
 </table>
 
 <a name="table-of-contents"></a>
-## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/format-list-bulleted.png" height="36" align="absmiddle"></a> Obsah
+## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/format-list-bulleted.png" height="36" align="absmiddle"></a> Obsah
 
 
-**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="26" align="absmiddle"></a> [Část 1. Pro začátečníky](#for-beginners)** · to stačí
+**<a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/rocket-launch.png" height="26" align="absmiddle"></a> [Část 1. Pro začátečníky](#for-beginners)** · to stačí
 - [Klikni na modré tlačítko](#krok-1)
 - [Klikni na „Stáhnout“](#krok-2)
 - [Přidej kartu](#krok-3)
@@ -56,19 +56,19 @@
 - [Slovníček: co znamenají tato slova?](#glossary)
 - [Otázky a problémy](#faq)
 
-**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="26" align="absmiddle"></a> [Část 2. Pro pokročilé](#advanced)** · nepovinné
+**<a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/wrench.png" height="26" align="absmiddle"></a> [Část 2. Pro pokročilé](#advanced)** · nepovinné
 
 ---
 
 <a name="for-beginners"></a>
-# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/rocket-launch.png" height="46" align="absmiddle"></a> Část 1. Pro začátečníky
+# <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Část 1. Pro začátečníky
 
 <a name="start-in-4-steps"></a>
 > [!TIP]
 > **To je vše, co potřebuješ.** 4 kroky, asi minuta. Zbytek udělá průvodce. Část 2 můžeš přeskočit.
 
 <a name="krok-1"></a>
-### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="32" align="absmiddle"></a> Klikni na modré tlačítko
+### <a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Klikni na modré tlačítko
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otevřít v HACS" height="56"></a></p>
 
@@ -80,7 +80,7 @@ Tlačítko otevře HACS ve tvém Home Assistant. Obrázek ukazuje, kam kliknout.
 <br>
 
 <a name="krok-2"></a>
-### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="32" align="absmiddle"></a> Klikni na „Stáhnout“
+### <a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/numeric-2-circle.png" height="32" align="absmiddle"></a> Klikni na „Stáhnout“
 
 Stáhni kartu do svého Home Assistant.
 
@@ -90,7 +90,7 @@ Stáhni kartu do svého Home Assistant.
 <br>
 
 <a name="krok-3"></a>
-### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="32" align="absmiddle"></a> Přidej kartu
+### <a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/numeric-3-circle.png" height="32" align="absmiddle"></a> Přidej kartu
 
 Přidej kartu na svou nástěnku.
 
@@ -100,7 +100,7 @@ Přidej kartu na svou nástěnku.
 <br>
 
 <a name="krok-4"></a>
-### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/numeric-4-circle.png" height="32" align="absmiddle"></a> Zbytek udělá průvodce
+### <a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/numeric-4-circle.png" height="32" align="absmiddle"></a> Zbytek udělá průvodce
 
 Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, motor, okenní senzory i počasí.
 
@@ -166,7 +166,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 ---
 
 <a name="actions-how-to-control-it"></a>
-### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/gesture-tap.png" height="32" align="absmiddle"></a> Jak ovládat
+### <a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/gesture-tap.png" height="32" align="absmiddle"></a> Jak ovládat
 
 <table>
 <tr><th align="center"><a name="i36" href="#i36"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="90" height="0"></a><br>Ikona</th><th align="left"><a name="i37" href="#i37"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="330" height="0"></a><br>Co děláš</th><th align="left"><a name="i38" href="#i38"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/odstep.png" width="480" height="0"></a><br>Co se stane</th></tr>
@@ -186,7 +186,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 ---
 
 <a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/update.png" height="32" align="absmiddle"></a> Aktualizace na v23
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualizace na v23
 
 > [!IMPORTANT]
 > Verze 23 **nemění** tvá nastavení. Stávající karty fungují dál.
@@ -205,7 +205,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 ---
 
 <a name="glossary"></a>
-### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/book-open-variant.png" height="32" align="absmiddle"></a> Slovníček: co znamenají tato slova?
+### <a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/book-open-variant.png" height="32" align="absmiddle"></a> Slovníček: co znamenají tato slova?
 
 
 <table>
@@ -224,39 +224,39 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 ---
 
 <a name="faq"></a>
-### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/help-circle.png" height="32" align="absmiddle"></a> Otázky a problémy
+### <a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/help-circle.png" height="32" align="absmiddle"></a> Otázky a problémy
 
 <br>
 
-#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Karta není v „Přidat kartu“
+#### <a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/alert-circle-outline.png" height="26" align="absmiddle"></a> Karta není v „Přidat kartu“
 
 Obnov stránku: **Ctrl + Shift + R**. V telefonu znovu otevři aplikaci HA. Pak napiš **Roleta** do hledání karet.
 
 
 <br>
 
-#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Animace je rychlejší nebo pomalejší než roleta
+#### <a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/alert-circle-outline.png" height="26" align="absmiddle"></a> Animace je rychlejší nebo pomalejší než roleta
 
 Otevři editor karty, oddíl **Ruch i kalibracja** (pohyb), klikni **Kalibruj automatycznie**. Karta změří čas sama.
 
 
 <br>
 
-#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Za sklem není počasí
+#### <a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/alert-circle-outline.png" height="26" align="absmiddle"></a> Za sklem není počasí
 
 Otevři editor, oddíl **Zaawansowane** (pokročilé), zdroj počasí **auto** nebo **internet**.
 
 
 <br>
 
-#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Roleta jede obráceně
+#### <a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/alert-circle-outline.png" height="26" align="absmiddle"></a> Roleta jede obráceně
 
 Otevři editor, oddíl **Zaawansowane** (pokročilé), zapni **Obrátit polohu**.
 
 
 <br>
 
-#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/alert-circle-outline.png" height="26" align="absmiddle"></a> Okenní senzor nefunguje
+#### <a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/alert-circle-outline.png" height="26" align="absmiddle"></a> Okenní senzor nefunguje
 
 Otevři editor, oddíl **Okno**. Vyber senzor pro každé křídlo a **vyklopené** nebo **otevřené**.
 
@@ -266,7 +266,7 @@ Stále nevíš? [Nahlas problém](https://github.com/superdarco78/roleta-realist
 ---
 
 <a name="advanced"></a>
-# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha2/wrench.png" height="46" align="absmiddle"></a> Část 2. Pro pokročilé
+# <a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/wrench.png" height="46" align="absmiddle"></a> Část 2. Pro pokročilé
 
 Všechny volby, příklady YAML, editor a instalace bez HACS jsou podrobně a s obrázky v anglickém návodu.
 

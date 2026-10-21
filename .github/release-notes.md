@@ -22,7 +22,7 @@
 
 ---
 
-## <a name="r2" href="#r2"><img src="{{RAW}}/img/zdjecia/ikony-ha2/star-four-points.png" height="36" align="absmiddle"></a> Co nowego w {{WERSJA}}
+## <a name="r2" href="#r2"><img src="{{RAW}}/img/zdjecia/ikony-ha3/star-four-points.png" height="36" align="absmiddle"></a> Co nowego w {{WERSJA}}
 
 {{OBRAZEK}}
 
@@ -30,24 +30,24 @@
 
 ---
 
-## <a name="r3" href="#r3"><img src="{{RAW}}/img/zdjecia/ikony-ha2/update.png" height="36" align="absmiddle"></a> Jak zaktualizować
+## <a name="r3" href="#r3"><img src="{{RAW}}/img/zdjecia/ikony-ha3/update.png" height="36" align="absmiddle"></a> Jak zaktualizować
 
 > [!IMPORTANT]
 > Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
 
-### <a name="r4" href="#r4"><img src="{{RAW}}/img/zdjecia/ikony-ha2/numeric-1-circle.png" height="32" align="absmiddle"></a> Kliknij niebieski przycisk „Otwórz w HACS” na górze tej strony
+### <a name="r4" href="#r4"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Kliknij niebieski przycisk „Otwórz w HACS” na górze tej strony
 
-### <a name="r5" href="#r5"><img src="{{RAW}}/img/zdjecia/ikony-ha2/numeric-2-circle.png" height="32" align="absmiddle"></a> Kliknij „Pobierz” i wybierz wersję {{WERSJA}}
+### <a name="r5" href="#r5"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-2-circle.png" height="32" align="absmiddle"></a> Kliknij „Pobierz” i wybierz wersję {{WERSJA}}
 
 <p align="center"><a name="r6" href="#r6"><img src="{{RAW}}/img/zdjecia/zrzuty/pl/hacs-1.png" width="49%" alt="Krok 1"></a>&nbsp;<a name="r7" href="#r7"><img src="{{RAW}}/img/zdjecia/zrzuty/pl/hacs-2.png" width="49%" alt="Krok 2"></a></p>
 
-### <a name="r8" href="#r8"><img src="{{RAW}}/img/zdjecia/ikony-ha2/numeric-3-circle.png" height="32" align="absmiddle"></a> Odśwież stronę Home Assistant
+### <a name="r8" href="#r8"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-3-circle.png" height="32" align="absmiddle"></a> Odśwież stronę Home Assistant
 
 Na komputerze naciśnij **Ctrl + F5**. W telefonie zamknij aplikację i otwórz ją jeszcze raz. Obok nazwy karty zobaczysz **{{WERSJA}}**.
 
 ---
 
-## <a name="r9" href="#r9"><img src="{{RAW}}/img/zdjecia/ikony-ha2/translate.png" height="36" align="absmiddle"></a> English
+## <a name="r9" href="#r9"><img src="{{RAW}}/img/zdjecia/ikony-ha3/translate.png" height="36" align="absmiddle"></a> English
 
 Update in **HACS → Roleta dzień-noc → Download**, then refresh the page (**Ctrl + F5**). Your settings stay the same. The card, the editor and the wizard use the language of your Home Assistant profile. Full guide: [README_EN]({{REPO_URL}}/blob/main/README_EN.md).
 
