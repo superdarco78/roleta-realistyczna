@@ -8,11 +8,11 @@
   <br>
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
-  <a href="#-translations"><img src="https://img.shields.io/badge/translations-PL%20%7C%20EN-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="translations"></a>
+  <a href="#translations"><img src="https://img.shields.io/badge/translations-PL%20%7C%20EN-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="translations"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="license"></a>
   <br>
   <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/validate.yml?style=for-the-badge&label=HACS%20validate&logo=homeassistantcommunitystore&logoColor=white" alt="HACS validate"></a>
-  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/release.yml?style=for-the-badge&label=release%20build&logo=githubactions&logoColor=white" alt="release%20build"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/release.yml?style=for-the-badge&label=release%20build&logo=githubactions&logoColor=white" alt="Release build"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&label=issues&color=e64a19" alt="issues"></a>
   <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/maintainer-%40superdarco78-d32f2f?style=for-the-badge&logo=github" alt="maintainer"></a>
   <br>
@@ -29,9 +29,10 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animation"></picture></p>
 
+<a name="start-in-4-steps"></a>
 ## 🚀 Start in 4 steps
 
-<p align="center"><a href="#️-installation"><img src="img/start-en.png" width="100%" alt="Start in 4 steps"></a></p>
+<p align="center"><a href="#installation"><img src="img/start-en.png" width="100%" alt="Start in 4 steps"></a></p>
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="48"></a><br><sub>⬆️ This is the button from step 1</sub></p>
 
@@ -50,32 +51,34 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 | **YAML** | Typing settings by hand. **Not needed here.** |
 </details>
 
+<a name="table-of-contents"></a>
 ## 📑 Table of contents
 
-- [🚀 Start in 4 steps](#-start-in-4-steps)
-- [⬆️ Upgrading to v22](#️-upgrading-to-v22)
-- [🪟 The Roleta dzień-noc card](#-the-roleta-dzień-noc-card)
+- [🚀 Start in 4 steps](#start-in-4-steps)
+- [⬆️ Upgrading to v22](#upgrading-to-v22)
+- [🪟 The Roleta dzień-noc card](#the-roleta-dzien-noc-card)
   - [Goals](#goals)
   - [How it looks](#how-it-looks)
   - [Colours and wood finishes](#colours-and-wood-finishes)
-- [⬇️ Installation](#️-installation)
+- [⬇️ Installation](#installation)
   - [With HACS (recommended)](#with-hacs-recommended)
   - [Manual](#manual)
-- [🪄 First run: the wizard](#-first-run-the-wizard)
-- [👆 Actions: how to control it](#-actions-how-to-control-it)
-- [🎛 Editor](#-editor)
-- [📄 Options](#-options)
-- [🧪 Examples](#-examples)
-- [🔎 Auto-detection](#-auto-detection)
-- [🔌 Moes / Tuya motors](#-moes--tuya-motors)
-- [🧩 Card elements](#-card-elements)
-- [❓ FAQ](#-faq)
-- [🙋 Help wanted](#-help-wanted)
-- [🌍 Translations](#-translations)
-- [☕ Support](#-support)
+- [🪄 First run: the wizard](#first-run-the-wizard)
+- [👆 Actions: how to control it](#actions-how-to-control-it)
+- [🎛 Editor](#editor)
+- [📄 Options](#options)
+- [🧪 Examples](#examples)
+- [🔎 Auto-detection](#auto-detection)
+- [🔌 Moes / Tuya motors](#moes-tuya-motors)
+- [🧩 Card elements](#card-elements)
+- [❓ FAQ](#faq)
+- [🙋 Help wanted](#help-wanted)
+- [🌍 Translations](#translations)
+- [☕ Support](#support)
 
 ---
 
+<a name="upgrading-to-v22"></a>
 ## ⬆️ Upgrading to v22
 
 > [!IMPORTANT]
@@ -90,12 +93,14 @@ README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
 
 ---
 
+<a name="the-roleta-dzien-noc-card"></a>
 ## 🪟 The Roleta dzień-noc card
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Card elements"></picture></p>
 
+<a name="goals"></a>
 ### Goals
 
 - ✅ The blind on screen should look and move **like the real one**.
@@ -103,6 +108,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 - ✅ Comfortable **touch control** on phones and tablets.
 - ✅ Work with **any** blind and **any** home (language, weather, sensors).
 
+<a name="how-it-looks"></a>
 ### How it looks
 
 **Weather:**
@@ -150,6 +156,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 </tr>
 </table>
 
+<a name="colours-and-wood-finishes"></a>
 ### Colours and wood finishes
 
 <table>
@@ -162,10 +169,12 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 
 ---
 
+<a name="installation"></a>
 ## ⬇️ Installation
 
 **Requirements:** Home Assistant **2024.8** or newer and a blind as a `cover.*` entity.
 
+<a name="with-hacs-recommended"></a>
 ### With HACS (recommended)
 
 **Step 1.** Click:
@@ -190,6 +199,7 @@ The card shows your day-night blind on a real-looking window. Drag the blind wit
 3. Search for “Roleta dzień-noc” → **Download**.
 </details>
 
+<a name="manual"></a>
 ### Manual
 
 Screenshots show the Polish HA interface; the buttons are in the same places in English.
@@ -232,6 +242,7 @@ Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScrip
 
 ---
 
+<a name="first-run-the-wizard"></a>
 ## 🪄 First run: the wizard
 
 Dashboard → pencil (Edit) → **＋ Add card** → type **Roleta** → click the card. The wizard opens by itself:
@@ -256,6 +267,7 @@ Motor, contact sensors and weather. Nothing to add.
 
 ---
 
+<a name="actions-how-to-control-it"></a>
 ## 👆 Actions: how to control it
 
 | Action | How | Result |
@@ -274,6 +286,7 @@ A dashed **“→ 50%”** line shows where the blind is going.
 
 ---
 
+<a name="editor"></a>
 ## 🎛 Editor
 
 Settings are grouped in collapsible sections, each with **↺ Restore defaults**. The live preview at the top **never moves the real blind**; pin it 📌 to see every change.
@@ -290,6 +303,7 @@ Settings are grouped in collapsible sections, each with **↺ Restore defaults**
 
 ---
 
+<a name="options"></a>
 ## 📄 Options
 
 Everything can be set in the editor; the tables are for YAML fans. Option names are Polish.
@@ -327,6 +341,7 @@ Everything can be set in the editor; the tables are for YAML fans. Option names 
 | `osobno` | bool | `false` | Dragging the glass moves one sash only. |
 | `wibracja` | bool | `true` | Haptic feedback. |
 
+<a name="examples"></a>
 ## 🧪 Examples
 
 ```yaml
@@ -356,6 +371,7 @@ zrodlo: brak
 jezyk: en
 ```
 
+<a name="auto-detection"></a>
 ## 🔎 Auto-detection
 
 | What | How |
@@ -366,10 +382,12 @@ jezyk: en
 | **Weather** | `weather.*`; if none, Open-Meteo for your home location (no API key). |
 | **Language** | From your HA profile. |
 
+<a name="moes-tuya-motors"></a>
 ## 🔌 Moes / Tuya motors
 
 Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2 + 394 / rpm. False 0% / 100% reports while moving are ignored.
 
+<a name="card-elements"></a>
 ## 🧩 Card elements
 
 | Element | Meaning |
@@ -384,6 +402,7 @@ Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2
 | <img src="img/ikony/slonce.png" height="32"> | Sun: daytime from `sun.sun`. |
 | <img src="img/ikony/ksiezyc.png" height="32"> | Moon and stars: night. |
 
+<a name="faq"></a>
 ## ❓ FAQ
 
 <details><summary><b>The card is not in “Add card”</b></summary>Refresh with <b>Ctrl + Shift + R</b>, or restart the HA app on your phone.</details>
@@ -393,10 +412,12 @@ Tested with **Moes TS0601** (zigbee2mqtt). Travel time from motor speed ≈ 20.2
 
 Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) or ask on the [HA forum](https://community.home-assistant.io/).
 
+<a name="help-wanted"></a>
 ## 🙋 Help wanted
 
 Different blind or motor? Tell us how it works with the card, with a screenshot. Ideas: [request a feature](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
 
+<a name="translations"></a>
 ## 🌍 Translations
 
 | Language | Status |
@@ -406,6 +427,7 @@ Different blind or motor? Tell us how it works with the card, with a screenshot.
 
 Want your language? Open an [issue](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose). Texts live in `RR_TXT` and `RR_ED` in `roleta-realistyczna.js`.
 
+<a name="support"></a>
 ## ☕ Support
 
 If you like the card, leave a ⭐ at the top of the page. Thank you!

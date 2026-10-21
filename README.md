@@ -4,16 +4,16 @@
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&label=wersja&color=0288d1" alt="wersja"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/total?style=for-the-badge&label=pobrania&color=2e7d32" alt="pobrania"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/stargazers"><img src="https://img.shields.io/github/stars/superdarco78/roleta-realistyczna?style=for-the-badge&label=gwiazdki&color=f9a825&logo=github" alt="gwiazdki"></a>
-  <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge&label=aktywno%C5%9B%C4%87&color=6a1b9a" alt="aktywno%C5%9B%C4%87"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge&label=aktywno%C5%9B%C4%87&color=6a1b9a" alt="Aktywność"></a>
   <br>
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
-  <a href="#-tłumaczenia"><img src="https://img.shields.io/badge/t%C5%82umaczenia-PL%20%7C%20EN-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="t%C5%82umaczenia"></a>
+  <a href="#tlumaczenia"><img src="https://img.shields.io/badge/t%C5%82umaczenia-PL%20%7C%20EN-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="Tłumaczenia"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licencja-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="licencja"></a>
   <br>
   <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/validate.yml?style=for-the-badge&label=HACS%20validate&logo=homeassistantcommunitystore&logoColor=white" alt="HACS validate"></a>
   <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/release.yml?style=for-the-badge&label=wydanie&logo=githubactions&logoColor=white" alt="wydanie"></a>
-  <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&label=zg%C5%82oszenia&color=e64a19" alt="zg%C5%82oszenia"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&label=zg%C5%82oszenia&color=e64a19" alt="Zgłoszenia"></a>
   <a href="https://github.com/superdarco78"><img src="https://img.shields.io/badge/maintainer-%40superdarco78-d32f2f?style=for-the-badge&logo=github" alt="maintainer"></a>
   <br>
   <a href="https://community.home-assistant.io/"><img src="https://img.shields.io/badge/forum-Home%20Assistant-41BDF5?style=for-the-badge&logo=discourse&logoColor=white" alt="Forum HA"></a>
@@ -29,9 +29,10 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/animacja-ciemna.gif"><img src="img/animacja.gif" width="380" alt="Animacja rolety"></picture></p>
 
+<a name="start-w-4-krokach"></a>
 ## 🚀 Start w 4 krokach
 
-<p align="center"><a href="#️-instalacja"><img src="img/start-pl.png" width="100%" alt="Start w 4 krokach"></a></p>
+<p align="center"><a href="#instalacja"><img src="img/start-pl.png" width="100%" alt="Start w 4 krokach"></a></p>
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otwórz w HACS" height="48"></a><br><sub>⬆️ To jest przycisk z kroku 1</sub></p>
 
@@ -50,44 +51,46 @@ README: **🇵🇱 Polski** | [🇬🇧 English](README_EN.md)
 | **YAML** | Ręczne pisanie ustawień. **Tu niepotrzebne.** |
 </details>
 
+<a name="spis-tresci"></a>
 ## 📑 Spis treści
 
-- [🚀 Start w 4 krokach](#-start-w-4-krokach)
-- [⬆️ Aktualizacja do v22 z wcześniejszych wersji](#️-aktualizacja-do-v22-z-wcześniejszych-wersji)
-- [🪟 Karta Roleta dzień-noc](#-karta-roleta-dzień-noc)
+- [🚀 Start w 4 krokach](#start-w-4-krokach)
+- [⬆️ Aktualizacja do v22 z wcześniejszych wersji](#aktualizacja-do-v22-z-wczesniejszych-wersji)
+- [🪟 Karta Roleta dzień-noc](#karta-roleta-dzien-noc)
   - [Cele](#cele)
-  - [Wygląd w różnych sytuacjach](#wygląd-w-różnych-sytuacjach)
+  - [Wygląd w różnych sytuacjach](#wyglad-w-roznych-sytuacjach)
   - [Kolory i okleiny](#kolory-i-okleiny)
-- [⬇️ Instalacja](#️-instalacja)
+- [⬇️ Instalacja](#instalacja)
   - [Przez HACS (zalecana)](#przez-hacs-zalecana)
-  - [Ręcznie](#ręcznie)
-- [🪄 Pierwsze uruchomienie: kreator](#-pierwsze-uruchomienie-kreator)
-- [👆 Akcje: jak sterować](#-akcje-jak-sterować)
-- [🎛 Edytor](#-edytor)
-  - [Podgląd na żywo](#podgląd-na-żywo)
-  - [🎨 Wygląd](#-wygląd)
-  - [🪟 Okno i kontaktrony](#-okno-i-kontaktrony)
-  - [⏱ Ruch i kalibracja](#-ruch-i-kalibracja)
-  - [⚙️ Zaawansowane](#️-zaawansowane)
-  - [🌍 Ustawienia globalne](#-ustawienia-globalne)
-- [📄 Opcje](#-opcje)
+  - [Ręcznie](#recznie)
+- [🪄 Pierwsze uruchomienie: kreator](#pierwsze-uruchomienie-kreator)
+- [👆 Akcje: jak sterować](#akcje-jak-sterowac)
+- [🎛 Edytor](#edytor)
+  - [Podgląd na żywo](#podglad-na-zywo)
+  - [🎨 Wygląd](#wyglad)
+  - [🪟 Okno i kontaktrony](#okno-i-kontaktrony)
+  - [⏱ Ruch i kalibracja](#ruch-i-kalibracja)
+  - [⚙️ Zaawansowane](#zaawansowane)
+  - [🌍 Ustawienia globalne](#ustawienia-globalne)
+- [📄 Opcje](#opcje)
   - [Podstawowe](#podstawowe)
-  - [Wygląd](#wygląd-1)
+  - [Wygląd](#wyglad-1)
   - [Okno i kontaktrony](#okno-i-kontaktrony-1)
   - [Ruch](#ruch)
   - [Pogoda i widok](#pogoda-i-widok)
   - [Przyciski i sterowanie](#przyciski-i-sterowanie)
-- [🧪 Przykłady](#-przykłady)
-- [🔎 Automatyczne wykrywanie](#-automatyczne-wykrywanie)
-- [🔌 Silniki Moes / Tuya](#-silniki-moes--tuya)
-- [🧩 Elementy karty](#-elementy-karty)
-- [❓ Pytania i problemy](#-pytania-i-problemy)
-- [🙋 Pomoc mile widziana](#-pomoc-mile-widziana)
-- [🌍 Tłumaczenia](#-tłumaczenia)
-- [☕ Wsparcie](#-wsparcie)
+- [🧪 Przykłady](#przyklady)
+- [🔎 Automatyczne wykrywanie](#automatyczne-wykrywanie)
+- [🔌 Silniki Moes / Tuya](#silniki-moes-tuya)
+- [🧩 Elementy karty](#elementy-karty)
+- [❓ Pytania i problemy](#pytania-i-problemy)
+- [🙋 Pomoc mile widziana](#pomoc-mile-widziana)
+- [🌍 Tłumaczenia](#tlumaczenia)
+- [☕ Wsparcie](#wsparcie)
 
 ---
 
+<a name="aktualizacja-do-v22-z-wczesniejszych-wersji"></a>
 ## ⬆️ Aktualizacja do v22 z wcześniejszych wersji
 
 > [!IMPORTANT]
@@ -108,12 +111,14 @@ Pełna lista zmian: [📝 Historia zmian](CHANGELOG.md).
 
 ---
 
+<a name="karta-roleta-dzien-noc"></a>
 ## 🪟 Karta Roleta dzień-noc
 
 Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz palcem, animacja jest zsynchronizowana z silnikiem, a za szybą widać aktualną pogodę i porę dnia.
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="img/opis-elementow-ciemny.png"><img src="img/opis-elementow.png" width="100%" alt="Opis elementów karty"></picture></p>
 
+<a name="cele"></a>
 ### Cele
 
 - ✅ Roleta na ekranie ma wyglądać i ruszać się **jak prawdziwa**.
@@ -121,6 +126,7 @@ Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz
 - ✅ Wygodne sterowanie **palcem na telefonie i tablecie**.
 - ✅ Karta ma działać z **każdą** roletą i **każdym** domem (język, pogoda, czujniki).
 
+<a name="wyglad-w-roznych-sytuacjach"></a>
 ### Wygląd w różnych sytuacjach
 
 Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje się do motywu Home Assistanta.
@@ -172,6 +178,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 </tr>
 </table>
 
+<a name="kolory-i-okleiny"></a>
 ### Kolory i okleiny
 
 <table>
@@ -186,10 +193,12 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 ---
 
+<a name="instalacja"></a>
 ## ⬇️ Instalacja
 
 **Wymagania:** Home Assistant **2024.8** lub nowszy i roleta jako encja `cover.*`.
 
+<a name="przez-hacs-zalecana"></a>
 ### Przez HACS (zalecana)
 
 Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualizuj”.
@@ -216,6 +225,7 @@ Dzięki HACS każdą nową wersję zainstalujesz jednym kliknięciem „Aktualiz
 3. Wyszukaj „Roleta dzień-noc” → **Pobierz**.
 </details>
 
+<a name="recznie"></a>
 ### Ręcznie
 
 Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z dodatkami → File editor → Zainstaluj).
@@ -258,6 +268,7 @@ Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Modu�
 
 ---
 
+<a name="pierwsze-uruchomienie-kreator"></a>
 ## 🪄 Pierwsze uruchomienie: kreator
 
 **Krok 1.** Na pulpicie kliknij ołówek (Edytuj) → **＋ Dodaj kartę** → wpisz **Roleta** → kliknij kartę.
@@ -284,10 +295,11 @@ Silnik, kontaktrony i pogoda. Niczego nie musisz dodawać.
 
 <img src="img/kreator-3.png" width="480" alt="3️⃣ Wybierz wygląd">
 
-✅ **Gotowe.** Wszystko inne zmienisz w [edytorze](#-edytor).
+✅ **Gotowe.** Wszystko inne zmienisz w [edytorze](#edytor).
 
 ---
 
+<a name="akcje-jak-sterowac"></a>
 ## 👆 Akcje: jak sterować
 
 | Akcja | Jak | Co się stanie |
@@ -306,40 +318,47 @@ Po puszczeniu palca przerywana linia **„→ 50%”** pokazuje, dokąd roleta j
 
 ---
 
+<a name="edytor"></a>
 ## 🎛 Edytor
 
 Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia są w rozwijanych działach. W każdym jest **↺ Przywróć domyślne**.
 
 <img src="img/edytor/dzialy.png" width="520" alt="Działy edytora">
 
+<a name="podglad-na-zywo"></a>
 ### Podgląd na żywo
 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
 <img src="img/edytor/podglad.png" width="520" alt="Podgląd"> <img src="img/edytor/przypiety.png" width="520" alt="Podgląd przypięty">
 
+<a name="wyglad"></a>
 ### 🎨 Wygląd
 
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
 <img src="img/edytor/wyglad.png" width="520" alt="Wygląd"> <img src="img/edytor/palety.png" width="520" alt="Palety">
 
+<a name="okno-i-kontaktrony"></a>
 ### 🪟 Okno i kontaktrony
 
 Wybierz kontaktron lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
 
 <img src="img/edytor/kontaktrony.png" width="760" alt="Kontaktrony: zamknięte, uchylone, otwarte">
 
+<a name="ruch-i-kalibracja"></a>
 ### ⏱ Ruch i kalibracja
 
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
 <img src="img/edytor/kalibracja.png" width="520" alt="Kalibracja">
 
+<a name="zaawansowane"></a>
 ### ⚙️ Zaawansowane
 
 Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwrócona pozycja, źródło pogody i własne zdjęcie zza okna.
 
+<a name="ustawienia-globalne"></a>
 ### 🌍 Ustawienia globalne
 
 **🌍 Zapisz jako domyślne** przenosi Twój wygląd na wszystkie karty rolet, także nowe. Każda karta może go nadal zmienić u siebie.
@@ -348,10 +367,12 @@ Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwr�
 
 ---
 
+<a name="opcje"></a>
 ## 📄 Opcje
 
 Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 
+<a name="podstawowe"></a>
 ### Podstawowe
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -361,6 +382,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 | `name` | tekst | nazwa encji | Nazwa na karcie. |
 | `jezyk` | tekst | `auto` | `auto` (wg języka HA), `pl` albo `en`. |
 
+<a name="wyglad-1"></a>
 ### Wygląd
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -373,6 +395,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 | `klamki` | tak/nie | `true` | Klamki obracają się przy uchyleniu i otwarciu. |
 | `wysokosc` | liczba | `260` | Wysokość okna w px. |
 
+<a name="okno-i-kontaktrony-1"></a>
 ### Okno i kontaktrony
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -384,6 +407,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 | `otwarcie` | liczba | `40` | Jak szeroko otwarte (% szerokości). |
 | `auto_czujniki` | tak/nie | `true` | Sama szukaj kontaktronów w pomieszczeniu rolety. |
 
+<a name="ruch"></a>
 ### Ruch
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -393,6 +417,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 | `predkosc_lewa` / `predkosc_prawa` | encja | auto | Prędkość silników (`number.*`, obr/min). |
 | `odwroc` | tak/nie | `false` | Odwrócona pozycja (gdy silnik liczy odwrotnie). |
 
+<a name="pogoda-i-widok"></a>
 ### Pogoda i widok
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -403,6 +428,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 | `widok` | tak/nie | `true` | Rysowany widok: domy, drzewa, ulica. |
 | `tlo` | tekst | – | Własne zdjęcie zza okna, np. `/local/okno.jpg`. |
 
+<a name="przyciski-i-sterowanie"></a>
 ### Przyciski i sterowanie
 
 | Nazwa | Typ | Domyślnie | Opis |
@@ -417,6 +443,7 @@ Wszystko ustawisz w edytorze. Tabele są dla chętnych, którzy wolą YAML.
 
 ---
 
+<a name="przyklady"></a>
 ## 🧪 Przykłady
 
 **Najprościej** (resztę karta wykryje sama):
@@ -471,6 +498,7 @@ jezyk: en
 
 ---
 
+<a name="automatyczne-wykrywanie"></a>
 ## 🔎 Automatyczne wykrywanie
 
 Karta sama szuka w Twoim Home Assistancie:
@@ -485,6 +513,7 @@ Karta sama szuka w Twoim Home Assistancie:
 
 Ręczny wybór w edytorze zawsze ma pierwszeństwo.
 
+<a name="silniki-moes-tuya"></a>
 ## 🔌 Silniki Moes / Tuya
 
 Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
@@ -494,6 +523,7 @@ Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
 - Fałszywe meldunki 0% / 100% w trakcie jazdy (nawet do 60 s po zatrzymaniu) są pomijane.
 - Gdy silnik pokazuje złą pozycję końcową, ustaw ponownie krańcówki w zigbee2mqtt.
 
+<a name="elementy-karty"></a>
 ## 🧩 Elementy karty
 
 | Element | Znaczenie |
@@ -512,6 +542,7 @@ Karta była testowana na silnikach **Moes TS0601** (zigbee2mqtt).
 
 ---
 
+<a name="pytania-i-problemy"></a>
 ## ❓ Pytania i problemy
 
 <details><summary><b>Nie ma karty na liście „Dodaj kartę”</b></summary>
@@ -546,11 +577,13 @@ Karta bierze język z profilu HA. Możesz też ustawić **Język karty** w ⚙�
 
 Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo napisz na [forum HA](https://community.home-assistant.io/) / [forum arturhome.pl](https://forum.arturhome.pl/).
 
+<a name="pomoc-mile-widziana"></a>
 ## 🙋 Pomoc mile widziana
 
 - Masz inną roletę lub silnik? Napisz, jak działa z kartą, i dołącz zrzut.
 - Masz pomysł? [Zaproponuj funkcję](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose).
 
+<a name="tlumaczenia"></a>
 ## 🌍 Tłumaczenia
 
 | Język | Stan |
@@ -560,6 +593,7 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 
 Chcesz dodać swój język? Napisz w [zgłoszeniach](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose). Teksty karty są w obiektach `RR_TXT` i `RR_ED` w pliku `roleta-realistyczna.js`.
 
+<a name="wsparcie"></a>
 ## ☕ Wsparcie
 
 Jeśli karta Ci się podoba, zostaw ⭐ na górze strony. Dziękuję!
