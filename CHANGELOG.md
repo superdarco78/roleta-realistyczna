@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v28.1 – Klikalne kafelki i przyciski w HACS
+
+- 👆 Kafelki, spis treści i przyciski kreatora w opisie działają też w HACS (otwierają właściwe miejsce na GitHubie)
+- ✅ Sama karta bez zmian
+
 ## v28 – Kreator nie myli się przy wersjach „.1”
 
 - 🩹 Kreator nie pokazuje już żółtej ramki „jest nowsza wersja”, gdy wyszło tylko wydanie z nowym opisem (np. v27.1). Liczy się numer karty
