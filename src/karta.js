@@ -3,15 +3,14 @@ import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { RR_WX, rrInternet, rrPogoda } from './pogoda.js';
 import { RR_TXT, rrJezyk } from './jezyk.js';
-import { rrRpm, rrCzujnikiAuto, rrPogodaId } from './wykrywanie.js';
+import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, rrGlobLoad } from './globalne.js';
 import { rrKartaStyl } from './karta-styl.js';
 
 /* Karta: okno z roletą dzień-noc, animacja w tempie silnika, pogoda za oknem, kontaktrony */
 export class RoletaRealistyczna extends HTMLElement {
   static getStubConfig(hass) {
-    const cov = Object.keys(hass?.states || {}).filter(k => k.startsWith('cover.'));
-    const e = cov.find(k => (hass.states[k].attributes?.entity_id || []).length > 1) || cov[0];   // v21: najpierw grupa rolet (okno 2-skrzydłowe)
+    const e = rrKandydaci(hass, 'cover')[0]?.id;   // v23: najlepiej dopasowana roleta (najpierw grupa = okno 2-skrzydłowe)
     return { entity: e || 'cover.roleta' };
   }
   static getConfigElement() { return document.createElement('roleta-realistyczna-editor'); }

@@ -84,10 +84,19 @@
         ustawienia globalne: „🌍 Zapisz jako domyślne dla wszystkich kart” – wygląd zapisany w profilu użytkownika HA,
         każda karta (i każda nowa) go przejmuje, a własne ustawienia karty mają pierwszeństwo; nowa karta sama wybiera grupę rolet
    v22 – 🪄 kreator w 3 krokach (wybierz roletę → co karta wykryła sama → gotowy wygląd), sam się otwiera przy nowej karcie;
-        menu w rozwijanych działach: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane; w każdym „↺ Przywróć domyślne” */
+        menu w rozwijanych działach: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane; w każdym „↺ Przywróć domyślne”
+   v23 – 🪄 nowy kreator w 7 krokach dla początkujących: roleta → okno i skrzydła → prędkość silnika → czujniki okna → pogoda →
+        wygląd i nazwa → podsumowanie i miejsce karty; w każdym kroku krótko „co” i „po co”; wygląd jak HA (ha-alert, ha-selector,
+        ikony mdi, kolory motywu); karta sama znajduje rolety, silniki, kontaktrony i pogodę i układa je od najlepiej pasujących
+        (to samo urządzenie, pomieszczenie, „lewe/prawe” w nazwie, podobna nazwa) z opisem dlaczego; w listach tylko pasujące encje
+        (bez bram, garaży, czujników ruchu, zwykłych liczb); gdy czegoś brakuje albo coś nie działa, kreator mówi dokładnie co zrobić
+        i otwiera właściwe miejsce w HA; pomiar czasu przejazdu w kreatorze; sprawdza, czy jest nowsza wersja i czy karta nie jest
+        dodana dwa razy w zasobach; dodaje kopię karty na inny panel albo nowy widok „Rolety” jednym kliknięciem; kreator odświeża się
+        sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
+        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v22";
+  var RR_WERSJA = "v23";
   var RR_DEF = {
     kolor: "czarny",
     rama: "#f4f4f2",
@@ -477,21 +486,6 @@
       sec_zaaw: "⚙️ Zaawansowane",
       rst: "↺ Przywróć domyślne",
       wz: "🪄 Kreator",
-      wzK: "krok {0} z 3",
-      wzW: "← Wstecz",
-      wzD: "Dalej →",
-      wzG: "Gotowe ✔",
-      wzGr: "grupa: {0} rolety (okno {0}-skrzydłowe)",
-      wz1: "Wybierz roletę albo grupę rolet. Grupy są na górze.",
-      wz2: "Karta sama sprawdziła Twój dom:",
-      wz3: "Wybierz gotowy wygląd. Później zmienisz wszystko w dziale 🎨 Wygląd.",
-      wzR: "Roleta: {0} → skrzydła: {1}",
-      wzS: "Silnik: {0} obr/min → przejazd ok. {1} s",
-      wzS0: "Silnik nie podaje prędkości – karta nauczy się czasu sama (albo kalibracja w dziale ⏱)",
-      wzC: "Kontaktrony okna: {0}",
-      wzC0: "Nie znaleziono kontaktronów w tym pomieszczeniu (można dodać później w dziale 🪟)",
-      wzP: "Pogoda: {0}",
-      wzP0: "Pogoda: z internetu (Open-Meteo, lokalizacja domu)",
       pre: [
         "Nowoczesny (antracyt + grafit)",
         "Klasyczne drewno (złoty dąb + beż)",
@@ -582,8 +576,7 @@
           "otworz",
           "otwarte (na zawiasach do środka)"
         ]
-      ],
-      wzR0: "Roleta: {0}"
+      ]
     },
     kolory: {
       bezowy: "beżowy",
@@ -595,6 +588,159 @@
       mietowy: "miętowy",
       blekitny: "błękitny",
       sliwkowy: "śliwkowy"
+    },
+    kreator: {
+      tytul: "Kreator karty",
+      krok: "krok {0} z {1}",
+      zamknij: "Zamknij kreatora",
+      co: "Co:",
+      poco: "Po co:",
+      wstecz: "← Wstecz",
+      dalej: "Dalej →",
+      gotowe: "Gotowe ✔",
+      kroki: {
+        roleta: {
+          t: "Wybierz roletę",
+          co: "roletę albo grupę rolet, którą ta karta ma pokazywać i sterować. Na liście są tylko rolety – bez bram, drzwi garażowych i innych urządzeń.",
+          poco: "karta wysyła do niej komendy (zwiń, opuść, ustaw %) i rysuje jej prawdziwą pozycję."
+        },
+        okno: {
+          t: "Okno i skrzydła",
+          co: "ile skrzydeł ma okno i która roleta wisi na którym skrzydle.",
+          poco: "każde skrzydło na karcie rusza się razem ze swoją prawdziwą roletą."
+        },
+        silnik: {
+          t: "Prędkość silnika",
+          co: "encja z prędkością silnika (obr/min), jeśli silnik ją podaje (np. Moes, Tuya). Na liście są tylko encje prędkości.",
+          poco: "animacja jedzie dokładnie w tempie prawdziwej rolety. Bez tego karta sama nauczy się czasu."
+        },
+        czujniki: {
+          t: "Czujniki okna",
+          co: "kontaktrony (czujniki otwarcia) – osobno lewe i prawe skrzydło. Na liście są tylko czujniki okien, drzwi i otwarcia.",
+          poco: "gdy uchylisz albo otworzysz okno, karta pokaże to na rysunku. Ten krok można pominąć."
+        },
+        pogoda: {
+          t: "Pogoda za oknem",
+          co: "skąd karta bierze pogodę.",
+          poco: "za szybą widać prawdziwe niebo: słońce, chmury, deszcz, śnieg, noc i temperaturę."
+        },
+        wyglad: {
+          t: "Wygląd i nazwa",
+          co: "gotowy zestaw kolorów ramy i rolety oraz nazwa na karcie.",
+          poco: "żeby karta wyglądała jak Twoje okno. Każdy kolor zmienisz później w dziale 🎨 Wygląd."
+        },
+        gdzie: {
+          t: "Gotowe – sprawdź i zapisz",
+          co: "podsumowanie tego, co karta znalazła, i miejsce, gdzie ma się pokazać.",
+          poco: "żeby nic nie zostało do poprawiania. Jeśli coś trzeba zrobić, jest tu napisane co i gdzie."
+        }
+      },
+      najlepsze: "najlepsze dopasowanie",
+      auto: "wybrane samo",
+      inna: "Inna (tylko pasujące encje)",
+      inne: "Pasujących encji: {0}. Pozostałe znajdziesz w liście „Inna” poniżej.",
+      bez: "Bez czujnika",
+      niedost: "niedostępna",
+      otwarte: "otwarte",
+      zamkniete: "zamknięte",
+      why: {
+        grupa: "grupa rolet",
+        poz: "zna pozycję %",
+        czlonek: "z wybranej grupy",
+        urz: "to samo urządzenie",
+        pom: "to samo pomieszczenie",
+        nazwa: "pasuje nazwa",
+        nazwa2: "podobna nazwa",
+        lewa: "„lewe” w nazwie",
+        prawa: "„prawe” w nazwie",
+        okno: "czujnik okna",
+        drzwi: "czujnik drzwi",
+        rpm: "jednostka obr/min",
+        typowa: "główna pogoda HA",
+        off: "⚠ niedostępna"
+      },
+      znaleziono: "Znalazłem {0} pasujących rolet. Najlepsze są na górze.",
+      brakRolet: "W Home Assistancie nie ma jeszcze żadnej rolety. Najpierw dodaj silnik rolety: Ustawienia → Urządzenia i usługi → „+ Dodaj integrację” (np. Zigbee2MQTT, ZHA, Tuya, Shelly). Potem wróć tutaj – kreator sam ją znajdzie.",
+      btnIntegr: "Otwórz Urządzenia i usługi",
+      niedostepna: "„{0}” jest teraz niedostępna. Sprawdź zasilanie silnika i zasięg (Zigbee / Wi-Fi). Kartę możesz dodać już teraz – zacznie działać, gdy roleta wróci.",
+      bezPoz: "„{0}” nie podaje pozycji w %. Karta pokaże tylko „zwinięta / opuszczona”, a przeciąganie wyśle zwiń albo opuść.",
+      grupaOk: "To grupa {0} rolet – ustawiłem okno 2-skrzydłowe, każde skrzydło ze swoją roletą.",
+      wybierz: "Wybierz roletę z listy, żeby przejść dalej.",
+      sk1: "1 skrzydło",
+      sk2: "2 skrzydła",
+      skL: "Lewe skrzydło",
+      skP: "Prawe skrzydło",
+      skJ: "Okno",
+      jednaNaDwa: "Jedna roleta na dwa skrzydła: obie połówki na karcie ruszą razem. Jeśli każde skrzydło ma swoją roletę, wybierz je poniżej albo zrób grupę: Ustawienia → Urządzenia i usługi → Pomocnicy → „+ Utwórz pomocnika” → Grupa → Grupa rolet.",
+      btnPomocnicy: "Otwórz Pomocników",
+      rpmOk: "{0}: silnik {1} obr/min → pełny przejazd ok. {2} s",
+      rpmBrak: "{0}: silnik nie podaje prędkości – nic nie szkodzi, karta sama nauczy się czasu z pierwszych ruchów rolety.",
+      rpmZadnej: "W HA nie ma encji z prędkością silnika. To normalne dla większości silników – karta sama nauczy się czasu przejazdu. Chcesz od razu? Zmierz go przyciskiem poniżej.",
+      kal: "🤖 Zmierz czas teraz (roleta pojedzie góra → dół → góra)",
+      czBrak: "W HA nie ma czujników okna (czujnik binarny typu okno, drzwi albo otwarcie). Ten krok możesz pominąć – karta działa bez nich.",
+      czBezPom: "Roleta nie ma przypisanego pomieszczenia, więc kreator nie wie, które czujniki są w tym samym pokoju. Przypisz pomieszczenie do urządzenia rolety (Ustawienia → Urządzenia → roleta → ✏️ → Pomieszczenie), a dopasowanie będzie lepsze.",
+      btnUrz: "Otwórz urządzenie rolety",
+      czAuto: "Czujniki dobrane automatycznie z tego samego pomieszczenia. Możesz wybrać inne.",
+      tryb: "Gdy czujnik pokaże „otwarte”, skrzydło jest:",
+      zr: [
+        [
+          "auto",
+          "🔎 Automatycznie"
+        ],
+        [
+          "internet",
+          "🌐 Z internetu"
+        ],
+        [
+          "brak",
+          "🚫 Bez pogody"
+        ]
+      ],
+      wxTeraz: "Teraz za oknem: {0}",
+      wxBrak: "W HA nie ma integracji pogody – karta weźmie pogodę z internetu (Open-Meteo: darmowe, bez konta i klucza) dla lokalizacji Twojego domu.",
+      wxBezLok: "HA nie zna lokalizacji domu, więc pogoda z internetu nie zadziała. Ustaw ją: Ustawienia → System → Ogólne → pinezka na mapie.",
+      btnOgolne: "Otwórz ustawienia ogólne",
+      wxNiedost: "„{0}” jest niedostępna – sprawdź integrację pogody. Do czasu naprawy karta weźmie pogodę z internetu.",
+      wxNic: "Bez pogody za szybą jest zwykłe niebo dzień / noc.",
+      nazwa: "Nazwa na karcie (puste = nazwa rolety)",
+      podglad: "Podgląd na żywo jest niżej – każda zmiana od razu się na nim pokazuje.",
+      jezyk: "Kreator i karta mówią po {0} – tak jak Twój profil w HA. Zmienisz to w ⚙️ Zaawansowane.",
+      jezykNazwa: "polsku",
+      pods: "Podsumowanie",
+      pRoleta: "Roleta: {0}",
+      pSk: "Skrzydła: {0}",
+      pSil: "Silnik: {0}",
+      pSilU: "Czas przejazdu: karta nauczy się sama",
+      pCz: "Czujniki okna: {0}",
+      pCzB: "Czujniki okna: brak (to nic, są opcjonalne)",
+      pWx: "Pogoda: {0}",
+      pWxI: "Pogoda: z internetu (Open-Meteo)",
+      pWxB: "Pogoda: wyłączona",
+      pWyg: "Wygląd: rama – {0}, pasy – {1}",
+      gdzieT: "Gdzie będzie karta",
+      tutaj: "Karta trafi do widoku, który teraz edytujesz. Kliknij na dole tego okna „Zapisz” – i gotowe.",
+      tez: "Chcesz ją mieć także na innym panelu? Wybierz panel i widok – dodam tam kopię od razu.",
+      panel: "Panel",
+      widok: "Widok",
+      nowyWidok: "➕ Nowy widok „Rolety”",
+      nowyTytul: "Rolety",
+      dodaj: "Dodaj kopię tam",
+      dodano: "Dodano ✔ {0} → {1}",
+      blad: "Nie udało się: {0}",
+      bezAdmina: "Dodawanie kart do innych paneli wymaga konta administratora HA.",
+      domyslny: "Przegląd (domyślny)",
+      tenPanel: " (ten – wystarczy „Zapisz”)",
+      autoPanel: " (automatyczny – nie da się)",
+      yaml: " (YAML – tylko ręcznie)",
+      widokPanel: " (pełny ekran – tylko 1 karta)",
+      wczytuje: "Wczytuję panele…",
+      verOk: "Karta zainstalowana poprawnie – masz najnowszą wersję {0} ✔",
+      verNowa: "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Roleta dzień-noc → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
+      btnHacs: "Otwórz HACS",
+      btnPrzeladuj: "🔄 Przeładuj stronę",
+      zasobyDup: "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",
+      btnZasoby: "Otwórz Zasoby",
+      obr: "obr/min"
     }
   };
 
@@ -694,21 +840,6 @@
       sec_zaaw: "⚙️ Advanced",
       rst: "↺ Restore defaults",
       wz: "🪄 Wizard",
-      wzK: "step {0} of 3",
-      wzW: "← Back",
-      wzD: "Next →",
-      wzG: "Done ✔",
-      wzGr: "group: {0} blinds ({0}-sash window)",
-      wz1: "Pick a blind or a blind group. Groups are at the top.",
-      wz2: "The card checked your home by itself:",
-      wz3: "Pick a ready-made look. You can change everything later in 🎨 Look.",
-      wzR: "Blind: {0} → sashes: {1}",
-      wzS: "Motor: {0} rpm → travel approx. {1} s",
-      wzS0: "The motor does not report speed – the card will learn the time (or calibrate in ⏱)",
-      wzC: "Window contact sensors: {0}",
-      wzC0: "No contact sensors found in this room (add them later in 🪟)",
-      wzP: "Weather: {0}",
-      wzP0: "Weather: from the internet (Open-Meteo, home location)",
       pre: [
         "Modern (anthracite + graphite)",
         "Classic wood (golden oak + beige)",
@@ -799,8 +930,7 @@
           "otworz",
           "open (on hinges, inward)"
         ]
-      ],
-      wzR0: "Blind: {0}"
+      ]
     },
     kolory: {
       czarny: "black",
@@ -838,6 +968,159 @@
       musztardowy: "mustard",
       terakota: "terracotta",
       sliwkowy: "plum"
+    },
+    kreator: {
+      tytul: "Card wizard",
+      krok: "step {0} of {1}",
+      zamknij: "Close wizard",
+      co: "What:",
+      poco: "Why:",
+      wstecz: "← Back",
+      dalej: "Next →",
+      gotowe: "Done ✔",
+      kroki: {
+        roleta: {
+          t: "Pick your blind",
+          co: "the blind or blind group this card shows and controls. Only blinds are listed – no gates, garage doors or other devices.",
+          poco: "the card sends it commands (open, close, set %) and draws its real position."
+        },
+        okno: {
+          t: "Window and sashes",
+          co: "how many sashes the window has and which blind hangs on which sash.",
+          poco: "each sash on the card moves together with its real blind."
+        },
+        silnik: {
+          t: "Motor speed",
+          co: "an entity with the motor speed (rpm), if your motor reports it (e.g. Moes, Tuya). Only speed entities are listed.",
+          poco: "the animation moves exactly at the speed of the real blind. Without it the card learns the time by itself."
+        },
+        czujniki: {
+          t: "Window sensors",
+          co: "contact sensors of the window – left and right sash separately. Only window, door and opening sensors are listed.",
+          poco: "when you tilt or open the window, the card shows it. This step is optional."
+        },
+        pogoda: {
+          t: "Weather outside",
+          co: "where the card takes the weather from.",
+          poco: "you see the real sky behind the glass: sun, clouds, rain, snow, night and the temperature."
+        },
+        wyglad: {
+          t: "Look and name",
+          co: "a ready-made set of frame and blind colours and the name on the card.",
+          poco: "so the card looks like your window. You can change every colour later in 🎨 Look."
+        },
+        gdzie: {
+          t: "Done – check and save",
+          co: "a summary of what the card found and where it should appear.",
+          poco: "so nothing is left to fix. If something needs doing, it says what and where."
+        }
+      },
+      najlepsze: "best match",
+      auto: "picked automatically",
+      inna: "Other (matching entities only)",
+      inne: "Matching entities: {0}. Find the rest in the “Other” list below.",
+      bez: "No sensor",
+      niedost: "unavailable",
+      otwarte: "open",
+      zamkniete: "closed",
+      why: {
+        grupa: "blind group",
+        poz: "reports position %",
+        czlonek: "from the chosen group",
+        urz: "same device",
+        pom: "same room",
+        nazwa: "name matches",
+        nazwa2: "similar name",
+        lewa: "“left” in name",
+        prawa: "“right” in name",
+        okno: "window sensor",
+        drzwi: "door sensor",
+        rpm: "rpm unit",
+        typowa: "main HA weather",
+        off: "⚠ unavailable"
+      },
+      znaleziono: "I found {0} matching blinds. The best ones are on top.",
+      brakRolet: "There is no blind in Home Assistant yet. Add your blind motor first: Settings → Devices & services → “+ Add integration” (e.g. Zigbee2MQTT, ZHA, Tuya, Shelly). Then come back – the wizard will find it.",
+      btnIntegr: "Open Devices & services",
+      niedostepna: "“{0}” is unavailable right now. Check the motor power and range (Zigbee / Wi-Fi). You can add the card now – it will work once the blind is back.",
+      bezPoz: "“{0}” does not report a position in %. The card will only show “open / closed”, and dragging will send open or close.",
+      grupaOk: "This is a group of {0} blinds – I set a 2-sash window, each sash with its own blind.",
+      wybierz: "Pick a blind from the list to continue.",
+      sk1: "1 sash",
+      sk2: "2 sashes",
+      skL: "Left sash",
+      skP: "Right sash",
+      skJ: "Window",
+      jednaNaDwa: "One blind for two sashes: both halves on the card move together. If each sash has its own blind, pick them below or create a group: Settings → Devices & services → Helpers → “+ Create helper” → Group → Cover group.",
+      btnPomocnicy: "Open Helpers",
+      rpmOk: "{0}: motor {1} rpm → full travel approx. {2} s",
+      rpmBrak: "{0}: the motor does not report speed – no problem, the card learns the travel time from the first moves.",
+      rpmZadnej: "There is no motor speed entity in HA. That is normal for most motors – the card learns the travel time by itself. Want it now? Measure it with the button below.",
+      kal: "🤖 Measure the time now (the blind goes up → down → up)",
+      czBrak: "There are no window sensors in HA (binary sensor of type window, door or opening). You can skip this step – the card works without them.",
+      czBezPom: "The blind has no room (area), so the wizard cannot tell which sensors are in the same room. Assign a room to the blind’s device (Settings → Devices → blind → ✏️ → Area) for better matches.",
+      btnUrz: "Open the blind’s device",
+      czAuto: "Sensors picked automatically from the same room. You can choose others.",
+      tryb: "When the sensor reports “open”, the sash is:",
+      zr: [
+        [
+          "auto",
+          "🔎 Automatic"
+        ],
+        [
+          "internet",
+          "🌐 From the internet"
+        ],
+        [
+          "brak",
+          "🚫 No weather"
+        ]
+      ],
+      wxTeraz: "Outside right now: {0}",
+      wxBrak: "There is no weather integration in HA – the card takes the weather from the internet (Open-Meteo: free, no account or key) for your home location.",
+      wxBezLok: "HA does not know your home location, so internet weather will not work. Set it: Settings → System → General → pin on the map.",
+      btnOgolne: "Open general settings",
+      wxNiedost: "“{0}” is unavailable – check the weather integration. Until it is fixed the card uses internet weather.",
+      wxNic: "Without weather the glass shows a plain day / night sky.",
+      nazwa: "Name on the card (empty = blind name)",
+      podglad: "The live preview is below – every change shows up right away.",
+      jezyk: "The wizard and card speak {0} – same as your HA profile. Change it in ⚙️ Advanced.",
+      jezykNazwa: "English",
+      pods: "Summary",
+      pRoleta: "Blind: {0}",
+      pSk: "Sashes: {0}",
+      pSil: "Motor: {0}",
+      pSilU: "Travel time: the card learns it",
+      pCz: "Window sensors: {0}",
+      pCzB: "Window sensors: none (fine, they are optional)",
+      pWx: "Weather: {0}",
+      pWxI: "Weather: from the internet (Open-Meteo)",
+      pWxB: "Weather: off",
+      pWyg: "Look: frame – {0}, stripes – {1}",
+      gdzieT: "Where the card goes",
+      tutaj: "The card goes to the view you are editing now. Click “Save” at the bottom of this dialog – done.",
+      tez: "Want it on another dashboard too? Pick a dashboard and view – I will add a copy there right away.",
+      panel: "Dashboard",
+      widok: "View",
+      nowyWidok: "➕ New view “Blinds”",
+      nowyTytul: "Blinds",
+      dodaj: "Add a copy there",
+      dodano: "Added ✔ {0} → {1}",
+      blad: "Failed: {0}",
+      bezAdmina: "Adding cards to other dashboards needs an HA administrator account.",
+      domyslny: "Overview (default)",
+      tenPanel: " (this one – just “Save”)",
+      autoPanel: " (automatic – not possible)",
+      yaml: " (YAML – manual only)",
+      widokPanel: " (panel – 1 card only)",
+      wczytuje: "Loading dashboards…",
+      verOk: "Card installed correctly – you have the latest version {0} ✔",
+      verNowa: "A newer version {0} is available (you have {1}). Update: HACS → Roleta dzień-noc → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
+      btnHacs: "Open HACS",
+      btnPrzeladuj: "🔄 Reload page",
+      zasobyDup: "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",
+      btnZasoby: "Open Resources",
+      obr: "rpm"
     }
   };
 
@@ -871,6 +1154,100 @@
     return ok.slice(0, 2);
   };
   var rrPogodaId = (c, hass) => c.pogoda && c.pogoda !== "auto" ? c.pogoda : ["weather.forecast_home", "weather.home", "weather.dom"].find((k) => hass.states[k]) || Object.keys(hass.states).find((k) => k.startsWith("weather."));
+  var rrBezPl = (s) => String(s || "").toLowerCase().replace(/ł/g, "l").normalize("NFD").replace(/[̀-ͯ]/g, "");
+  var RR_POMIN = /* @__PURE__ */ new Set([
+    "cover",
+    "binary",
+    "sensor",
+    "number",
+    "weather",
+    "lewa",
+    "lewe",
+    "lewy",
+    "prawa",
+    "prawe",
+    "prawy",
+    "left",
+    "right",
+    "okno",
+    "window",
+    "roleta",
+    "rolety",
+    "blind",
+    "motor",
+    "speed",
+    "predkosc",
+    "silnik",
+    "silnika",
+    "contact",
+    "kontaktron",
+    "czujnik",
+    "sensor"
+  ]);
+  var rrSlowa = (s) => rrBezPl(s).split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !RR_POMIN.has(w));
+  var RR_NIE_ROLETY = ["garage", "gate", "door", "damper"];
+  var rrNazwa = (h, id) => h?.states?.[id]?.attributes?.friendly_name || id;
+  var rrObszar = (h, id) => {
+    const e = h?.entities?.[id];
+    return e?.area_id || h?.devices?.[e?.device_id]?.area_id || null;
+  };
+  var rrObszarNazwa = (h, id) => {
+    const a = rrObszar(h, id);
+    return a ? h.areas?.[a]?.name || a : "";
+  };
+  function rrKandydaci(h, rola, ref = {}) {
+    const S = h?.states;
+    if (!S) return [];
+    const E = h.entities || {}, out = [], dev = (id) => E[id]?.device_id;
+    const rc = ref.cover, rDev = rc && dev(rc), rArea = ref.area !== void 0 ? ref.area : rc && rrObszar(h, rc);
+    const rW = new Set(rc ? rrSlowa(rrNazwa(h, rc) + " " + rc) : []);
+    for (const id in S) {
+      const dom = id.split(".")[0], st = S[id], a = st.attributes || {}, reg = E[id] || {}, nm = rrBezPl(id + " " + (a.friendly_name || ""));
+      if (reg.hidden) continue;
+      const why = [];
+      let sc = 0;
+      const plus = (w, p) => {
+        sc += p;
+        why.push(w);
+      };
+      if (rola === "cover" || rola === "skrzydlo") {
+        if (dom !== "cover" || RR_NIE_ROLETY.includes(a.device_class) || reg.entity_category) continue;
+        const grupa = (a.entity_id || []).length > 1;
+        if (rola === "cover") {
+          if (grupa) plus("grupa", 40);
+        } else if (grupa) continue;
+        else if ((ref.members || []).includes(id)) plus("czlonek", 100);
+        if (a.supported_features & 4) plus("poz", 10);
+        if (/rolet|zaluz|blind|shade|shutter|rolo|zaslon|curtain/.test(nm)) sc += 5;
+      } else if (rola === "speed") {
+        if (dom !== "number") continue;
+        const rpm = /rpm|obr/i.test(a.unit_of_measurement || "");
+        if (!rpm && !/speed|predkos|obrot|rpm/.test(nm)) continue;
+        if (rc && id === rc.replace("cover.", "number.") + "_motor_speed") plus("nazwa", 60);
+        if (rDev && dev(id) === rDev) plus("urz", 100);
+        if (rpm) plus("rpm", 10);
+      } else if (rola === "contact") {
+        if (dom !== "binary_sensor" || !["window", "door", "opening"].includes(a.device_class) || reg.entity_category) continue;
+        if (a.device_class === "window") plus("okno", 10);
+        else if (a.device_class === "door") why.push("drzwi");
+      } else if (rola === "weather") {
+        if (dom !== "weather") continue;
+        if (["weather.forecast_home", "weather.home", "weather.dom"].includes(id)) plus("typowa", 10);
+      } else continue;
+      if (rArea && rola !== "cover" && rola !== "weather" && rrObszar(h, id) === rArea) plus("pom", 40);
+      if (ref.side !== void 0) {
+        if ((ref.side ? /praw|right/ : /lew|left/).test(nm)) plus(ref.side ? "prawa" : "lewa", 30);
+        if ((ref.side ? /lew|left/ : /praw|right/).test(nm)) sc -= 25;
+      }
+      if (rW.size && rola !== "cover" && rrSlowa(nm).some((w) => rW.has(w))) plus("nazwa2", 15);
+      if (st.state === "unavailable") {
+        sc -= 50;
+        why.push("off");
+      }
+      out.push({ id, sc, why: [...new Set(why)] });
+    }
+    return out.sort((x, y) => y.sc - x.sc || rrNazwa(h, x.id).localeCompare(rrNazwa(h, y.id)));
+  }
 
   // src/globalne.js
   var RR_GKLUCZE = [
@@ -1034,8 +1411,7 @@
   // src/karta.js
   var RoletaRealistyczna = class extends HTMLElement {
     static getStubConfig(hass) {
-      const cov = Object.keys(hass?.states || {}).filter((k) => k.startsWith("cover."));
-      const e = cov.find((k) => (hass.states[k].attributes?.entity_id || []).length > 1) || cov[0];
+      const e = rrKandydaci(hass, "cover")[0]?.id;
       return { entity: e || "cover.roleta" };
     }
     static getConfigElement() {
@@ -1494,13 +1870,42 @@
 .sec[open]{padding-bottom:12px}
 .sec>.grp{margin-bottom:18px}
 .rst{justify-self:start;border:none;background:none;color:var(--primary-color,#03a9f4);font:inherit;font-size:13px;cursor:pointer;padding:4px 0}
-.wiz{border-radius:14px;padding:12px;display:grid;gap:10px;background:var(--secondary-background-color,rgba(127,127,127,.12));box-shadow:inset 0 0 0 2px var(--primary-color,#03a9f4)}
+.wiz{border-radius:var(--ha-card-border-radius,12px);padding:16px;display:grid;gap:14px;background:var(--card-background-color,#1c1c1c);box-shadow:0 0 0 2px var(--primary-color,#03a9f4),0 4px 16px rgba(0,0,0,.25)}
 .wiz[hidden]{display:none}
-.wzh{display:flex;align-items:center;gap:8px}.wzh span{font-size:12px;color:var(--secondary-text-color)}.wzx{margin-left:auto;border:none;background:none;color:inherit;cursor:pointer;font-size:16px}
-.wzl{display:grid;gap:6px}.wzl button{text-align:left;border:none;border-radius:10px;padding:10px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color);background:var(--card-background-color,rgba(127,127,127,.1));box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
-.wzl button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--primary-color,#03a9f4)}.wzl small{display:block;color:var(--secondary-text-color);font-size:12px}
-.wzl .sw2{display:inline-block;width:22px;height:22px;border-radius:5px;vertical-align:middle;margin-right:8px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.4)}
-.wzi{margin:0;padding-left:4px;list-style:none;display:grid;gap:6px;font-size:14px}
+.wzh{display:flex;align-items:center;gap:8px;color:var(--primary-color,#03a9f4)}.wzh b{color:var(--primary-text-color);font-size:16px;font-weight:500}
+.wzh span{font-size:12px;color:var(--secondary-text-color)}.wzx{margin-left:auto;border:none;background:none;color:var(--secondary-text-color);cursor:pointer;font-size:18px;padding:4px 8px;border-radius:50%}
+.wzs{display:flex;align-items:center}.wzs i{flex:1;height:2px;background:var(--divider-color,rgba(127,127,127,.3))}
+.wzd{flex:none;width:34px;height:34px;padding:0;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;--mdc-icon-size:18px;
+ background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color);transition:background .2s,box-shadow .2s}
+.wzd.ok{background:rgba(var(--rgb-primary-color,3,169,244),.22);color:var(--primary-color,#03a9f4)}
+.wzd.on{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff);box-shadow:0 0 0 4px rgba(var(--rgb-primary-color,3,169,244),.25)}
+.wzt{display:flex;align-items:center;gap:12px}.wzt h3{margin:0;font-size:20px;font-weight:400;color:var(--primary-text-color)}
+.wzt ha-icon{--mdc-icon-size:26px;color:var(--primary-color,#03a9f4);background:rgba(var(--rgb-primary-color,3,169,244),.15);border-radius:50%;padding:8px}
+.wzc{font-size:14px;line-height:1.45;color:var(--secondary-text-color);background:var(--secondary-background-color,rgba(127,127,127,.12));border-radius:10px;padding:8px 12px}
+.wzc p{margin:3px 0}.wzc b{color:var(--primary-text-color);font-weight:500}
+.wzb{display:grid;gap:12px}.wzb:empty{display:none}.wzp{display:grid;gap:8px}
+.wzl{display:grid;gap:6px}
+.wzl button{display:flex;align-items:center;gap:14px;text-align:left;border:none;border-radius:12px;padding:10px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color);
+ background:var(--card-background-color,rgba(127,127,127,.1));box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3));transition:box-shadow .15s,background .15s}
+.wzl button:hover{background:var(--secondary-background-color,rgba(127,127,127,.12))}
+.wzl button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--primary-color,#03a9f4);background:rgba(var(--rgb-primary-color,3,169,244),.08)}
+.wzl ha-icon{flex:none;color:var(--state-icon-color,#44739e)}.wzl button[aria-pressed="true"] ha-icon{color:var(--primary-color,#03a9f4)}
+.wzl small{display:block;color:var(--secondary-text-color);font-size:12px;margin-top:1px}
+.wzl em{font-style:normal;font-size:11px;font-weight:500;color:var(--primary-color,#03a9f4);margin-left:6px;white-space:nowrap}.wzl em.au{color:var(--success-color,#43a047)}
+.wzw{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}.wzw b{font-weight:400;font-size:11px;padding:1px 8px;border-radius:10px;background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color)}
+.wzl .sw2{flex:none;display:inline-block;width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.4)}
+.wzn{display:flex;gap:8px;align-items:center;border-top:1px solid var(--divider-color,rgba(127,127,127,.3));padding-top:12px}.wzn span{flex:1}
+.wb{border:none;border-radius:20px;padding:9px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
+.wb.sec{background:transparent;color:var(--primary-color,#03a9f4);box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
+.wb.sm{padding:5px 12px;font-size:13px}.wb[disabled]{opacity:.4;cursor:default}.wb[hidden]{display:none}
+.wzg{display:grid;gap:10px}.wzg>.wb{justify-self:start}
+ha-alert{display:block}
+ha-alert:not(:defined){padding:10px 12px;border-radius:8px;font-size:14px;line-height:1.45;color:var(--primary-text-color);background:rgba(3,155,229,.12);border-left:4px solid var(--info-color,#039be5)}
+ha-alert[alert-type=warning]:not(:defined){background:rgba(255,166,0,.12);border-color:var(--warning-color,#ffa600)}
+ha-alert[alert-type=error]:not(:defined){background:rgba(219,68,55,.12);border-color:var(--error-color,#db4437)}
+ha-alert[alert-type=success]:not(:defined){background:rgba(67,160,71,.12);border-color:var(--success-color,#43a047)}
+ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
+.wzi{margin:0;padding-left:4px;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--primary-text-color)}
 .lb .kn{text-transform:none;letter-spacing:0;color:var(--primary-text-color);margin-left:6px}
 .dot{display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;padding:0;color:var(--secondary-text-color);font:inherit;font-size:11px;width:52px}
 .dot i{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5);transition:transform .15s}
@@ -1527,6 +1932,465 @@
 .kalw{display:flex;align-items:center;gap:12px;font-size:20px;font-variant-numeric:tabular-nums;color:var(--primary-text-color)}
 `;
 
+  // src/panele.js
+  var rrBiezacyPanel = () => {
+    const p = decodeURIComponent(location.pathname.split("/")[1] || "");
+    return p === "lovelace" ? null : p;
+  };
+  async function rrPanele(hass) {
+    const lista = await hass.callWS({ type: "lovelace/dashboards/list" }).catch(() => []);
+    return [{ url_path: null, title: null, mode: "storage" }, ...lista.filter((d) => d.url_path && d.url_path !== "map")];
+  }
+  var rrKonfigPanelu = (hass, url_path) => hass.callWS({ type: "lovelace/config", url_path, force: true });
+  async function rrDodajDoPanelu(hass, url_path, widok, karta, tytul) {
+    const cfg = await rrKonfigPanelu(hass, url_path);
+    if (cfg.strategy) throw new Error("strategy");
+    const views = cfg.views || (cfg.views = []);
+    let v = views[widok];
+    if (widok === "nowy") {
+      let path = "rolety", i = 2;
+      while (views.some((x) => x.path === path)) path = "rolety-" + i++;
+      v = { title: tytul, path, icon: "mdi:roller-shade", type: "sections", sections: [{ type: "grid", cards: [] }] };
+      views.push(v);
+    }
+    if (!v || v.strategy || v.type === "panel") throw new Error("view");
+    if (v.type === "sections" || v.sections) {
+      const s = v.sections || (v.sections = []);
+      if (!s.length) s.push({ type: "grid", cards: [] });
+      const ost = s[s.length - 1];
+      (ost.cards || (ost.cards = [])).push(karta);
+    } else (v.cards || (v.cards = [])).push(karta);
+    await hass.callWS({ type: "lovelace/config/save", url_path, config: cfg });
+    return v;
+  }
+  var RR_INST = { t: 0, p: null };
+  function rrSprawdzInstalacje(hass) {
+    if (RR_INST.p && Date.now() - RR_INST.t < 36e5) return RR_INST.p;
+    RR_INST.t = Date.now();
+    const wynik = { wersja: RR_WERSJA };
+    const gh = fetch("https://api.github.com/repos/superdarco78/roleta-realistyczna/releases/latest").then((r) => r.ok ? r.json() : null).then((j) => {
+      if (j?.tag_name) wynik.najnowsza = j.tag_name;
+    }).catch(() => {
+    });
+    const zas = hass?.user?.is_admin && hass.callWS ? hass.callWS({ type: "lovelace/resources" }).then((l) => {
+      wynik.zasoby = (l || []).filter((x) => /roleta-realistyczna/.test(x.url)).length;
+    }).catch(() => {
+    }) : null;
+    return RR_INST.p = Promise.all([gh, zas]).then(() => wynik);
+  }
+  var rrNumerWersji = (v) => parseInt(String(v || "").replace(/\D+/g, ""), 10) || 0;
+
+  // src/kreator.js
+  var RR_KROKI = [
+    { k: "roleta", ic: "mdi:roller-shade" },
+    { k: "okno", ic: "mdi:window-closed-variant" },
+    { k: "silnik", ic: "mdi:speedometer" },
+    { k: "czujniki", ic: "mdi:window-open-variant" },
+    { k: "pogoda", ic: "mdi:weather-partly-cloudy" },
+    { k: "wyglad", ic: "mdi:palette" },
+    { k: "gdzie", ic: "mdi:view-dashboard-edit" }
+  ];
+  var RR_IKONY = { cover: "mdi:roller-shade", number: "mdi:speedometer", binary_sensor: "mdi:window-open-variant", weather: "mdi:weather-partly-cloudy" };
+  var esc = (s) => String(s ?? "").replace(/[&<>"]/g, (z) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[z]);
+  var RrKreator = class {
+    constructor(ed, el) {
+      this.ed = ed;
+      this.el = el;
+      this.n = 0;
+    }
+    get W() {
+      return RR_JEZYKI[this.ed._lang].kreator;
+    }
+    get T() {
+      return RR_JEZYKI[this.ed._lang].karta;
+    }
+    get h() {
+      return this.ed._hass;
+    }
+    get c() {
+      return this.ed._cfg;
+    }
+    get otwarty() {
+      return !this.el.hidden;
+    }
+    otworz(n = 0) {
+      this.el.hidden = false;
+      this.pokaz(n);
+    }
+    zamknij() {
+      this.el.hidden = true;
+    }
+    /* dynamicznie: gdy w HA pojawi się nowe urządzenie albo zmieni się stan wybranych encji, krok rysuje się od nowa */
+    _klucz() {
+      const h = this.h, s = (id) => id ? h.states[id]?.state : "";
+      return [
+        Object.keys(h.states).length,
+        Object.keys(h.entities || {}).length,
+        s(this.c.entity),
+        s(rrPogodaId(this.c, h)),
+        ...this._skrzydla().map((x) => s(x.cover) + s(rrRpmId(h, x.cover, this.c[x.i ? "predkosc_prawa" : "predkosc_lewa"])))
+      ].join("|");
+    }
+    odswiez() {
+      if (!this.otwarty || this._klucz() === this._k) return;
+      const a = this.ed._r?.activeElement;
+      if (a && this.el.contains(a) && a.tagName !== "BUTTON") return;
+      this.pokaz(this.n);
+    }
+    /* skrzydła: roleta każdego skrzydła (wybrana ręcznie albo z grupy) */
+    _skrzydla() {
+      const c = this.c, h = this.h, n = +this.ed._val("skrzydla") === 1 ? 1 : 2;
+      const m = (h.states[c.entity]?.attributes?.entity_id || []).filter((e) => h.states[e]);
+      return Array.from({ length: n }, (_, i) => {
+        const auto = m.length ? m[Math.min(i, m.length - 1)] : c.entity, wyb = c[i ? "roleta_prawa" : "roleta_lewa"];
+        return { i, auto, cover: wyb && h.states[wyb] ? wyb : auto, members: m };
+      });
+    }
+    _etykieta(i, n) {
+      const W = this.W;
+      return n < 2 ? W.skJ : i ? W.skP : W.skL;
+    }
+    pokaz(n) {
+      const W = this.W, K = RR_KROKI;
+      this.n = n = Math.max(0, Math.min(K.length - 1, n));
+      const s = K[n], T = W.kroki[s.k], ost = n === K.length - 1;
+      this.el.innerHTML = `
+<div class="wzh"><ha-icon icon="mdi:auto-fix"></ha-icon><b>${W.tytul}</b><span>${W.krok(n + 1, K.length)}</span><button class="wzx" title="${W.zamknij}">✕</button></div>
+<div class="wzs">${K.map((x, i) => `<button class="wzd${i === n ? " on" : i < n ? " ok" : ""}" data-wn="${i}" title="${esc(W.kroki[x.k].t)}"><ha-icon icon="${x.ic}"></ha-icon></button>`).join("<i></i>")}</div>
+<div class="wzt"><ha-icon icon="${s.ic}"></ha-icon><h3>${T.t}</h3></div>
+<div class="wzc"><p><b>${W.co}</b> ${T.co}</p><p><b>${W.poco}</b> ${T.poco}</p></div>
+<div class="wzb"></div>
+<div class="wzn"><button class="wb sec" data-wa="-1"${n ? "" : " hidden"}>${W.wstecz}</button><span></span><button class="wb" data-wa="${ost ? "x" : "1"}">${ost ? W.gotowe : W.dalej}</button></div>`;
+      const q = (x) => this.el.querySelector(x);
+      q(".wzx").onclick = () => this.zamknij();
+      this.el.querySelectorAll("[data-wn]").forEach((b) => b.onclick = () => this.pokaz(+b.dataset.wn));
+      this.el.querySelectorAll("[data-wa]").forEach((b) => b.onclick = () => b.dataset.wa === "x" ? this.zamknij() : this.pokaz(n + +b.dataset.wa));
+      const dalej = q('[data-wa="1"]');
+      if (dalej && n === 0 && !this.h.states[this.c.entity]) dalej.disabled = true;
+      this["_k_" + s.k](q(".wzb"));
+      this._k = this._klucz();
+    }
+    /* ---------- klocki ---------- */
+    _alert(typ, txt, akcje = []) {
+      return `<ha-alert alert-type="${typ}">${esc(txt)}${akcje.map(([t, p]) => ` <button class="wb sm sec" slot="action" data-open="${esc(p)}">${esc(t)}</button>`).join("")}</ha-alert>`;
+    }
+    _html(box, html) {
+      box.insertAdjacentHTML("beforeend", html);
+      box.querySelectorAll("[data-open]").forEach((b) => b.onclick = () => {
+        if (b.dataset.open === "reload") location.reload();
+        else window.open(b.dataset.open, "_blank");
+      });
+    }
+    _seg(box, opcje, wart, cb) {
+      const d = document.createElement("div");
+      d.className = "seg";
+      d.innerHTML = opcje.map(([v, t]) => `<button data-v="${esc(v)}" aria-pressed="${String(v) === String(wart)}">${esc(t)}</button>`).join("");
+      d.querySelectorAll("button").forEach((b) => b.onclick = () => cb(b.dataset.v));
+      box.appendChild(d);
+    }
+    _stan(id) {
+      const st = this.h.states[id], W = this.W, T = this.T;
+      if (!st) return "";
+      if (st.state === "unavailable" || st.state === "unknown") return W.niedost;
+      const d = id.split(".")[0], a = st.attributes || {};
+      if (d === "binary_sensor") return st.state === "on" ? W.otwarte : W.zamkniete;
+      if (d === "number") return st.state + (a.unit_of_measurement ? " " + a.unit_of_measurement : "");
+      if (d === "weather") return (T.wx?.[st.state] || st.state) + (typeof a.temperature === "number" ? " " + Math.round(a.temperature) + (a.temperature_unit || "°C") : "");
+      if (d === "cover") return (T[st.state] || st.state) + (typeof a.current_position === "number" ? " " + a.current_position + "%" : "");
+      return st.state;
+    }
+    /* lista podpowiedzi: najlepsze dopasowania na górze (z powodami), reszta pasujących w ha-selector „Inna” */
+    _lista(box, { rola, ref, wart, auto, pusty, etykieta, wybor, ile = 4 }) {
+      const W = this.W, h = this.h, K = rrKandydaci(h, rola, ref), ef = wart || auto || "";
+      const top = K.slice(0, ile);
+      if (ef && h.states[ef] && !top.some((x) => x.id === ef)) top.unshift(K.find((x) => x.id === ef) || { id: ef, sc: 0, why: [] });
+      const d = document.createElement("div");
+      d.className = "wzp";
+      const wiersz = (x, i) => {
+        const ob = rrObszarNazwa(h, x.id), st = this._stan(x.id);
+        return `<button data-id="${esc(x.id)}" aria-pressed="${x.id === ef}"><ha-icon icon="${RR_IKONY[x.id.split(".")[0]] || "mdi:help-circle"}"></ha-icon><span>
+        <span class="wzn1">${esc(rrNazwa(h, x.id))}${i === 0 && x.sc > 0 && K.length > 1 ? ` <em>★ ${W.najlepsze}</em>` : ""}${x.id === auto && !wart ? ` <em class="au">✓ ${W.auto}</em>` : ""}</span>
+        <small>${esc(x.id)}${ob ? " · " + esc(ob) : ""}${st ? " · " + esc(st) : ""}</small>
+        ${x.why.length ? `<span class="wzw">${x.why.map((w) => `<b>${esc(W.why[w] || w)}</b>`).join("")}</span>` : ""}</span></button>`;
+      };
+      d.innerHTML = `${etykieta ? `<div class="lb">${esc(etykieta)}</div>` : ""}<div class="wzl">${top.map(wiersz).join("")}${pusty ? `<button data-id="" aria-pressed="${!ef}"><ha-icon icon="mdi:close-circle-outline"></ha-icon><span><span class="wzn1">${esc(pusty)}</span></span></button>` : ""}</div>`;
+      d.querySelectorAll("[data-id]").forEach((b) => b.onclick = () => wybor(b.dataset.id));
+      if (K.length > top.length) {
+        const p = document.createElement("p");
+        p.className = "hint";
+        p.textContent = W.inne(K.length);
+        d.appendChild(p);
+        const s = document.createElement("ha-selector");
+        s.hass = h;
+        s.selector = { entity: { include_entities: K.map((x) => x.id) } };
+        s.label = W.inna;
+        s.value = top.some((x) => x.id === ef) ? "" : ef;
+        s.addEventListener("value-changed", (e) => {
+          if (e.detail.value) wybor(e.detail.value);
+        });
+        d.appendChild(s);
+      }
+      box.appendChild(d);
+      return K;
+    }
+    _ustaw(zm) {
+      Object.entries(zm).forEach(([k, v]) => this.ed._set(k, v));
+      this.pokaz(this.n);
+    }
+    /* ---------- krok 1: roleta ---------- */
+    _k_roleta(B) {
+      const W = this.W, h = this.h, c = this.c;
+      this._instalacja(B);
+      const K = rrKandydaci(h, "cover");
+      if (!K.length) {
+        this._html(B, this._alert("error", W.brakRolet, [[W.btnIntegr, "/config/integrations/dashboard"]]));
+        return;
+      }
+      this._html(B, `<p class="hint">${esc(W.znaleziono(K.length))}</p>`);
+      this._lista(B, { rola: "cover", wart: h.states[c.entity] ? c.entity : "", wybor: (id) => {
+        if (!id) return;
+        const g2 = (h.states[id]?.attributes?.entity_id || []).length;
+        this._ustaw({ entity: id, roleta_lewa: "", roleta_prawa: "", ...g2 >= 2 ? { skrzydla: 2 } : {} });
+      } });
+      const st = h.states[c.entity];
+      if (!st) {
+        this._html(B, this._alert("info", W.wybierz));
+        return;
+      }
+      const nm = rrNazwa(h, c.entity), g = (st.attributes?.entity_id || []).length;
+      if (st.state === "unavailable") this._html(B, this._alert("warning", W.niedostepna(nm)));
+      else if (g >= 2) this._html(B, this._alert("success", W.grupaOk(g)));
+      if (!g && st.state !== "unavailable" && !(st.attributes?.supported_features & 4)) this._html(B, this._alert("info", W.bezPoz(nm)));
+      this._html(B, this._alert("info", W.jezyk(W.jezykNazwa)));
+    }
+    /* czy karta jest aktualna i dodana raz w zasobach */
+    _instalacja(B) {
+      const W = this.W, box = document.createElement("div");
+      box.className = "wzb";
+      B.appendChild(box);
+      rrSprawdzInstalacje(this.h).then((w) => {
+        if (!box.isConnected) return;
+        if (w.najnowsza && rrNumerWersji(w.najnowsza) > rrNumerWersji(w.wersja))
+          this._html(box, this._alert("warning", W.verNowa(w.najnowsza, w.wersja), [[W.btnHacs, "/hacs/dashboard"], [W.btnPrzeladuj, "reload"]]));
+        else this._html(box, this._alert("success", W.verOk(w.wersja)));
+        if (w.zasoby > 1) this._html(box, this._alert("warning", W.zasobyDup(w.zasoby), [[W.btnZasoby, "/config/lovelace/resources"]]));
+      });
+    }
+    /* ---------- krok 2: okno i skrzydła ---------- */
+    _k_okno(B) {
+      const W = this.W, h = this.h, c = this.c, n = +this.ed._val("skrzydla") === 1 ? 1 : 2;
+      this._seg(B, [[1, W.sk1], [2, W.sk2]], n, (v) => this._ustaw({ skrzydla: +v }));
+      const sk = this._skrzydla(), grupa = sk[0].members.length;
+      if (n === 2 && !grupa) this._html(B, this._alert("info", W.jednaNaDwa, [[W.btnPomocnicy, "/config/helpers"]]));
+      if (n === 2) sk.forEach((x) => this._lista(B, {
+        rola: "skrzydlo",
+        etykieta: this._etykieta(x.i, n),
+        ile: 3,
+        ref: { members: x.members, side: x.i, area: rrObszar(h, c.entity) },
+        wart: c[x.i ? "roleta_prawa" : "roleta_lewa"],
+        auto: x.auto,
+        wybor: (id) => this._ustaw({ [x.i ? "roleta_prawa" : "roleta_lewa"]: id === x.auto ? "" : id })
+      }));
+    }
+    /* ---------- krok 3: prędkość silnika ---------- */
+    _k_silnik(B) {
+      const W = this.W, h = this.h, c = this.c, sk = this._skrzydla(), n = sk.length;
+      let ile = 0;
+      sk.forEach((x) => {
+        const pole = x.i ? "predkosc_prawa" : "predkosc_lewa", rpm = rrRpm(h, x.cover, c[pole]);
+        const nm = n > 1 ? this._etykieta(x.i, n) : rrNazwa(h, x.cover);
+        if (rpm > 0) this._html(B, this._alert("success", W.rpmOk(nm, rpm, rrCzas("auto", rpm).toFixed(1))));
+        const K = this._lista(B, {
+          rola: "speed",
+          etykieta: n > 1 ? this._etykieta(x.i, n) : "",
+          ref: { cover: x.cover, side: n > 1 ? x.i : void 0 },
+          wart: c[pole],
+          auto: rrRpmId(h, x.cover),
+          wybor: (v) => this._ustaw({ [pole]: v === rrRpmId(h, x.cover) ? "" : v })
+        });
+        ile += K.length;
+        if (K.length && !(rpm > 0)) this._html(B, this._alert("info", W.rpmBrak(nm)));
+        if (!K.length) B.lastChild.remove();
+      });
+      if (!ile) this._html(B, this._alert("info", W.rpmZadnej));
+      if (!sk.some((x) => rrRpm(h, x.cover, c[x.i ? "predkosc_prawa" : "predkosc_lewa"]) > 0)) {
+        const d = document.createElement("div");
+        d.className = "wzb";
+        d.innerHTML = `<div class="kal"><button class="wb">${W.kal}</button></div><p class="hint"></p><p class="hint">${esc(this.ed._L.akh)}</p>`;
+        const btn = d.querySelector("button");
+        btn.onclick = () => this.ed._akal(btn, d.querySelector("p"), W.kal);
+        B.appendChild(d);
+      }
+    }
+    /* ---------- krok 4: kontaktrony ---------- */
+    _k_czujniki(B) {
+      const W = this.W, h = this.h, c = this.c, sk = this._skrzydla(), n = sk.length, L = this.ed._L;
+      if (!rrKandydaci(h, "contact").length) {
+        this._html(B, this._alert("info", W.czBrak));
+        return;
+      }
+      const area = rrObszar(h, c.entity), dev = h.entities?.[c.entity]?.device_id;
+      if (!area) this._html(B, this._alert("warning", W.czBezPom, [[W.btnUrz, dev ? "/config/devices/device/" + dev : "/config/entities"]]));
+      const auto = c.auto_czujniki !== false ? rrCzujnikiAuto(h, c.entity) : [];
+      if (auto.some(Boolean) && !c.czujnik_lewe && !c.czujnik_prawe) this._html(B, this._alert("success", W.czAuto));
+      sk.forEach((x) => {
+        const pole = x.i ? "czujnik_prawe" : "czujnik_lewe", tryb = x.i ? "tryb_prawe" : "tryb_lewe";
+        this._lista(B, {
+          rola: "contact",
+          etykieta: this._etykieta(x.i, n),
+          ile: 3,
+          ref: { cover: x.cover, area, side: n > 1 ? x.i : void 0 },
+          wart: c[pole],
+          auto: auto[x.i],
+          pusty: W.bez,
+          wybor: (v) => this._ustaw(v ? { [pole]: v } : { [pole]: "", ...auto[x.i] ? { auto_czujniki: false } : {} })
+        });
+        if (c[pole] || auto[x.i]) {
+          this._html(B, `<p class="hint">${esc(W.tryb)}</p>`);
+          this._seg(B, L.tr, this.ed._val(tryb), (v) => this._ustaw({ [tryb]: v }));
+        }
+      });
+    }
+    /* ---------- krok 5: pogoda ---------- */
+    _k_pogoda(B) {
+      const W = this.W, h = this.h, c = this.c, zr = this.ed._val("zrodlo");
+      const lok = h.config?.latitude != null && h.config?.longitude != null;
+      this._seg(B, W.zr, zr, (v) => this._ustaw({ zrodlo: v }));
+      if (zr === "brak") {
+        this._html(B, this._alert("info", W.wxNic));
+        return;
+      }
+      if (zr === "auto") {
+        const auto = rrPogodaId({ pogoda: "auto" }, h), K = rrKandydaci(h, "weather");
+        if (!K.length) this._html(B, this._alert("info", W.wxBrak));
+        else {
+          this._lista(B, { rola: "weather", wart: c.pogoda && c.pogoda !== "auto" ? c.pogoda : "", auto, wybor: (v) => this._ustaw({ pogoda: v === auto ? "auto" : v }) });
+          const wid = rrPogodaId(c, h), st = h.states[wid];
+          if (!st || st.state === "unavailable") this._html(B, this._alert("warning", W.wxNiedost(rrNazwa(h, wid))));
+          else this._html(B, this._alert("success", W.wxTeraz(this._stan(wid))));
+          if (st && st.state !== "unavailable") return;
+        }
+      }
+      if (!lok) this._html(B, this._alert("warning", W.wxBezLok, [[W.btnOgolne, "/config/general"]]));
+    }
+    /* ---------- krok 6: wygląd i nazwa ---------- */
+    _k_wyglad(B) {
+      const W = this.W, L = this.ed._L, P = RR_PRESETY;
+      const d = document.createElement("div");
+      d.className = "wzl";
+      d.innerHTML = P.map((p, i) => `<button data-wp="${i}" aria-pressed="${this.ed._val("rama") === p.rama && this.ed._val("kolor") === p.kolor}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span><span><span class="wzn1">${esc(L.pre[i])}</span></span></button>`).join("");
+      d.querySelectorAll("[data-wp]").forEach((b) => b.onclick = () => {
+        const p = P[+b.dataset.wp];
+        this._ustaw({ rama: p.rama, kolor: p.kolor, siatka: p.siatka ?? "" });
+      });
+      B.appendChild(d);
+      const s = document.createElement("ha-selector");
+      s.hass = this.h;
+      s.selector = { text: {} };
+      s.label = W.nazwa;
+      s.value = this.c.name || "";
+      s.addEventListener("value-changed", (e) => this.ed._set("name", e.detail.value || ""));
+      B.appendChild(s);
+      this._html(B, `<p class="hint">${esc(W.podglad)}</p>`);
+    }
+    /* ---------- krok 7: podsumowanie i miejsce karty ---------- */
+    _k_gdzie(B) {
+      const W = this.W, h = this.h, c = this.c, sk = this._skrzydla(), ri = this.ed._lang === "en" ? 1 : 0;
+      const pkt = [];
+      const st = h.states[c.entity];
+      pkt.push([st && st.state !== "unavailable" ? "✅" : "⚠️", W.pRoleta(rrNazwa(h, c.entity))]);
+      pkt.push(["✅", W.pSk(sk.length > 1 ? sk.map((x) => rrNazwa(h, x.cover)).join(" / ") : W.sk1)]);
+      const rpm = sk.map((x) => rrRpm(h, x.cover, c[x.i ? "predkosc_prawa" : "predkosc_lewa"])).filter((x) => x > 0);
+      pkt.push(rpm.length ? ["✅", W.pSil([...new Set(rpm)].join(" / ") + " " + W.obr)] : ["ℹ️", W.pSilU]);
+      const auto = c.auto_czujniki !== false ? rrCzujnikiAuto(h, c.entity) : [];
+      const cz = sk.map((x) => c[x.i ? "czujnik_prawe" : "czujnik_lewe"] || auto[x.i]).filter(Boolean);
+      pkt.push(cz.length ? ["✅", W.pCz(cz.map((x) => rrNazwa(h, x)).join(" / "))] : ["ℹ️", W.pCzB]);
+      const zr = this.ed._val("zrodlo"), wid = zr === "auto" ? rrPogodaId(c, h) : null;
+      pkt.push(zr === "brak" ? ["ℹ️", W.pWxB] : wid && h.states[wid] ? ["✅", W.pWx(rrNazwa(h, wid) + " – " + this._stan(wid))] : ["✅", W.pWxI]);
+      const rama = this.ed._val("rama"), kol = this.ed._val("kolor");
+      pkt.push(["✅", W.pWyg(RR_RAMY[rama]?.[ri] || rama, RR_KOL_NAZWY[this.ed._lang][kol] || kol)]);
+      this._html(B, `<div class="lb">${W.pods}</div><ul class="wzi">${pkt.map(([i, t]) => `<li>${i} ${esc(t)}</li>`).join("")}</ul>`);
+      this._instalacja(B);
+      this._html(B, `<div class="lb">${W.gdzieT}</div>` + this._alert("success", W.tutaj));
+      if (!h.user?.is_admin) {
+        this._html(B, this._alert("info", W.bezAdmina));
+        return;
+      }
+      this._html(B, `<p class="hint">${esc(W.tez)}</p>`);
+      const box = document.createElement("div");
+      box.className = "wzg";
+      box.innerHTML = `<p class="hint">${esc(W.wczytuje)}</p>`;
+      B.appendChild(box);
+      this._panele(box);
+    }
+    async _panele(box) {
+      const W = this.W, h = this.h, biez = rrBiezacyPanel();
+      const lista = await rrPanele(h);
+      if (!box.isConnected) return;
+      const nazwa = (d) => d.url_path ? d.title || d.url_path : W.domyslny;
+      const opcje = lista.map((d, i) => ({ value: String(i), label: nazwa(d) + (d.url_path === biez ? W.tenPanel : d.mode === "yaml" ? W.yaml : ""), disabled: d.url_path === biez || d.mode === "yaml" }));
+      box.innerHTML = "";
+      const wyb = { d: opcje.find((o) => !o.disabled)?.value, v: "nowy" };
+      const sel = (label, opts, value, cb) => {
+        const s = document.createElement("ha-selector");
+        s.hass = h;
+        s.label = label;
+        s.selector = { select: { mode: "dropdown", options: opts } };
+        s.value = value;
+        s.addEventListener("value-changed", (e) => cb(e.detail.value));
+        return s;
+      };
+      const vBox = document.createElement("div"), btn = document.createElement("button"), out = document.createElement("p");
+      btn.className = "wb";
+      btn.textContent = W.dodaj;
+      out.className = "hint";
+      const widoki = async () => {
+        vBox.innerHTML = "";
+        btn.disabled = true;
+        const d = lista[+wyb.d];
+        if (!d) return;
+        let cfg = null;
+        try {
+          cfg = await rrKonfigPanelu(h, d.url_path);
+        } catch (x) {
+        }
+        const vs = cfg && !cfg.strategy ? cfg.views || [] : null;
+        if (!vs) {
+          out.textContent = nazwa(d) + W.autoPanel;
+          return;
+        }
+        const opts = [{ value: "nowy", label: W.nowyWidok }, ...vs.map((v, i) => ({ value: String(i), label: (v.title || v.path || "#" + (i + 1)) + (v.type === "panel" || v.strategy ? W.widokPanel : ""), disabled: v.type === "panel" || !!v.strategy }))];
+        wyb.v = "nowy";
+        vBox.appendChild(sel(W.widok, opts, wyb.v, (v) => {
+          wyb.v = v;
+        }));
+        btn.disabled = false;
+      };
+      box.appendChild(sel(W.panel, opcje, wyb.d, (v) => {
+        wyb.d = v;
+        out.textContent = "";
+        widoki();
+      }));
+      box.append(vBox, btn, out);
+      btn.onclick = async () => {
+        const d = lista[+wyb.d];
+        btn.disabled = true;
+        const karta = Object.assign({ type: "custom:roleta-realistyczna" }, this.c);
+        try {
+          const v = await rrDodajDoPanelu(h, d.url_path, wyb.v === "nowy" ? "nowy" : +wyb.v, karta, W.nowyTytul);
+          out.textContent = W.dodano(nazwa(d), v.title || v.path);
+          await widoki();
+        } catch (e) {
+          out.textContent = W.blad(e.message || e);
+          btn.disabled = false;
+        }
+      };
+      if (wyb.d != null) widoki();
+      else out.textContent = "";
+    }
+  };
+  var rrKreatorPotrzebny = (c) => !Object.keys(c).some((k) => k !== "type" && k !== "entity" && !(k in RR_DEF && c[k] === RR_DEF[k]));
+
   // src/edytor.js
   var RR_POLA = ["entity", "name", "roleta_lewa", "roleta_prawa", "predkosc_lewa", "predkosc_prawa", "zrodlo", "pogoda", "tlo", "czujnik_lewe", "tryb_lewe", "czujnik_prawe", "tryb_prawe"];
   var RR_PRZEL = ["auto_czujniki", "klamki", "wibracja", "przyciski", "niebo", "widok", "uchwyty", "uchwyt_srodek", "osobno", "odwroc"];
@@ -1550,6 +2414,9 @@
     }
     connectedCallback() {
       if (this._built) this._startMotor();
+    }
+    get _L() {
+      return RR_ED[this._lang];
     }
     _val(k) {
       return this._cfg[k] ?? RR_G.v?.[k] ?? RR_DEF[k];
@@ -1581,6 +2448,7 @@
         this._lang = lang;
         this._build();
       }
+      this._schemat();
       this._f.hass = this._hass;
       const d = {};
       RR_POLA.forEach((k) => {
@@ -1589,6 +2457,7 @@
       this._f.data = d;
       this._sync();
       this._preview();
+      this._kr?.odswiez();
     }
     _build() {
       const root = this.shadowRoot || this.attachShadow({ mode: "open" });
@@ -1598,8 +2467,7 @@
 <style>${RR_EDYTOR_STYL}</style>
 </style>
 <div class="ed">
- <div class="wiz" hidden><div class="wzh"><b>${L.wz}</b><span id="wzK"></span><button class="wzx" title="✕">✕</button></div>
-  <div id="wzB"></div><div class="kal"><button class="play" id="wzW">${L.wzW}</button><button class="play" id="wzD">${L.wzD}</button></div></div>
+ <div class="wiz" hidden></div>
  <div class="f"></div>
  <div class="pv">
   <div class="pvh"><span>${L.pv}</span><span><button class="pin-b wzo" style="opacity:1" title="${L.wz}">🪄</button><button class="pin-b" title="${L.pin}">📌</button> <button class="play">${L.play}</button></span></div>
@@ -1657,28 +2525,7 @@
       const $ = (s) => root.querySelector(s);
       this._r = root;
       this._f = document.createElement("ha-form");
-      const sel = (d) => ({ entity: { domain: d } }), opt = (a) => ({ select: { mode: "dropdown", options: a.map(([value, label]) => ({ value, label })) } });
-      this._f.schema = [
-        { name: "entity", required: true, selector: sel("cover") },
-        { name: "name", selector: { text: {} } },
-        { type: "expandable", flatten: true, name: "", title: L.s_enc, icon: "mdi:roller-shade", schema: [
-          { name: "roleta_lewa", selector: sel("cover") },
-          { name: "roleta_prawa", selector: sel("cover") },
-          { name: "predkosc_lewa", selector: sel("number") },
-          { name: "predkosc_prawa", selector: sel("number") }
-        ] },
-        { type: "expandable", flatten: true, name: "", title: L.s_pog, icon: "mdi:weather-partly-cloudy", schema: [
-          { name: "zrodlo", selector: opt(L.zr) },
-          { name: "pogoda", selector: sel("weather") },
-          { name: "tlo", selector: { text: {} } }
-        ] },
-        { type: "expandable", flatten: true, name: "", title: L.s_okn, icon: "mdi:window-open-variant", schema: [
-          { name: "czujnik_lewe", selector: sel("binary_sensor") },
-          { name: "tryb_lewe", selector: opt(L.tr) },
-          { name: "czujnik_prawe", selector: sel("binary_sensor") },
-          { name: "tryb_prawe", selector: opt(L.tr) }
-        ] }
-      ];
+      this._schemat();
       this._f.computeLabel = (s) => L.f[s.name] || s.title || s.name;
       this._f.addEventListener("value-changed", (e) => {
         const v = e.detail.value;
@@ -1690,13 +2537,9 @@
       $("#akal").onclick = () => this._akal();
       const RST = { wyg: ["kolor", "siatka", "rama", "skrzydla", "slupek", "wysokosc"], okn: ["kat_uchyl", "otwarcie"], ruch: ["czas", "krok", "pozycje"], zaaw: ["jezyk", ...RR_PRZEL] };
       root.querySelectorAll("[data-rst]").forEach((b) => b.onclick = () => RST[b.dataset.rst].forEach((k) => this._set(k, null)));
-      $(".wzo").onclick = () => this._wiz(1);
-      $(".wzx").onclick = () => {
-        $(".wiz").hidden = true;
-      };
-      $("#wzW").onclick = () => this._wiz(this._wk - 1);
-      $("#wzD").onclick = () => this._wk >= 3 ? $(".wiz").hidden = true : this._wiz(this._wk + 1);
-      if (!Object.keys(this._cfg).some((k) => k !== "type" && k !== "entity")) this._wiz(1);
+      this._kr = new RrKreator(this, $(".wiz"));
+      $(".wzo").onclick = () => this._kr.otworz(0);
+      if (rrKreatorPotrzebny(this._cfg)) this._kr.otworz(0);
       const gInfo = () => {
         const n = Object.keys(RR_G.v || {}).length;
         $("#gInfo").textContent = n ? L.gIle(n) : L.gBrak;
@@ -1789,6 +2632,40 @@
       this._m = { "cover.podglad_l": { pos: 60, target: 60 }, "cover.podglad_p": { pos: 60, target: 60 } };
       this._built = true;
       this._startMotor();
+    }
+    /* wszystko do wyboru (v17) – rozwijane sekcje, nic na sztywno; v23: ścisłe filtry – w listach tylko pasujące encje */
+    _schemat() {
+      const L = RR_ED[this._lang], h = this._hass, e = this._cfg.entity;
+      const klucz = this._lang + Object.keys(h.states).length + "|" + e;
+      if (klucz === this._sk) return;
+      this._sk = klucz;
+      const m = h.states[e]?.attributes?.entity_id || [];
+      const tylko = (rola, ref, dom) => {
+        const k = rrKandydaci(h, rola, ref).map((x) => x.id);
+        return { entity: k.length ? { include_entities: k } : { domain: dom } };
+      };
+      const opt = (a) => ({ select: { mode: "dropdown", options: a.map(([value, label]) => ({ value, label })) } });
+      this._f.schema = [
+        { name: "entity", required: true, selector: tylko("cover", {}, "cover") },
+        { name: "name", selector: { text: {} } },
+        { type: "expandable", flatten: true, name: "", title: L.s_enc, icon: "mdi:roller-shade", schema: [
+          { name: "roleta_lewa", selector: tylko("skrzydlo", { members: m, side: 0 }, "cover") },
+          { name: "roleta_prawa", selector: tylko("skrzydlo", { members: m, side: 1 }, "cover") },
+          { name: "predkosc_lewa", selector: tylko("speed", { cover: m[0] || e }, "number") },
+          { name: "predkosc_prawa", selector: tylko("speed", { cover: m[1] || e }, "number") }
+        ] },
+        { type: "expandable", flatten: true, name: "", title: L.s_pog, icon: "mdi:weather-partly-cloudy", schema: [
+          { name: "zrodlo", selector: opt(L.zr) },
+          { name: "pogoda", selector: tylko("weather", {}, "weather") },
+          { name: "tlo", selector: { text: {} } }
+        ] },
+        { type: "expandable", flatten: true, name: "", title: L.s_okn, icon: "mdi:window-open-variant", schema: [
+          { name: "czujnik_lewe", selector: tylko("contact", { cover: e, side: 0 }, "binary_sensor") },
+          { name: "tryb_lewe", selector: opt(L.tr) },
+          { name: "czujnik_prawe", selector: tylko("contact", { cover: e, side: 1 }, "binary_sensor") },
+          { name: "tryb_prawe", selector: opt(L.tr) }
+        ] }
+      ];
     }
     _rpm() {
       const st = this._hass?.states[this._cfg.entity];
@@ -1889,54 +2766,13 @@
         r.querySelector("#kalV").textContent = ((performance.now() - this._kalT) / 1e3).toFixed(1) + " s";
       }, 100);
     }
-    /* v22: kreator w 3 krokach */
-    _wiz(n) {
-      const r = this._r, L = RR_ED[this._lang], h = this._hass, B = r.querySelector("#wzB");
-      this._wk = n = Math.max(1, Math.min(3, n));
-      r.querySelector(".wiz").hidden = false;
-      r.querySelector("#wzK").textContent = L.wzK(n);
-      r.querySelector("#wzW").style.visibility = n > 1 ? "" : "hidden";
-      r.querySelector("#wzD").textContent = n === 3 ? L.wzG : L.wzD;
-      const nm = (id) => h.states[id]?.attributes?.friendly_name || id;
-      if (n === 1) {
-        const cov = Object.keys(h.states).filter((k) => k.startsWith("cover.")).sort((a, b) => (h.states[b].attributes?.entity_id?.length || 0) - (h.states[a].attributes?.entity_id?.length || 0));
-        B.innerHTML = `<p class="hint">${L.wz1}</p><div class="wzl">${cov.map((k) => {
-          const g = h.states[k].attributes?.entity_id?.length;
-          return `<button data-wc="${k}">${nm(k)}<small>${g ? L.wzGr(g) : k}</small></button>`;
-        }).join("")}</div>`;
-        B.querySelectorAll("[data-wc]").forEach((b) => {
-          b.setAttribute("aria-pressed", b.dataset.wc === this._cfg.entity);
-          b.onclick = () => {
-            this._set("entity", b.dataset.wc);
-            this._wiz(2);
-          };
-        });
-      } else if (n === 2) {
-        const e = this._cfg.entity, m = h.states[e]?.attributes?.entity_id || [], rpm = this._rpm().filter((x) => x > 0), cz = rrCzujnikiAuto(h, e).filter(Boolean);
-        const wid = rrPogodaId(this._cfg, h);
-        const li = (ok, t) => `<li>${ok ? "✅" : "ℹ️"} ${t}</li>`;
-        B.innerHTML = `<p class="hint">${L.wz2}</p><ul class="wzi">
-        ${li(true, m.length ? L.wzR(nm(e), m.map(nm).join(", ")) : L.wzR0(nm(e)))}
-        ${li(rpm.length, rpm.length ? L.wzS(rpm[0], rrCzas("auto", rpm[0]).toFixed(1)) : L.wzS0)}
-        ${li(cz.length, cz.length ? L.wzC(cz.map(nm).join(", ")) : L.wzC0)}
-        ${li(true, wid ? L.wzP(nm(wid)) : L.wzP0)}</ul>`;
-      } else {
-        const P = RR_PRESETY;
-        B.innerHTML = `<p class="hint">${L.wz3}</p><div class="wzl">${P.map((p, i) => `<button data-wp="${i}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span>${L.pre[i]}</button>`).join("")}</div>`;
-        B.querySelectorAll("[data-wp]").forEach((b) => b.onclick = () => {
-          const p = P[+b.dataset.wp];
-          ["rama", "kolor", "siatka"].forEach((k) => this._set(k, p[k] ?? null));
-          B.querySelectorAll("[data-wp]").forEach((x) => x.setAttribute("aria-pressed", x === b));
-        });
-      }
-    }
     /* automatyczna kalibracja (v18): góra → dół (mierzone) → góra (mierzone), średnia zapisana jako czas */
-    _akal() {
-      const r = this._r, L = RR_ED[this._lang], out = r.querySelector("#akV"), btn = r.querySelector("#akal"), e = this._cfg.entity;
+    _akal(btn = this._r.querySelector("#akal"), out = this._r.querySelector("#akV"), etyk = RR_ED[this._lang].ak) {
+      const L = RR_ED[this._lang], e = this._cfg.entity;
       const koniec = (txt) => {
         clearInterval(this._ak);
         this._ak = null;
-        btn.textContent = L.ak;
+        btn.textContent = etyk;
         out.textContent = txt;
       };
       if (this._ak) {

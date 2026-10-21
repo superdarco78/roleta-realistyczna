@@ -435,7 +435,7 @@ Want your language? Copy [`translations/en.json`](translations/en.json) to `tran
 <a name="project-structure"></a>
 ## 🧱 Project structure
 
-Source code is split into modules in [`src/`](src) (card, editor, weather, detection, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
+Source code is split into modules in [`src/`](src) (card, editor, 7-step wizard, dashboards, weather, detection and ranking, motor timing, colours, global settings, language), texts in [`translations/`](translations), tests in [`test/`](test). `npm install` → `npm run check` lints, tests and bundles everything with esbuild into `dist/roleta-realistyczna.js`, the single file HACS installs. GitHub runs the same checks on every change.
 
 <a name="support"></a>
 ## ☕ Support

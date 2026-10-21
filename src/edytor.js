@@ -1,11 +1,12 @@
-import { RR_WERSJA, RR_DEF, RR_PRESETY } from './stale.js';
+import { RR_WERSJA, RR_DEF } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
 import { RR_ED, RR_KOL_NAZWY, rrJezyk } from './jezyk.js';
-import { rrRpm, rrCzujnikiAuto, rrPogodaId } from './wykrywanie.js';
+import { rrRpm, rrCzujnikiAuto, rrPogodaId, rrKandydaci } from './wykrywanie.js';
 import { RR_G, RR_GKLUCZE, rrGlobLoad, rrGlobSave } from './globalne.js';
 import { RR_EDYTOR_STYL } from './edytor-styl.js';
+import { RrKreator, rrKreatorPotrzebny } from './kreator.js';
 
 /* Edytor graficzny (v6): jak symulator – kółka kolorów, suwaki, przełączniki i żywy podgląd z animacją.
    Podgląd steruje udawanym silnikiem, nigdy prawdziwą roletą. */
@@ -16,6 +17,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   set hass(h) { this._hass = h; this._go(); }
   disconnectedCallback() { clearInterval(this._loop); this._loop = null; clearInterval(this._kalI); clearInterval(this._ak); this._ak = null; cancelAnimationFrame(this._raf); this._raf = null; }
   connectedCallback() { if (this._built) this._startMotor(); }
+  get _L() { return RR_ED[this._lang]; }
   _val(k) { return this._cfg[k] ?? RR_G.v?.[k] ?? RR_DEF[k]; }
   _set(k, v) {
     const c = Object.assign({}, this._cfg);
@@ -31,11 +33,13 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     const lang = rrJezyk(this._cfg, this._hass);
     if (this._built && lang !== this._lang) { clearInterval(this._loop); this._loop = null; this._built = false; }   // zmiana języka = nowy edytor
     if (!this._built) { this._lang = lang; this._build(); }
+    this._schemat();
     this._f.hass = this._hass;
     const d = {};
     RR_POLA.forEach(k => { d[k] = k === 'pogoda' && this._cfg.pogoda === 'auto' ? undefined : this._cfg[k] ?? (RR_DEF[k] === '' ? undefined : RR_DEF[k]); });
     this._f.data = d;
     this._sync(); this._preview();
+    this._kr?.odswiez();
   }
   _build() {
     const root = this.shadowRoot || this.attachShadow({ mode: 'open' });
@@ -45,8 +49,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
 <style>${RR_EDYTOR_STYL}</style>
 </style>
 <div class="ed">
- <div class="wiz" hidden><div class="wzh"><b>${L.wz}</b><span id="wzK"></span><button class="wzx" title="✕">✕</button></div>
-  <div id="wzB"></div><div class="kal"><button class="play" id="wzW">${L.wzW}</button><button class="play" id="wzD">${L.wzD}</button></div></div>
+ <div class="wiz" hidden></div>
  <div class="f"></div>
  <div class="pv">
   <div class="pvh"><span>${L.pv}</span><span><button class="pin-b wzo" style="opacity:1" title="${L.wz}">🪄</button><button class="pin-b" title="${L.pin}">📌</button> <button class="play">${L.play}</button></span></div>
@@ -104,17 +107,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     const $ = s => root.querySelector(s);
     this._r = root;
     this._f = document.createElement('ha-form');
-    /* wszystko do wyboru (v17) – rozwijane sekcje, nic na sztywno */
-    const sel = d => ({ entity: { domain: d } }), opt = a => ({ select: { mode: 'dropdown', options: a.map(([value, label]) => ({ value, label })) } });
-    this._f.schema = [{ name: 'entity', required: true, selector: sel('cover') }, { name: 'name', selector: { text: {} } },
-      { type: 'expandable', flatten: true, name: '', title: L.s_enc, icon: 'mdi:roller-shade', schema: [
-        { name: 'roleta_lewa', selector: sel('cover') }, { name: 'roleta_prawa', selector: sel('cover') },
-        { name: 'predkosc_lewa', selector: sel('number') }, { name: 'predkosc_prawa', selector: sel('number') }] },
-      { type: 'expandable', flatten: true, name: '', title: L.s_pog, icon: 'mdi:weather-partly-cloudy', schema: [
-        { name: 'zrodlo', selector: opt(L.zr) }, { name: 'pogoda', selector: sel('weather') }, { name: 'tlo', selector: { text: {} } }] },
-      { type: 'expandable', flatten: true, name: '', title: L.s_okn, icon: 'mdi:window-open-variant', schema: [
-        { name: 'czujnik_lewe', selector: sel('binary_sensor') }, { name: 'tryb_lewe', selector: opt(L.tr) },
-        { name: 'czujnik_prawe', selector: sel('binary_sensor') }, { name: 'tryb_prawe', selector: opt(L.tr) }] }];
+    this._schemat();
     this._f.computeLabel = s => L.f[s.name] || s.title || s.name;
     this._f.addEventListener('value-changed', e => { const v = e.detail.value;
       RR_POLA.forEach(k => this._set(k, v[k] || (k === 'pogoda' ? 'auto' : RR_DEF[k]))); });
@@ -125,12 +118,10 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     /* v22: przywracanie domyślnych w każdym dziale */
     const RST = { wyg: ['kolor', 'siatka', 'rama', 'skrzydla', 'slupek', 'wysokosc'], okn: ['kat_uchyl', 'otwarcie'], ruch: ['czas', 'krok', 'pozycje'], zaaw: ['jezyk', ...RR_PRZEL] };
     root.querySelectorAll('[data-rst]').forEach(b => b.onclick = () => RST[b.dataset.rst].forEach(k => this._set(k, null)));
-    /* v22: kreator */
-    $('.wzo').onclick = () => this._wiz(1);
-    $('.wzx').onclick = () => { $('.wiz').hidden = true; };
-    $('#wzW').onclick = () => this._wiz(this._wk - 1);
-    $('#wzD').onclick = () => this._wk >= 3 ? ($('.wiz').hidden = true) : this._wiz(this._wk + 1);
-    if (!Object.keys(this._cfg).some(k => k !== 'type' && k !== 'entity')) this._wiz(1);   // nowa karta = kreator od razu
+    /* v23: kreator w 7 krokach (src/kreator.js) – nowa karta = kreator od razu, później przycisk 🪄 */
+    this._kr = new RrKreator(this, $('.wiz'));
+    $('.wzo').onclick = () => this._kr.otworz(0);
+    if (rrKreatorPotrzebny(this._cfg)) this._kr.otworz(0);
     /* v21: ustawienia globalne */
     const gInfo = () => { const n = Object.keys(RR_G.v || {}).length; $('#gInfo').textContent = n ? L.gIle(n) : L.gBrak; };
     rrGlobLoad(this._hass).then(() => { gInfo(); this._sync(); this._preview(); });
@@ -177,6 +168,23 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     this._m = { 'cover.podglad_l': { pos: 60, target: 60 }, 'cover.podglad_p': { pos: 60, target: 60 } };
     this._built = true;
     this._startMotor();
+  }
+  /* wszystko do wyboru (v17) – rozwijane sekcje, nic na sztywno; v23: ścisłe filtry – w listach tylko pasujące encje */
+  _schemat() {
+    const L = RR_ED[this._lang], h = this._hass, e = this._cfg.entity;
+    const klucz = this._lang + Object.keys(h.states).length + '|' + e; if (klucz === this._sk) return; this._sk = klucz;
+    const m = h.states[e]?.attributes?.entity_id || [];
+    const tylko = (rola, ref, dom) => { const k = rrKandydaci(h, rola, ref).map(x => x.id); return { entity: k.length ? { include_entities: k } : { domain: dom } }; };
+    const opt = a => ({ select: { mode: 'dropdown', options: a.map(([value, label]) => ({ value, label })) } });
+    this._f.schema = [{ name: 'entity', required: true, selector: tylko('cover', {}, 'cover') }, { name: 'name', selector: { text: {} } },
+      { type: 'expandable', flatten: true, name: '', title: L.s_enc, icon: 'mdi:roller-shade', schema: [
+        { name: 'roleta_lewa', selector: tylko('skrzydlo', { members: m, side: 0 }, 'cover') }, { name: 'roleta_prawa', selector: tylko('skrzydlo', { members: m, side: 1 }, 'cover') },
+        { name: 'predkosc_lewa', selector: tylko('speed', { cover: m[0] || e }, 'number') }, { name: 'predkosc_prawa', selector: tylko('speed', { cover: m[1] || e }, 'number') }] },
+      { type: 'expandable', flatten: true, name: '', title: L.s_pog, icon: 'mdi:weather-partly-cloudy', schema: [
+        { name: 'zrodlo', selector: opt(L.zr) }, { name: 'pogoda', selector: tylko('weather', {}, 'weather') }, { name: 'tlo', selector: { text: {} } }] },
+      { type: 'expandable', flatten: true, name: '', title: L.s_okn, icon: 'mdi:window-open-variant', schema: [
+        { name: 'czujnik_lewe', selector: tylko('contact', { cover: e, side: 0 }, 'binary_sensor') }, { name: 'tryb_lewe', selector: opt(L.tr) },
+        { name: 'czujnik_prawe', selector: tylko('contact', { cover: e, side: 1 }, 'binary_sensor') }, { name: 'tryb_prawe', selector: opt(L.tr) }] }];
   }
   _rpm() {   // prędkość prawdziwych silników wybranej rolety (jeśli są) – podgląd jedzie w tym samym tempie
     const st = this._hass?.states[this._cfg.entity];
@@ -249,43 +257,10 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     clearInterval(this._kalI);
     this._kalI = setInterval(() => { r.querySelector('#kalV').textContent = ((performance.now() - this._kalT) / 1000).toFixed(1) + ' s'; }, 100);
   }
-  /* v22: kreator w 3 krokach */
-  _wiz(n) {
-    const r = this._r, L = RR_ED[this._lang], h = this._hass, B = r.querySelector('#wzB');
-    this._wk = n = Math.max(1, Math.min(3, n));
-    r.querySelector('.wiz').hidden = false;
-    r.querySelector('#wzK').textContent = L.wzK(n);
-    r.querySelector('#wzW').style.visibility = n > 1 ? '' : 'hidden';
-    r.querySelector('#wzD').textContent = n === 3 ? L.wzG : L.wzD;
-    const nm = id => h.states[id]?.attributes?.friendly_name || id;
-    if (n === 1) {
-      const cov = Object.keys(h.states).filter(k => k.startsWith('cover.')).sort((a, b) => (h.states[b].attributes?.entity_id?.length || 0) - (h.states[a].attributes?.entity_id?.length || 0));
-      B.innerHTML = `<p class="hint">${L.wz1}</p><div class="wzl">${cov.map(k => { const g = h.states[k].attributes?.entity_id?.length;
-        return `<button data-wc="${k}">${nm(k)}<small>${g ? L.wzGr(g) : k}</small></button>`; }).join('')}</div>`;
-      B.querySelectorAll('[data-wc]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.wc === this._cfg.entity);
-        b.onclick = () => { this._set('entity', b.dataset.wc); this._wiz(2); }; });
-    } else if (n === 2) {
-      const e = this._cfg.entity, m = (h.states[e]?.attributes?.entity_id || []), rpm = this._rpm().filter(x => x > 0), cz = rrCzujnikiAuto(h, e).filter(Boolean);
-      const wid = rrPogodaId(this._cfg, h);
-      const li = (ok, t) => `<li>${ok ? '✅' : 'ℹ️'} ${t}</li>`;
-      B.innerHTML = `<p class="hint">${L.wz2}</p><ul class="wzi">
-        ${li(true, m.length ? L.wzR(nm(e), m.map(nm).join(', ')) : L.wzR0(nm(e)))}
-        ${li(rpm.length, rpm.length ? L.wzS(rpm[0], rrCzas('auto', rpm[0]).toFixed(1)) : L.wzS0)}
-        ${li(cz.length, cz.length ? L.wzC(cz.map(nm).join(', ')) : L.wzC0)}
-        ${li(true, wid ? L.wzP(nm(wid)) : L.wzP0)}</ul>`;
-    } else {
-      const P = RR_PRESETY;
-      B.innerHTML = `<p class="hint">${L.wz3}</p><div class="wzl">${P.map((p, i) => `<button data-wp="${i}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span>${L.pre[i]}</button>`).join('')}</div>`;
-      B.querySelectorAll('[data-wp]').forEach(b => b.onclick = () => {
-        const p = P[+b.dataset.wp]; ['rama', 'kolor', 'siatka'].forEach(k => this._set(k, p[k] ?? null));
-        B.querySelectorAll('[data-wp]').forEach(x => x.setAttribute('aria-pressed', x === b));
-      });
-    }
-  }
   /* automatyczna kalibracja (v18): góra → dół (mierzone) → góra (mierzone), średnia zapisana jako czas */
-  _akal() {
-    const r = this._r, L = RR_ED[this._lang], out = r.querySelector('#akV'), btn = r.querySelector('#akal'), e = this._cfg.entity;
-    const koniec = txt => { clearInterval(this._ak); this._ak = null; btn.textContent = L.ak; out.textContent = txt; };
+  _akal(btn = this._r.querySelector('#akal'), out = this._r.querySelector('#akV'), etyk = RR_ED[this._lang].ak) {   // v23: też z kreatora
+    const L = RR_ED[this._lang], e = this._cfg.entity;
+    const koniec = txt => { clearInterval(this._ak); this._ak = null; btn.textContent = etyk; out.textContent = txt; };
     if (this._ak) { this._hass.callService('cover', 'stop_cover', { entity_id: e }); koniec(L.akstop); return; }
     const rpm = this._rpm()[0];
     if (rpm > 0) { out.textContent = L.akrpm(rrCzas('auto', rpm).toFixed(1)); return; }

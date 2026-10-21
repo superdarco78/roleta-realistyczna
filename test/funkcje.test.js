@@ -77,3 +77,30 @@ test('wersja: plik dist i CHANGELOG mają ten sam numer', () => {
   assert.ok(readFileSync('dist/roleta-realistyczna.js', 'utf8').includes(`"${RR_WERSJA}"`));
   assert.equal(RR_DEF.czas, 'auto');
 });
+
+test('v23: ranking i ścisłe filtry encji', async () => {
+  const { rrKandydaci } = await import('../src/wykrywanie.js');
+  const h = JSON.parse(JSON.stringify(hass));
+  Object.assign(h.states, {
+    'cover.brama': { state: 'closed', attributes: { device_class: 'gate' } },
+    'cover.kuchnia': { state: 'unavailable', attributes: {} },
+    'number.temperatura': { state: '21', attributes: { unit_of_measurement: '°C' } },
+    'number.prawa_rpm': { state: '40', attributes: { unit_of_measurement: 'rpm' } }
+  });
+  const ids = (r, ref) => rrKandydaci(h, r, ref).map(x => x.id);
+  assert.equal(ids('cover')[0], 'cover.salon');                    // grupa rolet na górze
+  assert.ok(!ids('cover').includes('cover.brama'));                // bez bram
+  assert.equal(ids('cover').at(-1), 'cover.kuchnia');              // niedostępna na końcu
+  assert.ok(!ids('speed').includes('number.temperatura'));         // tylko prędkości
+  assert.equal(ids('speed', { cover: 'cover.prawa' })[0], 'number.silnik_predkosc');   // to samo urządzenie
+  assert.deepEqual(ids('contact').sort(), ['binary_sensor.okno_lewe', 'binary_sensor.okno_prawe']);   // bez czujnika ruchu
+  assert.equal(ids('contact', { cover: 'cover.salon', side: 1 })[0], 'binary_sensor.okno_prawe');
+  assert.deepEqual(ids('skrzydlo', { members: ['cover.lewa', 'cover.prawa'], side: 0 }).slice(0, 2), ['cover.lewa', 'cover.prawa']);
+  assert.deepEqual(ids('weather'), ['weather.forecast_home']);
+});
+
+test('v23: tłumaczenia kreatora mają te same klucze', () => {
+  const pl = JSON.parse(readFileSync('translations/pl.json', 'utf8')), en = JSON.parse(readFileSync('translations/en.json', 'utf8'));
+  const klucze = (o, p = '') => Object.entries(o).flatMap(([k, v]) => v && typeof v === 'object' && !Array.isArray(v) ? klucze(v, p + k + '.') : [p + k]).sort();
+  assert.deepEqual(klucze(pl.kreator), klucze(en.kreator));
+});

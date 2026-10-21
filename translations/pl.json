@@ -93,21 +93,6 @@
     "sec_zaaw": "⚙️ Zaawansowane",
     "rst": "↺ Przywróć domyślne",
     "wz": "🪄 Kreator",
-    "wzK": "krok {0} z 3",
-    "wzW": "← Wstecz",
-    "wzD": "Dalej →",
-    "wzG": "Gotowe ✔",
-    "wzGr": "grupa: {0} rolety (okno {0}-skrzydłowe)",
-    "wz1": "Wybierz roletę albo grupę rolet. Grupy są na górze.",
-    "wz2": "Karta sama sprawdziła Twój dom:",
-    "wz3": "Wybierz gotowy wygląd. Później zmienisz wszystko w dziale 🎨 Wygląd.",
-    "wzR": "Roleta: {0} → skrzydła: {1}",
-    "wzS": "Silnik: {0} obr/min → przejazd ok. {1} s",
-    "wzS0": "Silnik nie podaje prędkości – karta nauczy się czasu sama (albo kalibracja w dziale ⏱)",
-    "wzC": "Kontaktrony okna: {0}",
-    "wzC0": "Nie znaleziono kontaktronów w tym pomieszczeniu (można dodać później w dziale 🪟)",
-    "wzP": "Pogoda: {0}",
-    "wzP0": "Pogoda: z internetu (Open-Meteo, lokalizacja domu)",
     "pre": [
       "Nowoczesny (antracyt + grafit)",
       "Klasyczne drewno (złoty dąb + beż)",
@@ -198,8 +183,7 @@
         "otworz",
         "otwarte (na zawiasach do środka)"
       ]
-    ],
-    "wzR0": "Roleta: {0}"
+    ]
   },
   "kolory": {
     "bezowy": "beżowy",
@@ -211,5 +195,158 @@
     "mietowy": "miętowy",
     "blekitny": "błękitny",
     "sliwkowy": "śliwkowy"
+  },
+  "kreator": {
+    "tytul": "Kreator karty",
+    "krok": "krok {0} z {1}",
+    "zamknij": "Zamknij kreatora",
+    "co": "Co:",
+    "poco": "Po co:",
+    "wstecz": "← Wstecz",
+    "dalej": "Dalej →",
+    "gotowe": "Gotowe ✔",
+    "kroki": {
+      "roleta": {
+        "t": "Wybierz roletę",
+        "co": "roletę albo grupę rolet, którą ta karta ma pokazywać i sterować. Na liście są tylko rolety – bez bram, drzwi garażowych i innych urządzeń.",
+        "poco": "karta wysyła do niej komendy (zwiń, opuść, ustaw %) i rysuje jej prawdziwą pozycję."
+      },
+      "okno": {
+        "t": "Okno i skrzydła",
+        "co": "ile skrzydeł ma okno i która roleta wisi na którym skrzydle.",
+        "poco": "każde skrzydło na karcie rusza się razem ze swoją prawdziwą roletą."
+      },
+      "silnik": {
+        "t": "Prędkość silnika",
+        "co": "encja z prędkością silnika (obr/min), jeśli silnik ją podaje (np. Moes, Tuya). Na liście są tylko encje prędkości.",
+        "poco": "animacja jedzie dokładnie w tempie prawdziwej rolety. Bez tego karta sama nauczy się czasu."
+      },
+      "czujniki": {
+        "t": "Czujniki okna",
+        "co": "kontaktrony (czujniki otwarcia) – osobno lewe i prawe skrzydło. Na liście są tylko czujniki okien, drzwi i otwarcia.",
+        "poco": "gdy uchylisz albo otworzysz okno, karta pokaże to na rysunku. Ten krok można pominąć."
+      },
+      "pogoda": {
+        "t": "Pogoda za oknem",
+        "co": "skąd karta bierze pogodę.",
+        "poco": "za szybą widać prawdziwe niebo: słońce, chmury, deszcz, śnieg, noc i temperaturę."
+      },
+      "wyglad": {
+        "t": "Wygląd i nazwa",
+        "co": "gotowy zestaw kolorów ramy i rolety oraz nazwa na karcie.",
+        "poco": "żeby karta wyglądała jak Twoje okno. Każdy kolor zmienisz później w dziale 🎨 Wygląd."
+      },
+      "gdzie": {
+        "t": "Gotowe – sprawdź i zapisz",
+        "co": "podsumowanie tego, co karta znalazła, i miejsce, gdzie ma się pokazać.",
+        "poco": "żeby nic nie zostało do poprawiania. Jeśli coś trzeba zrobić, jest tu napisane co i gdzie."
+      }
+    },
+    "najlepsze": "najlepsze dopasowanie",
+    "auto": "wybrane samo",
+    "inna": "Inna (tylko pasujące encje)",
+    "inne": "Pasujących encji: {0}. Pozostałe znajdziesz w liście „Inna” poniżej.",
+    "bez": "Bez czujnika",
+    "niedost": "niedostępna",
+    "otwarte": "otwarte",
+    "zamkniete": "zamknięte",
+    "why": {
+      "grupa": "grupa rolet",
+      "poz": "zna pozycję %",
+      "czlonek": "z wybranej grupy",
+      "urz": "to samo urządzenie",
+      "pom": "to samo pomieszczenie",
+      "nazwa": "pasuje nazwa",
+      "nazwa2": "podobna nazwa",
+      "lewa": "„lewe” w nazwie",
+      "prawa": "„prawe” w nazwie",
+      "okno": "czujnik okna",
+      "drzwi": "czujnik drzwi",
+      "rpm": "jednostka obr/min",
+      "typowa": "główna pogoda HA",
+      "off": "⚠ niedostępna"
+    },
+    "znaleziono": "Znalazłem {0} pasujących rolet. Najlepsze są na górze.",
+    "brakRolet": "W Home Assistancie nie ma jeszcze żadnej rolety. Najpierw dodaj silnik rolety: Ustawienia → Urządzenia i usługi → „+ Dodaj integrację” (np. Zigbee2MQTT, ZHA, Tuya, Shelly). Potem wróć tutaj – kreator sam ją znajdzie.",
+    "btnIntegr": "Otwórz Urządzenia i usługi",
+    "niedostepna": "„{0}” jest teraz niedostępna. Sprawdź zasilanie silnika i zasięg (Zigbee / Wi-Fi). Kartę możesz dodać już teraz – zacznie działać, gdy roleta wróci.",
+    "bezPoz": "„{0}” nie podaje pozycji w %. Karta pokaże tylko „zwinięta / opuszczona”, a przeciąganie wyśle zwiń albo opuść.",
+    "grupaOk": "To grupa {0} rolet – ustawiłem okno 2-skrzydłowe, każde skrzydło ze swoją roletą.",
+    "wybierz": "Wybierz roletę z listy, żeby przejść dalej.",
+    "sk1": "1 skrzydło",
+    "sk2": "2 skrzydła",
+    "skL": "Lewe skrzydło",
+    "skP": "Prawe skrzydło",
+    "skJ": "Okno",
+    "jednaNaDwa": "Jedna roleta na dwa skrzydła: obie połówki na karcie ruszą razem. Jeśli każde skrzydło ma swoją roletę, wybierz je poniżej albo zrób grupę: Ustawienia → Urządzenia i usługi → Pomocnicy → „+ Utwórz pomocnika” → Grupa → Grupa rolet.",
+    "btnPomocnicy": "Otwórz Pomocników",
+    "rpmOk": "{0}: silnik {1} obr/min → pełny przejazd ok. {2} s",
+    "rpmBrak": "{0}: silnik nie podaje prędkości – nic nie szkodzi, karta sama nauczy się czasu z pierwszych ruchów rolety.",
+    "rpmZadnej": "W HA nie ma encji z prędkością silnika. To normalne dla większości silników – karta sama nauczy się czasu przejazdu. Chcesz od razu? Zmierz go przyciskiem poniżej.",
+    "kal": "🤖 Zmierz czas teraz (roleta pojedzie góra → dół → góra)",
+    "czBrak": "W HA nie ma czujników okna (czujnik binarny typu okno, drzwi albo otwarcie). Ten krok możesz pominąć – karta działa bez nich.",
+    "czBezPom": "Roleta nie ma przypisanego pomieszczenia, więc kreator nie wie, które czujniki są w tym samym pokoju. Przypisz pomieszczenie do urządzenia rolety (Ustawienia → Urządzenia → roleta → ✏️ → Pomieszczenie), a dopasowanie będzie lepsze.",
+    "btnUrz": "Otwórz urządzenie rolety",
+    "czAuto": "Czujniki dobrane automatycznie z tego samego pomieszczenia. Możesz wybrać inne.",
+    "tryb": "Gdy czujnik pokaże „otwarte”, skrzydło jest:",
+    "zr": [
+      [
+        "auto",
+        "🔎 Automatycznie"
+      ],
+      [
+        "internet",
+        "🌐 Z internetu"
+      ],
+      [
+        "brak",
+        "🚫 Bez pogody"
+      ]
+    ],
+    "wxTeraz": "Teraz za oknem: {0}",
+    "wxBrak": "W HA nie ma integracji pogody – karta weźmie pogodę z internetu (Open-Meteo: darmowe, bez konta i klucza) dla lokalizacji Twojego domu.",
+    "wxBezLok": "HA nie zna lokalizacji domu, więc pogoda z internetu nie zadziała. Ustaw ją: Ustawienia → System → Ogólne → pinezka na mapie.",
+    "btnOgolne": "Otwórz ustawienia ogólne",
+    "wxNiedost": "„{0}” jest niedostępna – sprawdź integrację pogody. Do czasu naprawy karta weźmie pogodę z internetu.",
+    "wxNic": "Bez pogody za szybą jest zwykłe niebo dzień / noc.",
+    "nazwa": "Nazwa na karcie (puste = nazwa rolety)",
+    "podglad": "Podgląd na żywo jest niżej – każda zmiana od razu się na nim pokazuje.",
+    "jezyk": "Kreator i karta mówią po {0} – tak jak Twój profil w HA. Zmienisz to w ⚙️ Zaawansowane.",
+    "jezykNazwa": "polsku",
+    "pods": "Podsumowanie",
+    "pRoleta": "Roleta: {0}",
+    "pSk": "Skrzydła: {0}",
+    "pSil": "Silnik: {0}",
+    "pSilU": "Czas przejazdu: karta nauczy się sama",
+    "pCz": "Czujniki okna: {0}",
+    "pCzB": "Czujniki okna: brak (to nic, są opcjonalne)",
+    "pWx": "Pogoda: {0}",
+    "pWxI": "Pogoda: z internetu (Open-Meteo)",
+    "pWxB": "Pogoda: wyłączona",
+    "pWyg": "Wygląd: rama – {0}, pasy – {1}",
+    "gdzieT": "Gdzie będzie karta",
+    "tutaj": "Karta trafi do widoku, który teraz edytujesz. Kliknij na dole tego okna „Zapisz” – i gotowe.",
+    "tez": "Chcesz ją mieć także na innym panelu? Wybierz panel i widok – dodam tam kopię od razu.",
+    "panel": "Panel",
+    "widok": "Widok",
+    "nowyWidok": "➕ Nowy widok „Rolety”",
+    "nowyTytul": "Rolety",
+    "dodaj": "Dodaj kopię tam",
+    "dodano": "Dodano ✔ {0} → {1}",
+    "blad": "Nie udało się: {0}",
+    "bezAdmina": "Dodawanie kart do innych paneli wymaga konta administratora HA.",
+    "domyslny": "Przegląd (domyślny)",
+    "tenPanel": " (ten – wystarczy „Zapisz”)",
+    "autoPanel": " (automatyczny – nie da się)",
+    "yaml": " (YAML – tylko ręcznie)",
+    "widokPanel": " (pełny ekran – tylko 1 karta)",
+    "wczytuje": "Wczytuję panele…",
+    "verOk": "Karta zainstalowana poprawnie – masz najnowszą wersję {0} ✔",
+    "verNowa": "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Roleta dzień-noc → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
+    "btnHacs": "Otwórz HACS",
+    "btnPrzeladuj": "🔄 Przeładuj stronę",
+    "zasobyDup": "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",
+    "btnZasoby": "Otwórz Zasoby",
+    "obr": "obr/min"
   }
 }

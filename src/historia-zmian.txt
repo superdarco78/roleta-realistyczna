@@ -76,4 +76,13 @@
         ustawienia globalne: „🌍 Zapisz jako domyślne dla wszystkich kart” – wygląd zapisany w profilu użytkownika HA,
         każda karta (i każda nowa) go przejmuje, a własne ustawienia karty mają pierwszeństwo; nowa karta sama wybiera grupę rolet
    v22 – 🪄 kreator w 3 krokach (wybierz roletę → co karta wykryła sama → gotowy wygląd), sam się otwiera przy nowej karcie;
-        menu w rozwijanych działach: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane; w każdym „↺ Przywróć domyślne” */
+        menu w rozwijanych działach: 🎨 Wygląd, 🪟 Okno, ⏱ Ruch i kalibracja, ⚙️ Zaawansowane; w każdym „↺ Przywróć domyślne”
+   v23 – 🪄 nowy kreator w 7 krokach dla początkujących: roleta → okno i skrzydła → prędkość silnika → czujniki okna → pogoda →
+        wygląd i nazwa → podsumowanie i miejsce karty; w każdym kroku krótko „co” i „po co”; wygląd jak HA (ha-alert, ha-selector,
+        ikony mdi, kolory motywu); karta sama znajduje rolety, silniki, kontaktrony i pogodę i układa je od najlepiej pasujących
+        (to samo urządzenie, pomieszczenie, „lewe/prawe” w nazwie, podobna nazwa) z opisem dlaczego; w listach tylko pasujące encje
+        (bez bram, garaży, czujników ruchu, zwykłych liczb); gdy czegoś brakuje albo coś nie działa, kreator mówi dokładnie co zrobić
+        i otwiera właściwe miejsce w HA; pomiar czasu przejazdu w kreatorze; sprawdza, czy jest nowsza wersja i czy karta nie jest
+        dodana dwa razy w zasobach; dodaje kopię karty na inny panel albo nowy widok „Rolety” jednym kliknięciem; kreator odświeża się
+        sam, gdy w HA pojawi się nowe urządzenie; język kreatora, karty i menu wg profilu HA; te same ścisłe filtry w menu;
+        kod karty podzielony na moduły (src/, translations/), testy i automatyczne budowanie */

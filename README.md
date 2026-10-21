@@ -604,10 +604,12 @@ src/                    kod źródłowy (moduły)
 ├─ index.js             rejestracja karty i edytora w HA
 ├─ karta.js             karta: okno, roleta, przeciąganie, animacja w tempie silnika
 ├─ karta-styl.js        wygląd karty (CSS)
-├─ edytor.js            edytor graficzny, kreator, kalibracja
+├─ edytor.js            edytor graficzny, kalibracja
+├─ kreator.js           kreator w 7 krokach dla początkujących
+├─ panele.js            dodanie karty na panel, sprawdzenie instalacji
 ├─ edytor-styl.js       wygląd edytora (CSS)
 ├─ pogoda.js            niebo, pogoda, rysowany widok, pogoda z internetu
-├─ wykrywanie.js        automatyczne wykrywanie silnika, kontaktronów, pogody
+├─ wykrywanie.js        wykrywanie i ranking rolet, silników, kontaktronów, pogody
 ├─ silnik.js            czas przejazdu (prędkość, nauka, kalibracja)
 ├─ kolory.js            tkaniny, ramy i okleiny
 ├─ globalne.js          ustawienia globalne (profil użytkownika HA)
