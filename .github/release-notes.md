@@ -1,4 +1,4 @@
-<p align="center"><a name="r1" href="#r1"><img src="{{RAW}}/img/hero/baner-pl.png" width="100%" alt="Okno HA"></a></p>
+<p align="center"><a name="r1" href="#r1"><img src="{{RAW}}/img/hero2/baner-pl.png" width="100%" alt="Okno HA"></a></p>
 
 <h1 align="center">{{TYTUL}}</h1>
 

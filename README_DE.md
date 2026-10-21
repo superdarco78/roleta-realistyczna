@@ -1,4 +1,4 @@
-<p align="center"><a name="i1" href="#i1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/baner-de-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero/baner-de.png" alt="HA Window" width="100%"></picture></a></p>
+<p align="center"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/hero2/baner-de.png" alt="HA Window" width="100%"></a></p>
 
 <p align="center"><a name="pokaz" href="#pokaz"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/pokaz4-en.webp" alt="Animation: four covers, day and night, weather, movement" width="100%"></a></p>
 
