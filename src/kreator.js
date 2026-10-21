@@ -71,6 +71,9 @@ export class RrKreator {
 
   /* ---------- klocki ---------- */
   _alert(typ, txt, akcje = []) {
+    const przyc = akcje.map(([t, p]) => ` <button class="wb sm sec" data-open="${esc(p)}">${esc(t)}</button>`).join('');
+    /* v36: dobre wiadomości i podpowiedzi w kolorze głównym motywu (bez stałej zieleni); ostrzeżenia i błędy jak w HA */
+    if (typ === 'success' || typ === 'info') return `<div class="wza"><ha-icon icon="${typ === 'success' ? 'mdi:check-circle' : 'mdi:information'}"></ha-icon><div>${esc(txt)}${przyc ? `<div>${przyc}</div>` : ''}</div></div>`;
     return `<ha-alert alert-type="${typ}">${esc(txt)}${akcje.map(([t, p]) => ` <button class="wb sm sec" slot="action" data-open="${esc(p)}">${esc(t)}</button>`).join('')}</ha-alert>`;
   }
   _html(box, html) {
@@ -267,18 +270,18 @@ export class RrKreator {
     const W = this.W, h = this.h, c = this.c, sk = this._skrzydla(), ri = this.ed._lang === 'en' ? 1 : 0;
     const pkt = [];
     const st = h.states[c.entity];
-    pkt.push([st && st.state !== 'unavailable' ? '✅' : '⚠️', W.pRoleta(rrNazwa(h, c.entity))]);
-    pkt.push(['✅', W.pSk(sk.length > 1 ? sk.map(x => rrNazwa(h, x.cover)).join(' / ') : W.sk1)]);
+    pkt.push([st && st.state !== 'unavailable' ? 'ok' : 'uw', W.pRoleta(rrNazwa(h, c.entity))]);
+    pkt.push(['ok', W.pSk(sk.length > 1 ? sk.map(x => rrNazwa(h, x.cover)).join(' / ') : W.sk1)]);
     const rpm = sk.map(x => rrRpm(h, x.cover, c[x.i ? 'predkosc_prawa' : 'predkosc_lewa'])).filter(x => x > 0);
-    pkt.push(rpm.length ? ['✅', W.pSil([...new Set(rpm)].join(' / ') + ' ' + W.obr)] : ['ℹ️', W.pSilU]);
+    pkt.push(rpm.length ? ['ok', W.pSil([...new Set(rpm)].join(' / ') + ' ' + W.obr)] : ['in', W.pSilU]);
     const auto = c.auto_czujniki !== false ? rrCzujnikiAuto(h, c.entity) : [];
     const cz = sk.map(x => c[x.i ? 'czujnik_prawe' : 'czujnik_lewe'] || auto[x.i]).filter(Boolean);
-    pkt.push(cz.length ? ['✅', W.pCz(cz.map(x => rrNazwa(h, x)).join(' / '))] : ['ℹ️', W.pCzB]);
+    pkt.push(cz.length ? ['ok', W.pCz(cz.map(x => rrNazwa(h, x)).join(' / '))] : ['in', W.pCzB]);
     const zr = this.ed._val('zrodlo'), wid = zr === 'auto' ? rrPogodaId(c, h) : null;
-    pkt.push(zr === 'brak' ? ['ℹ️', W.pWxB] : wid && h.states[wid] ? ['✅', W.pWx(rrNazwa(h, wid) + ' – ' + this._stan(wid))] : ['✅', W.pWxI]);
+    pkt.push(zr === 'brak' ? ['in', W.pWxB] : wid && h.states[wid] ? ['ok', W.pWx(rrNazwa(h, wid) + ' – ' + this._stan(wid))] : ['ok', W.pWxI]);
     const rama = this.ed._val('rama'), kol = this.ed._val('kolor');
-    pkt.push(['✅', W.pWyg(RR_RAMY[rama]?.[ri] || rama, RR_KOL_NAZWY[this.ed._lang][kol] || kol)]);
-    this._html(B, `<div class="lb">${W.pods}</div><ul class="wzi">${pkt.map(([i, t]) => `<li>${i} ${esc(t)}</li>`).join('')}</ul>`);
+    pkt.push(['ok', W.pWyg(RR_RAMY[rama]?.[ri] || rama, RR_KOL_NAZWY[this.ed._lang][kol] || kol)]);
+    this._html(B, `<div class="lb">${W.pods}</div><ul class="wzi">${pkt.map(([i, t]) => `<li><ha-icon class="${i}" icon="${{ ok: 'mdi:check-circle', uw: 'mdi:alert-circle', in: 'mdi:information-outline' }[i]}"></ha-icon>${esc(t)}</li>`).join('')}</ul>`);
     this._instalacja(B);
     this._html(B, `<div class="lb">${W.gdzieT}</div>` + this._alert('success', W.tutaj));
     if (!h.user?.is_admin) { this._html(B, this._alert('info', W.bezAdmina)); return; }

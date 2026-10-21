@@ -110,10 +110,11 @@
    v32 – szeroki edytor w dwóch kolumnach z przyklejonym podglądem; kolorowe kółka w kilku rzędach bez suwaka
    v33 – kreator: dowolny kolor osłony i ramy z palety (podgląd na żywo), wyraźniejsze podpisy kółek kolorów
    v34 – kolory z motywu HA: akcent (uchwyt, linia celu, przyciski animacji), bez numeru karty – w edytorze wersja integracji
-   v35 – zapasowe kolory = domyślne kolory HA: główny #009ac7, akcent #ff9800 */
+   v35 – zapasowe kolory = domyślne kolory HA: główny #009ac7, akcent #ff9800
+   v36 – kreator bez stałych kolorów: ikony mdi i ramki w kolorze głównym motywu, bez numeru karty w komunikatach */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v35";
+  var RR_WERSJA = "v36";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -840,8 +841,8 @@
       yaml: " (YAML – tylko ręcznie)",
       widokPanel: " (pełny ekran – tylko 1 karta)",
       wczytuje: "Wczytuję panele…",
-      verOk: "Karta zainstalowana poprawnie – masz najnowszą wersję {0} ✔",
-      verNowa: "Jest nowsza wersja {0} (masz {1}). Zaktualizuj: HACS → Okno HA → ⋮ → Pobierz ponownie, potem przeładuj stronę (komputer: Ctrl+F5, telefon: zamknij i otwórz aplikację).",
+      verOk: "Karta zainstalowana poprawnie – masz najnowszą wersję.",
+      verNowa: "Jest nowsza wersja Okna HA. Zaktualizuj ją w Ustawienia → Aktualizacje, potem przeładuj stronę.",
       btnHacs: "Otwórz HACS",
       btnPrzeladuj: "🔄 Przeładuj stronę",
       zasobyDup: "Karta jest dodana w Zasobach {0} razy. Zostaw jeden wpis (Ustawienia → Panele → ⋮ → Zasoby), inaczej mogą się mieszać stare i nowe wersje.",
@@ -1267,8 +1268,8 @@
       yaml: " (YAML – manual only)",
       widokPanel: " (panel – 1 card only)",
       wczytuje: "Loading dashboards…",
-      verOk: "Card installed correctly – you have the latest version {0} ✔",
-      verNowa: "A newer version {0} is available (you have {1}). Update: HACS → Okno HA → ⋮ → Redownload, then reload the page (PC: Ctrl+F5, phone: close and reopen the app).",
+      verOk: "Card installed correctly – you have the latest version.",
+      verNowa: "A newer version of Okno HA is available. Update it in Settings → Updates, then reload the page.",
       btnHacs: "Open HACS",
       btnPrzeladuj: "🔄 Reload page",
       zasobyDup: "The card is added {0} times in Resources. Keep one entry (Settings → Dashboards → ⋮ → Resources), otherwise old and new versions may mix.",
@@ -2247,10 +2248,10 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wzs{display:flex;align-items:center}.wzs i{flex:1;height:2px;background:var(--divider-color,rgba(127,127,127,.3))}
 .wzd{flex:none;width:34px;height:34px;padding:0;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;--mdc-icon-size:18px;
  background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color);transition:background .2s,box-shadow .2s}
-.wzd.ok{background:rgba(var(--rgb-primary-color,0,154,199),.22);color:var(--primary-color,#009ac7)}
-.wzd.on{background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff);box-shadow:0 0 0 4px rgba(var(--rgb-primary-color,0,154,199),.25)}
+.wzd.ok{background:color-mix(in srgb,var(--primary-color,#009ac7) 22%,transparent);color:var(--primary-color,#009ac7)}
+.wzd.on{background:var(--primary-color,#009ac7);color:var(--text-primary-color,#fff);box-shadow:0 0 0 4px color-mix(in srgb,var(--primary-color,#009ac7) 25%,transparent)}
 .wzt{display:flex;align-items:center;gap:12px}.wzt h3{margin:0;font-size:20px;font-weight:400;color:var(--primary-text-color)}
-.wzt ha-icon{--mdc-icon-size:26px;color:var(--primary-color,#009ac7);background:rgba(var(--rgb-primary-color,0,154,199),.15);border-radius:50%;padding:8px}
+.wzt ha-icon{--mdc-icon-size:26px;color:var(--primary-color,#009ac7);background:color-mix(in srgb,var(--primary-color,#009ac7) 15%,transparent);border-radius:50%;padding:8px}
 .wzc{font-size:14px;line-height:1.45;color:var(--secondary-text-color);background:var(--secondary-background-color,rgba(127,127,127,.12));border-radius:10px;padding:8px 12px}
 .wzc p{margin:3px 0}.wzc b{color:var(--primary-text-color);font-weight:500}
 .wzb{display:grid;gap:12px}.wzb:empty{display:none}.wzp{display:grid;gap:8px}
@@ -2258,10 +2259,10 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wzl button{display:flex;align-items:center;gap:14px;text-align:left;border:none;border-radius:12px;padding:10px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color);
  background:var(--card-background-color,rgba(127,127,127,.1));box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3));transition:box-shadow .15s,background .15s}
 .wzl button:hover{background:var(--secondary-background-color,rgba(127,127,127,.12))}
-.wzl button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--primary-color,#009ac7);background:rgba(var(--rgb-primary-color,0,154,199),.08)}
+.wzl button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--primary-color,#009ac7);background:color-mix(in srgb,var(--primary-color,#009ac7) 8%,transparent)}
 .wzl ha-icon{flex:none;color:var(--state-icon-color,#44739e)}.wzl button[aria-pressed="true"] ha-icon{color:var(--primary-color,#009ac7)}
 .wzl small{display:block;color:var(--secondary-text-color);font-size:12px;margin-top:1px}
-.wzl em{font-style:normal;font-size:11px;font-weight:500;color:var(--primary-color,#009ac7);margin-left:6px;white-space:nowrap}.wzl em.au{color:var(--success-color,#43a047)}
+.wzl em{font-style:normal;font-size:11px;font-weight:500;color:var(--primary-color,#009ac7);margin-left:6px;white-space:nowrap}.wzl em.au{color:var(--accent-color,#ff9800)}
 .wzw{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}.wzw b{font-weight:400;font-size:11px;padding:1px 8px;border-radius:10px;background:var(--secondary-background-color,rgba(127,127,127,.15));color:var(--secondary-text-color)}
 .wor{display:flex;flex-wrap:wrap;gap:10px}.wo{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:12px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4));font-size:14px;font-weight:500;color:var(--primary-text-color)}.wo .sw2{width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}.wown{display:grid;gap:8px;margin-top:4px}
 .wzl .sw2{flex:none;display:inline-block;width:26px;height:26px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.4)}
@@ -2271,12 +2272,14 @@ ${rrOslonaStyl(c.oslona, col, rama)}
 .wb.sm{padding:5px 12px;font-size:13px}.wb[disabled]{opacity:.4;cursor:default}.wb[hidden]{display:none}
 .wzg{display:grid;gap:10px}.wzg>.wb{justify-self:start}
 ha-alert{display:block}
-ha-alert:not(:defined){padding:10px 12px;border-radius:8px;font-size:14px;line-height:1.45;color:var(--primary-text-color);background:rgba(3,155,229,.12);border-left:4px solid var(--info-color,#008bb3)}
-ha-alert[alert-type=warning]:not(:defined){background:rgba(255,166,0,.12);border-color:var(--warning-color,#ffa600)}
-ha-alert[alert-type=error]:not(:defined){background:rgba(219,68,55,.12);border-color:var(--error-color,#db4437)}
-ha-alert[alert-type=success]:not(:defined){background:rgba(67,160,71,.12);border-color:var(--success-color,#43a047)}
+ha-alert:not(:defined){padding:10px 12px;border-radius:8px;font-size:14px;line-height:1.45;color:var(--primary-text-color);background:color-mix(in srgb,var(--info-color,#039be5) 12%,transparent);border-left:4px solid var(--info-color,#008bb3)}
+ha-alert[alert-type=warning]:not(:defined){background:color-mix(in srgb,var(--warning-color,#ffa600) 12%,transparent);border-color:var(--warning-color,#ffa600)}
+ha-alert[alert-type=error]:not(:defined){background:color-mix(in srgb,var(--error-color,#db4437) 12%,transparent);border-color:var(--error-color,#db4437)}
+ha-alert[alert-type=success]:not(:defined){background:color-mix(in srgb,var(--success-color,#43a047) 12%,transparent);border-color:var(--success-color,#43a047)}
 ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .wzi{margin:0;padding-left:4px;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--primary-text-color)}
+.wzi li{display:flex;align-items:flex-start;gap:8px}.wzi ha-icon{flex:none;--mdc-icon-size:20px;color:var(--primary-color,#009ac7)}.wzi ha-icon.uw{color:var(--warning-color,#ffa600)}.wzi ha-icon.in{color:var(--secondary-text-color)}
+.wza{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:8px;font-size:14px;line-height:1.45;color:var(--primary-text-color);background:color-mix(in srgb,var(--primary-color,#009ac7) 12%,transparent);border-left:4px solid var(--primary-color,#009ac7)}.wza ha-icon{flex:none;color:var(--primary-color,#009ac7)}.wza .wb{margin:8px 8px 0 0}
 .lb .kn{text-transform:none;letter-spacing:0;color:var(--primary-text-color);margin-left:6px}
 .dot{display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;padding:0;color:var(--primary-text-color);font:inherit;font-size:12px;font-weight:500;line-height:1.25;text-align:center;width:74px}
 .dot i{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(127,127,127,.5);transition:transform .15s}
@@ -2300,7 +2303,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .sw{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--primary-text-color);padding:4px 0}
 .hint{font-size:12px;color:var(--secondary-text-color);line-height:1.4;margin:0}
 .ver{font-size:11px;color:var(--secondary-text-color);text-align:right}
-.kal{display:flex;flex-wrap:wrap;gap:8px}.kal .ok{background:#2e7d32}.play[disabled]{opacity:.4;cursor:default}
+.kal{display:flex;flex-wrap:wrap;gap:8px}.kal .ok{background:var(--primary-color,#009ac7)}.play[disabled]{opacity:.4;cursor:default}
 .kalw{display:flex;align-items:center;gap:12px;font-size:20px;font-variant-numeric:tabular-nums;color:var(--primary-text-color)}
 `;
 
@@ -2396,6 +2399,8 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     }
     /* ---------- klocki ---------- */
     _alert(typ, txt, akcje = []) {
+      const przyc = akcje.map(([t, p]) => ` <button class="wb sm sec" data-open="${esc(p)}">${esc(t)}</button>`).join("");
+      if (typ === "success" || typ === "info") return `<div class="wza"><ha-icon icon="${typ === "success" ? "mdi:check-circle" : "mdi:information"}"></ha-icon><div>${esc(txt)}${przyc ? `<div>${przyc}</div>` : ""}</div></div>`;
       return `<ha-alert alert-type="${typ}">${esc(txt)}${akcje.map(([t, p]) => ` <button class="wb sm sec" slot="action" data-open="${esc(p)}">${esc(t)}</button>`).join("")}</ha-alert>`;
     }
     _html(box, html) {
@@ -2641,18 +2646,18 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       const W = this.W, h = this.h, c = this.c, sk = this._skrzydla(), ri = this.ed._lang === "en" ? 1 : 0;
       const pkt = [];
       const st = h.states[c.entity];
-      pkt.push([st && st.state !== "unavailable" ? "✅" : "⚠️", W.pRoleta(rrNazwa(h, c.entity))]);
-      pkt.push(["✅", W.pSk(sk.length > 1 ? sk.map((x) => rrNazwa(h, x.cover)).join(" / ") : W.sk1)]);
+      pkt.push([st && st.state !== "unavailable" ? "ok" : "uw", W.pRoleta(rrNazwa(h, c.entity))]);
+      pkt.push(["ok", W.pSk(sk.length > 1 ? sk.map((x) => rrNazwa(h, x.cover)).join(" / ") : W.sk1)]);
       const rpm = sk.map((x) => rrRpm(h, x.cover, c[x.i ? "predkosc_prawa" : "predkosc_lewa"])).filter((x) => x > 0);
-      pkt.push(rpm.length ? ["✅", W.pSil([...new Set(rpm)].join(" / ") + " " + W.obr)] : ["ℹ️", W.pSilU]);
+      pkt.push(rpm.length ? ["ok", W.pSil([...new Set(rpm)].join(" / ") + " " + W.obr)] : ["in", W.pSilU]);
       const auto = c.auto_czujniki !== false ? rrCzujnikiAuto(h, c.entity) : [];
       const cz = sk.map((x) => c[x.i ? "czujnik_prawe" : "czujnik_lewe"] || auto[x.i]).filter(Boolean);
-      pkt.push(cz.length ? ["✅", W.pCz(cz.map((x) => rrNazwa(h, x)).join(" / "))] : ["ℹ️", W.pCzB]);
+      pkt.push(cz.length ? ["ok", W.pCz(cz.map((x) => rrNazwa(h, x)).join(" / "))] : ["in", W.pCzB]);
       const zr = this.ed._val("zrodlo"), wid = zr === "auto" ? rrPogodaId(c, h) : null;
-      pkt.push(zr === "brak" ? ["ℹ️", W.pWxB] : wid && h.states[wid] ? ["✅", W.pWx(rrNazwa(h, wid) + " – " + this._stan(wid))] : ["✅", W.pWxI]);
+      pkt.push(zr === "brak" ? ["in", W.pWxB] : wid && h.states[wid] ? ["ok", W.pWx(rrNazwa(h, wid) + " – " + this._stan(wid))] : ["ok", W.pWxI]);
       const rama = this.ed._val("rama"), kol = this.ed._val("kolor");
-      pkt.push(["✅", W.pWyg(RR_RAMY[rama]?.[ri] || rama, RR_KOL_NAZWY[this.ed._lang][kol] || kol)]);
-      this._html(B, `<div class="lb">${W.pods}</div><ul class="wzi">${pkt.map(([i, t]) => `<li>${i} ${esc(t)}</li>`).join("")}</ul>`);
+      pkt.push(["ok", W.pWyg(RR_RAMY[rama]?.[ri] || rama, RR_KOL_NAZWY[this.ed._lang][kol] || kol)]);
+      this._html(B, `<div class="lb">${W.pods}</div><ul class="wzi">${pkt.map(([i, t]) => `<li><ha-icon class="${i}" icon="${{ ok: "mdi:check-circle", uw: "mdi:alert-circle", in: "mdi:information-outline" }[i]}"></ha-icon>${esc(t)}</li>`).join("")}</ul>`);
       this._instalacja(B);
       this._html(B, `<div class="lb">${W.gdzieT}</div>` + this._alert("success", W.tutaj));
       if (!h.user?.is_admin) {
