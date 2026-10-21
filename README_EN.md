@@ -31,7 +31,7 @@
 </p>
 
 
-> [!TIP]
+> [!NOTE]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
 
 <a name="obr-1"></a>
@@ -52,7 +52,7 @@
 - [Add the card](#krok-3)
 - [The wizard does the rest](#krok-4)
 - [How to control it](#actions-how-to-control-it)
-- [Upgrading to v23](#upgrading-to-v23)
+- [Updating](#updating)
 - [Glossary: what do these words mean?](#glossary)
 - [FAQ](#faq)
 
@@ -64,7 +64,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Part 1. For beginners
 
 <a name="start-in-4-steps"></a>
-> [!TIP]
+> [!NOTE]
 > **This is all you need.** 4 steps, about a minute. The wizard does the rest. You can skip Part 2.
 
 <a name="krok-1"></a>
@@ -75,7 +75,7 @@
 The button opens HACS in your Home Assistant. The picture shows what to click.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -85,7 +85,7 @@ The button opens HACS in your Home Assistant. The picture shows what to click.
 Download the card to your Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -95,7 +95,7 @@ Download the card to your Home Assistant.
 Add the card to your dashboard.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
@@ -115,7 +115,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Summary</b></td><td align="left">Check everything and choose where the card goes</td></tr>
 </table>
 
-> [!TIP]
+> [!NOTE]
 > Not sure? Keep what is selected at the top of the list. The card picked the best match.
 
 <a name="kreator-krok-1"></a>
@@ -160,7 +160,7 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora.png" width="100%" alt=""></picture></a><br><a href="#kreator-krok-1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1.png" width="13.07%" alt="1"></picture></a><a href="#kreator-krok-2"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2.png" width="14.71%" alt="2"></picture></a><a href="#kreator-krok-3"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3.png" width="14.78%" alt="3"></picture></a><a href="#kreator-krok-4"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4.png" width="14.71%" alt="4"></picture></a><a href="#kreator-krok-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5.png" width="14.78%" alt="5"></picture></a><a href="#kreator-krok-6"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6.png" width="14.71%" alt="6"></picture></a><a href="#kreator-krok-7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7.png" width="13.21%" alt="7"></picture></a><br><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol.png" width="100%" alt=""></picture></a></p>
 
-> [!IMPORTANT]
+> [!NOTE]
 > ✅ **Done.** Click **Save**. The card works.
 
 ---
@@ -185,22 +185,23 @@ The wizard opens by itself. It has 7 short steps. The card finds your blind, mot
 
 ---
 
-<a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Upgrading to v23
+<a name="updating"></a>
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Updating
 
-> [!IMPORTANT]
-> Version 23 **does not change** your settings. Existing cards keep working.
+> [!NOTE]
+> Updating **does not change** your settings. Your cards keep working.
 
-**What's new**
+#### ⭐ Recommended: automatic with HACS
 
-- 🪄 A **7-step wizard** for beginners. Every step says **what** you pick and **why**.
-- 🔍 The card finds blinds, motors, window sensors and weather by itself, best matches first.
-- 🧹 Lists show only matching devices: no gates, garages or motion sensors.
-- 🧭 When something is missing, the wizard says what to do and opens the right HA page in one click.
-- 📋 Add a copy of the card to another dashboard or a new “Blinds” view in one click.
-- 🌍 The wizard, card and menu follow your HA profile language.
+When a new version comes out, HA shows it in **Settings** by itself.
 
-**What to do:** click **Update** in HACS, then refresh with **Ctrl + Shift + R**. Full list: [📝 Changelog](CHANGELOG.md).
+<a name="obr-u1"></a><a href="#obr-u1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/aktualizacja-1.png" width="100%" alt="1"></a>
+
+Click **UPDATE**, then refresh the page.
+
+<a name="obr-u2"></a><a href="#obr-u2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/aktualizacja-2.png" width="100%" alt="2"></a>
+
+What is new: [📝 Changelog](CHANGELOG.md) and [releases](https://github.com/superdarco78/roleta-realistyczna/releases). No HACS? See [Manual update](#manual-update) in the advanced part.
 
 ---
 
@@ -514,37 +515,37 @@ Screenshots show the Polish HA interface; the buttons are in the same places in 
 
 Open the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest) and click `roleta-realistyczna.js`.
 
-<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-1.png" width="100%" alt="Step 1"></a>
+<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-1.png" width="100%" alt="Step 1"></a>
 
 **Step 2. Upload it to Home Assistant**
 
 Open **File editor**, click the folder icon, go to `www` and upload the file with the up arrow.
 
-<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-2.png" width="100%" alt="Step 2"></a>
+<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-2.png" width="100%" alt="Step 2"></a>
 
 **Step 3. Open Dashboards**
 
 Click **Settings** at the bottom of the left menu, then **Dashboards**.
 
-<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-3.png" width="100%" alt="Step 3"></a>
+<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-3.png" width="100%" alt="Step 3"></a>
 
 **Step 4. Open Resources**
 
 Click the three dots **⋮** top right, then **Resources**.
 
-<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-4.png" width="100%" alt="Step 4"></a>
+<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-4.png" width="100%" alt="Step 4"></a>
 
 **Step 4a. No “Resources”? Turn on Advanced mode**
 
 Click your name at the bottom of the left menu and turn on **Advanced mode**. Then go back to step 4.
 
-<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-7.png" width="100%" alt="Step 4a"></a>
+<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-7.png" width="100%" alt="Step 4a"></a>
 
 **Step 5. Add the card as a resource**
 
 Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScript module** and click **Create**. Then refresh: **Ctrl + Shift + R**.
 
-<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/en/krok-5.png" width="100%" alt="Step 5"></a>
+<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/en/krok-5.png" width="100%" alt="Step 5"></a>
 
 **HACS button not working?**
 
@@ -553,6 +554,15 @@ Click **Add resource**, type `/local/roleta-realistyczna.js`, choose **JavaScrip
 2. Repository `https://github.com/superdarco78/roleta-realistyczna`, type **Dashboard**, **Add**.
 3. Search for “Roleta dzień-noc” → **Download**.
 
+
+
+<a name="manual-update"></a>
+#### 🔧 Manual update (without HACS)
+
+1. Download the new `roleta-realistyczna.js` from the [latest release](https://github.com/superdarco78/roleta-realistyczna/releases/latest).
+2. In **File editor**, upload it to the `www` folder and replace the old file.
+3. **Settings → Dashboards → ⋮ → Resources**: click the card entry and add a number at the end of the URL, e.g. `/local/roleta-realistyczna.js?v=2`. Raise the number with every update (`?v=3`, `?v=4`…).
+4. Refresh the page: **Ctrl + Shift + R**.
 
 ---
 

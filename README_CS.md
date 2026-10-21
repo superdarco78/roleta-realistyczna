@@ -31,7 +31,7 @@
 </p>
 
 
-> [!TIP]
+> [!NOTE]
 > Karta funguje s **každou roletou** v Home Assistantu (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy a dalšími. Nejlépe vypadá s roletou den-noc (zebra) na dvoukřídlém okně, ale jde i jedno křídlo. Po přidání karty **průvodce vše nastaví za tebe**.
 
 <a name="obr-1"></a>
@@ -52,7 +52,7 @@
 - [Přidej kartu](#krok-3)
 - [Zbytek udělá průvodce](#krok-4)
 - [Jak ovládat](#actions-how-to-control-it)
-- [Aktualizace na v23](#upgrading-to-v23)
+- [Aktualizace](#updating)
 - [Slovníček: co znamenají tato slova?](#glossary)
 - [Otázky a problémy](#faq)
 
@@ -64,7 +64,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Část 1. Pro začátečníky
 
 <a name="start-in-4-steps"></a>
-> [!TIP]
+> [!NOTE]
 > **To je vše, co potřebuješ.** 4 kroky, asi minuta. Zbytek udělá průvodce. Část 2 můžeš přeskočit.
 
 <a name="krok-1"></a>
@@ -75,7 +75,7 @@
 Tlačítko otevře HACS ve tvém Home Assistant. Obrázek ukazuje, kam kliknout.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/cs/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/cs/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -85,7 +85,7 @@ Tlačítko otevře HACS ve tvém Home Assistant. Obrázek ukazuje, kam kliknout.
 Stáhni kartu do svého Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/cs/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/cs/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -95,7 +95,7 @@ Stáhni kartu do svého Home Assistant.
 Přidej kartu na svou nástěnku.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/cs/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/cs/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
@@ -115,7 +115,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Shrnutí</b></td><td align="left">Vše zkontroluj a vyber, kam karta patří</td></tr>
 </table>
 
-> [!TIP]
+> [!NOTE]
 > Nevíš? Nech, co je vybrané nahoře v seznamu. Karta vybrala to nejlepší.
 
 <a name="kreator-krok-1"></a>
@@ -160,7 +160,7 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora.png" width="100%" alt=""></picture></a><br><a href="#kreator-krok-1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1.png" width="13.07%" alt="1"></picture></a><a href="#kreator-krok-2"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2.png" width="14.71%" alt="2"></picture></a><a href="#kreator-krok-3"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3.png" width="14.78%" alt="3"></picture></a><a href="#kreator-krok-4"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4.png" width="14.71%" alt="4"></picture></a><a href="#kreator-krok-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5.png" width="14.78%" alt="5"></picture></a><a href="#kreator-krok-6"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6.png" width="14.71%" alt="6"></picture></a><a href="#kreator-krok-7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7.png" width="13.21%" alt="7"></picture></a><br><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol.png" width="100%" alt=""></picture></a></p>
 
-> [!IMPORTANT]
+> [!NOTE]
 > ✅ **Hotovo.** Klikni **Uložit**. Karta funguje.
 
 ---
@@ -185,22 +185,23 @@ Průvodce se otevře sám. Má 7 krátkých kroků. Karta sama najde roletu, mot
 
 ---
 
-<a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualizace na v23
+<a name="updating"></a>
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualizace
 
-> [!IMPORTANT]
-> Verze 23 **nemění** tvá nastavení. Stávající karty fungují dál.
+> [!NOTE]
+> Aktualizace **nemění** tvoje nastavení. Tvoje karty fungují dál.
 
-**Co je nového**
+#### ⭐ Doporučeno: automaticky přes HACS
 
-- 🪄 **Průvodce v 7 krocích** pro začátečníky. Každý krok říká, **co** vybíráš a **proč**.
-- 🔍 Karta sama najde rolety, motory, senzory a počasí, nejlepší jako první.
-- 🧹 Seznamy ukazují jen vhodná zařízení: žádné brány, garáže ani pohybová čidla.
-- 🧭 Když něco chybí, průvodce řekne, co dělat, a otevře správnou stránku HA.
-- 📋 Kopii karty přidáš na jinou nástěnku nebo do nového pohledu „Rolety“ jedním kliknutím.
-- 🌍 Průvodce, karta i menu se řídí jazykem tvého profilu HA.
+Když vyjde nová verze, HA ji sám ukáže v **Settings**.
 
-**Co udělat:** v HACS klikni **Aktualizovat**, pak obnov stránku **Ctrl + Shift + R**. Všechny změny: [📝 Changelog](CHANGELOG.md).
+<a name="obr-u1"></a><a href="#obr-u1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/cs/aktualizacja-1.png" width="100%" alt="1"></a>
+
+Klikni na **UPDATE** a obnov stránku.
+
+<a name="obr-u2"></a><a href="#obr-u2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/cs/aktualizacja-2.png" width="100%" alt="2"></a>
+
+Co je nového: [📝 Changelog](CHANGELOG.md) a [vydání](https://github.com/superdarco78/roleta-realistyczna/releases). Bez HACS: [Manual update](README_EN.md#manual-update) (anglicky).
 
 ---
 

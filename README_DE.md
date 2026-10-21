@@ -31,7 +31,7 @@
 </p>
 
 
-> [!TIP]
+> [!NOTE]
 > Die Karte funktioniert mit **jedem Rollo** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy und mehr. Am schönsten sieht sie mit einem Doppelrollo (Zebra) an einem zweiflügeligen Fenster aus, ein Flügel geht auch. Nach dem Hinzufügen **richtet der Assistent alles für dich ein**.
 
 <a name="obr-1"></a>
@@ -52,7 +52,7 @@
 - [Karte hinzufügen](#krok-3)
 - [Den Rest macht der Assistent](#krok-4)
 - [Bedienung](#actions-how-to-control-it)
-- [Update auf v23](#upgrading-to-v23)
+- [Aktualisieren](#updating)
 - [Wörterbuch: was bedeuten diese Wörter?](#glossary)
 - [Fragen und Probleme](#faq)
 
@@ -64,7 +64,7 @@
 # <a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/rocket-launch.png" height="46" align="absmiddle"></a> Teil 1. Für Einsteiger
 
 <a name="start-in-4-steps"></a>
-> [!TIP]
+> [!NOTE]
 > **Mehr brauchst du nicht.** 4 Schritte, etwa eine Minute. Den Rest macht der Assistent. Teil 2 kannst du überspringen.
 
 <a name="krok-1"></a>
@@ -75,7 +75,7 @@
 Der Knopf öffnet HACS in deinem Home Assistant. Das Bild zeigt, was du klicken musst.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/de/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/de/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -85,7 +85,7 @@ Der Knopf öffnet HACS in deinem Home Assistant. Das Bild zeigt, was du klicken 
 Lade die Karte in deinen Home Assistant herunter.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/de/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/de/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -95,7 +95,7 @@ Lade die Karte in deinen Home Assistant herunter.
 Füge die Karte zu deinem Dashboard hinzu.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty/de/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/de/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
@@ -115,7 +115,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 <tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kafle/check-circle-outline.png" height="28" align="absmiddle" alt=""></a> <b>Zusammenfassung</b></td><td align="left">Alles prüfen und wählen, wo die Karte hinkommt</td></tr>
 </table>
 
-> [!TIP]
+> [!NOTE]
 > Unsicher? Lass die Auswahl oben in der Liste. Die Karte hat das Beste gewählt.
 
 <a name="kreator-krok-1"></a>
@@ -160,7 +160,7 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 <a name="obr-k7"></a>
 <p align="center"><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-gora.png" width="100%" alt=""></picture></a><br><a href="#kreator-krok-1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p1.png" width="13.07%" alt="1"></picture></a><a href="#kreator-krok-2"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p2.png" width="14.71%" alt="2"></picture></a><a href="#kreator-krok-3"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p3.png" width="14.78%" alt="3"></picture></a><a href="#kreator-krok-4"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p4.png" width="14.71%" alt="4"></picture></a><a href="#kreator-krok-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p5.png" width="14.78%" alt="5"></picture></a><a href="#kreator-krok-6"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p6.png" width="14.71%" alt="6"></picture></a><a href="#kreator-krok-7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-p7.png" width="13.21%" alt="7"></picture></a><br><a href="#obr-k7"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/kreator-nav/krok-7-en-dol.png" width="100%" alt=""></picture></a></p>
 
-> [!IMPORTANT]
+> [!NOTE]
 > ✅ **Fertig.** Klicke **Speichern**. Die Karte funktioniert.
 
 ---
@@ -185,22 +185,23 @@ Der Assistent öffnet sich von selbst. Er hat 7 kurze Schritte. Die Karte findet
 
 ---
 
-<a name="upgrading-to-v23"></a>
-### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Update auf v23
+<a name="updating"></a>
+### <a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/ikony-ha3/update.png" height="32" align="absmiddle"></a> Aktualisieren
 
-> [!IMPORTANT]
-> Version 23 **ändert deine Einstellungen nicht**. Vorhandene Karten funktionieren weiter.
+> [!NOTE]
+> Ein Update **ändert deine Einstellungen nicht**. Deine Karten funktionieren weiter.
 
-**Neu**
+#### ⭐ Empfohlen: automatisch mit HACS
 
-- 🪄 Ein **Assistent in 7 Schritten** für Einsteiger. Jeder Schritt sagt, **was** du wählst und **wozu**.
-- 🔍 Die Karte findet Rollos, Motoren, Fenstersensoren und Wetter selbst, die besten zuerst.
-- 🧹 Listen zeigen nur passende Geräte: keine Tore, Garagen oder Bewegungsmelder.
-- 🧭 Fehlt etwas, sagt der Assistent, was zu tun ist, und öffnet die richtige HA-Seite.
-- 📋 Eine Kopie der Karte auf ein anderes Dashboard oder eine neue Ansicht „Rollos“ mit einem Klick.
-- 🌍 Assistent, Karte und Menü folgen der Sprache deines HA-Profils.
+Bei einer neuen Version zeigt HA sie von selbst in **Settings**.
 
-**Was tun:** in HACS **Aktualisieren** klicken, dann mit **Strg + Umschalt + R** neu laden. Alle Änderungen: [📝 Changelog](CHANGELOG.md).
+<a name="obr-u1"></a><a href="#obr-u1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/de/aktualizacja-1.png" width="100%" alt="1"></a>
+
+**UPDATE** klicken, dann die Seite neu laden.
+
+<a name="obr-u2"></a><a href="#obr-u2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/zdjecia/zrzuty2/de/aktualizacja-2.png" width="100%" alt="2"></a>
+
+Was ist neu: [📝 Changelog](CHANGELOG.md) und [Releases](https://github.com/superdarco78/roleta-realistyczna/releases). Ohne HACS: [Manual update](README_EN.md#manual-update) (Englisch).
 
 ---
 

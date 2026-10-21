@@ -32,14 +32,14 @@
 
 ## <a name="r3" href="#r3"><img src="{{RAW}}/img/zdjecia/ikony-ha3/update.png" height="36" align="absmiddle"></a> Jak zaktualizować
 
-> [!IMPORTANT]
+> [!NOTE]
 > Aktualizacja **nie zmienia** Twoich ustawień. Karty, które już masz, działają dalej.
 
 ### <a name="r4" href="#r4"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-1-circle.png" height="32" align="absmiddle"></a> Kliknij niebieski przycisk „Otwórz w HACS” na górze tej strony
 
 ### <a name="r5" href="#r5"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-2-circle.png" height="32" align="absmiddle"></a> Kliknij „Pobierz” i wybierz wersję {{WERSJA}}
 
-<p align="center"><a name="r6" href="#r6"><img src="{{RAW}}/img/zdjecia/zrzuty/pl/hacs-1.png" width="49%" alt="Krok 1"></a>&nbsp;<a name="r7" href="#r7"><img src="{{RAW}}/img/zdjecia/zrzuty/pl/hacs-2.png" width="49%" alt="Krok 2"></a></p>
+<p align="center"><a name="r6" href="#r6"><img src="{{RAW}}/img/zdjecia/zrzuty2/pl/hacs-1.png" width="49%" alt="Krok 1"></a>&nbsp;<a name="r7" href="#r7"><img src="{{RAW}}/img/zdjecia/zrzuty2/pl/hacs-2.png" width="49%" alt="Krok 2"></a></p>
 
 ### <a name="r8" href="#r8"><img src="{{RAW}}/img/zdjecia/ikony-ha3/numeric-3-circle.png" height="32" align="absmiddle"></a> Odśwież stronę Home Assistant
 
