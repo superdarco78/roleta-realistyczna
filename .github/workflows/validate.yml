@@ -18,18 +18,22 @@ jobs:
           ignore: brands topics description license
 
   js:
-    name: Sprawdzenie pliku karty (JavaScript)
+    name: Kod karty – lint, testy, budowanie
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Sprawdzenie kodu (ESLint)
+        run: npm run lint
+      - name: Testy
+        run: npm test
+      - name: Budowanie dist/ z src/
+        run: npm run build
+      - name: dist/ zgodny ze źródłami
+        run: git diff --exit-code dist/ || (echo "::error::dist/roleta-realistyczna.js nie pasuje do src/ – uruchom npm run build" && exit 1)
       - name: Składnia JS
         run: node --check dist/roleta-realistyczna.js
-      - name: Wersja w pliku = wersja w CHANGELOG
-        run: |
-          JS=$(grep -oE "RR_WERSJA *= *'v[0-9]+'" dist/roleta-realistyczna.js | grep -oE 'v[0-9]+')
-          CL=$(grep -m1 -oE '^## v[0-9]+' CHANGELOG.md | grep -oE 'v[0-9]+')
-          echo "plik: $JS, changelog: $CL"
-          test "$JS" = "$CL"

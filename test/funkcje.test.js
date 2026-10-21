@@ -1,0 +1,79 @@
+/* Testy: `npm test` – czyste funkcje karty (bez przeglądarki) */
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { rrCzas } from '../src/silnik.js';
+import { rrShade, rrHex, RR_KOLORY } from '../src/kolory.js';
+import { rrWmo } from '../src/pogoda.js';
+import { rrRpmId, rrCzujnikiAuto, rrPogodaId } from '../src/wykrywanie.js';
+import { RR_WERSJA, RR_DEF } from '../src/stale.js';
+
+test('czas przejazdu z prędkości silnika (pomiar Moes 20.10: 40 obr/min ≈ 30 s, 255 obr/min ≈ 22 s)', () => {
+  assert.ok(Math.abs(rrCzas('auto', 40) - 30) < 0.5);
+  assert.ok(Math.abs(rrCzas('auto', 255) - 21.7) < 0.5);
+  assert.equal(rrCzas('auto', 0, 18), 18);        // nauczony czas
+  assert.equal(rrCzas('auto', 0, 0), 30);         // nic nie wiadomo
+  assert.equal(rrCzas(1, 40), 3);                 // ręczny, najmniej 3 s
+});
+
+test('kolory', () => {
+  assert.equal(rrHex('czarny'), RR_KOLORY.czarny);
+  assert.equal(rrHex('#123456'), '#123456');
+  assert.equal(rrShade('#000000', 1), '#ffffff');
+  assert.equal(rrShade('#ffffff', -1), '#000000');
+});
+
+test('kody pogody Open-Meteo → stany HA', () => {
+  assert.equal(rrWmo(0, 1, 5), 'sunny');
+  assert.equal(rrWmo(0, 0, 5), 'clear-night');
+  assert.equal(rrWmo(3, 1, 50), 'windy-variant');
+  assert.equal(rrWmo(95, 1, 5), 'lightning-rainy');
+  assert.equal(rrWmo(73, 1, 5), 'snowy');
+});
+
+const hass = {
+  states: {
+    'cover.salon': { state: 'open', attributes: { entity_id: ['cover.lewa', 'cover.prawa'] } },
+    'cover.lewa': { state: 'open', attributes: {} }, 'cover.prawa': { state: 'open', attributes: {} },
+    'number.lewa_motor_speed': { state: '40' }, 'number.silnik_predkosc': { state: '60' },
+    'binary_sensor.okno_lewe': { state: 'off', attributes: { device_class: 'window', friendly_name: 'Okno lewe' } },
+    'binary_sensor.okno_prawe': { state: 'off', attributes: { device_class: 'window', friendly_name: 'Okno prawe' } },
+    'binary_sensor.ruch': { state: 'off', attributes: { device_class: 'motion' } },
+    'weather.forecast_home': { state: 'sunny', attributes: {} }
+  },
+  entities: {
+    'cover.salon': { area_id: 'salon' }, 'cover.prawa': { device_id: 'd2' }, 'number.silnik_predkosc': { device_id: 'd2' },
+    'binary_sensor.okno_lewe': { area_id: 'salon' }, 'binary_sensor.okno_prawe': { device_id: 'd9' }, 'binary_sensor.ruch': { area_id: 'salon' }
+  },
+  devices: { d9: { area_id: 'salon' } }
+};
+
+test('wykrywanie prędkości silnika: po nazwie i z tego samego urządzenia', () => {
+  assert.equal(rrRpmId(hass, 'cover.lewa'), 'number.lewa_motor_speed');
+  assert.equal(rrRpmId(hass, 'cover.prawa'), 'number.silnik_predkosc');
+  assert.equal(rrRpmId(hass, 'cover.lewa', 'number.x'), 'number.x');   // ręczny wybór ma pierwszeństwo
+});
+
+test('kontaktrony z tego samego pomieszczenia, lewe/prawe po nazwie, bez czujników ruchu', () => {
+  assert.deepEqual(rrCzujnikiAuto(hass, 'cover.salon'), ['binary_sensor.okno_lewe', 'binary_sensor.okno_prawe']);
+  assert.deepEqual(rrCzujnikiAuto(hass, 'cover.lewa'), []);   // bez pomieszczenia nic nie zgadujemy
+});
+
+test('pogoda: wybrana albo typowa encja', () => {
+  assert.equal(rrPogodaId({ pogoda: 'auto' }, hass), 'weather.forecast_home');
+  assert.equal(rrPogodaId({ pogoda: 'weather.x' }, hass), 'weather.x');
+});
+
+test('tłumaczenia: polski i angielski mają te same klucze', () => {
+  const pl = JSON.parse(readFileSync('translations/pl.json', 'utf8')), en = JSON.parse(readFileSync('translations/en.json', 'utf8'));
+  const klucze = (o, p = '') => Object.entries(o).flatMap(([k, v]) => v && typeof v === 'object' && !Array.isArray(v) ? klucze(v, p + k + '.') : [p + k]).sort();
+  assert.deepEqual(klucze(pl.karta), klucze(en.karta));
+  assert.deepEqual(klucze(pl.edytor), klucze(en.edytor));
+});
+
+test('wersja: plik dist i CHANGELOG mają ten sam numer', () => {
+  assert.match(RR_WERSJA, /^v\d+$/);
+  assert.equal(readFileSync('CHANGELOG.md', 'utf8').match(/^## (v\d+)/m)[1], RR_WERSJA);
+  assert.ok(readFileSync('dist/roleta-realistyczna.js', 'utf8').includes(`"${RR_WERSJA}"`));
+  assert.equal(RR_DEF.czas, 'auto');
+});
