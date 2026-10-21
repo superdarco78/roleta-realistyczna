@@ -8,7 +8,7 @@
   <br>
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="HACS"></a>
   <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
-  <a href="#translations"><img src="https://img.shields.io/badge/translations-PL%20%7C%20EN-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="translations"></a>
+  <a href="#translations"><img src="https://img.shields.io/badge/translations-PL%20%7C%20EN%20%7C%20DE%20%7C%20FR%20%7C%20CS-2e7d32?style=for-the-badge&logo=googletranslate&logoColor=white" alt="translations"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=for-the-badge" alt="license"></a>
   <br>
   <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/validate.yml?style=for-the-badge&label=HACS%20validate&logo=homeassistantcommunitystore&logoColor=white" alt="HACS validate"></a>
@@ -22,7 +22,13 @@
 </p>
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open in HACS" height="56"></a></p>
-README: [🇵🇱 Polski](README.md) | **🇬🇧 English**
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/PL-Polski-8c959f?style=for-the-badge" alt="Polski" height="36"></a>
+  <a href="README_EN.md"><img src="https://img.shields.io/badge/EN-English-1f6feb?style=for-the-badge" alt="English" height="36"></a>
+  <a href="README_DE.md"><img src="https://img.shields.io/badge/DE-Deutsch-8c959f?style=for-the-badge" alt="Deutsch" height="36"></a>
+  <a href="README_FR.md"><img src="https://img.shields.io/badge/FR-Fran%C3%A7ais-8c959f?style=for-the-badge" alt="Français" height="36"></a>
+  <a href="README_CS.md"><img src="https://img.shields.io/badge/CZ-%C4%8Ce%C5%A1tina-8c959f?style=for-the-badge" alt="Čeština" height="36"></a>
+</p>
 
 > [!TIP]
 > The card works with **any roller blind** in Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, **the wizard sets everything up for you**.
@@ -247,7 +253,6 @@ Still stuck? [Open an issue](https://github.com/superdarco78/roleta-realistyczna
 
 The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-en.png" width="100%" alt="Card elements"></picture></p>
 
 <a name="goals"></a>
 ### Goals
