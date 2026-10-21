@@ -105,7 +105,7 @@
 
 ## v10 – Odporność na fałszywe meldunki i linia celu
 
-- Animacja nie skacze od fałszywych meldunków Moes (test Dariusza 20.10 19:28: przy „50%” silniki meldowały 0 i 100 w trakcie jazdy, prawy nawet na końcu 100, choć oba stanęły w połowie): po komendzie z karty liczy się cel komendy, meldunki 0/100 niezgodne z celem są pomijane, a każdy meldunek brany jest tylko raz
+- Animacja nie skacze od fałszywych meldunków Moes (test 20.10 19:28: przy „50%” silniki meldowały 0 i 100 w trakcie jazdy, prawy nawet na końcu 100, choć oba stanęły w połowie): po komendzie z karty liczy się cel komendy, meldunki 0/100 niezgodne z celem są pomijane, a każdy meldunek brany jest tylko raz
 - Po przeciągnięciu lub kliknięciu przerywana linia z „→ 50%” pokazuje, gdzie roleta jedzie, aż dojedzie
 - W nagłówku „32% → 50%”
 
