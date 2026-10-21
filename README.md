@@ -40,10 +40,16 @@
 <a name="obr-1"></a>
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja.webp" width="49%" alt="Animacja rolety"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/animacja-ciemna.webp" width="49%" alt="Animacja rolety"></a></p>
 
-<table>
-<tr><td align="center" width="25%"><a href="#wyglad-w-roznych-sytuacjach"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-1.png" width="215" alt="Pogoda"></a></td><td align="center" width="25%"><a href="#akcje-jak-sterowac"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-2.png" width="215" alt="Sterowanie palcem"></a></td><td align="center" width="25%"><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-3.png" width="215" alt="Kreator"></a></td><td align="center" width="25%"><a href="#okno-i-kontaktrony"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-4.png" width="215" alt="Czujnik okna"></a></td></tr>
-<tr><td align="center" width="25%"><a href="#ruch-i-kalibracja"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-5.png" width="215" alt="Prędkość silnika"></a></td><td align="center" width="25%"><a href="#kolory-i-okleiny"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-6.png" width="215" alt="Kolory"></a></td><td align="center" width="25%"><a href="#wyglad"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-7.png" width="215" alt="Jasny i ciemny"></a></td><td align="center" width="25%"><a href="#tlumaczenia"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafelki2/pl-8.png" width="215" alt="Polski i angielski"></a></td></tr>
-</table>
+<p align="center">
+<a href="#wyglad-w-roznych-sytuacjach"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-1.svg" alt="Pogoda"></a>
+<a href="#akcje-jak-sterowac"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-2.svg" alt="Sterowanie palcem"></a>
+<a href="#kreator-krok-1"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-3.svg" alt="Kreator"></a>
+<a href="#okno-i-kontaktrony"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-4.svg" alt="Czujnik okna"></a>
+<a href="#ruch-i-kalibracja"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-5.svg" alt="Prędkość silnika"></a>
+<a href="#kolory-i-okleiny"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-6.svg" alt="Kolory"></a>
+<a href="#wyglad"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-7.svg" alt="Jasny i ciemny"></a>
+<a href="#tlumaczenia"><img width="24%" src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kafelki2-pl-8.svg" alt="Polski i angielski"></a>
+</p>
 
 <a name="spis-tresci"></a>
 ## <a name="rodzaje-oslon" href="#rodzaje-oslon"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> Rodzaje osłon
@@ -83,7 +89,7 @@
 Przycisk otworzy HACS w Twoim Home Assistant. Co kliknąć, pokazuje obrazek.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/hacs-1.png" width="100%" alt="Krok 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-hacs-1.svg" width="100%" alt="Krok 1"></a></p>
 
 <br>
 
@@ -93,7 +99,7 @@ Przycisk otworzy HACS w Twoim Home Assistant. Co kliknąć, pokazuje obrazek.
 Pobierz kartę do swojego Home Assistant.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/hacs-2.png" width="100%" alt="Krok 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-hacs-2.svg" width="100%" alt="Krok 2"></a></p>
 
 <br>
 
@@ -103,7 +109,7 @@ Pobierz kartę do swojego Home Assistant.
 Dodaj kartę na swój pulpit.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/dodaj-karte.png" width="100%" alt="Krok 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-dodaj-karte.svg" width="100%" alt="Krok 3"></a></p>
 
 <br>
 
@@ -129,43 +135,43 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 #### <a name="i28" href="#i28"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-shutter.png" height="32" align="absmiddle"></a> Krok 1: Roleta
 
 <a name="obr-k1"></a>
-<p align="center"><a href="#obr-k1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-1-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-1-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-2"></a>
 #### <a name="i29" href="#i29"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-closed-variant.png" height="32" align="absmiddle"></a> Krok 2: Okno
 
 <a name="obr-k2"></a>
-<p align="center"><a href="#obr-k2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-2-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-2-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-3"></a>
 #### <a name="i30" href="#i30"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/speedometer.png" height="32" align="absmiddle"></a> Krok 3: Silnik
 
 <a name="obr-k3"></a>
-<p align="center"><a href="#obr-k3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-3-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-3-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-4"></a>
 #### <a name="i31" href="#i31"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/window-open-variant.png" height="32" align="absmiddle"></a> Krok 4: Czujniki okna
 
 <a name="obr-k4"></a>
-<p align="center"><a href="#obr-k4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-4-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-4-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-5"></a>
 #### <a name="i32" href="#i32"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/weather-partly-cloudy.png" height="32" align="absmiddle"></a> Krok 5: Pogoda
 
 <a name="obr-k5"></a>
-<p align="center"><a href="#obr-k5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-5-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-5-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-6"></a>
 #### <a name="i33" href="#i33"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/palette.png" height="32" align="absmiddle"></a> Krok 6: Wygląd
 
 <a name="obr-k6"></a>
-<p align="center"><a href="#obr-k6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-6-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-6-pl-dol.svg" width="100%" alt=""></a></p>
 
 <a name="kreator-krok-7"></a>
 #### <a name="i34" href="#i34"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kafle/check-circle-outline.png" height="32" align="absmiddle"></a> Krok 7: Zapis
 
 <a name="obr-k7"></a>
-<p align="center"><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-gora.png" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p1.png" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p2.png" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p3.png" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p4.png" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p5.png" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p6.png" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-p7.png" width="13.21%" alt="7"></a><br><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/kreator-nav/krok-7-pl-dol.png" width="100%" alt=""></a></p>
+<p align="center"><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-gora.svg" width="100%" alt=""></a><br><a href="#kreator-krok-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p1.svg" width="13.07%" alt="1"></a><a href="#kreator-krok-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p2.svg" width="14.71%" alt="2"></a><a href="#kreator-krok-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p3.svg" width="14.78%" alt="3"></a><a href="#kreator-krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p4.svg" width="14.71%" alt="4"></a><a href="#kreator-krok-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p5.svg" width="14.78%" alt="5"></a><a href="#kreator-krok-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p6.svg" width="14.71%" alt="6"></a><a href="#kreator-krok-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-p7.svg" width="13.21%" alt="7"></a><br><a href="#obr-k7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-kreator-nav-krok-7-pl-dol.svg" width="100%" alt=""></a></p>
 
 > ℹ️ ✅ **Gotowe.** Kliknij **Zapisz**. Karta działa.
 
@@ -187,7 +193,7 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 </table>
 
 <a name="obr-5"></a>
-<p align="center"><a href="#obr-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/opis-elementow.png" width="100%" alt="Uchwyty i przyciski"></a></p>
+<p align="center"><a href="#obr-5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-opis-elementow.svg" width="100%" alt="Uchwyty i przyciski"></a></p>
 
 ---
 
@@ -200,11 +206,11 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 
 Gdy wyjdzie nowa wersja, HA sam ją pokaże w **Ustawieniach**.
 
-<a name="obr-u1"></a><a href="#obr-u1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/aktualizacja-1.png" width="100%" alt="1"></a>
+<a name="obr-u1"></a><a href="#obr-u1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-aktualizacja-1.svg" width="100%" alt="1"></a>
 
 Kliknij **AKTUALIZUJ**, potem odśwież stronę.
 
-<a name="obr-u2"></a><a href="#obr-u2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/aktualizacja-2.png" width="100%" alt="2"></a>
+<a name="obr-u2"></a><a href="#obr-u2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-aktualizacja-2.svg" width="100%" alt="2"></a>
 
 Co nowego w każdej wersji: [📝 Historia zmian](CHANGELOG.md) i [wydania](https://github.com/superdarco78/roleta-realistyczna/releases). Bez HACS? Zobacz [Ręczna aktualizacja](#reczna-aktualizacja) w części dla zaawansowanych.
 
@@ -238,7 +244,7 @@ Co nowego w każdej wersji: [📝 Historia zmian](CHANGELOG.md) i [wydania](http
 
 Odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA. Potem kliknij ołówek, **Dodaj kartę** i wpisz **Okno**.
 
-<a name="obr-f1"></a><a href="#obr-f1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/karta.png" width="100%" alt="karta"></a>
+<a name="obr-f1"></a><a href="#obr-f1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-karta.svg" width="100%" alt="karta"></a>
 
 
 <br>
@@ -247,7 +253,7 @@ Odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikacj�
 
 W edytorze karty otwórz **Ruch i kalibracja** i kliknij **Kalibruj automatycznie**. Karta sama zmierzy czas jazdy. Uczy się też z każdego ruchu.
 
-<a name="obr-f2"></a><a href="#obr-f2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/kalibracja.png" width="100%" alt="kalibracja"></a>
+<a name="obr-f2"></a><a href="#obr-f2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-kalibracja.svg" width="100%" alt="kalibracja"></a>
 
 
 <br>
@@ -256,7 +262,7 @@ W edytorze karty otwórz **Ruch i kalibracja** i kliknij **Kalibruj automatyczni
 
 To złe meldunki silnika. Karta je pomija. Jeśli dalej skacze, [zgłoś błąd](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) i podaj nazwę silnika.
 
-<a name="obr-f3"></a><a href="#obr-f3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/blad.png" width="100%" alt="blad"></a>
+<a name="obr-f3"></a><a href="#obr-f3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-blad.svg" width="100%" alt="blad"></a>
 
 <br>
 
@@ -264,7 +270,7 @@ To złe meldunki silnika. Karta je pomija. Jeśli dalej skacze, [zgłoś błąd]
 
 W edytorze karty kliknij różdżkę 🪄. W kroku 5 wybierz **Automatycznie** albo **Z internetu**. Z internetu = pogoda dla lokalizacji Twojego domu.
 
-<a name="obr-f4"></a><a href="#obr-f4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/pogoda.png" width="100%" alt="pogoda"></a>
+<a name="obr-f4"></a><a href="#obr-f4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-pogoda.svg" width="100%" alt="pogoda"></a>
 
 
 <br>
@@ -273,7 +279,7 @@ W edytorze karty kliknij różdżkę 🪄. W kroku 5 wybierz **Automatycznie** a
 
 W edytorze karty otwórz **Zaawansowane** i włącz **Odwróć pozycję**.
 
-<a name="obr-f5"></a><a href="#obr-f5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/odwroc.png" width="100%" alt="odwroc"></a>
+<a name="obr-f5"></a><a href="#obr-f5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-odwroc.svg" width="100%" alt="odwroc"></a>
 
 
 <br>
@@ -282,7 +288,7 @@ W edytorze karty otwórz **Zaawansowane** i włącz **Odwróć pozycję**.
 
 Karta bierze język z Twojego profilu HA. Możesz też otworzyć **Zaawansowane** i w polu **Język karty** wybrać **Polski**.
 
-<a name="obr-f6"></a><a href="#obr-f6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/jezyk.png" width="100%" alt="jezyk"></a>
+<a name="obr-f6"></a><a href="#obr-f6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-jezyk.svg" width="100%" alt="jezyk"></a>
 
 
 <br>
@@ -291,7 +297,7 @@ Karta bierze język z Twojego profilu HA. Możesz też otworzyć **Zaawansowane*
 
 W edytorze karty kliknij różdżkę 🪄. W kroku 4 wybierz czujnik okna i to, jak okno się otwiera: uchylone albo otwarte.
 
-<a name="obr-f7"></a><a href="#obr-f7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/faq/pl/czujnik.png" width="100%" alt="czujnik"></a>
+<a name="obr-f7"></a><a href="#obr-f7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-faq-pl-czujnik.svg" width="100%" alt="czujnik"></a>
 
 
 Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-realistyczna/issues/new/choose) albo napisz na [forum HA](https://community.home-assistant.io/) / [forum arturhome.pl](https://forum.arturhome.pl/).
@@ -354,14 +360,14 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>☀️ Słońce</b><br><a name="obr-g1"></a><a href="#obr-g1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/dzien.png" width="100%"></a></td>
-<td align="center" width="33%"><b>🌧 Deszcz</b><br><a name="obr-g2"></a><a href="#obr-g2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/deszcz.png" width="100%"></a></td>
-<td align="center" width="33%"><b>⛈ Burza</b><br><a name="obr-g3"></a><a href="#obr-g3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/burza.png" width="100%"></a></td>
+<td align="center" width="33%"><b>☀️ Słońce</b><br><a name="obr-g1"></a><a href="#obr-g1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-dzien.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>🌧 Deszcz</b><br><a name="obr-g2"></a><a href="#obr-g2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-deszcz.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>⛈ Burza</b><br><a name="obr-g3"></a><a href="#obr-g3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-burza.svg" width="100%"></a></td>
 </tr>
 <tr>
-<td align="center" width="33%"><b>❄️ Śnieg</b><br><a name="obr-g4"></a><a href="#obr-g4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/snieg.png" width="100%"></a></td>
-<td align="center" width="33%"><b>🌫 Mgła</b><br><a name="obr-g5"></a><a href="#obr-g5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/mgla.png" width="100%"></a></td>
-<td align="center" width="33%"><b>☁️ Pochmurno (po angielsku)</b><br><a name="obr-g6"></a><a href="#obr-g6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/en.png" width="100%"></a></td>
+<td align="center" width="33%"><b>❄️ Śnieg</b><br><a name="obr-g4"></a><a href="#obr-g4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-snieg.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>🌫 Mgła</b><br><a name="obr-g5"></a><a href="#obr-g5"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-mgla.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>☁️ Pochmurno (po angielsku)</b><br><a name="obr-g6"></a><a href="#obr-g6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-en.svg" width="100%"></a></td>
 </tr>
 </table>
 
@@ -369,9 +375,9 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>☀️ Dzień</b><br><a name="obr-g7"></a><a href="#obr-g7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/zwinieta.png" width="100%"></a></td>
-<td align="center" width="33%"><b>🌅 Zachód słońca</b><br><a name="obr-g8"></a><a href="#obr-g8"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/zachod.png" width="100%"></a></td>
-<td align="center" width="33%"><b>🌙 Noc</b><br><a name="obr-g9"></a><a href="#obr-g9"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/noc.png" width="100%"></a></td>
+<td align="center" width="33%"><b>☀️ Dzień</b><br><a name="obr-g7"></a><a href="#obr-g7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-zwinieta.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>🌅 Zachód słońca</b><br><a name="obr-g8"></a><a href="#obr-g8"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-zachod.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>🌙 Noc</b><br><a name="obr-g9"></a><a href="#obr-g9"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-noc.svg" width="100%"></a></td>
 </tr>
 </table>
 
@@ -380,9 +386,9 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>⬆️ Zwinięta (100%)</b><br><a name="obr-g10"></a><a href="#obr-g10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/zwinieta.png" width="100%"></a></td>
-<td align="center" width="33%"><b>↕️ W połowie (50%)</b><br><a name="obr-g11"></a><a href="#obr-g11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/polowa.png" width="100%"></a></td>
-<td align="center" width="33%"><b>⬇️ Opuszczona (0%)</b><br><a name="obr-g12"></a><a href="#obr-g12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/opuszczona.png" width="100%"></a></td>
+<td align="center" width="33%"><b>⬆️ Zwinięta (100%)</b><br><a name="obr-g10"></a><a href="#obr-g10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-zwinieta.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>↕️ W połowie (50%)</b><br><a name="obr-g11"></a><a href="#obr-g11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-polowa.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>⬇️ Opuszczona (0%)</b><br><a name="obr-g12"></a><a href="#obr-g12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-opuszczona.svg" width="100%"></a></td>
 </tr>
 </table>
 
@@ -390,9 +396,9 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>↘ Lewe uchylone</b><br><a name="obr-g13"></a><a href="#obr-g13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/uchylone.png" width="100%"></a></td>
-<td align="center" width="33%"><b>↔ Prawe otwarte</b><br><a name="obr-g14"></a><a href="#obr-g14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/otwarte.png" width="100%"></a></td>
-<td align="center" width="33%"><b>🪟 Uchylone i otwarte</b><br><a name="obr-g15"></a><a href="#obr-g15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/okno.png" width="100%"></a></td>
+<td align="center" width="33%"><b>↘ Lewe uchylone</b><br><a name="obr-g13"></a><a href="#obr-g13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-uchylone.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>↔ Prawe otwarte</b><br><a name="obr-g14"></a><a href="#obr-g14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-otwarte.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>🪟 Uchylone i otwarte</b><br><a name="obr-g15"></a><a href="#obr-g15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-okno.svg" width="100%"></a></td>
 </tr>
 </table>
 
@@ -404,7 +410,7 @@ Zrzuty dopasowują się do motywu (jasny / ciemny), tak jak karta dopasowuje si�
 
 Karta rysuje nie tylko roletę dzień-noc. Wybierz w edytorze (dział **Wygląd**) albo w kreatorze (krok 6), co wisi w Twoim oknie:
 
-<a name="obr-typy"></a><a href="#obr-typy"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/typy/typy-pl.png" width="100%" alt="Typy osłon"></a>
+<a name="obr-typy"></a><a href="#obr-typy"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/typy-typy-pl.svg" width="100%" alt="Typy osłon"></a>
 
 | Typ | Wpisz w YAML |
 |---|---|
@@ -421,9 +427,9 @@ Dodatkowo: ciepłe **promienie słońca** w pokoju (`promienie`, domyślnie wł�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>Złoty dąb + beż</b><br><a name="obr-g16"></a><a href="#obr-g16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/zloty.png" width="100%"></a></td>
-<td align="center" width="33%"><b>Antracyt + turkus</b><br><a name="obr-g17"></a><a href="#obr-g17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/turkus.png" width="100%"></a></td>
-<td align="center" width="33%"><b>1 skrzydło</b><br><a name="obr-g18"></a><a href="#obr-g18"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/stany-jasne/jedno-v24.png" width="100%"></a></td>
+<td align="center" width="33%"><b>Złoty dąb + beż</b><br><a name="obr-g16"></a><a href="#obr-g16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-zloty.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>Antracyt + turkus</b><br><a name="obr-g17"></a><a href="#obr-g17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-turkus.svg" width="100%"></a></td>
+<td align="center" width="33%"><b>1 skrzydło</b><br><a name="obr-g18"></a><a href="#obr-g18"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-stany-jasne-jedno-v24.svg" width="100%"></a></td>
 </tr>
 </table>
 
@@ -431,7 +437,7 @@ Dodatkowo: ciepłe **promienie słońca** w pokoju (`promienie`, domyślnie wł�
 **Okleiny ze słojami:**
 
 <a name="obr-6"></a>
-<p align="center"><a href="#obr-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/okleiny.png" width="100%" alt="Okleiny"></a></p>
+<p align="center"><a href="#obr-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-okleiny.svg" width="100%" alt="Okleiny"></a></p>
 
 ---
 
@@ -446,7 +452,7 @@ Edytor otworzysz tak: pulpit → ołówek → kliknij kartę rolety. Ustawienia 
 Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ Pokaż animację** pokazuje ruch z prędkością Twojego silnika, a przyciski pogody pokazują deszcz, burzę, śnieg albo noc. Pinezka 📌 przypina podgląd u góry, żeby widzieć każdą zmianę od razu.
 
 <a name="obr-7"></a>
-<p align="center"><a href="#obr-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/przeglad.png" width="49%" alt="przeglad"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/przeglad-ciemny.png" width="49%" alt="przeglad"></a></p>
+<p align="center"><a href="#obr-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-edytor-przeglad.svg" width="49%" alt="przeglad"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/przeglad-ciemny.png" width="49%" alt="przeglad"></a></p>
 
 <a name="wyglad"></a>
 ### <a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/palette.png" height="32" align="absmiddle"></a> Wygląd
@@ -454,7 +460,7 @@ Na górze edytora jest podgląd, który **nie rusza prawdziwej rolety**. **▶ P
 Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolory gładkie), liczba skrzydeł, słupek i wysokość okna. Kolor wybierasz kółkiem albo przesuwając palcem suwak pod paletą.
 
 <a name="obr-8"></a>
-<p align="center"><a href="#obr-8"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/wyglad.png" width="49%" alt="wyglad"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/wyglad-ciemny.png" width="49%" alt="wyglad"></a></p>
+<p align="center"><a href="#obr-8"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-edytor-wyglad.svg" width="49%" alt="wyglad"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/wyglad-ciemny.png" width="49%" alt="wyglad"></a></p>
 
 <a name="okno-i-kontaktrony"></a>
 ### <a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/window-open-variant.png" height="32" align="absmiddle"></a> Okno i czujniki okna
@@ -462,7 +468,7 @@ Kolor pasów pełnych i przezroczystych, kolor ramy (okleiny ze słojami i kolor
 Wybierz czujnik okna lewego i prawego skrzydła (albo zostaw automatyczne wykrywanie) i powiedz karcie, czy skrzydło po otwarciu jest **uchylone** czy **otwarte**. Suwaki ustalają, jak mocno.
 
 <a name="obr-9"></a>
-<p align="center"><a href="#obr-9"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/okno.png" width="49%" alt="okno"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/okno-ciemny.png" width="49%" alt="okno"></a></p>
+<p align="center"><a href="#obr-9"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-edytor-okno.svg" width="49%" alt="okno"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/okno-ciemny.png" width="49%" alt="okno"></a></p>
 
 <a name="ruch-i-kalibracja"></a>
 ### <a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/timer-outline.png" height="32" align="absmiddle"></a> Ruch i kalibracja
@@ -470,7 +476,7 @@ Wybierz czujnik okna lewego i prawego skrzydła (albo zostaw automatyczne wykryw
 Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każdego ruchu. Jeśli animacja nie zgadza się z roletą, kliknij **🤖 Kalibruj automatycznie**: roleta sama pojedzie na górę, na dół i znowu do góry, a karta zapisze czas. Można też zmierzyć ręcznie stoperem.
 
 <a name="obr-10"></a>
-<p align="center"><a href="#obr-10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/kalibracja.png" width="49%" alt="kalibracja"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/kalibracja-ciemny.png" width="49%" alt="kalibracja"></a></p>
+<p align="center"><a href="#obr-10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-edytor-kalibracja.svg" width="49%" alt="kalibracja"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/kalibracja-ciemny.png" width="49%" alt="kalibracja"></a></p>
 
 <a name="zaawansowane"></a>
 ### <a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/cog.png" height="32" align="absmiddle"></a> Zaawansowane
@@ -478,7 +484,7 @@ Czas przejazdu karta ustala sama z prędkości silnika albo uczy się go z każd
 Język karty, przyciski, uchwyty, ruch krokowy, szybkie pozycje, wibracja, odwrócona pozycja, źródło pogody i własne zdjęcie zza okna.
 
 <a name="obr-11"></a>
-<p align="center"><a href="#obr-11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/zaawansowane.png" width="49%" alt="Zaawansowane"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/zaawansowane-ciemny.png" width="49%" alt="Zaawansowane"></a></p>
+<p align="center"><a href="#obr-11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-edytor-zaawansowane.svg" width="49%" alt="Zaawansowane"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/edytor/zaawansowane-ciemny.png" width="49%" alt="Zaawansowane"></a></p>
 
 <a name="ustawienia-globalne"></a>
 ### <a name="i66" href="#i66"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/earth.png" height="32" align="absmiddle"></a> Ustawienia globalne
@@ -583,7 +589,7 @@ entity: cover.zaluzje_salon
 ```
 
 <a name="obr-12"></a>
-<p align="center"><a href="#obr-12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex1.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex1-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-przyklady-ex1.svg" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex1-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Okno 2-skrzydłowe z osobnymi roletami i czujnikami okna:**
 
@@ -600,7 +606,7 @@ tryb_prawe: otworz
 ```
 
 <a name="obr-13"></a>
-<p align="center"><a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex2.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex2-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-przyklady-ex2.svg" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex2-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Drewniane okno (złoty dąb) z beżową tkaniną:**
 
@@ -614,7 +620,7 @@ wysokosc: 300
 ```
 
 <a name="obr-14"></a>
-<p align="center"><a href="#obr-14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex3.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex3-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-przyklady-ex3.svg" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex3-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Własne zdjęcie widoku zza okna:**
 
@@ -625,7 +631,7 @@ tlo: /local/widok-sypialnia.jpg
 ```
 
 <a name="obr-15"></a>
-<p align="center"><a href="#obr-15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex4.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex4-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-przyklady-ex4.svg" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex4-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 **Jedno skrzydło, bez pogody:**
 
@@ -637,7 +643,7 @@ zrodlo: brak
 ```
 
 <a name="obr-16"></a>
-<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex5-pl-v24.png" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex5-pl-v24-ciemny.png" width="49%" alt="Wygląd"></a></p>
+<p align="center"><a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-przyklady-ex5-pl-v24.svg" width="49%" alt="Wygląd"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/przyklady/ex5-pl-v24-ciemny.png" width="49%" alt="Wygląd"></a></p>
 
 ---
 
@@ -687,37 +693,37 @@ Bez HACS. Potrzebny dodatek **File editor** (Ustawienia → Dodatki → Sklep z 
 
 Wejdź w [najnowsze wydanie](https://github.com/superdarco78/roleta-realistyczna/releases/latest) i kliknij `roleta-realistyczna.js`. Plik zapisze się w folderze Pobrane.
 
-<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-1.png" width="100%" alt="Krok 1"></a>
+<a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-1.svg" width="100%" alt="Krok 1"></a>
 
 **Krok 2. Wgraj plik do Home Assistanta**
 
 Otwórz **File editor**. Kliknij ikonę folderu, wejdź do folderu `www` i wgraj plik strzałką w górę.
 
-<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-2.png" width="100%" alt="Krok 2"></a>
+<a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-2.svg" width="100%" alt="Krok 2"></a>
 
 **Krok 3. Otwórz Pulpity**
 
 Kliknij **Ustawienia** na dole menu po lewej, potem **Pulpity**.
 
-<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-3.png" width="100%" alt="Krok 3"></a>
+<a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-3.svg" width="100%" alt="Krok 3"></a>
 
 **Krok 4. Otwórz Zasoby**
 
 Kliknij trzy kropki **⋮** w prawym górnym rogu, potem **Zasoby**.
 
-<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-4.png" width="100%" alt="Krok 4"></a>
+<a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-4.svg" width="100%" alt="Krok 4"></a>
 
 **Krok 4a. Nie widzisz „Zasoby”? Włącz tryb zaawansowany**
 
 Kliknij swoje imię na dole menu po lewej i włącz **Tryb zaawansowany**. Potem wróć do kroku 4.
 
-<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-7.png" width="100%" alt="Krok 4a"></a>
+<a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-7.svg" width="100%" alt="Krok 4a"></a>
 
 **Krok 5. Dodaj kartę jako zasób**
 
 Kliknij **Dodaj zasób**, wpisz `/local/roleta-realistyczna.js`, wybierz **Moduł JavaScript** i kliknij **Utwórz**. Na koniec odśwież stronę: **Ctrl + Shift + R**.
 
-<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/zrzuty2/pl/krok-5.png" width="100%" alt="Krok 5"></a>
+<a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/auto/z3-zrzuty2-pl-krok-5.svg" width="100%" alt="Krok 5"></a>
 
 **Przycisk HACS nie działa?**
 
