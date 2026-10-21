@@ -110,8 +110,20 @@ test('v26: każdy typ osłony ma 3 warstwy materiału', async () => {
   const { RR_OSLONY, RR_OSL_IKONY } = await import('../src/stale.js');
   for (const t of [...RR_OSLONY, undefined]) {
     const s = rrTkanina(t, '#232427', {});
-    assert.equal(s.split(/,(?=\s*(?:repeating-)?linear-gradient)/).length, 3, t);
+    assert.equal(s.split(/,(?=\s*(?:repeating-)?(?:linear|radial)-gradient)/).length, 3, t);
     assert.ok(!s.includes('NaN') && !s.includes('undefined'), t);
   }
   RR_OSLONY.forEach(t => assert.match(RR_OSL_IKONY[t], /^mdi:/));
+});
+
+test('v27: rodzaje osłon – grupy, nazwy, opisy i style', async () => {
+  const { rrTkanina, rrOslonaStyl } = await import('../src/karta-styl.js');
+  const { RR_OSLONY, RR_OSL_GRUPY } = await import('../src/stale.js');
+  const pl = JSON.parse(readFileSync('translations/pl.json', 'utf8')), en = JSON.parse(readFileSync('translations/en.json', 'utf8'));
+  assert.deepEqual([...RR_OSL_GRUPY.wew, ...RR_OSL_GRUPY.zew].sort(), [...RR_OSLONY].sort());
+  for (const L of [pl.edytor, en.edytor]) { assert.equal(L.osln.length, RR_OSLONY.length); assert.equal(L.osld.length, RR_OSLONY.length); }
+  for (const t of RR_OSLONY) {
+    const s = rrTkanina(t, '#6d7076', {}) + rrOslonaStyl(t, '#6d7076', '#f4f4f2');
+    assert.ok(!s.includes('NaN') && !s.includes('undefined'), t);
+  }
 });

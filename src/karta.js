@@ -359,7 +359,7 @@ export class RoletaRealistyczna extends HTMLElement {
       S.bar.style.top = bt + 'px';
       S.bt = S.root.parentElement.offsetTop + S.root.offsetTop + S.glass.offsetTop + bt + RR_LISTWA / 2;
       /* pasy przyklejone do dolnej listwy – zwijają się razem z materiałem i zawsze stoją równo */
-      S.fabric.style.backgroundPosition = `0 0,0 0,0 ${fh % RR_OKRES}px`;
+      S.fabric.style.backgroundPosition = `0 0,0 ${fh % RR_OKRES}px,0 ${fh % RR_OKRES}px`;
     });
     const E = this._el;   // środkowy uchwyt jedzie na średniej wysokości listew
     if (E.mid && E.sash.every(S => S.bt != null)) E.mid.style.top = (E.sash.reduce((x, S) => x + S.bt, 0) / E.sash.length + 8) + 'px';

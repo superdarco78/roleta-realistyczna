@@ -99,10 +99,12 @@
    v25 – nowa nazwa karty: Okno HA (HA Window) – w oknie wyboru kart, edytorze i kreatorze; nowy typ custom:okno-ha,
         stary custom:roleta-realistyczna działa dalej; klamki okna większe, srebrne z ciemnym obrysem i zawsze nad roletą
    v26 – typ osłony (dzień-noc, pełna, plisa, rzymska, żaluzja, zewnętrzna) w edytorze i kreatorze; promienie słońca wpadające
-        przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony */
+        przez okno w słoneczny dzień; opcjonalny cichy dźwięk silnika przy ruchu; ikona karty wg typu osłony
+   v27 – 15 rodzajów osłon w dwóch grupach (w pokoju / na zewnątrz) z opisami; każdy ma własną kasetę, prowadnice
+        boczne i listwę dolną (nadstawna, natynkowa, podtynkowa, perforowana, fasadowa C80/Z90, screen ZIP, plaster miodu…) */
 (() => {
   // src/stale.js
-  var RR_WERSJA = "v26";
+  var RR_WERSJA = "v27";
   var rrWysOkna = (c, n) => n === 1 ? Math.round((+c.wysokosc || 260) * 1.25) : +c.wysokosc || 260;
   var RR_DEF = {
     kolor: "czarny",
@@ -142,8 +144,44 @@
     promienie: true,
     dzwiek: false
   };
-  var RR_OSLONY = ["zebra", "pelna", "plisa", "rzymska", "zaluzja", "zewnetrzna"];
-  var RR_OSL_IKONY = { zebra: "mdi:roller-shade", pelna: "mdi:roller-shade-closed", plisa: "mdi:blinds", rzymska: "mdi:curtains", zaluzja: "mdi:blinds-horizontal", zewnetrzna: "mdi:window-shutter" };
+  var RR_OSLONY = [
+    "zebra",
+    "pelna",
+    "plisa",
+    "rzymska",
+    "zaluzja",
+    "zewnetrzna",
+    "zaciemniajaca",
+    "plaster",
+    "drewniana",
+    "natynkowa",
+    "podtynkowa",
+    "perforowana",
+    "fasadowa",
+    "fasadowaz",
+    "screen"
+  ];
+  var RR_OSL_GRUPY = {
+    wew: ["zebra", "pelna", "zaciemniajaca", "plisa", "plaster", "rzymska", "zaluzja", "drewniana"],
+    zew: ["zewnetrzna", "natynkowa", "podtynkowa", "perforowana", "fasadowa", "fasadowaz", "screen"]
+  };
+  var RR_OSL_IKONY = {
+    zebra: "mdi:roller-shade",
+    pelna: "mdi:roller-shade-closed",
+    plisa: "mdi:blinds",
+    rzymska: "mdi:curtains",
+    zaluzja: "mdi:blinds-horizontal",
+    zewnetrzna: "mdi:window-shutter",
+    zaciemniajaca: "mdi:roller-shade-closed",
+    plaster: "mdi:blinds",
+    drewniana: "mdi:blinds-horizontal",
+    natynkowa: "mdi:window-shutter",
+    podtynkowa: "mdi:window-shutter",
+    perforowana: "mdi:window-shutter-open",
+    fasadowa: "mdi:blinds-horizontal-closed",
+    fasadowaz: "mdi:blinds-horizontal-closed",
+    screen: "mdi:roller-shade"
+  };
   var RR_PAS = 16;
   var RR_SIATKA = 10;
   var RR_OKRES = RR_PAS + RR_SIATKA;
@@ -594,15 +632,43 @@
       osl: "Typ osłony",
       osln: [
         "Dzień-noc",
-        "Pełna",
+        "Materiałowa",
         "Plisa",
         "Rzymska",
-        "Żaluzja",
-        "Zewnętrzna"
+        "Żaluzja aluminiowa",
+        "Roleta nadstawna",
+        "Zaciemniająca",
+        "Plaster miodu",
+        "Żaluzja drewniana",
+        "Roleta natynkowa",
+        "Roleta podtynkowa",
+        "Roleta z perforacją",
+        "Żaluzja fasadowa C80",
+        "Żaluzja fasadowa Z90",
+        "Screen ZIP"
       ],
-      d_osl: "Jak wygląda materiał. Dzień-noc ma pasy pełne i przezroczyste. Żaluzja ma listewki. Zewnętrzna to roleta za oknem z aluminiowych profili.",
+      d_osl: "Wybierz, co masz w oknie. Karta dopasuje wygląd tkaniny, kasety, prowadnic i listwy.",
       promienie: "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
-      dzwiek: "Cichy dźwięk silnika przy ruchu (po kliknięciu)"
+      dzwiek: "Cichy dźwięk silnika przy ruchu (po kliknięciu)",
+      osld: [
+        "Pasy pełne i przezroczyste. Przesuwasz, a światło przechodzi przez paski.",
+        "Zwykła roleta z jednolitej tkaniny. Rozprasza światło.",
+        "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
+        "Tkanina złożona w harmonijkę.",
+        "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
+        "Tkanina układa się w miękkie fałdy.",
+        "Cienkie aluminiowe listewki 25 mm na sznurkach.",
+        "Szerokie drewniane lamele 50 mm na taśmach.",
+        "Kaseta nad oknem w kolorze ramy, montowana razem z oknem. Pancerz z profili PVC lub aluminium.",
+        "Skrzynka na elewacji ze ściętym frontem. Dobra do gotowych domów.",
+        "Skrzynka schowana w ścianie pod tynkiem. Widać tylko pancerz i prowadnice.",
+        "Profile z małymi otworami. Przy opuszczonej rolecie wpada trochę światła.",
+        "Wygięte lamele aluminiowe 80 mm na taśmach. Można je przechylać.",
+        "Płaskie lamele 90 mm w kształcie Z z uszczelką. Szczelnie zaciemniają.",
+        "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
+      ],
+      osw: "W pokoju",
+      osz: "Na zewnątrz"
     },
     kolory: {
       bezowy: "beżowy",
@@ -962,15 +1028,43 @@
       osl: "Shade type",
       osln: [
         "Day-night",
-        "Blackout",
+        "Fabric roller",
         "Pleated",
         "Roman",
-        "Venetian",
-        "Shutter"
+        "Aluminium venetian",
+        "Top-mounted shutter",
+        "Blackout",
+        "Honeycomb",
+        "Wooden venetian",
+        "Surface-mounted shutter",
+        "Concealed shutter",
+        "Perforated shutter",
+        "External venetian C80",
+        "External venetian Z90",
+        "Screen ZIP"
       ],
-      d_osl: "How the material looks. Day-night has solid and sheer stripes. Venetian has slats. Shutter is an outside roller shutter made of aluminium profiles.",
+      d_osl: "Pick what you have in your window. The card matches the fabric, box, side guides and bottom bar.",
       promienie: "Sun rays coming through the window (daytime, when sunny)",
-      dzwiek: "Quiet motor sound while moving (after a tap)"
+      dzwiek: "Quiet motor sound while moving (after a tap)",
+      osld: [
+        "Solid and sheer stripes. Slide them to let light through the sheer stripes.",
+        "A plain roller of solid fabric. Diffuses the light.",
+        "Dense coated fabric. Runs in white side channels and blocks the light.",
+        "Fabric folded like an accordion.",
+        "Double pleat. Honeycomb cells keep the warmth in.",
+        "Fabric gathers in soft folds.",
+        "Thin 25 mm aluminium slats on cords.",
+        "Wide 50 mm wooden slats on tapes.",
+        "Box above the window in the frame colour, fitted with the window. Curtain of PVC or aluminium profiles.",
+        "Box on the outside wall with a bevelled front. Good for existing houses.",
+        "Box hidden in the wall under the plaster. Only the curtain and guides are visible.",
+        "Profiles with small holes. Some light comes in when closed.",
+        "Curved 80 mm aluminium slats on tapes. They can tilt.",
+        "Flat 90 mm Z-shaped slats with a seal. Very dark when closed.",
+        "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view."
+      ],
+      osw: "Inside",
+      osz: "Outside"
     },
     kolory: {
       czarny: "black",
@@ -1346,25 +1440,88 @@
     const brzegi = "linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2))";
     const splot = "repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px)", bez = "linear-gradient(transparent,transparent)";
     const h = RR_OKRES / 2;
+    const tasmy = (k, w) => `linear-gradient(90deg,transparent calc(25% - ${w / 2}px),${k} calc(25% - ${w / 2}px),${k} calc(25% + ${w / 2}px),transparent calc(25% + ${w / 2}px),transparent calc(75% - ${w / 2}px),${k} calc(75% - ${w / 2}px),${k} calc(75% + ${w / 2}px),transparent calc(75% + ${w / 2}px))`;
+    const pancerz = (o) => `${S(0.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-0.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
     switch (typ) {
       case "pelna":
         return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-0.06)} ${h}px,${col} ${RR_OKRES}px)`;
+      /* v27: zaciemniająca – gęsta tkanina z powłoką, lekki połysk, bez prześwitu */
+      case "zaciemniajaca":
+        return `${brzegi},linear-gradient(90deg,rgba(255,255,255,0) 20%,rgba(255,255,255,.07) 45%,rgba(255,255,255,0) 70%),linear-gradient(180deg,${col} 0,${S(0.03)} ${h}px,${col} ${RR_OKRES}px)`;
       case "plisa":
         return `${brzegi},${bez},linear-gradient(180deg,${A(S(0.2), 0.94)} 0,${A(col, 0.94)} 5px,${A(S(-0.24), 0.96)} ${h - 0.5}px,${A(S(0.2), 0.94)} ${h}px,${A(col, 0.94)} ${h + 5}px,${A(S(-0.24), 0.96)} ${RR_OKRES - 0.5}px,${A(S(0.2), 0.94)} ${RR_OKRES}px)`;
+      /* v27: plaster miodu – plisa podwójna, w każdym fałdzie widać szew komórki */
+      case "plaster": {
+        const kom = (o) => `${A(S(0.24), 0.95)} ${o}px,${A(col, 0.93)} ${o + 3}px,${A(S(-0.12), 0.94)} ${o + 6}px,${A(S(-0.34), 0.97)} ${o + 6.5}px,${A(S(0.1), 0.93)} ${o + 7}px,${A(col, 0.93)} ${o + 10}px,${A(S(-0.28), 0.96)} ${o + h - 0.5}px`;
+        return `${brzegi},${bez},linear-gradient(180deg,${kom(0)},${kom(h)},${A(S(0.24), 0.95)} ${RR_OKRES}px)`;
+      }
       case "rzymska":
         return `${brzegi},${splot},linear-gradient(180deg,${A(col, 0.93)} 0,${A(S(0.12), 0.93)} 17px,${A(S(-0.28), 0.96)} ${RR_OKRES - 1}px,${A(S(0.1), 0.93)} ${RR_OKRES}px)`;
       case "zaluzja": {
         const lam = (o) => `${S(0.32)} ${o}px,${col} ${o + 4}px,${S(-0.3)} ${o + 10}px,rgba(0,0,0,.35) ${o + 10}px,transparent ${o + 11}px,transparent ${o + h}px`;
-        return `${bez},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
+        return `${tasmy("rgba(235,235,235,.75)", 1)},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
       }
-      case "zewnetrzna": {
-        const pro = (o) => `${S(0.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-0.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
+      /* v27: drewniana 50 mm – szerokie lamele ze słojami, taśmy drabinkowe */
+      case "drewniana":
+        return `${tasmy(A(S(-0.18), 0.95), 6)},repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 5px,rgba(255,255,255,.06) 5px 6px,transparent 6px 11px),linear-gradient(180deg,${S(0.2)} 0,${col} 5px,${S(-0.1)} 15px,${S(-0.34)} 21px,rgba(0,0,0,.4) 21px,transparent 22.5px,transparent ${RR_OKRES}px)`;
+      case "zewnetrzna":
+      case "podtynkowa":
+        return `${brzegi},${bez},linear-gradient(180deg,${pancerz(0)},${pancerz(h)})`;
+      /* v27: natynkowa – profil aluminiowy z rowkiem na środku */
+      case "natynkowa": {
+        const pro = (o) => `${S(0.28)} ${o}px,${col} ${o + 3}px,${S(0.08)} ${o + 6}px,${S(-0.2)} ${o + 6.5}px,${col} ${o + 7.5}px,${S(-0.38)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
         return `${brzegi},${bez},linear-gradient(180deg,${pro(0)},${pro(h)})`;
       }
+      /* v27: perforowana – w każdym profilu rząd małych otworów, przez które wpada światło */
+      case "perforowana":
+        return `${brzegi},radial-gradient(1.8px 1px at 50% 6.5px,rgba(255,246,214,.9) 70%,transparent 100%),linear-gradient(180deg,${pancerz(0)},${pancerz(h)})`;
+      /* v27: żaluzja fasadowa C80 – wygięte lamele, taśmy podnoszące */
+      case "fasadowa": {
+        const c80 = (o) => `${S(-0.3)} ${o}px,${S(0.28)} ${o + 3}px,${S(0.1)} ${o + 7}px,${S(-0.26)} ${o + 11}px,rgba(0,0,0,.6) ${o + 11.5}px,rgba(0,0,0,.3) ${o + h}px`;
+        return `${tasmy("rgba(30,30,30,.55)", 2)},${bez},linear-gradient(180deg,${c80(0)},${c80(h)})`;
+      }
+      /* v27: żaluzja fasadowa Z90 – płaskie lamele w kształcie Z z czarną uszczelką */
+      case "fasadowaz": {
+        const z90 = (o) => `${S(0.16)} ${o}px,${col} ${o + 2}px,${col} ${o + 9}px,${S(-0.22)} ${o + 10.5}px,#1d1d1d ${o + 10.5}px,#1d1d1d ${o + 12}px,${S(-0.45)} ${o + h}px`;
+        return `${tasmy("rgba(30,30,30,.45)", 2)},${bez},linear-gradient(180deg,${z90(0)},${z90(h)})`;
+      }
+      /* v27: screen ZIP – zewnętrzna tkanina z siatki, przez którą trochę widać */
+      case "screen":
+        return `${brzegi},repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 2px),linear-gradient(180deg,${A(col, 0.82)} 0,${A(S(0.06), 0.8)} ${h}px,${A(col, 0.82)} ${RR_OKRES}px)`;
       default:
         return `${brzegi},${splot},linear-gradient(180deg,
    ${S(0.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-0.25)} ${RR_PAS}px,
    ${A(c.siatka ? rrHex(c.siatka) : S(0.3), 0.62)} ${RR_PAS}px,${A(c.siatka ? rrShade(rrHex(c.siatka), 0.1) : S(0.4), 0.55)} ${RR_OKRES}px)`;
+    }
+  }
+  function rrOslonaStyl(typ, col, rama) {
+    const S = (k) => rrShade(col, k), R = (k) => rrShade(rama, k);
+    const kas = (bg, ext = "") => `.cas{background:${bg};border-radius:0 0 2px 2px;${ext}}.cas:before,.cas:after{background:${S(-0.12)};border-radius:0}`;
+    const prow = (w, bg) => `.glass:before,.glass:after{content:"";position:absolute;top:${RR_KASETA - 2}px;bottom:0;width:${w}px;z-index:4;pointer-events:none;background:${bg};box-shadow:0 0 2px rgba(0,0,0,.45)}
+.glass:before{left:0}.glass:after{right:0}.fabric{left:${w - 2}px;right:${w - 2}px}.bar{left:${w - 3}px;right:${w - 3}px}`;
+    const alu = `linear-gradient(90deg,${S(-0.4)},${S(0.22)} 40%,${S(-0.05)} 70%,${S(-0.45)})`;
+    const listwa = `.bar{background:linear-gradient(180deg,${S(0.35)},${S(0.05)} 55%,${S(-0.4)});box-shadow:0 2px 0 rgba(20,20,20,.85),0 3px 3px rgba(0,0,0,.4)}`;
+    const lamela = `.bar{background:linear-gradient(180deg,${S(0.3)},${col} 50%,${S(-0.3)})}`;
+    switch (typ) {
+      case "zaciemniajaca":
+        return prow(4, "linear-gradient(90deg,#c9c9c9,#fafafa 45%,#b5b5b5)");
+      case "zaluzja":
+      case "drewniana":
+        return kas(`linear-gradient(180deg,${S(0.3)},${col} 55%,${S(-0.35)})`) + lamela;
+      case "zewnetrzna":
+      case "perforowana":
+        return `.cas{background:linear-gradient(180deg,${R(0.05)},${rama} 45%,${R(-0.16)});border-radius:0;box-shadow:inset 0 -2px 0 rgba(0,0,0,.12),0 2px 3px rgba(0,0,0,.35)}.cas:before,.cas:after{background:${R(-0.08)};border-radius:0}` + prow(5, alu) + listwa;
+      case "natynkowa":
+        return kas(`linear-gradient(180deg,${S(0.36)} 0,${S(0.18)} 50%,${S(-0.3)} 51%,${S(-0.05)} 100%)`, `height:${RR_KASETA + 8}px;box-shadow:0 3px 5px rgba(0,0,0,.5)`) + prow(6, alu) + listwa;
+      case "podtynkowa":
+        return `.cas{background:linear-gradient(180deg,#ebe7de 0,#d6d1c6 58%,#3a3a3a 60%,#151515 100%);border-radius:0;box-shadow:none}.cas:before,.cas:after{background:#ddd8cd;border-radius:0;box-shadow:none}` + prow(5, alu) + listwa;
+      case "fasadowa":
+      case "fasadowaz":
+        return kas(`linear-gradient(180deg,${S(0.3)},${S(0.05)} 70%,${S(-0.3)})`) + prow(4, alu) + listwa;
+      case "screen":
+        return kas(`linear-gradient(180deg,${S(0.3)},${S(0.08)} 60%,${S(-0.35)})`) + prow(6, `linear-gradient(90deg,${S(-0.45)},${S(0.15)} 35%,#111 50%,${S(0.15)} 65%,${S(-0.45)})`) + listwa;
+      default:
+        return "";
     }
   }
   var rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
@@ -1434,7 +1591,7 @@
 .cas:after{content:"";position:absolute;right:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 6px 0;box-shadow:-1px 0 0 rgba(0,0,0,.08)}
 .fabric{position:absolute;left:1px;right:1px;top:${RR_KASETA - 2}px;height:0;z-index:2;
  background:${rrTkanina(c.oslona, col, c)};
- background-size:100% 100%,100% 100%,100% ${RR_OKRES}px}
+ background-size:100% 100%,${c.oslona === "perforowana" ? "7px " + RR_OKRES / 2 + "px" : "100% 100%"},100% ${RR_OKRES}px}
 /* v26: promienie słońca wpadające przez okno (tylko w dzień, przy słońcu) */
 .ray{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.5s;mix-blend-mode:screen;
  background:linear-gradient(115deg,rgba(255,214,120,0) 15%,rgba(255,214,120,.26) 40%,rgba(255,214,120,0) 62%),
@@ -1477,6 +1634,7 @@
 .qk{display:flex;gap:6px;margin-top:8px}
 .qk button{flex:1;height:28px;border:none;border-radius:9px;font-size:12px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--text-primary-color,#fff);background:var(--primary-color,#03a9f4);box-shadow:none}
+${rrOslonaStyl(c.oslona, col, rama)}
 `;
 
   // src/karta.js
@@ -1944,7 +2102,7 @@
         S.fabric.style.height = fh + "px";
         S.bar.style.top = bt + "px";
         S.bt = S.root.parentElement.offsetTop + S.root.offsetTop + S.glass.offsetTop + bt + RR_LISTWA / 2;
-        S.fabric.style.backgroundPosition = `0 0,0 0,0 ${fh % RR_OKRES}px`;
+        S.fabric.style.backgroundPosition = `0 0,0 ${fh % RR_OKRES}px,0 ${fh % RR_OKRES}px`;
       });
       const E = this._el;
       if (E.mid && E.sash.every((S) => S.bt != null)) E.mid.style.top = E.sash.reduce((x, S) => x + S.bt, 0) / E.sash.length + 8 + "px";
@@ -2026,7 +2184,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
 .dot[aria-pressed="true"]{color:var(--primary-text-color)}
 .own{position:relative;width:34px;height:34px;border-radius:50%;overflow:hidden;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);box-shadow:inset 0 0 0 1px rgba(127,127,127,.5)}
 .own input{position:absolute;inset:-8px;width:50px;height:50px;opacity:0;cursor:pointer}
-.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:18px}
+.osg{font-size:12px;font-weight:500;color:var(--primary-text-color);margin-top:4px}.seg.osl{display:flex;flex-wrap:wrap}.seg.osl button{display:inline-flex;align-items:center;gap:4px;padding:7px 10px;white-space:nowrap}.seg.osl ha-icon{--mdc-icon-size:18px}
 .seg{display:inline-flex;border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.4))}
 .seg button{border:none;background:none;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--primary-text-color)}
 .seg button[aria-pressed="true"]{background:var(--primary-color,#03a9f4);color:var(--text-primary-color,#fff)}
@@ -2387,7 +2545,12 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
     _k_wyglad(B) {
       const W = this.W, L = this.ed._L, P = RR_PRESETY;
       this._html(B, `<div class="lb">${esc(L.osl)}</div>`);
-      this._seg(B, RR_OSLONY.map((v, k) => [v, L.osln[k]]), this.ed._val("oslona"), (v) => this._ustaw({ oslona: v }));
+      for (const [g, typy] of Object.entries(RR_OSL_GRUPY)) {
+        this._html(B, `<div class="osg">${esc(g === "wew" ? L.osw : L.osz)}</div>`);
+        this._seg(B, typy.map((v) => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val("oslona"), (v) => this._ustaw({ oslona: v }));
+        B.lastElementChild.classList.add("osl");
+      }
+      this._html(B, `<p class="hint">${esc(L.osld[Math.max(0, RR_OSLONY.indexOf(this.ed._val("oslona")))])}</p>`);
       const d = document.createElement("div");
       d.className = "wzl";
       d.innerHTML = P.map((p, i) => `<button data-wp="${i}" aria-pressed="${this.ed._val("rama") === p.rama && this.ed._val("kolor") === p.kolor}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span><span><span class="wzn1">${esc(L.pre[i])}</span></span></button>`).join("");
@@ -2588,7 +2751,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
- <div class="grp"><div class="lb">${L.osl}</div><div class="seg osl">${RR_OSLONY.map((v, k) => `<button data-osl="${v}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[k]}</button>`).join("")}</div><p class="hint">${L.d_osl}</p></div>
+ <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_GRUPY).map(([g, typy]) => `<div class="osg">${g === "wew" ? L.osw : L.osz}</div><div class="seg osl">${typy.map((v) => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join("")}</div>`).join("")}<p class="hint" id="oslD"></p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map((k) => chip("kolor", k, RR_KOLORY[k], KN[k] || k)).join("")}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>
@@ -2978,6 +3141,7 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       r.querySelector("#ramOwn").value = /^#[0-9a-f]{6}$/i.test(rama) ? rama : "#f4f4f2";
       r.querySelectorAll("[data-sk]").forEach((b) => b.setAttribute("aria-pressed", +b.dataset.sk === +this._val("skrzydla")));
       r.querySelectorAll("[data-osl]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.osl === this._val("oslona")));
+      r.querySelector("#oslD").textContent = this._L.osld[Math.max(0, RR_OSLONY.indexOf(this._val("oslona")))];
       r.querySelectorAll("[data-sl]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.sl === this._val("slupek")));
       r.querySelector("#slGrp").style.display = +this._val("skrzydla") === 1 ? "none" : "";
       const set = (id, v, txt) => {
