@@ -1,6 +1,6 @@
 {
   "name": "roleta-realistyczna",
-  "version": "31.0.0",
+  "version": "32.0.0",
   "description": "Roleta dzień-noc – realistyczna karta rolety dla Home Assistant (Lovelace)",
   "private": true,
   "type": "module",
