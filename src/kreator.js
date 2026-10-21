@@ -245,6 +245,16 @@ export class RrKreator {
     d.innerHTML = P.map((p, i) => `<button data-wp="${i}" aria-pressed="${this.ed._val('rama') === p.rama && this.ed._val('kolor') === p.kolor}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span><span><span class="wzn1">${esc(L.pre[i])}</span></span></button>`).join('');
     d.querySelectorAll('[data-wp]').forEach(b => b.onclick = () => { const p = P[+b.dataset.wp]; this._ustaw({ rama: p.rama, kolor: p.kolor, siatka: p.siatka ?? '' }); });
     B.appendChild(d);
+    /* v33: dowolny kolor osłony i ramy z palety (jak „własny” w edytorze) */
+    const hx = v => /^#[0-9a-f]{6}$/i.test(v || '') ? v : rrHex(v) || '#000000';
+    const w = document.createElement('div'); w.className = 'wown';
+    w.innerHTML = `<div class="lb">${esc(W.wlasny)}</div><div class="wor">${[['kolor', W.wlasnyKol], ['rama', W.wlasnyRam]].map(([k, n]) =>
+      `<label class="wo"><span class="own"><input type="color" data-wo="${k}" value="${hx(this.ed._val(k))}"></span><span class="sw2" style="background:${hx(this.ed._val(k))}"></span><span class="won">${esc(n)}</span></label>`).join('')}</div><p class="hint">${esc(W.wlasnyOpis)}</p>`;
+    w.querySelectorAll('[data-wo]').forEach(i => {
+      i.oninput = () => { this.ed._set(i.dataset.wo, i.value); i.closest('.wo').querySelector('.sw2').style.background = i.value; };   // podgląd na żywo
+      i.onchange = () => this._ustaw({ [i.dataset.wo]: i.value });
+    });
+    B.appendChild(w);
     const s = document.createElement('ha-selector');
     s.hass = this.h; s.selector = { text: {} }; s.label = W.nazwa; s.value = this.c.name || '';
     s.addEventListener('value-changed', e => this.ed._set('name', e.detail.value || ''));

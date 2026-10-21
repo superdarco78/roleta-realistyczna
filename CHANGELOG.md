@@ -1,5 +1,10 @@
 # 📝 Historia zmian
 
+## v33 – Dowolny kolor z palety w kreatorze
+
+- 🎨 W kreatorze z kółkami (krok „Wygląd”) można wybrać dowolny kolor osłony i ramy z palety. Podgląd zmienia się na żywo, kolor zapisuje się sam
+- 🔤 Podpisy pod kółkami kolorów (Czarny, Grafit…) są większe i wyraźniejsze w motywie jasnym i ciemnym
+
 ## v32 – Edytor z dużym podglądem obok
 
 - 🖥️ Na szerokim ekranie edytor ma dwie kolumny: ustawienia po lewej, duży podgląd po prawej. Podgląd zostaje na miejscu przy przewijaniu, a każda zmiana widać od razu
