@@ -23,15 +23,17 @@
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otwórz w HACS" height="56"></a></p>
 <p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/PL-Polski-dc143c?style=for-the-badge" alt="Polski" height="36"></a>
-  <a href="README_EN.md"><img src="https://img.shields.io/badge/EN-English-8c959f?style=for-the-badge" alt="English" height="36"></a>
-  <a href="README_DE.md"><img src="https://img.shields.io/badge/DE-Deutsch-8c959f?style=for-the-badge" alt="Deutsch" height="36"></a>
-  <a href="README_FR.md"><img src="https://img.shields.io/badge/FR-Fran%C3%A7ais-8c959f?style=for-the-badge" alt="Français" height="36"></a>
-  <a href="README_CS.md"><img src="https://img.shields.io/badge/CZ-%C4%8Ce%C5%A1tina-8c959f?style=for-the-badge" alt="Čeština" height="36"></a>
+  <a href="README.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/pl-on.png" alt="Polski" height="44"></a>
+  <a href="README_EN.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/en.png" alt="English" height="44"></a>
+  <a href="README_DE.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/de.png" alt="Deutsch" height="44"></a>
+  <a href="README_FR.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/fr.png" alt="Français" height="44"></a>
+  <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
 > [!TIP]
-> Karta działa z **każdą roletą** w Home Assistancie (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i innymi. Najlepiej wygląda z roletą dzień-noc (zebra) i oknem 2-skrzydłowym, ale ustawisz też 1 skrzydło. Po dodaniu karty **kreator ustawi wszystko sam**.
+> Karta działa z każdym silnikiem rolet w Home Assistant (`cover.*`): Zigbee, Z-Wave, Tuya, Shelly, Somfy i inne.
+> Najładniej wygląda przy oknie z dwoma skrzydłami. Jedno skrzydło też działa.
+> Po dodaniu karty kreator sam wszystko ustawi.
 
 <a name="obr-1"></a>
 <p align="center"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="49%" alt="Animacja rolety"></a>&nbsp;<a href="#obr-16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp" width="49%" alt="Animacja rolety"></a></p>
@@ -70,30 +72,37 @@
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Otwórz w HACS" height="56"></a></p>
 
-Kliknij **Otwórz link**. Za pierwszym razem strona zapyta o adres Twojego HA. Gdy HACS zapyta „Dodać repozytorium?”, kliknij **Dodaj**.
+1. Kliknij **Otwórz link**.
+2. Za pierwszym razem strona zapyta o adres Twojego HA. Wpisz go.
+3. Gdy HACS zapyta „Dodać repozytorium?”, kliknij **Dodaj**.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-1.png" width="100%" alt="Krok 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/hacs-1.png" width="100%" alt="Krok 1"></a></p>
 
 <br>
 
 <a name="krok-2"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-2-circle.png" height="26" align="absmiddle"> Kliknij „Pobierz”
 
-Kliknij **Pobierz** na dole po prawej, potem jeszcze raz **Pobierz** w okienku. Potem odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA.
+1. Kliknij **Pobierz** na dole po prawej.
+2. W okienku kliknij jeszcze raz **Pobierz**.
+
+Potem odśwież stronę: **Ctrl + Shift + R**. W telefonie zamknij i otwórz aplikację HA.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-2.png" width="100%" alt="Krok 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/hacs-2.png" width="100%" alt="Krok 2"></a></p>
 
 <br>
 
 <a name="krok-3"></a>
 ### <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-3-circle.png" height="26" align="absmiddle"> Dodaj kartę
 
-Na pulpicie kliknij ołówek, potem **＋ Dodaj kartę**. Wpisz **Roleta** i kliknij kartę.
+1. Na pulpicie kliknij ołówek, potem **＋ Dodaj kartę**.
+2. Wpisz: Roleta
+3. Kliknij kartę. Kreator otworzy się sam.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png" width="100%" alt="Krok 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/dodaj-karte.png" width="100%" alt="Krok 3"></a></p>
 
 <br>
 
@@ -144,7 +153,7 @@ Kreator otwiera się sam. Ma 7 krótkich kroków. Wszystko znajduje sam: roletę
 </table>
 
 <a name="obr-5"></a>
-<p align="center"><a href="#obr-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-pl-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-pl.png" width="100%" alt="Uchwyty i przyciski"></picture></a></p>
+<p align="center"><a href="#obr-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow.png" width="100%" alt="Uchwyty i przyciski"></picture></a></p>
 
 ---
 
@@ -281,16 +290,16 @@ Nie ma tu odpowiedzi? [Zgłoś błąd](https://github.com/superdarco78/roleta-re
 <a name="karta-roleta-dzien-noc"></a>
 ## <img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-shutter.png" height="30" align="absmiddle"> Karta Roleta dzień-noc
 
-Karta pokazuje Twoją roletę dzień-noc na prawdziwym oknie. Roletę przesuwasz palcem, animacja jest zsynchronizowana z silnikiem, a za szybą widać aktualną pogodę i porę dnia.
+Karta pokazuje okno z roletą dzień-noc. Przesuwasz ją palcem. Obraz rusza się razem z silnikiem. Za szybą widać pogodę i porę dnia.
 
 
 <a name="cele"></a>
 ### Cele
 
-- ✅ Roleta na ekranie ma wyglądać i ruszać się **jak prawdziwa**.
-- ✅ Ustawienie ma zająć **minutę, bez YAML** i bez dodawania pomocników.
-- ✅ Wygodne sterowanie **palcem na telefonie i tablecie**.
-- ✅ Karta ma działać z **każdą** roletą i **każdym** domem (język, pogoda, czujniki).
+- ✅ Obraz na ekranie wygląda i rusza się jak prawdziwy.
+- ✅ Ustawienie trwa minutę. Bez YAML i bez dodatkowych pomocników.
+- ✅ Łatwe sterowanie palcem na telefonie i tablecie.
+- ✅ Działa w każdym domu: z każdym językiem, pogodą i czujnikami.
 
 ---
 

@@ -23,11 +23,11 @@
 
 <p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&repository=roleta-realistyczna&category=plugin"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Ouvrir dans HACS" height="56"></a></p>
 <p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/PL-Polski-8c959f?style=for-the-badge" alt="Polski" height="36"></a>
-  <a href="README_EN.md"><img src="https://img.shields.io/badge/EN-English-8c959f?style=for-the-badge" alt="English" height="36"></a>
-  <a href="README_DE.md"><img src="https://img.shields.io/badge/DE-Deutsch-8c959f?style=for-the-badge" alt="Deutsch" height="36"></a>
-  <a href="README_FR.md"><img src="https://img.shields.io/badge/FR-Fran%C3%A7ais-0055a4?style=for-the-badge" alt="Français" height="36"></a>
-  <a href="README_CS.md"><img src="https://img.shields.io/badge/CZ-%C4%8Ce%C5%A1tina-8c959f?style=for-the-badge" alt="Čeština" height="36"></a>
+  <a href="README.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/pl.png" alt="Polski" height="44"></a>
+  <a href="README_EN.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/en.png" alt="English" height="44"></a>
+  <a href="README_DE.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/de.png" alt="Deutsch" height="44"></a>
+  <a href="README_FR.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/fr-on.png" alt="Français" height="44"></a>
+  <a href="README_CS.md"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44"></a>
 </p>
 
 > [!TIP]
@@ -73,7 +73,7 @@
 Clique sur **Open link**. La première fois, la page demande l’adresse de ton HA. Quand HACS demande « Ajouter le dépôt ? », clique sur **Ajouter**.
 
 <a name="obr-2"></a>
-<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-1.png" width="100%" alt="Step 1"></a></p>
+<p align="center"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/hacs-1.png" width="100%" alt="Step 1"></a></p>
 
 <br>
 
@@ -83,7 +83,7 @@ Clique sur **Open link**. La première fois, la page demande l’adresse de ton 
 Clique sur **Télécharger** en bas à droite, puis encore **Télécharger** dans la fenêtre. Recharge la page : **Ctrl + Maj + R**. Sur téléphone, ferme et rouvre l’application HA.
 
 <a name="obr-3"></a>
-<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/hacs-2.png" width="100%" alt="Step 2"></a></p>
+<p align="center"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/hacs-2.png" width="100%" alt="Step 2"></a></p>
 
 <br>
 
@@ -93,7 +93,7 @@ Clique sur **Télécharger** en bas à droite, puis encore **Télécharger** dan
 Sur ton tableau de bord, clique sur le crayon, puis **＋ Ajouter une carte**. Tape **Roleta** et clique sur la carte.
 
 <a name="obr-4"></a>
-<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki/krok-6.png" width="100%" alt="Step 3"></a></p>
+<p align="center"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kroki2/dodaj-karte.png" width="100%" alt="Step 3"></a></p>
 
 <br>
 
@@ -144,7 +144,7 @@ L’assistant s’ouvre tout seul. Il a 7 courtes étapes. La carte trouve elle-
 </table>
 
 <a name="obr-5"></a>
-<p align="center"><a href="#obr-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/elementy-en.png" width="100%" alt="Poignées et boutons"></picture></a></p>
+<p align="center"><a href="#obr-5"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-en.png" width="100%" alt="Poignées et boutons"></picture></a></p>
 
 ---
 
