@@ -1,0 +1,1701 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roleta dzień-noc – guide</title><link rel="icon" href="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/ikona.png">
+<style>.markdown-body {
+  --base-size-4: 0.25rem;
+  --base-size-8: 0.5rem;
+  --base-size-16: 1rem;
+  --base-size-24: 1.5rem;
+  --base-size-40: 2.5rem;
+  --base-text-weight-normal: 400;
+  --base-text-weight-medium: 500;
+  --base-text-weight-semibold: 600;
+  --fontStack-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --fgColor-accent: Highlight;
+}
+@media (prefers-color-scheme: dark) {
+  .markdown-body, [data-theme="dark"] {
+    /* dark */
+    color-scheme: dark;
+    --focus-outlineColor: #1f6feb;
+    --fgColor-default: #f0f6fc;
+    --fgColor-muted: #9198a1;
+    --fgColor-accent: #4493f8;
+    --fgColor-success: #3fb950;
+    --fgColor-attention: #d29922;
+    --fgColor-danger: #f85149;
+    --fgColor-done: #ab7df8;
+    --bgColor-default: #0d1117;
+    --bgColor-muted: #151b23;
+    --bgColor-neutral-muted: #656c7633;
+    --bgColor-attention-muted: #bb800926;
+    --borderColor-default: #3d444d;
+    --borderColor-muted: #3d444db3;
+    --borderColor-neutral-muted: #3d444db3;
+    --borderColor-accent-emphasis: #1f6feb;
+    --borderColor-success-emphasis: #238636;
+    --borderColor-attention-emphasis: #9e6a03;
+    --borderColor-danger-emphasis: #da3633;
+    --borderColor-done-emphasis: #8957e5;
+    --color-prettylights-syntax-comment: #9198a1;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #f0f6fc;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-brackethighlighter-angle: #9198a1;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #f0f6fc;
+    --color-prettylights-syntax-markup-bold: #f0f6fc;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #f0f6fc;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .markdown-body, [data-theme="light"] {
+    /* light */
+    color-scheme: light;
+    --focus-outlineColor: #0969da;
+    --fgColor-default: #1f2328;
+    --fgColor-muted: #59636e;
+    --fgColor-accent: #0969da;
+    --fgColor-success: #1a7f37;
+    --fgColor-attention: #9a6700;
+    --fgColor-danger: #d1242f;
+    --fgColor-done: #8250df;
+    --bgColor-default: #ffffff;
+    --bgColor-muted: #f6f8fa;
+    --bgColor-neutral-muted: #818b981f;
+    --bgColor-attention-muted: #fff8c5;
+    --borderColor-default: #d1d9e0;
+    --borderColor-muted: #d1d9e0b3;
+    --borderColor-neutral-muted: #d1d9e0b3;
+    --borderColor-accent-emphasis: #0969da;
+    --borderColor-success-emphasis: #1a7f37;
+    --borderColor-attention-emphasis: #9a6700;
+    --borderColor-danger-emphasis: #cf222e;
+    --borderColor-done-emphasis: #8250df;
+    --color-prettylights-syntax-comment: #59636e;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #1f2328;
+    --color-prettylights-syntax-entity-tag: #0550ae;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-brackethighlighter-angle: #59636e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #1f2328;
+    --color-prettylights-syntax-markup-bold: #1f2328;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #d1d9e0;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
+  }
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--fgColor-accent);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--bgColor-attention-muted);
+  color: var(--fgColor-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em var(--base-size-40);
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--borderColor-muted);
+  height: .25em;
+  padding: 0;
+  margin: var(--base-size-24) 0;
+  background-color: var(--borderColor-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--fgColor-muted);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  font-variant: tabular-nums;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--focus-outlineColor);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--focus-outlineColor);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: var(--base-size-4);
+  font: 11px var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  line-height: 10px;
+  color: var(--fgColor-default);
+  vertical-align: middle;
+  background-color: var(--bgColor-muted);
+  border: solid 1px var(--borderColor-neutral-muted);
+  border-bottom-color: var(--borderColor-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--borderColor-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: var(--base-size-24);
+  margin-bottom: var(--base-size-16);
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--fgColor-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--fgColor-muted);
+  border-left: .25em solid var(--borderColor-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--fgColor-danger);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: var(--base-size-4);
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--fgColor-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: var(--base-size-16);
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: var(--base-size-16);
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 var(--base-size-16);
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--borderColor-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--bgColor-default);
+  border-top: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--bgColor-muted);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--borderColor-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--fgColor-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--bgColor-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: var(--base-size-16);
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-muted);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px var(--base-size-8) 9px;
+  text-align: right;
+  background: var(--bgColor-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--bgColor-muted);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--fgColor-muted);
+  border-top: 1px solid var(--borderColor-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: var(--base-size-16);
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: var(--base-size-16);
+  margin-top: var(--base-size-16);
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: calc(var(--base-size-8)*-1);
+  right: calc(var(--base-size-8)*-1);
+  bottom: calc(var(--base-size-8)*-1);
+  left: calc(var(--base-size-24)*-1);
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--borderColor-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--fgColor-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body body:has(:modal) {
+  padding-right: var(--dialog-scrollgutter) !important;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible),
+.markdown-body button:focus:not(:focus-visible),
+.markdown-body summary:focus:not(:focus-visible),
+.markdown-body a:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.markdown-body [tabindex="0"]:focus:not(:focus-visible),
+.markdown-body details-dialog:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: var(--base-size-4);
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body ul:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body ol:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8) var(--base-size-16);
+  margin-bottom: var(--base-size-16);
+  color: inherit;
+  border-left: .25em solid var(--borderColor-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--borderColor-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--fgColor-accent);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--borderColor-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--fgColor-done);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--borderColor-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--fgColor-attention);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--borderColor-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--fgColor-success);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--borderColor-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--fgColor-danger);
+}
+
+.markdown-body>*:first-child>.heading-element:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .highlight pre:has(+.zeroclipboard-container) {
+  min-height: 52px;
+}
+
+
+body{margin:0;background:#fff}@media (prefers-color-scheme:dark){body{background:#0d1117}}
+.markdown-body{box-sizing:border-box;max-width:980px;margin:0 auto;padding:24px 16px 64px}
+.top{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:10px 16px;background:rgba(3,169,244,.97);color:#fff;font:600 15px/1.3 -apple-system,"Segoe UI",Roboto,Arial,sans-serif;border-radius:0 0 12px 12px;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.top a{color:#fff;text-decoration:underline;white-space:nowrap}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:12px;box-sizing:border-box}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;background:transparent}
+#lb span{position:absolute;top:10px;right:18px;color:#fff;font:700 34px/1 Arial}
+</style></head><body>
+<div class="top"><span>🔍 Click a picture to enlarge it. Click again to go back.</span><a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/README_EN.md">View on GitHub</a></div>
+<article class="markdown-body"><article class="markdown-body entry-content container-lg" itemprop="text"><p align="center" dir="auto"><a name="i1" href="#i1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/hero-en.png" alt="Roleta dzień-noc" width="100%" style="max-width: 100%;"></a></p>
+<p align="center" dir="auto">
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://camo.githubusercontent.com/7adfe72d224eff82bb2bcadea1cdaf5aad382b22711334ecbea08069d9842d2a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e613f7374796c653d666f722d7468652d6261646765266c6162656c3d72656c6561736526636f6c6f723d303238386431" alt="release" data-canonical-src="https://img.shields.io/github/v/release/superdarco78/roleta-realistyczna?style=for-the-badge&amp;label=release&amp;color=0288d1" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/releases"><img src="https://camo.githubusercontent.com/ce78525f622486839f090f1dbe6cce9ac31399bbdb9d68b614714b865b8286d5/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e612f746f74616c3f7374796c653d666f722d7468652d6261646765266c6162656c3d646f776e6c6f61647326636f6c6f723d326537643332" alt="downloads" data-canonical-src="https://img.shields.io/github/downloads/superdarco78/roleta-realistyczna/total?style=for-the-badge&amp;label=downloads&amp;color=2e7d32" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/stargazers"><img src="https://camo.githubusercontent.com/90de1e1533d6e86c9fba3ad8c08480dcda4f94abac110ba5b17c97c3c7062048/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e613f7374796c653d666f722d7468652d6261646765266c6162656c3d737461727326636f6c6f723d663961383235266c6f676f3d676974687562" alt="stars" data-canonical-src="https://img.shields.io/github/stars/superdarco78/roleta-realistyczna?style=for-the-badge&amp;label=stars&amp;color=f9a825&amp;logo=github" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/commits/main"><img src="https://camo.githubusercontent.com/f057682bd698df23f5aac7a13db4c2d47719e945ec68332ac3bd371e86634245/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6d6d69742d61637469766974792f792f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e613f7374796c653d666f722d7468652d6261646765266c6162656c3d616374697669747926636f6c6f723d366131623961" alt="activity" data-canonical-src="https://img.shields.io/github/commit-activity/y/superdarco78/roleta-realistyczna?style=for-the-badge&amp;label=activity&amp;color=6a1b9a" style="max-width: 100%;"></a>
+  <br>
+  <a href="https://hacs.xyz" rel="nofollow"><img src="https://camo.githubusercontent.com/cddec91b0f7a571fbc9e7bb01571094f97aecfb34fd3a2b006966d94d96f0842/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f484143532d637573746f6d2d3431424446353f7374796c653d666f722d7468652d6261646765266c6f676f3d686f6d65617373697374616e74636f6d6d756e69747973746f7265266c6f676f436f6c6f723d7768697465" alt="HACS" data-canonical-src="https://img.shields.io/badge/HACS-custom-41BDF5?style=for-the-badge&amp;logo=homeassistantcommunitystore&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://www.home-assistant.io/" rel="nofollow"><img src="https://camo.githubusercontent.com/fb258bdf822ef19c54fea9a5602aa662aa4e0825dba618cfb0e13bf8cd576ebf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f486f6d65253230417373697374616e742d323032342e382532422d3431424446353f7374796c653d666f722d7468652d6261646765266c6f676f3d686f6d65617373697374616e74266c6f676f436f6c6f723d7768697465" alt="Home Assistant" data-canonical-src="https://img.shields.io/badge/Home%20Assistant-2024.8%2B-41BDF5?style=for-the-badge&amp;logo=homeassistant&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="#translations"><img src="https://camo.githubusercontent.com/5aff8d5a944f20c3bf8f21b465a9b4b957479d120492ac3dde3f183547bcc5d9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7472616e736c6174696f6e732d504c253230253743253230454e2532302537432532304445253230253743253230465225323025374325323043532d3265376433323f7374796c653d666f722d7468652d6261646765266c6f676f3d676f6f676c657472616e736c617465266c6f676f436f6c6f723d7768697465" alt="translations" data-canonical-src="https://img.shields.io/badge/translations-PL%20%7C%20EN%20%7C%20DE%20%7C%20FR%20%7C%20CS-2e7d32?style=for-the-badge&amp;logo=googletranslate&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/LICENSE"><img src="https://camo.githubusercontent.com/259b4fdda3734a4124a2fb897ba27d6de33c185ccbbb8a0b3d6aa59b8e008430/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d677265656e3f7374796c653d666f722d7468652d6261646765" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=for-the-badge" style="max-width: 100%;"></a>
+  <br>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/validate.yml"><img src="https://camo.githubusercontent.com/3450e8f73b265edd22dbd00ab0fa6c8cc9d1b15c09f0768fa105e5dee24cb424/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e612f76616c69646174652e796d6c3f7374796c653d666f722d7468652d6261646765266c6162656c3d4841435325323076616c6964617465266c6f676f3d686f6d65617373697374616e74636f6d6d756e69747973746f7265266c6f676f436f6c6f723d7768697465" alt="HACS validate" data-canonical-src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/validate.yml?style=for-the-badge&amp;label=HACS%20validate&amp;logo=homeassistantcommunitystore&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/actions/workflows/release.yml"><img src="https://camo.githubusercontent.com/acd5d444cd03aa741c5ab5d22a3c85036823cba400ac68ad53784c0f1df1ccfc/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e612f72656c656173652e796d6c3f7374796c653d666f722d7468652d6261646765266c6162656c3d72656c656173652532306275696c64266c6f676f3d676974687562616374696f6e73266c6f676f436f6c6f723d7768697465" alt="Release build" data-canonical-src="https://img.shields.io/github/actions/workflow/status/superdarco78/roleta-realistyczna/release.yml?style=for-the-badge&amp;label=release%20build&amp;logo=githubactions&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78/roleta-realistyczna/issues"><img src="https://camo.githubusercontent.com/1f88d31bf7daa725ebc39f4077af1a64d2209bcb11ebaa0616127a8f1b426938/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f7375706572646172636f37382f726f6c6574612d7265616c69737479637a6e613f7374796c653d666f722d7468652d6261646765266c6162656c3d69737375657326636f6c6f723d653634613139" alt="issues" data-canonical-src="https://img.shields.io/github/issues/superdarco78/roleta-realistyczna?style=for-the-badge&amp;label=issues&amp;color=e64a19" style="max-width: 100%;"></a>
+  <a href="https://github.com/superdarco78"><img src="https://camo.githubusercontent.com/7d9dbb7078117e13e63298e490d77f645d8e163ad8df3d60665e410d4c629ada/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d61696e7461696e65722d2534307375706572646172636f37382d6433326632663f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562" alt="maintainer" data-canonical-src="https://img.shields.io/badge/maintainer-%40superdarco78-d32f2f?style=for-the-badge&amp;logo=github" style="max-width: 100%;"></a>
+  <br>
+  <a href="https://community.home-assistant.io/" rel="nofollow"><img src="https://camo.githubusercontent.com/41f94648c93a8e5788db91de58992d52827d9825c29366f311fbd29142e21d38/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f666f72756d2d486f6d65253230417373697374616e742d3431424446353f7374796c653d666f722d7468652d6261646765266c6f676f3d646973636f75727365266c6f676f436f6c6f723d7768697465" alt="Forum HA" data-canonical-src="https://img.shields.io/badge/forum-Home%20Assistant-41BDF5?style=for-the-badge&amp;logo=discourse&amp;logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://forum.arturhome.pl/" rel="nofollow"><img src="https://camo.githubusercontent.com/302bc0bf85d671cc9e65603b197a1fafc200b545652cde2a480c0a8ef8139f95/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f666f72756d253230504c2d6172747572686f6d652e706c2d6463313433633f7374796c653d666f722d7468652d6261646765266c6f676f3d646973636f75727365266c6f676f436f6c6f723d7768697465" alt="Forum PL" data-canonical-src="https://img.shields.io/badge/forum%20PL-arturhome.pl-dc143c?style=for-the-badge&amp;logo=discourse&amp;logoColor=white" style="max-width: 100%;"></a>
+  
+</p>
+<p align="center" dir="auto"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&amp;repository=roleta-realistyczna&amp;category=plugin" rel="nofollow"><img src="https://camo.githubusercontent.com/49f849a6409cdcad49e32d41115ab078f810d960b35466436e028d4552aadd40/68747470733a2f2f6d792e686f6d652d617373697374616e742e696f2f6261646765732f686163735f7265706f7369746f72792e737667" alt="Open in HACS" height="56" data-canonical-src="https://my.home-assistant.io/badges/hacs_repository.svg" style="max-width: 100%; height: auto; max-height: 56px;"></a></p>
+<p align="center" dir="auto">
+  <a href="index.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/pl.png" alt="Polski" height="44" style="max-width: 100%; height: auto; max-height: 44px;"></a>
+  <a href="en.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/en-on.png" alt="English" height="44" style="max-width: 100%; height: auto; max-height: 44px;"></a>
+  <a href="de.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/de.png" alt="Deutsch" height="44" style="max-width: 100%; height: auto; max-height: 44px;"></a>
+  <a href="fr.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/fr.png" alt="Français" height="44" style="max-width: 100%; height: auto; max-height: 44px;"></a>
+  <a href="cs.html"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/jezyki/cs.png" alt="Čeština" height="44" style="max-width: 100%; height: auto; max-height: 44px;"></a>
+</p>
+
+<div class="markdown-alert markdown-alert-tip" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p dir="auto">The card works with <strong>any roller blind</strong> in Home Assistant (<code>cover.*</code>): Zigbee, Z-Wave, Tuya, Shelly, Somfy and more. It looks best with a day-night (zebra) blind on a 2-sash window, but 1 sash works too. When you add the card, <strong>the wizard sets everything up for you</strong>.</p>
+</div>
+<p dir="auto"><a name="obr-1"></a></p>
+<p align="center" dir="auto"><a href="#obr-1"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja.webp" width="49%" alt="Animation" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/animacja-ciemna.webp" width="49%" alt="Animation" style="max-width: 100%;"></a></p>
+<markdown-accessiblity-table><table>
+<tbody><tr><td align="center" valign="top" width="25%"><a name="i80" href="#i80"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#how-it-looks"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/weather-partly-cloudy.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Real weather</b><br><sub>Rain, snow, sun or night outside</sub></a></td><td align="center" valign="top" width="25%"><a name="i81" href="#i81"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#actions-how-to-control-it"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-swipe-vertical.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Swipe to move</b><br><sub>Drag up or down with one finger</sub></a></td><td align="center" valign="top" width="25%"><a name="i82" href="#i82"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#krok-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/auto-fix.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Setup wizard</b><br><sub>Finds your devices for you</sub></a></td><td align="center" valign="top" width="25%"><a name="i83" href="#i83"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#auto-detection"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-open-variant.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Open window</b><br><sub>Shows an open or tilted window</sub></a></td></tr>
+<tr><td align="center" valign="top" width="25%"><a name="i84" href="#i84"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#options"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/timer-outline.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Motor speed</b><br><sub>Moves as fast as your motor</sub></a></td><td align="center" valign="top" width="25%"><a name="i85" href="#i85"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#colours-and-wood-finishes"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/palette.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Colours</b><br><sub>Oak, walnut, anthracite and more</sub></a></td><td align="center" valign="top" width="25%"><a name="i86" href="#i86"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#editor"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/theme-light-dark.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Light and dark</b><br><sub>Matches your Home Assistant theme</sub></a></td><td align="center" valign="top" width="25%"><a name="i87" href="#i87"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="215" height="0" style="max-width: 100%;; aspect-ratio: 215 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br><a href="#translations"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="56" alt="" style="max-width: 100%; height: auto; max-height: 56px;"><br><b>Polish and English</b><br><sub>Uses your profile language</sub></a></td></tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><a name="table-of-contents"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/format-list-bulleted.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Contents</h2><a id="-contents" class="anchor" aria-label="Permalink:  Contents" href="#-contents"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong><a name="i11" href="#i11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/rocket-launch.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> <a href="#for-beginners">Part 1. For beginners</a></strong> · this is enough</p>
+<ul dir="auto">
+<li><a href="#krok-1">Click the blue button</a></li>
+<li><a href="#krok-2">Click “Download”</a></li>
+<li><a href="#krok-3">Add the card</a></li>
+<li><a href="#krok-4">The wizard does the rest</a></li>
+<li><a href="#actions-how-to-control-it">How to control it</a></li>
+<li><a href="#upgrading-to-v23">Upgrading to v23</a></li>
+<li><a href="#glossary">Glossary: what do these words mean?</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<p dir="auto"><strong><a name="i12" href="#i12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/wrench.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> <a href="#advanced">Part 2. Advanced</a></strong> · optional</p>
+<hr>
+<p dir="auto"><a name="for-beginners"></a></p>
+<div class="markdown-heading" dir="auto"><h1 class="heading-element" dir="auto"><a name="i13" href="#i13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/rocket-launch.png" height="40" align="absmiddle" style="max-width: 100%; height: auto; max-height: 40px;"></a> Part 1. For beginners</h1><a id="-part-1-for-beginners" class="anchor" aria-label="Permalink:  Part 1. For beginners" href="#-part-1-for-beginners"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="start-in-4-steps"></a></p>
+<div class="markdown-alert markdown-alert-tip" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p dir="auto"><strong>This is all you need.</strong> 4 steps, about a minute. The wizard does the rest. You can skip Part 2.</p>
+</div>
+<p dir="auto"><a name="krok-1"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i14" href="#i14"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-1-circle.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Click the blue button</h3><a id="-click-the-blue-button" class="anchor" aria-label="Permalink:  Click the blue button" href="#-click-the-blue-button"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p align="center" dir="auto"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=superdarco78&amp;repository=roleta-realistyczna&amp;category=plugin" rel="nofollow"><img src="https://camo.githubusercontent.com/49f849a6409cdcad49e32d41115ab078f810d960b35466436e028d4552aadd40/68747470733a2f2f6d792e686f6d652d617373697374616e742e696f2f6261646765732f686163735f7265706f7369746f72792e737667" alt="Open in HACS" height="56" data-canonical-src="https://my.home-assistant.io/badges/hacs_repository.svg" style="max-width: 100%; height: auto; max-height: 56px;"></a></p>
+<p dir="auto">The button opens HACS in your Home Assistant. The picture shows what to click.</p>
+<p dir="auto"><a name="obr-2"></a></p>
+<p align="center" dir="auto"><a href="#obr-2"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/hacs-1.png" width="100%" alt="Step 1" style="max-width: 100%;"></a></p>
+<br>
+<p dir="auto"><a name="krok-2"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i15" href="#i15"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-2-circle.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Click “Download”</h3><a id="-click-download" class="anchor" aria-label="Permalink:  Click “Download”" href="#-click-download"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Download the card to your Home Assistant.</p>
+<p dir="auto"><a name="obr-3"></a></p>
+<p align="center" dir="auto"><a href="#obr-3"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/hacs-2.png" width="100%" alt="Step 2" style="max-width: 100%;"></a></p>
+<br>
+<p dir="auto"><a name="krok-3"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i16" href="#i16"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-3-circle.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Add the card</h3><a id="-add-the-card" class="anchor" aria-label="Permalink:  Add the card" href="#-add-the-card"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Add the card to your dashboard.</p>
+<p dir="auto"><a name="obr-4"></a></p>
+<p align="center" dir="auto"><a href="#obr-4"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/dodaj-karte.png" width="100%" alt="Step 3" style="max-width: 100%;"></a></p>
+<br>
+<p dir="auto"><a name="krok-4"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i17" href="#i17"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/numeric-4-circle.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> The wizard does the rest</h3><a id="-the-wizard-does-the-rest" class="anchor" aria-label="Permalink:  The wizard does the rest" href="#-the-wizard-does-the-rest"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">The wizard opens by itself. It has 7 short steps. The card finds your blind, motor, window sensors and weather by itself.</p>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="center"><a name="i18" href="#i18"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="0" style="max-width: 100%;; aspect-ratio: 90 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Step</th><th align="left"><a name="i19" href="#i19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="0" style="max-width: 100%;; aspect-ratio: 330 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>What you pick</th><th align="left"><a name="i20" href="#i20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="0" style="max-width: 100%;; aspect-ratio: 480 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Why</th></tr>
+<tr><td align="center">1</td><td align="left"><a name="i21" href="#i21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-shutter.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Blind</b></td><td align="left">Which blind (or blind group) the card controls</td></tr>
+<tr><td align="center">2</td><td align="left"><a name="i22" href="#i22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-closed-variant.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Window</b></td><td align="left">How many sashes and which blind is on which</td></tr>
+<tr><td align="center">3</td><td align="left"><a name="i23" href="#i23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/speedometer.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Motor</b></td><td align="left">So the animation moves as fast as the real blind</td></tr>
+<tr><td align="center">4</td><td align="left"><a name="i24" href="#i24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-open-variant.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Window sensors</b></td><td align="left">So the card shows a tilted or open window</td></tr>
+<tr><td align="center">5</td><td align="left"><a name="i25" href="#i25"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/weather-partly-cloudy.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Weather</b></td><td align="left">Real weather behind the glass</td></tr>
+<tr><td align="center">6</td><td align="left"><a name="i26" href="#i26"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/palette.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Look and name</b></td><td align="left">A ready colour set and the card title</td></tr>
+<tr><td align="center">7</td><td align="left"><a name="i27" href="#i27"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/check-circle-outline.png" height="28" align="absmiddle" alt="" style="max-width: 100%; height: auto; max-height: 28px;"></a> <b>Summary</b></td><td align="left">Check everything and choose where the card goes</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<div class="markdown-alert markdown-alert-tip" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p dir="auto">Not sure? Keep what is selected at the top of the list. The card picked the best match.</p>
+</div>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i28" href="#i28"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-shutter.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 1 of 7: Pick your blind</h4><a id="-step-1-of-7-pick-your-blind" class="anchor" aria-label="Permalink:  Step 1 of 7: Pick your blind" href="#-step-1-of-7-pick-your-blind"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k1"></a></p>
+<p align="center" dir="auto"><a href="#obr-k1"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-1-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-1-en.png" width="100%" alt="Step 1"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i29" href="#i29"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-closed-variant.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 2 of 7: Window and sashes</h4><a id="-step-2-of-7-window-and-sashes" class="anchor" aria-label="Permalink:  Step 2 of 7: Window and sashes" href="#-step-2-of-7-window-and-sashes"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k2"></a></p>
+<p align="center" dir="auto"><a href="#obr-k2"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-2-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-2-en.png" width="100%" alt="Step 2"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i30" href="#i30"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/speedometer.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 3 of 7: Motor speed</h4><a id="-step-3-of-7-motor-speed" class="anchor" aria-label="Permalink:  Step 3 of 7: Motor speed" href="#-step-3-of-7-motor-speed"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k3"></a></p>
+<p align="center" dir="auto"><a href="#obr-k3"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-3-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-3-en.png" width="100%" alt="Step 3"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i31" href="#i31"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/window-open-variant.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 4 of 7: Window sensors</h4><a id="-step-4-of-7-window-sensors" class="anchor" aria-label="Permalink:  Step 4 of 7: Window sensors" href="#-step-4-of-7-window-sensors"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k4"></a></p>
+<p align="center" dir="auto"><a href="#obr-k4"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-4-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-4-en.png" width="100%" alt="Step 4"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i32" href="#i32"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/weather-partly-cloudy.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 5 of 7: Weather outside</h4><a id="-step-5-of-7-weather-outside" class="anchor" aria-label="Permalink:  Step 5 of 7: Weather outside" href="#-step-5-of-7-weather-outside"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k5"></a></p>
+<p align="center" dir="auto"><a href="#obr-k5"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-5-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-5-en.png" width="100%" alt="Step 5"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i33" href="#i33"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/palette.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 6 of 7: Look and name</h4><a id="-step-6-of-7-look-and-name" class="anchor" aria-label="Permalink:  Step 6 of 7: Look and name" href="#-step-6-of-7-look-and-name"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k6"></a></p>
+<p align="center" dir="auto"><a href="#obr-k6"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-6-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-6-en.png" width="100%" alt="Step 6"></picture></themed-picture></a></p>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i34" href="#i34"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/check-circle-outline.png" height="32" align="absmiddle" style="max-width: 100%; height: auto; max-height: 32px;"></a> Step 7 of 7: Check and save</h4><a id="-step-7-of-7-check-and-save" class="anchor" aria-label="Permalink:  Step 7 of 7: Check and save" href="#-step-7-of-7-check-and-save"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a name="obr-k7"></a></p>
+<p align="center" dir="auto"><a href="#obr-k7"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-7-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kreator2/krok-7-en.png" width="100%" alt="Step 7"></picture></themed-picture></a></p>
+<div class="markdown-alert markdown-alert-important" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p dir="auto">✅ <strong>Done.</strong> Click <strong>Save</strong>. The card works.</p>
+</div>
+<hr>
+<p dir="auto"><a name="actions-how-to-control-it"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i35" href="#i35"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/gesture-tap.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> How to control it</h3><a id="-how-to-control-it" class="anchor" aria-label="Permalink:  How to control it" href="#-how-to-control-it"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="center"><a name="i36" href="#i36"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="90" height="0" style="max-width: 100%;; aspect-ratio: 90 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Icon</th><th align="left"><a name="i37" href="#i37"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="330" height="0" style="max-width: 100%;; aspect-ratio: 330 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>What you do</th><th align="left"><a name="i38" href="#i38"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="480" height="0" style="max-width: 100%;; aspect-ratio: 480 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>What happens</th></tr>
+<tr><td align="center"><a name="i39" href="#i39"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/drag-horizontal-variant.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Drag the handle at the bottom of one sash</td><td align="left">Only that sash moves</td></tr>
+<tr><td align="center"><a name="i40" href="#i40"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/swap-vertical-circle-outline.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Drag the round handle in the middle</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center"><a name="i41" href="#i41"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/gesture-swipe-vertical.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Drag your finger on the glass</td><td align="left">Both sashes move</td></tr>
+<tr><td align="center"><a name="i42" href="#i42"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/stop.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Tap STOP, or tap the window while it moves</td><td align="left">Everything stops</td></tr>
+<tr><td align="center"><a name="i43" href="#i43"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/arrow-up.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Tap the up arrow</td><td align="left">Goes fully up: window uncovered</td></tr>
+<tr><td align="center"><a name="i44" href="#i44"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/arrow-down.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Tap the down arrow</td><td align="left">Goes fully down: window covered</td></tr>
+<tr><td align="center"><a name="i45" href="#i45"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/unfold-more-horizontal.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Tap ▲ 5% or ▼ 5%</td><td align="left">Moves a little up or down</td></tr>
+<tr><td align="center"><a name="i46" href="#i46"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/kafle/percent-outline.png" height="48" alt="" style="max-width: 100%; height: auto; max-height: 48px;"></a></td><td align="left">Tap a ready position, e.g. 75%</td><td align="left">Goes to that position</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><a name="obr-5"></a></p>
+<p align="center" dir="auto"><a href="#obr-5"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-en-ciemny.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/opis-elementow-en.png" width="100%" alt="Handles and buttons"></picture></themed-picture></a></p>
+<hr>
+<p dir="auto"><a name="upgrading-to-v23"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i47" href="#i47"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/update.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Upgrading to v23</h3><a id="-upgrading-to-v23" class="anchor" aria-label="Permalink:  Upgrading to v23" href="#-upgrading-to-v23"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-alert markdown-alert-important" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p dir="auto">Version 23 <strong>does not change</strong> your settings. Existing cards keep working.</p>
+</div>
+<p dir="auto"><strong>What's new</strong></p>
+<ul dir="auto">
+<li>🪄 A <strong>7-step wizard</strong> for beginners. Every step says <strong>what</strong> you pick and <strong>why</strong>.</li>
+<li>🔍 The card finds blinds, motors, window sensors and weather by itself, best matches first.</li>
+<li>🧹 Lists show only matching devices: no gates, garages or motion sensors.</li>
+<li>🧭 When something is missing, the wizard says what to do and opens the right HA page in one click.</li>
+<li>📋 Add a copy of the card to another dashboard or a new “Blinds” view in one click.</li>
+<li>🌍 The wizard, card and menu follow your HA profile language.</li>
+</ul>
+<p dir="auto"><strong>What to do:</strong> click <strong>Update</strong> in HACS, then refresh with <strong>Ctrl + Shift + R</strong>. Full list: <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/CHANGELOG.md">📝 Changelog</a>.</p>
+<hr>
+<p dir="auto"><a name="glossary"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i48" href="#i48"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/book-open-variant.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Glossary: what do these words mean?</h3><a id="-glossary-what-do-these-words-mean" class="anchor" aria-label="Permalink:  Glossary: what do these words mean?" href="#-glossary-what-do-these-words-mean"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="left"><a name="i49" href="#i49"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0" style="max-width: 100%;; aspect-ratio: 260 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Word</th><th align="left"><a name="i50" href="#i50"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0" style="max-width: 100%;; aspect-ratio: 640 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>In plain words</th></tr>
+<tr><td align="left"><b>Home Assistant (HA)</b></td><td align="left">The app that runs your smart home.</td></tr>
+<tr><td align="left"><b>HACS</b></td><td align="left">An “app store” for HA add-ons. You install the card and its updates from here.</td></tr>
+<tr><td align="left"><b>Card</b></td><td align="left">A tile on your HA screen, like this blind.</td></tr>
+<tr><td align="left"><b>Dashboard</b></td><td align="left">An HA screen that holds cards.</td></tr>
+<tr><td align="left"><b><code>cover.…</code> entity</b></td><td align="left">Your blind, as HA sees it.</td></tr>
+<tr><td align="left"><b>Contact sensor</b></td><td align="left">A window sensor: knows if it is closed, tilted or open.</td></tr>
+<tr><td align="left"><b>Open / 100%</b></td><td align="left">Blind fully up, window uncovered.</td></tr>
+<tr><td align="left"><b>Closed / 0%</b></td><td align="left">Blind fully down, window covered.</td></tr>
+<tr><td align="left"><b>YAML</b></td><td align="left">Typing settings by hand. <b>Not needed here.</b></td></tr>
+</tbody></table></markdown-accessiblity-table>
+<hr>
+<p dir="auto"><a name="faq"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto"><a name="i51" href="#i51"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/help-circle.png" height="26" align="absmiddle" style="max-width: 100%; height: auto; max-height: 26px;"></a> Questions and problems</h3><a id="-questions-and-problems" class="anchor" aria-label="Permalink:  Questions and problems" href="#-questions-and-problems"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<br>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i52" href="#i52"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/alert-circle-outline.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> The card is not in “Add card”</h4><a id="-the-card-is-not-in-add-card" class="anchor" aria-label="Permalink:  The card is not in “Add card”" href="#-the-card-is-not-in-add-card"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Refresh the page: <strong>Ctrl + Shift + R</strong>. On a phone, close and reopen the HA app. Then type <strong>Roleta</strong> in the card search.</p>
+<br>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i53" href="#i53"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/alert-circle-outline.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> The animation is faster or slower than the blind</h4><a id="-the-animation-is-faster-or-slower-than-the-blind" class="anchor" aria-label="Permalink:  The animation is faster or slower than the blind" href="#-the-animation-is-faster-or-slower-than-the-blind"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Open the card editor, section <strong>Motion and calibration</strong>, click <strong>Auto-calibrate</strong>. The card measures the time by itself.</p>
+<br>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i54" href="#i54"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/alert-circle-outline.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> No weather behind the glass</h4><a id="-no-weather-behind-the-glass" class="anchor" aria-label="Permalink:  No weather behind the glass" href="#-no-weather-behind-the-glass"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Open the editor, section <strong>Advanced</strong>, set the weather source to <strong>auto</strong> or <strong>internet</strong>.</p>
+<br>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i55" href="#i55"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/alert-circle-outline.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> The blind moves the wrong way</h4><a id="-the-blind-moves-the-wrong-way" class="anchor" aria-label="Permalink:  The blind moves the wrong way" href="#-the-blind-moves-the-wrong-way"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Open the editor, section <strong>Advanced</strong>, turn on <strong>Invert position</strong>.</p>
+<br>
+<div class="markdown-heading" dir="auto"><h4 class="heading-element" dir="auto"><a name="i56" href="#i56"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/alert-circle-outline.png" height="22" align="absmiddle" style="max-width: 100%; height: auto; max-height: 22px;"></a> The window sensor does not work</h4><a id="-the-window-sensor-does-not-work" class="anchor" aria-label="Permalink:  The window sensor does not work" href="#-the-window-sensor-does-not-work"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Open the editor, section <strong>Window</strong>. Pick the sensor for each sash and choose <strong>tilt</strong> or <strong>open</strong>.</p>
+<p dir="auto">Still stuck? <a href="https://github.com/superdarco78/roleta-realistyczna/issues/new/choose">Open an issue</a> or ask on the <a href="https://community.home-assistant.io/" rel="nofollow">HA forum</a>.</p>
+<hr>
+<p dir="auto"><a name="advanced"></a></p>
+<div class="markdown-heading" dir="auto"><h1 class="heading-element" dir="auto"><a name="i57" href="#i57"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/wrench.png" height="40" align="absmiddle" style="max-width: 100%; height: auto; max-height: 40px;"></a> Part 2. Advanced</h1><a id="-part-2-advanced" class="anchor" aria-label="Permalink:  Part 2. Advanced" href="#-part-2-advanced"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-alert markdown-alert-note" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p dir="auto"><strong>You do not need to read this.</strong> The wizard has already set everything up. Here are the details: all wizard screens, the editor, options, YAML and installing without HACS.</p>
+</div>
+<ul dir="auto">
+<li><a href="#the-roleta-dzien-noc-card">The Roleta dzień-noc card</a>
+<ul dir="auto">
+<li><a href="#goals">Goals</a></li>
+<li><a href="#how-it-looks">How it looks</a></li>
+<li><a href="#colours-and-wood-finishes">Colours and wood finishes</a></li>
+</ul>
+</li>
+<li><a href="#editor">Editor</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#auto-detection">Auto-detection</a></li>
+<li><a href="#moes-tuya-motors">Moes / Tuya motors</a></li>
+<li><a href="#card-elements">Card elements</a></li>
+<li><a href="#manual">Install without HACS (manual)</a></li>
+</ul>
+<hr>
+<p dir="auto"><a name="the-roleta-dzien-noc-card"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i58" href="#i58"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/window-shutter.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> The Roleta dzień-noc card</h2><a id="-the-roleta-dzień-noc-card" class="anchor" aria-label="Permalink:  The Roleta dzień-noc card" href="#-the-roleta-dzień-noc-card"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">The card shows your day-night blind on a real-looking window. Drag the blind with your finger; the animation moves at the speed of the motor, and you see the current weather and time of day behind the glass.</p>
+<p dir="auto"><a name="goals"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto">Goals</h3><a id="goals" class="anchor" aria-label="Permalink: Goals" href="#goals"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li>✅ The picture on screen looks and moves like the real one.</li>
+<li>✅ Setup takes a minute. No YAML and no extra helpers.</li>
+<li>✅ Easy touch control on phones and tablets.</li>
+<li>✅ Works in any home: any language, weather and sensors.</li>
+</ul>
+<hr>
+<p dir="auto"><a name="how-it-looks"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto">How it looks</h3><a id="how-it-looks" class="anchor" aria-label="Permalink: How it looks" href="#how-it-looks"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong>Weather:</strong></p>
+<markdown-accessiblity-table><table>
+<tbody><tr>
+<td align="center" width="33%"><b>☀️ Sun</b><br><a name="obr-g1"></a><a href="#obr-g1"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/dzien.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/dzien.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>🌧 Rain</b><br><a name="obr-g2"></a><a href="#obr-g2"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/deszcz.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/deszcz.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>⛈ Storm</b><br><a name="obr-g3"></a><a href="#obr-g3"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/burza.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/burza.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+<tr>
+<td align="center" width="33%"><b>❄️ Snow</b><br><a name="obr-g4"></a><a href="#obr-g4"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/snieg.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/snieg.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>🌫 Fog</b><br><a name="obr-g5"></a><a href="#obr-g5"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/mgla.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/mgla.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>☁️ Cloudy (English UI)</b><br><a name="obr-g6"></a><a href="#obr-g6"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/en.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/en.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><strong>Time of day:</strong></p>
+<markdown-accessiblity-table><table>
+<tbody><tr>
+<td align="center" width="33%"><b>☀️ Day</b><br><a name="obr-g7"></a><a href="#obr-g7"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/zwinieta.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/zwinieta.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>🌅 Sunset</b><br><a name="obr-g8"></a><a href="#obr-g8"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/zachod.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/zachod.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>🌙 Night</b><br><a name="obr-g9"></a><a href="#obr-g9"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/noc.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/noc.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><strong>Blind position:</strong></p>
+<markdown-accessiblity-table><table>
+<tbody><tr>
+<td align="center" width="33%"><b>⬆️ Open (100%)</b><br><a name="obr-g10"></a><a href="#obr-g10"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/zwinieta.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/zwinieta.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b><g-emoji class="g-emoji" alias="arrow_up_down">↕️</g-emoji> Half (50%)</b><br><a name="obr-g11"></a><a href="#obr-g11"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/polowa.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/polowa.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>⬇️ Closed (0%)</b><br><a name="obr-g12"></a><a href="#obr-g12"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/opuszczona.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/opuszczona.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><strong>Window (from contact sensors):</strong></p>
+<markdown-accessiblity-table><table>
+<tbody><tr>
+<td align="center" width="33%"><b>↘ Left tilted</b><br><a name="obr-g13"></a><a href="#obr-g13"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/uchylone.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/uchylone.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>↔ Right opened</b><br><a name="obr-g14"></a><a href="#obr-g14"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/otwarte.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/otwarte.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>🪟 Tilted and opened</b><br><a name="obr-g15"></a><a href="#obr-g15"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/okno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/okno.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<hr>
+<p dir="auto"><a name="colours-and-wood-finishes"></a></p>
+<div class="markdown-heading" dir="auto"><h3 class="heading-element" dir="auto">Colours and wood finishes</h3><a id="colours-and-wood-finishes" class="anchor" aria-label="Permalink: Colours and wood finishes" href="#colours-and-wood-finishes"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table><table>
+<tbody><tr>
+<td align="center" width="33%"><b>Golden oak + beige</b><br><a name="obr-g16"></a><a href="#obr-g16"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/zloty.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/zloty.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>Anthracite + turquoise</b><br><a name="obr-g17"></a><a href="#obr-g17"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/turkus.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/turkus.png" width="100%"></picture></themed-picture></a></td>
+<td align="center" width="33%"><b>1 sash</b><br><a name="obr-g18"></a><a href="#obr-g18"><themed-picture data-catalyst-inline="true"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-en/jedno.png"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/stany-jasne-en/jedno.png" width="100%"></picture></themed-picture></a></td>
+</tr>
+</tbody></table></markdown-accessiblity-table>
+<hr>
+<p dir="auto"><a name="editor"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i59" href="#i59"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/tune.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Editor</h2><a id="-editor" class="anchor" aria-label="Permalink:  Editor" href="#-editor"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Settings are grouped in collapsible sections, each with <strong>↺ Restore defaults</strong>. The live preview at the top <strong>never moves the real blind</strong>; pin it 📌 to see every change.</p>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="left"><a name="i60" href="#i60"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0" style="max-width: 100%;; aspect-ratio: 260 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Section</th><th align="left"><a name="i61" href="#i61"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0" style="max-width: 100%;; aspect-ratio: 640 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>What you set</th></tr>
+<tr><td align="left">🎨 Look</td><td align="left">Stripe colours, frame colour (wood finishes and plain), sashes, mullion, height.</td></tr>
+<tr><td align="left">🪟 Window</td><td align="left">Contact sensors per sash, tilted or opened, how much.</td></tr>
+<tr><td align="left">⏱ Motion &amp; calibration</td><td align="left">Travel time from motor speed, learned, or <b>🤖 Auto-calibrate</b>.</td></tr>
+<tr><td align="left">⚙️ Advanced</td><td align="left">Language, buttons, handles, steps, quick positions, vibration, inverted position, weather source, own background photo.</td></tr>
+<tr><td align="left">🌍 Global</td><td align="left"><b>Save as default</b> for all blind cards.</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto"><a name="obr-6"></a></p>
+<p align="center" dir="auto"><a href="#obr-6"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/wyglad.png" width="49%" alt="Look" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/wyglad-ciemny.png" width="49%" alt="Look" style="max-width: 100%;"></a></p>
+<p dir="auto"><a name="obr-7"></a></p>
+<p align="center" dir="auto"><a href="#obr-7"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/kalibracja.png" width="49%" alt="Motion" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/kalibracja-ciemny.png" width="49%" alt="Motion" style="max-width: 100%;"></a></p>
+<p dir="auto"><a name="obr-8"></a></p>
+<p align="center" dir="auto"><a href="#obr-8"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/zaawansowane.png" width="49%" alt="Advanced" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/zaawansowane-ciemny.png" width="49%" alt="Advanced" style="max-width: 100%;"></a></p>
+<p dir="auto"><a name="obr-9"></a></p>
+<p align="center" dir="auto"><a href="#obr-9"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/przeglad.png" width="49%" alt="przeglad" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/przeglad-ciemny.png" width="49%" alt="przeglad" style="max-width: 100%;"></a></p>
+<p dir="auto"><a name="obr-10"></a></p>
+<p align="center" dir="auto"><a href="#obr-10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/okno.png" width="49%" alt="okno" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/edytor-en/okno-ciemny.png" width="49%" alt="okno" style="max-width: 100%;"></a></p>
+<hr>
+<p dir="auto"><a name="options"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i62" href="#i62"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/file-document-outline.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Options</h2><a id="-options" class="anchor" aria-label="Permalink:  Options" href="#-options"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Everything can be set in the editor; the tables are for YAML fans. Option names are Polish.</p>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="left"><a name="i63" href="#i63"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="190" height="0" style="max-width: 100%;; aspect-ratio: 190 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Name</th><th align="left"><a name="i64" href="#i64"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="110" height="0" style="max-width: 100%;; aspect-ratio: 110 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Type</th><th align="left"><a name="i65" href="#i65"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="140" height="0" style="max-width: 100%;; aspect-ratio: 140 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Default</th><th align="left"><a name="i66" href="#i66"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="460" height="0" style="max-width: 100%;; aspect-ratio: 460 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Description</th></tr>
+<tr><td align="left"><code>type</code></td><td align="left">text</td><td align="left"><b>required</b></td><td align="left">custom:roleta-realistyczna</td></tr>
+<tr><td align="left"><code>entity</code></td><td align="left">entity</td><td align="left"><b>required</b></td><td align="left">cover.* or a blind group (left + right).</td></tr>
+<tr><td align="left"><code>name</code></td><td align="left">text</td><td align="left">entity name</td><td align="left">Card title.</td></tr>
+<tr><td align="left"><code>jezyk</code></td><td align="left">text</td><td align="left">auto</td><td align="left">auto (HA language), pl, en.</td></tr>
+<tr><td align="left"><code>kolor</code></td><td align="left">text</td><td align="left">czarny</td><td align="left">Solid stripe colour (palette name or #rrggbb).</td></tr>
+<tr><td align="left"><code>siatka</code></td><td align="left">text</td><td align="left">like solid</td><td align="left">Sheer stripe colour.</td></tr>
+<tr><td align="left"><code>rama</code></td><td align="left">text</td><td align="left">#f4f4f2</td><td align="left">Frame colour, e.g. #8a5a3b golden oak, #3b3f45 anthracite.</td></tr>
+<tr><td align="left"><code>skrzydla</code></td><td align="left">number</td><td align="left">2</td><td align="left">Sashes: 1 or 2.</td></tr>
+<tr><td align="left"><code>slupek</code></td><td align="left">text</td><td align="left">staly</td><td align="left">Mullion: staly (fixed) or ruchomy (moving).</td></tr>
+<tr><td align="left"><code>klamki</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Handles turn when tilted/opened.</td></tr>
+<tr><td align="left"><code>wysokosc</code></td><td align="left">number</td><td align="left">260</td><td align="left">Window height in px.</td></tr>
+<tr><td align="left"><code>czujnik_lewe</code> / <code>czujnik_prawe</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">Contact sensor per sash.</td></tr>
+<tr><td align="left"><code>tryb_lewe</code> / <code>tryb_prawe</code></td><td align="left">text</td><td align="left">uchyl</td><td align="left">uchyl (tilt) or otworz (open).</td></tr>
+<tr><td align="left"><code>kat_uchyl</code></td><td align="left">number</td><td align="left">14</td><td align="left">Tilt angle.</td></tr>
+<tr><td align="left"><code>otwarcie</code></td><td align="left">number</td><td align="left">40</td><td align="left">Opening width (%).</td></tr>
+<tr><td align="left"><code>auto_czujniki</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Find contact sensors in the blind's area.</td></tr>
+<tr><td align="left"><code>roleta_lewa</code> / <code>roleta_prawa</code></td><td align="left">entity</td><td align="left">–</td><td align="left">Separate blinds per sash.</td></tr>
+<tr><td align="left"><code>czas</code></td><td align="left">number / auto</td><td align="left">auto</td><td align="left">Full travel time (s).</td></tr>
+<tr><td align="left"><code>predkosc_lewa</code> / <code>predkosc_prawa</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">Motor speed number.*.</td></tr>
+<tr><td align="left"><code>odwroc</code></td><td align="left">bool</td><td align="left">false</td><td align="left">Inverted position.</td></tr>
+<tr><td align="left"><code>zrodlo</code></td><td align="left">text</td><td align="left">auto</td><td align="left">Weather: auto, internet, brak (none).</td></tr>
+<tr><td align="left"><code>pogoda</code></td><td align="left">entity</td><td align="left">auto</td><td align="left">weather.* entity.</td></tr>
+<tr><td align="left"><code>niebo</code> / <code>widok</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Sky &amp; weather / drawn street view.</td></tr>
+<tr><td align="left"><code>tlo</code></td><td align="left">text</td><td align="left">–</td><td align="left">Own background photo, e.g. /local/view.jpg.</td></tr>
+<tr><td align="left"><code>przyciski</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Buttons and quick positions.</td></tr>
+<tr><td align="left"><code>pozycje</code></td><td align="left">text</td><td align="left">100,75,50,25,0</td><td align="left">Quick positions (100 = open).</td></tr>
+<tr><td align="left"><code>krok</code></td><td align="left">number</td><td align="left">5</td><td align="left">▲/▼ step in %, 0 = off.</td></tr>
+<tr><td align="left"><code>uchwyty</code> / <code>uchwyt_srodek</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Rail handles / centre handle.</td></tr>
+<tr><td align="left"><code>osobno</code></td><td align="left">bool</td><td align="left">false</td><td align="left">Dragging the glass moves one sash only.</td></tr>
+<tr><td align="left"><code>wibracja</code></td><td align="left">bool</td><td align="left">true</td><td align="left">Haptic feedback.</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<hr>
+<p dir="auto"><a name="examples"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i67" href="#i67"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/flask-outline.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Examples</h2><a id="-examples" class="anchor" aria-label="Permalink:  Examples" href="#-examples"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="highlight highlight-source-yaml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="type: custom:roleta-realistyczna
+entity: cover.living_room"><pre><span class="pl-ent">type</span>: <span class="pl-s">custom:roleta-realistyczna</span>
+<span class="pl-ent">entity</span>: <span class="pl-s">cover.living_room</span></pre></div>
+<p dir="auto"><a name="obr-11"></a></p>
+<p align="center" dir="auto"><a href="#obr-11"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1en.png" width="49%" alt="Preview" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex1en-ciemny.png" width="49%" alt="Preview" style="max-width: 100%;"></a></p>
+<div class="highlight highlight-source-yaml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="type: custom:roleta-realistyczna
+entity: cover.living_left
+name: Living room
+roleta_lewa: cover.living_left
+roleta_prawa: cover.living_right
+czujnik_lewe: binary_sensor.window_left
+tryb_lewe: uchyl
+czujnik_prawe: binary_sensor.window_right
+tryb_prawe: otworz"><pre><span class="pl-ent">type</span>: <span class="pl-s">custom:roleta-realistyczna</span>
+<span class="pl-ent">entity</span>: <span class="pl-s">cover.living_left</span>
+<span class="pl-ent">name</span>: <span class="pl-s">Living room</span>
+<span class="pl-ent">roleta_lewa</span>: <span class="pl-s">cover.living_left</span>
+<span class="pl-ent">roleta_prawa</span>: <span class="pl-s">cover.living_right</span>
+<span class="pl-ent">czujnik_lewe</span>: <span class="pl-s">binary_sensor.window_left</span>
+<span class="pl-ent">tryb_lewe</span>: <span class="pl-s">uchyl</span>
+<span class="pl-ent">czujnik_prawe</span>: <span class="pl-s">binary_sensor.window_right</span>
+<span class="pl-ent">tryb_prawe</span>: <span class="pl-s">otworz</span></pre></div>
+<p dir="auto"><a name="obr-12"></a></p>
+<p align="center" dir="auto"><a href="#obr-12"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2en.png" width="49%" alt="Preview" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex2en-ciemny.png" width="49%" alt="Preview" style="max-width: 100%;"></a></p>
+<div class="highlight highlight-source-yaml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="type: custom:roleta-realistyczna
+entity: cover.bedroom
+skrzydla: 1
+kolor: bezowy
+rama: '#8a5a3b'
+zrodlo: brak
+jezyk: en"><pre><span class="pl-ent">type</span>: <span class="pl-s">custom:roleta-realistyczna</span>
+<span class="pl-ent">entity</span>: <span class="pl-s">cover.bedroom</span>
+<span class="pl-ent">skrzydla</span>: <span class="pl-c1">1</span>
+<span class="pl-ent">kolor</span>: <span class="pl-s">bezowy</span>
+<span class="pl-ent">rama</span>: <span class="pl-s"><span class="pl-pds">'</span>#8a5a3b<span class="pl-pds">'</span></span>
+<span class="pl-ent">zrodlo</span>: <span class="pl-s">brak</span>
+<span class="pl-ent">jezyk</span>: <span class="pl-s">en</span></pre></div>
+<p dir="auto"><a name="obr-13"></a></p>
+<p align="center" dir="auto"><a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en.png" width="49%" alt="Preview" style="max-width: 100%;"></a> <a href="#obr-13"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/przyklady/ex5en-ciemny.png" width="49%" alt="Preview" style="max-width: 100%;"></a></p>
+<hr>
+<p dir="auto"><a name="auto-detection"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i68" href="#i68"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/magnify.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Auto-detection</h2><a id="-auto-detection" class="anchor" aria-label="Permalink:  Auto-detection" href="#-auto-detection"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="left"><a name="i69" href="#i69"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0" style="max-width: 100%;; aspect-ratio: 260 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>What</th><th align="left"><a name="i70" href="#i70"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0" style="max-width: 100%;; aspect-ratio: 640 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>How</th></tr>
+<tr><td align="left"><b>Blind group</b></td><td align="left">Suggested first for a new card.</td></tr>
+<tr><td align="left"><b>Motor speed</b></td><td align="left"><code>number.*_motor_speed</code> on the same device.</td></tr>
+<tr><td align="left"><b>Contact sensors</b></td><td align="left">Window/door <code>binary_sensor.*</code> in the same area; left/right by name.</td></tr>
+<tr><td align="left"><b>Weather</b></td><td align="left"><code>weather.*</code>; if none, Open-Meteo for your home location (no API key).</td></tr>
+<tr><td align="left"><b>Language</b></td><td align="left">From your HA profile.</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<hr>
+<p dir="auto"><a name="moes-tuya-motors"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i71" href="#i71"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/power-plug.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Moes / Tuya motors</h2><a id="-moes--tuya-motors" class="anchor" aria-label="Permalink:  Moes / Tuya motors" href="#-moes--tuya-motors"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Tested with <strong>Moes TS0601</strong> (zigbee2mqtt). Travel time from motor speed ≈ 20.2 + 394 / rpm. False 0% / 100% reports while moving are ignored.</p>
+<hr>
+<p dir="auto"><a name="card-elements"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i72" href="#i72"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/puzzle.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Card elements</h2><a id="-card-elements" class="anchor" aria-label="Permalink:  Card elements" href="#-card-elements"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">All card elements, numbered, are in the picture in <a href="#actions-how-to-control-it">How to control it</a>.</p>
+<hr>
+<p dir="auto"><a name="manual"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i73" href="#i73"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/toolbox.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Install without HACS (manual)</h2><a id="-install-without-hacs-manual" class="anchor" aria-label="Permalink:  Install without HACS (manual)" href="#-install-without-hacs-manual"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Screenshots show the Polish HA interface; the buttons are in the same places in English.</p>
+<p dir="auto"><strong>Step 1. Download the card file</strong></p>
+<p dir="auto">Open the <a href="https://github.com/superdarco78/roleta-realistyczna/releases/latest">latest release</a> and click <code>roleta-realistyczna.js</code>.</p>
+<p dir="auto"><a name="obr-g19"></a><a href="#obr-g19"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-1.png" width="100%" alt="Step 1" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Step 2. Upload it to Home Assistant</strong></p>
+<p dir="auto">Open <strong>File editor</strong>, click the folder icon, go to <code>www</code> and upload the file with the up arrow.</p>
+<p dir="auto"><a name="obr-g20"></a><a href="#obr-g20"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-2.png" width="100%" alt="Step 2" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Step 3. Open Dashboards</strong></p>
+<p dir="auto">Click <strong>Settings</strong> at the bottom of the left menu, then <strong>Dashboards</strong>.</p>
+<p dir="auto"><a name="obr-g21"></a><a href="#obr-g21"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-3.png" width="100%" alt="Step 3" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Step 4. Open Resources</strong></p>
+<p dir="auto">Click the three dots <strong>⋮</strong> top right, then <strong>Resources</strong>.</p>
+<p dir="auto"><a name="obr-g22"></a><a href="#obr-g22"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-4.png" width="100%" alt="Step 4" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Step 4a. No “Resources”? Turn on Advanced mode</strong></p>
+<p dir="auto">Click your name at the bottom of the left menu and turn on <strong>Advanced mode</strong>. Then go back to step 4.</p>
+<p dir="auto"><a name="obr-g23"></a><a href="#obr-g23"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-7.png" width="100%" alt="Step 4a" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>Step 5. Add the card as a resource</strong></p>
+<p dir="auto">Click <strong>Add resource</strong>, type <code>/local/roleta-realistyczna.js</code>, choose <strong>JavaScript module</strong> and click <strong>Create</strong>. Then refresh: <strong>Ctrl + Shift + R</strong>.</p>
+<p dir="auto"><a name="obr-g24"></a><a href="#obr-g24"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/instr/en/krok-5.png" width="100%" alt="Step 5" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong>HACS button not working?</strong></p>
+<ol dir="auto">
+<li><strong>HACS → ⋮ → Custom repositories</strong>.</li>
+<li>Repository <code>https://github.com/superdarco78/roleta-realistyczna</code>, type <strong>Dashboard</strong>, <strong>Add</strong>.</li>
+<li>Search for “Roleta dzień-noc” → <strong>Download</strong>.</li>
+</ol>
+<hr>
+<p dir="auto"><a name="help-wanted"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i74" href="#i74"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/hand-wave.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Help wanted</h2><a id="-help-wanted" class="anchor" aria-label="Permalink:  Help wanted" href="#-help-wanted"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Different blind or motor? Tell us how it works with the card, with a screenshot. Ideas: <a href="https://github.com/superdarco78/roleta-realistyczna/issues/new/choose">request a feature</a>.</p>
+<hr>
+<p dir="auto"><a name="translations"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i75" href="#i75"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/translate.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Translations</h2><a id="-translations" class="anchor" aria-label="Permalink:  Translations" href="#-translations"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<markdown-accessiblity-table><table>
+<tbody><tr><th align="left"><a name="i76" href="#i76"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="260" height="0" style="max-width: 100%;; aspect-ratio: 260 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Language</th><th align="left"><a name="i77" href="#i77"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/odstep.png" width="640" height="0" style="max-width: 100%;; aspect-ratio: 640 / 0; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a><br>Status</th></tr>
+<tr><td align="left">🇵🇱 Polski</td><td align="left">✅ 100%</td></tr>
+<tr><td align="left">🇬🇧 English</td><td align="left">✅ 100%</td></tr>
+</tbody></table></markdown-accessiblity-table>
+<p dir="auto">Want your language? Copy <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/translations/en.json"><code>translations/en.json</code></a> to <code>translations/&lt;code&gt;.json</code>, translate it and send it in an <a href="https://github.com/superdarco78/roleta-realistyczna/issues/new/choose">issue</a> or a pull request.</p>
+<hr>
+<p dir="auto"><a name="project-structure"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i78" href="#i78"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/code-braces.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Project structure</h2><a id="-project-structure" class="anchor" aria-label="Permalink:  Project structure" href="#-project-structure"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Source code is split into modules in <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/src"><code>src/</code></a> (card, editor, 7-step wizard, dashboards, weather, detection and ranking, motor timing, colours, global settings, language), texts in <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/translations"><code>translations/</code></a>, tests in <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/test"><code>test/</code></a>. <code>npm install</code> → <code>npm run check</code> lints, tests and bundles everything with esbuild into <code>dist/roleta-realistyczna.js</code>, the single file HACS installs. GitHub runs the same checks on every change.</p>
+<hr>
+<p dir="auto"><a name="support"></a></p>
+<div class="markdown-heading" dir="auto"><h2 class="heading-element" dir="auto"><a name="i79" href="#i79"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/v23/ikony/coffee.png" height="30" align="absmiddle" style="max-width: 100%; height: auto; max-height: 30px;"></a> Support</h2><a id="-support" class="anchor" aria-label="Permalink:  Support" href="#-support"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">If you like the card, leave a ⭐ at the top of the page. Thank you!</p>
+
+<hr>
+<p dir="auto"><a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/LICENSE">CC BY-NC-SA 4.0</a> © <a href="https://github.com/superdarco78">superdarco78</a>. Personal, non-commercial use with attribution.</p>
+<div class="markdown-alert markdown-alert-note" dir="auto"><p class="markdown-alert-title" dir="auto"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p dir="auto"><strong>© 2026 superdarco78.</strong> The card, graphics and texts are licensed under <a href="https://github.com/superdarco78/roleta-realistyczna/blob/main/LICENSE">CC BY-NC-SA 4.0</a>. Free for use in your home. Selling, reselling, republishing as your own or any commercial use only with the author's permission. Official source: <a href="https://github.com/superdarco78/roleta-realistyczna">github.com/superdarco78/roleta-realistyczna</a>.</p>
+</div>
+</article></article>
+<div id="lb"><span>×</span><img alt=""></div>
+<script>
+(function(){
+var ov=document.getElementById('lb'),im=ov.querySelector('img');
+function open(src,alt){im.src=src;im.alt=alt||'';ov.classList.add('on');document.body.style.overflow='hidden';}
+function close(){ov.classList.remove('on');document.body.style.overflow='';im.removeAttribute('src');}
+ov.addEventListener('click',close);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+document.querySelectorAll('.markdown-body img').forEach(function(i){
+  var a=i.closest('a'),h=a?a.getAttribute('href')||'':'';
+  var local=!a||h.charAt(0)==='#'||/raw\.githubusercontent|camo\./.test(h);
+  if(!local)return;
+  if(i.getAttribute('width')==='0'||i.getAttribute('height')==='0'||/odstep\.png/.test(i.src))return;
+  var small=(+i.getAttribute('height')||999)<60;
+  if(small){i.style.cursor='default';if(a)a.addEventListener('click',function(e){e.preventDefault();});return;}
+  i.style.cursor='zoom-in';
+  (a||i).addEventListener('click',function(e){e.preventDefault();open(i.currentSrc||i.src,i.alt);});
+});
+function go(id){var el=document.getElementById(id)||document.getElementsByName(id)[0];if(el)el.scrollIntoView();}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a||a.querySelector('img'))return;e.preventDefault();var id=decodeURIComponent(a.getAttribute('href').slice(1));history.replaceState(null,'','#'+id);go(id);});
+if(location.hash)setTimeout(function(){go(decodeURIComponent(location.hash.slice(1)));},300);
+})();
+</script></body></html>
