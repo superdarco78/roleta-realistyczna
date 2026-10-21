@@ -8667,4 +8667,14 @@ ha-alert:not(:defined) [slot=action]{display:inline-block;margin:8px 8px 0 0}
       return { label: T.nazwaKarty, config: { type: "custom:okno-ha", entity: entityId } };
     }
   });
+  window.__oknoHaDane = {
+    wersja: RR_WERSJA,
+    podgrupy: RR_OSL_PODGRUPY,
+    ikony: RR_OSL_IKONY,
+    presety: RR_PRESETY.map((p) => ({ ...p, hex: rrHex(p.kolor) })),
+    teksty: (jez) => {
+      const L = RR_ED[rrKod(jez)];
+      return { osl: L.osl, osw: L.osw, osz: L.osz, oslg: L.oslg, pre: L.pre, nazwa: (t) => L.osln[RR_OSLONY.indexOf(t)] };
+    }
+  };
 })();
