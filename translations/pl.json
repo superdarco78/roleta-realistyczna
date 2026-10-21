@@ -189,15 +189,43 @@
     "osl": "Typ osłony",
     "osln": [
       "Dzień-noc",
-      "Pełna",
+      "Materiałowa",
       "Plisa",
       "Rzymska",
-      "Żaluzja",
-      "Zewnętrzna"
+      "Żaluzja aluminiowa",
+      "Roleta nadstawna",
+      "Zaciemniająca",
+      "Plaster miodu",
+      "Żaluzja drewniana",
+      "Roleta natynkowa",
+      "Roleta podtynkowa",
+      "Roleta z perforacją",
+      "Żaluzja fasadowa C80",
+      "Żaluzja fasadowa Z90",
+      "Screen ZIP"
     ],
-    "d_osl": "Jak wygląda materiał. Dzień-noc ma pasy pełne i przezroczyste. Żaluzja ma listewki. Zewnętrzna to roleta za oknem z aluminiowych profili.",
+    "d_osl": "Wybierz, co masz w oknie. Karta dopasuje wygląd tkaniny, kasety, prowadnic i listwy.",
     "promienie": "Promienie słońca wpadające przez okno (w dzień przy słońcu)",
-    "dzwiek": "Cichy dźwięk silnika przy ruchu (po kliknięciu)"
+    "dzwiek": "Cichy dźwięk silnika przy ruchu (po kliknięciu)",
+    "osld": [
+      "Pasy pełne i przezroczyste. Przesuwasz, a światło przechodzi przez paski.",
+      "Zwykła roleta z jednolitej tkaniny. Rozprasza światło.",
+      "Gęsta tkanina z powłoką. Chodzi w białych prowadnicach po bokach, nie przepuszcza światła.",
+      "Tkanina złożona w harmonijkę.",
+      "Plisa podwójna. Komórki jak w plastrze miodu trzymają ciepło.",
+      "Tkanina układa się w miękkie fałdy.",
+      "Cienkie aluminiowe listewki 25 mm na sznurkach.",
+      "Szerokie drewniane lamele 50 mm na taśmach.",
+      "Kaseta nad oknem w kolorze ramy, montowana razem z oknem. Pancerz z profili PVC lub aluminium.",
+      "Skrzynka na elewacji ze ściętym frontem. Dobra do gotowych domów.",
+      "Skrzynka schowana w ścianie pod tynkiem. Widać tylko pancerz i prowadnice.",
+      "Profile z małymi otworami. Przy opuszczonej rolecie wpada trochę światła.",
+      "Wygięte lamele aluminiowe 80 mm na taśmach. Można je przechylać.",
+      "Płaskie lamele 90 mm w kształcie Z z uszczelką. Szczelnie zaciemniają.",
+      "Zewnętrzna tkanina z siatki w prowadnicach z zamkiem. Chroni przed słońcem, a widok zostaje."
+    ],
+    "osw": "W pokoju",
+    "osz": "Na zewnątrz"
   },
   "kolory": {
     "bezowy": "beżowy",

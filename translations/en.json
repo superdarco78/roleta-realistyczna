@@ -189,15 +189,43 @@
     "osl": "Shade type",
     "osln": [
       "Day-night",
-      "Blackout",
+      "Fabric roller",
       "Pleated",
       "Roman",
-      "Venetian",
-      "Shutter"
+      "Aluminium venetian",
+      "Top-mounted shutter",
+      "Blackout",
+      "Honeycomb",
+      "Wooden venetian",
+      "Surface-mounted shutter",
+      "Concealed shutter",
+      "Perforated shutter",
+      "External venetian C80",
+      "External venetian Z90",
+      "Screen ZIP"
     ],
-    "d_osl": "How the material looks. Day-night has solid and sheer stripes. Venetian has slats. Shutter is an outside roller shutter made of aluminium profiles.",
+    "d_osl": "Pick what you have in your window. The card matches the fabric, box, side guides and bottom bar.",
     "promienie": "Sun rays coming through the window (daytime, when sunny)",
-    "dzwiek": "Quiet motor sound while moving (after a tap)"
+    "dzwiek": "Quiet motor sound while moving (after a tap)",
+    "osld": [
+      "Solid and sheer stripes. Slide them to let light through the sheer stripes.",
+      "A plain roller of solid fabric. Diffuses the light.",
+      "Dense coated fabric. Runs in white side channels and blocks the light.",
+      "Fabric folded like an accordion.",
+      "Double pleat. Honeycomb cells keep the warmth in.",
+      "Fabric gathers in soft folds.",
+      "Thin 25 mm aluminium slats on cords.",
+      "Wide 50 mm wooden slats on tapes.",
+      "Box above the window in the frame colour, fitted with the window. Curtain of PVC or aluminium profiles.",
+      "Box on the outside wall with a bevelled front. Good for existing houses.",
+      "Box hidden in the wall under the plaster. Only the curtain and guides are visible.",
+      "Profiles with small holes. Some light comes in when closed.",
+      "Curved 80 mm aluminium slats on tapes. They can tilt.",
+      "Flat 90 mm Z-shaped slats with a seal. Very dark when closed.",
+      "Outside mesh fabric in zipped side guides. Keeps the sun out, keeps the view."
+    ],
+    "osw": "Inside",
+    "osz": "Outside"
   },
   "kolory": {
     "czarny": "black",

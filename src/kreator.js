@@ -1,4 +1,4 @@
-import { RR_PRESETY, RR_DEF, RR_OSLONY } from './stale.js';
+import { RR_PRESETY, RR_DEF, RR_OSLONY, RR_OSL_GRUPY } from './stale.js';
 import { RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas } from './silnik.js';
 import { RR_JEZYKI, RR_KOL_NAZWY } from './jezyk.js';
@@ -235,7 +235,12 @@ export class RrKreator {
   _k_wyglad(B) {
     const W = this.W, L = this.ed._L, P = RR_PRESETY;
     this._html(B, `<div class="lb">${esc(L.osl)}</div>`);
-    this._seg(B, RR_OSLONY.map((v, k) => [v, L.osln[k]]), this.ed._val('oslona'), v => this._ustaw({ oslona: v }));
+    for (const [g, typy] of Object.entries(RR_OSL_GRUPY)) {
+      this._html(B, `<div class="osg">${esc(g === 'wew' ? L.osw : L.osz)}</div>`);
+      this._seg(B, typy.map(v => [v, L.osln[RR_OSLONY.indexOf(v)]]), this.ed._val('oslona'), v => this._ustaw({ oslona: v }));
+      B.lastElementChild.classList.add('osl');
+    }
+    this._html(B, `<p class="hint">${esc(L.osld[Math.max(0, RR_OSLONY.indexOf(this.ed._val('oslona')))])}</p>`);
     const d = document.createElement('div'); d.className = 'wzl';
     d.innerHTML = P.map((p, i) => `<button data-wp="${i}" aria-pressed="${this.ed._val('rama') === p.rama && this.ed._val('kolor') === p.kolor}"><span class="sw2" style="background:linear-gradient(135deg,${p.rama} 50%,${rrHex(p.kolor)} 50%)"></span><span><span class="wzn1">${esc(L.pre[i])}</span></span></button>`).join('');
     d.querySelectorAll('[data-wp]').forEach(b => b.onclick = () => { const p = P[+b.dataset.wp]; this._ustaw({ rama: p.rama, kolor: p.kolor, siatka: p.siatka ?? '' }); });

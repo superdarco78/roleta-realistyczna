@@ -7,21 +7,74 @@ export function rrTkanina(typ, col, c) {
   const brzegi = 'linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 30%,rgba(0,0,0,0) 60%,rgba(0,0,0,.2))';
   const splot = 'repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px)', bez = 'linear-gradient(transparent,transparent)';
   const h = RR_OKRES / 2;
+  /* dwa pionowe paski na 25% i 75% szerokości: sznurki drabinek (żaluzje) albo taśmy podnoszące (żaluzje fasadowe) */
+  const tasmy = (k, w) => `linear-gradient(90deg,transparent calc(25% - ${w / 2}px),${k} calc(25% - ${w / 2}px),${k} calc(25% + ${w / 2}px),transparent calc(25% + ${w / 2}px),transparent calc(75% - ${w / 2}px),${k} calc(75% - ${w / 2}px),${k} calc(75% + ${w / 2}px),transparent calc(75% + ${w / 2}px))`;
+  const pancerz = o => `${S(.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
   switch (typ) {
     case 'pelna': return `${brzegi},${splot},linear-gradient(180deg,${col} 0,${S(-.06)} ${h}px,${col} ${RR_OKRES}px)`;
+    /* v27: zaciemniająca – gęsta tkanina z powłoką, lekki połysk, bez prześwitu */
+    case 'zaciemniajaca': return `${brzegi},linear-gradient(90deg,rgba(255,255,255,0) 20%,rgba(255,255,255,.07) 45%,rgba(255,255,255,0) 70%),linear-gradient(180deg,${col} 0,${S(.03)} ${h}px,${col} ${RR_OKRES}px)`;
     case 'plisa': return `${brzegi},${bez},linear-gradient(180deg,${A(S(.2), .94)} 0,${A(col, .94)} 5px,${A(S(-.24), .96)} ${h - .5}px,${A(S(.2), .94)} ${h}px,${A(col, .94)} ${h + 5}px,${A(S(-.24), .96)} ${RR_OKRES - .5}px,${A(S(.2), .94)} ${RR_OKRES}px)`;
+    /* v27: plaster miodu – plisa podwójna, w każdym fałdzie widać szew komórki */
+    case 'plaster': {
+      const kom = o => `${A(S(.24), .95)} ${o}px,${A(col, .93)} ${o + 3}px,${A(S(-.12), .94)} ${o + 6}px,${A(S(-.34), .97)} ${o + 6.5}px,${A(S(.1), .93)} ${o + 7}px,${A(col, .93)} ${o + 10}px,${A(S(-.28), .96)} ${o + h - .5}px`;
+      return `${brzegi},${bez},linear-gradient(180deg,${kom(0)},${kom(h)},${A(S(.24), .95)} ${RR_OKRES}px)`;
+    }
     case 'rzymska': return `${brzegi},${splot},linear-gradient(180deg,${A(col, .93)} 0,${A(S(.12), .93)} 17px,${A(S(-.28), .96)} ${RR_OKRES - 1}px,${A(S(.1), .93)} ${RR_OKRES}px)`;
     case 'zaluzja': {
       const lam = o => `${S(.32)} ${o}px,${col} ${o + 4}px,${S(-.3)} ${o + 10}px,rgba(0,0,0,.35) ${o + 10}px,transparent ${o + 11}px,transparent ${o + h}px`;
-      return `${bez},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
+      return `${tasmy('rgba(235,235,235,.75)', 1)},${bez},linear-gradient(180deg,${lam(0)},${lam(h)})`;
     }
-    case 'zewnetrzna': {
-      const pro = o => `${S(.25)} ${o}px,${col} ${o + 3}px,${col} ${o + 9}px,${S(-.35)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
+    /* v27: drewniana 50 mm – szerokie lamele ze słojami, taśmy drabinkowe */
+    case 'drewniana': return `${tasmy(A(S(-.18), .95), 6)},repeating-linear-gradient(90deg,rgba(0,0,0,.07) 0 1px,transparent 1px 5px,rgba(255,255,255,.06) 5px 6px,transparent 6px 11px),` +
+      `linear-gradient(180deg,${S(.2)} 0,${col} 5px,${S(-.1)} 15px,${S(-.34)} 21px,rgba(0,0,0,.4) 21px,transparent 22.5px,transparent ${RR_OKRES}px)`;
+    case 'zewnetrzna': case 'podtynkowa': return `${brzegi},${bez},linear-gradient(180deg,${pancerz(0)},${pancerz(h)})`;
+    /* v27: natynkowa – profil aluminiowy z rowkiem na środku */
+    case 'natynkowa': {
+      const pro = o => `${S(.28)} ${o}px,${col} ${o + 3}px,${S(.08)} ${o + 6}px,${S(-.2)} ${o + 6.5}px,${col} ${o + 7.5}px,${S(-.38)} ${o + 12}px,rgba(0,0,0,.55) ${o + 12}px,rgba(0,0,0,.55) ${o + h}px`;
       return `${brzegi},${bez},linear-gradient(180deg,${pro(0)},${pro(h)})`;
     }
+    /* v27: perforowana – w każdym profilu rząd małych otworów, przez które wpada światło */
+    case 'perforowana': return `${brzegi},radial-gradient(1.8px 1px at 50% 6.5px,rgba(255,246,214,.9) 70%,transparent 100%),linear-gradient(180deg,${pancerz(0)},${pancerz(h)})`;
+    /* v27: żaluzja fasadowa C80 – wygięte lamele, taśmy podnoszące */
+    case 'fasadowa': {
+      const c80 = o => `${S(-.3)} ${o}px,${S(.28)} ${o + 3}px,${S(.1)} ${o + 7}px,${S(-.26)} ${o + 11}px,rgba(0,0,0,.6) ${o + 11.5}px,rgba(0,0,0,.3) ${o + h}px`;
+      return `${tasmy('rgba(30,30,30,.55)', 2)},${bez},linear-gradient(180deg,${c80(0)},${c80(h)})`;
+    }
+    /* v27: żaluzja fasadowa Z90 – płaskie lamele w kształcie Z z czarną uszczelką */
+    case 'fasadowaz': {
+      const z90 = o => `${S(.16)} ${o}px,${col} ${o + 2}px,${col} ${o + 9}px,${S(-.22)} ${o + 10.5}px,#1d1d1d ${o + 10.5}px,#1d1d1d ${o + 12}px,${S(-.45)} ${o + h}px`;
+      return `${tasmy('rgba(30,30,30,.45)', 2)},${bez},linear-gradient(180deg,${z90(0)},${z90(h)})`;
+    }
+    /* v27: screen ZIP – zewnętrzna tkanina z siatki, przez którą trochę widać */
+    case 'screen': return `${brzegi},repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 2px),linear-gradient(180deg,${A(col, .82)} 0,${A(S(.06), .8)} ${h}px,${A(col, .82)} ${RR_OKRES}px)`;
     default: return `${brzegi},${splot},linear-gradient(180deg,
    ${S(.12)} 0px,${col} 2px,${col} ${RR_PAS - 3}px,${S(-.25)} ${RR_PAS}px,
    ${A(c.siatka ? rrHex(c.siatka) : S(.3), .62)} ${RR_PAS}px,${A(c.siatka ? rrShade(rrHex(c.siatka), .1) : S(.4), .55)} ${RR_OKRES}px)`;
+  }
+}
+
+/* v27: kaseta, prowadnice boczne i listwa dolna zależne od rodzaju osłony (dopisywane na końcu stylu karty) */
+export function rrOslonaStyl(typ, col, rama) {
+  const S = k => rrShade(col, k), R = k => rrShade(rama, k);
+  const kas = (bg, ext = '') => `.cas{background:${bg};border-radius:0 0 2px 2px;${ext}}.cas:before,.cas:after{background:${S(-.12)};border-radius:0}`;
+  const prow = (w, bg) => `.glass:before,.glass:after{content:"";position:absolute;top:${RR_KASETA - 2}px;bottom:0;width:${w}px;z-index:4;pointer-events:none;background:${bg};box-shadow:0 0 2px rgba(0,0,0,.45)}
+.glass:before{left:0}.glass:after{right:0}.fabric{left:${w - 2}px;right:${w - 2}px}.bar{left:${w - 3}px;right:${w - 3}px}`;
+  const alu = `linear-gradient(90deg,${S(-.4)},${S(.22)} 40%,${S(-.05)} 70%,${S(-.45)})`;
+  const listwa = `.bar{background:linear-gradient(180deg,${S(.35)},${S(.05)} 55%,${S(-.4)});box-shadow:0 2px 0 rgba(20,20,20,.85),0 3px 3px rgba(0,0,0,.4)}`;
+  const lamela = `.bar{background:linear-gradient(180deg,${S(.3)},${col} 50%,${S(-.3)})}`;
+  switch (typ) {
+    case 'zaciemniajaca': return prow(4, 'linear-gradient(90deg,#c9c9c9,#fafafa 45%,#b5b5b5)');
+    case 'zaluzja': case 'drewniana': return kas(`linear-gradient(180deg,${S(.3)},${col} 55%,${S(-.35)})`) + lamela;
+    case 'zewnetrzna': case 'perforowana':   // nadstawna: kaseta nad oknem w kolorze ramy
+      return `.cas{background:linear-gradient(180deg,${R(.05)},${rama} 45%,${R(-.16)});border-radius:0;box-shadow:inset 0 -2px 0 rgba(0,0,0,.12),0 2px 3px rgba(0,0,0,.35)}.cas:before,.cas:after{background:${R(-.08)};border-radius:0}` + prow(5, alu) + listwa;
+    case 'natynkowa':   // skrzynka na elewacji ze ściętym frontem 45°
+      return kas(`linear-gradient(180deg,${S(.36)} 0,${S(.18)} 50%,${S(-.3)} 51%,${S(-.05)} 100%)`, `height:${RR_KASETA + 8}px;box-shadow:0 3px 5px rgba(0,0,0,.5)`) + prow(6, alu) + listwa;
+    case 'podtynkowa':   // skrzynka schowana w ścianie: widać tylko tynk i szczelinę
+      return `.cas{background:linear-gradient(180deg,#ebe7de 0,#d6d1c6 58%,#3a3a3a 60%,#151515 100%);border-radius:0;box-shadow:none}.cas:before,.cas:after{background:#ddd8cd;border-radius:0;box-shadow:none}` + prow(5, alu) + listwa;
+    case 'fasadowa': case 'fasadowaz': return kas(`linear-gradient(180deg,${S(.3)},${S(.05)} 70%,${S(-.3)})`) + prow(4, alu) + listwa;
+    case 'screen': return kas(`linear-gradient(180deg,${S(.3)},${S(.08)} 60%,${S(-.35)})`) + prow(6, `linear-gradient(90deg,${S(-.45)},${S(.15)} 35%,#111 50%,${S(.15)} 65%,${S(-.45)})`) + listwa;
+    default: return '';
   }
 }
 
@@ -93,7 +146,7 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .cas:after{content:"";position:absolute;right:0;top:0;bottom:0;width:4px;background:#e2e2e2;border-radius:0 0 6px 0;box-shadow:-1px 0 0 rgba(0,0,0,.08)}
 .fabric{position:absolute;left:1px;right:1px;top:${RR_KASETA - 2}px;height:0;z-index:2;
  background:${rrTkanina(c.oslona, col, c)};
- background-size:100% 100%,100% 100%,100% ${RR_OKRES}px}
+ background-size:100% 100%,${c.oslona === 'perforowana' ? '7px ' + RR_OKRES / 2 + 'px' : '100% 100%'},100% ${RR_OKRES}px}
 /* v26: promienie słońca wpadające przez okno (tylko w dzień, przy słońcu) */
 .ray{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.5s;mix-blend-mode:screen;
  background:linear-gradient(115deg,rgba(255,214,120,0) 15%,rgba(255,214,120,.26) 40%,rgba(255,214,120,0) 62%),
@@ -136,4 +189,5 @@ export const rrKartaStyl = ({ H, n, sloje, rama, col, c }) => `
 .qk{display:flex;gap:6px;margin-top:8px}
 .qk button{flex:1;height:28px;border:none;border-radius:9px;font-size:12px;cursor:pointer;color:var(--secondary-text-color);background:transparent;box-shadow:inset 0 0 0 1px var(--divider-color,rgba(127,127,127,.3))}
 .qk button.on{color:var(--text-primary-color,#fff);background:var(--primary-color,#03a9f4);box-shadow:none}
+${rrOslonaStyl(c.oslona, col, rama)}
 `;

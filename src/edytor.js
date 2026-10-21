@@ -1,4 +1,4 @@
-import { RR_WERSJA, RR_DEF, RR_OSLONY, RR_OSL_IKONY } from './stale.js';
+import { RR_WERSJA, RR_DEF, RR_OSLONY, RR_OSL_GRUPY, RR_OSL_IKONY } from './stale.js';
 import { RR_KOLORY, RR_RAMY, rrHex } from './kolory.js';
 import { rrCzas, rrUcz } from './silnik.js';
 import { rrInternet } from './pogoda.js';
@@ -58,7 +58,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
   <div class="slot"></div>
  </div>
  <details class="sec" data-sec="wyg" open><summary>${L.sec_wyg}</summary>
- <div class="grp"><div class="lb">${L.osl}</div><div class="seg osl">${RR_OSLONY.map((v, k) => `<button data-osl="${v}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[k]}</button>`).join('')}</div><p class="hint">${L.d_osl}</p></div>
+ <div class="grp"><div class="lb">${L.osl}</div><p class="hint">${L.d_osl}</p>${Object.entries(RR_OSL_GRUPY).map(([g, typy]) => `<div class="osg">${g === 'wew' ? L.osw : L.osz}</div><div class="seg osl">${typy.map(v => `<button data-osl="${v}" title="${L.osld[RR_OSLONY.indexOf(v)]}"><ha-icon icon="${RR_OSL_IKONY[v]}"></ha-icon> ${L.osln[RR_OSLONY.indexOf(v)]}</button>`).join('')}</div>`).join('')}<p class="hint" id="oslD"></p></div>
  <div class="grp"><div class="lb">${L.kol}<span class="kn" data-kn="kolor"></span></div><div class="dots" id="kol">
   ${Object.keys(RR_KOLORY).map(k => chip('kolor', k, RR_KOLORY[k], KN[k] || k)).join('')}
   <label class="dot" data-own="kolor" title="${L.own}"><span class="own"><input type="color" id="kolOwn"></span><span>${L.own}</span></label></div>
@@ -322,6 +322,7 @@ export class RoletaRealistycznaEditor extends HTMLElement {
     r.querySelector('#ramOwn').value = /^#[0-9a-f]{6}$/i.test(rama) ? rama : '#f4f4f2';
     r.querySelectorAll('[data-sk]').forEach(b => b.setAttribute('aria-pressed', +b.dataset.sk === +this._val('skrzydla')));
     r.querySelectorAll('[data-osl]').forEach(b => b.setAttribute('aria-pressed', b.dataset.osl === this._val('oslona')));
+    r.querySelector('#oslD').textContent = this._L.osld[Math.max(0, RR_OSLONY.indexOf(this._val('oslona')))];
     r.querySelectorAll('[data-sl]').forEach(b => b.setAttribute('aria-pressed', b.dataset.sl === this._val('slupek')));
     r.querySelector('#slGrp').style.display = +this._val('skrzydla') === 1 ? 'none' : '';
     const set = (id, v, txt) => { const el = r.querySelector('#' + id); if (r.activeElement !== el) el.value = v; r.querySelector('#' + id + 'V').textContent = txt; };
