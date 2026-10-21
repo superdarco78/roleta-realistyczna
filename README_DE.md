@@ -44,6 +44,12 @@
 </table>
 
 <a name="table-of-contents"></a>
+## <a name="rodzaje-oslon" href="#rodzaje-oslon"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> Arten von Rollos
+
+15 Arten zur Auswahl: 8 innen und 7 außen. Wähle im Assistenten oder im Editor (🎨 Aussehen).
+
+<p align="center"><a name="rodzaje-oslon-obraz" href="#rodzaje-oslon-obraz"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/rodzaje-oslon-en.png" width="100%" alt="15 Arten von Rollos"></a></p>
+
 ## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/format-list-bulleted.png" height="36" align="absmiddle"></a> Inhalt
 
 

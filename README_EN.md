@@ -44,6 +44,12 @@
 </table>
 
 <a name="table-of-contents"></a>
+## <a name="rodzaje-oslon" href="#rodzaje-oslon"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/window-shutter.png" height="36" align="absmiddle"></a> Cover types
+
+15 types to choose from: 8 inside and 7 outside. Pick one in the wizard or in the editor (🎨 Look).
+
+<p align="center"><a name="rodzaje-oslon-obraz" href="#rodzaje-oslon-obraz"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/rodzaje-oslon-en.png" width="100%" alt="15 cover types"></a></p>
+
 ## <a name="i10" href="#i10"><img src="https://raw.githubusercontent.com/superdarco78/roleta-realistyczna/main/img/z3/ikony-ha3/format-list-bulleted.png" height="36" align="absmiddle"></a> Contents
 
 
